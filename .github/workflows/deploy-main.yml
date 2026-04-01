@@ -1,0 +1,28 @@
+name: Deploy main → /base/
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install lftp & sshpass
+        run: sudo apt-get install -y lftp sshpass
+
+      - name: Deploy via SFTP
+        env:
+          SSHPASS: ${{ secrets.CAFE24_PASS }}
+          CAFE24_HOST: ${{ secrets.CAFE24_HOST }}
+          CAFE24_PORT: ${{ secrets.CAFE24_PORT }}
+          CAFE24_USER: ${{ secrets.CAFE24_USER }}
+        run: |
+          lftp <<LFTP
+          set sftp:connect-program "sshpass -e ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+          open -u $CAFE24_USER sftp://$CAFE24_HOST:$CAFE24_PORT
+          mirror -R --parallel=4 --exclude-glob=*.json --exclude-glob=*.ini --exclude-glob=*.gif --exclude-glob=*.yml --exclude-glob=*.md --exclude-glob=*.scss --exclude=^\.git$ --exclude=^\.github$ --exclude=^\.vscode$ --exclude=^\.claude$ --exclude=^\.DS_Store$ --exclude=^\.prettierignore$ ./ /base/
+          quit
+          LFTP
