@@ -23,6 +23,6 @@ jobs:
           lftp <<LFTP
           set sftp:connect-program "sshpass -e ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
           open -u $CAFE24_USER,$SSHPASS sftp://$CAFE24_HOST:$CAFE24_PORT
-          mirror -R --parallel=4 --exclude-glob=*.json --exclude-glob=*.ini --exclude-glob=*.gif --exclude-glob=*.yml --exclude-glob=*.md --exclude-glob=*.scss --exclude=^\.git$ --exclude=^\.github$ --exclude=^\.vscode$ --exclude=^\.claude$ --exclude=^\.DS_Store$ --exclude=^\.prettierignore$ ./ /base/
+          mirror -R --parallel=4 --exclude-glob=*.json --exclude-glob=*.ini --exclude-glob=*.gif --exclude-glob=*.yml --exclude-glob=*.md --exclude-glob=*.scss --exclude=^\.git --exclude=^\.github --exclude=^\.vscode --exclude=^\.claude --exclude=^\.DS_Store$ --exclude=^\.prettierignore$ ./ /base/
           quit
           LFTP
