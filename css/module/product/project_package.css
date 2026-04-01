@@ -1,6 +1,5 @@
 .xans-project-package .title{ margin: 40px 0 0;}
 .xans-project-package .title h2 { margin: 0 0 30px; text-align: center; font-size:20px; color:#000; }
-.xans-project-package .product_top_image { margin:0 auto; padding:20px 0; text-align:center; }
 .xans-project-package .banner { margin:0 0 54px; }
 .xans-project-package .banner img { width: 100%; }
 
@@ -19,9 +18,6 @@
     .xans-project-package .title {margin: 0;}
     .xans-project-package .banner {margin-bottom: 40px; }
     .xans-project-package .title h2 {font-size: 22px;}
-    .xans-project-package .product_top_image { width:100%; padding:10px 0; }
-    .xans-project-package .ec-base-tab.typeMenu { height:auto; }
-    .xans-project-package .ec-base-tab.typeMenu .menuCategory { position:relative; }
     .xans-project-list {margin: 0 16px; }
     .xans-project-list h3 {margin: 40px 0 20px; font-size: 16px;}
 }

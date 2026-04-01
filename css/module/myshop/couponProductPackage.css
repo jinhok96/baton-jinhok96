@@ -5,3 +5,9 @@
 .xans-myshop-couponproductlist .title select { float:right; }
 .xans-myshop-couponproductlist table td.thumb img { width:80px; }
 .xans-myshop-couponproductlist table td.price strong { display:block; }
+
+/********************* Mobile *********************/
+@media all and (max-width:767px) {
+    .xans-myshop-couponproductpackage .ec-base-paginate.typeList { display:flex; justify-content: center; }
+    .xans-myshop-couponproductpackage .ec-base-paginate.typeList ol { display:flex; }
+}

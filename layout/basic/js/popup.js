@@ -1,7 +1,5 @@
-$(function() {
-    setTimeout(function() {
-        setResizePopup();
-    });
+window.addEventListener('load', function() {
+    setResizePopup();
 });
 
 /**
@@ -9,21 +7,21 @@ $(function() {
  */
 function setResizePopup() {
     var ePopup = document.querySelector('#popup');
-
+    
     var iWrapWidth = ePopup.offsetWidth;
     var iWrapHeight = ePopup.offsetHeight;
 
     var iWindowWidth = window.innerWidth;
     var iWindowHeight = window.innerHeight;
-
+    
     window.resizeBy(iWrapWidth - iWindowWidth, iWrapHeight - iWindowHeight);
-
+    
     // Mobile Device
     var isMobile = detectMobileDevice(window.navigator.userAgent);
     if (isMobile) {
       var popup = document.querySelector('#popup');
       popup.style.width = '100%';
-    }
+    } 
 }
 
 /**

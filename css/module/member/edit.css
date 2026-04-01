@@ -12,7 +12,7 @@
 .xans-member-edit .verify #verify_sms_number { padding:2px 50px 2px 4px; box-sizing:border-box; }
 .xans-member-edit .verify #verify_sms_number:disabled { padding-right:4px; }
 
-.xans-member-edit .layerLeave { width:600px; display:none; }
+.xans-member-edit .layerLeave { max-width:600px; display:none; }
 .xans-member-edit .layerLeave h4 { margin:20px 0 10px; }
 .xans-member-edit .layerLeave select,
 .xans-member-edit .layerLeave textarea { width:100%; box-sizing:border-box; }

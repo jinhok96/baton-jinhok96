@@ -6,7 +6,7 @@
     </div>
     <div class="content">
         <div class="inner" module="product_detail">
-            <div class="information productNormal">
+            <div class="information productNormal {$normal_product_display|display}">
                 <div class="thumbnail">
                     <img src="{$tiny_img}" alt="{$seo_alt_tag}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" id="{$image_id}" class="{$display_single_product|display}" />
                 </div>
@@ -19,55 +19,6 @@
                     <span class="{$product_restock_button_display|display}"><a href="#none" class="btnNormal sizeS" {$product_restock_link}>재입고 알림 SMS</a></span>
                 </div>
             </div>
-
-			<div class="regularDelivery {$regular_delivery_display|display}">
-				<table border="1" summary="정기결제">
-					<caption>정기결제</caption>
-					<colgroup>
-						<col style="width:86px;"/>
-						<col style="width:auto;"/>
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row">구매방법</th>
-							<td>
-								<label class="gLabel {$one_time_purchase_display|display}">{$regular_deliveryF} 1회구매</label>
-								<label class="gLabel"><span class="{$one_time_purchase_display|display}">{$regular_deliveryT}</span> 정기배송<span class="badge {$regular_delivery_discount_display|display}">{$max_discount_value} <i class="icoDown">할인</i></span></label>
-							</td>
-						</tr>
-						<tr class="shippingCycle {$regular_cycle_period|display}" id="{$regular_cycle_period_id}">
-							<th scope="row">배송주기</th>
-							<td>
-								{$regularPeriod}
-							</td>
-						</tr>
-                        <tr class="shippingNum {$regular_count_display|display}" id="{$regular_count_id}">
-                            <th scope="row">정기배송 횟수</th>
-                            <td>
-                                {$regularCount}
-                            </td>
-                        </tr>
-                        <tr class="shippingGuide" id="{$regular_info_id}">
-                            <th scope="row"><span class="displaynone">안내사항</span></th>
-                            <td>
-                                <div class="info {$regular_delivery_discount_display|display}" id="{$regular_delivery_discount_id}">
-                                    <p class="title"><strong>정기배송 할인</strong> <span class="icoSave">save</span></p>
-                                    <ul module="product_regularDiscount">
-                                        <li>{$discount_count}차 이상 구매 시 : {$discount_value} <span class="icoDown">할인</span></li>
-                                        <li>{$discount_count}차 이상 구매 시 : {$discount_value} <span class="icoDown">할인</span></li>
-                                    </ul>
-                                </div>
-                                <div class="info">
-                                    <ul class="ec-base-help typeDash txt11">
-                                        <li>배송주기, 정기배송 횟수는 상품 전체에 동일하게 적용됩니다.</li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-					</tbody>
-				</table>
-			</div>
-
             <table border="1" module="product_option">
                 <!--
 					$use_per_add_option = yes
@@ -339,7 +290,6 @@
                 </table>
             </div>
             <div id="{$total.total_price_id}" class="totalPrice">
-                <p class="ec-base-help txtWarn txt11 {$exclusive_purchase_olny|display}"> 단독구매상품</p>
                 <strong class="title">TOTAL <span class="qty">(QUANTITY)</span></strong><span class="{$total.total_cnt}"><strong><em>0</em></strong> (0개)</span>
             </div>
             <p class="ec-base-help txt11 {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수 있습니다.</p>
@@ -351,10 +301,11 @@
         <a href="#none" class="btnSubmit sizeM {$buy_display|display}" onclick="{$action_buy}">
             <span id="{$btn_buy_id}">바로구매</span>
             <span id="{$btn_reserve_id}" class="{$btn_reserve_class|display}">예약주문하기</span>
-			<span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청하기</span>
         </a>
         <!-- 네이버 체크아웃 구매 버튼 -->
         <div id="NaverChk_Button"></div>
+        <!-- //네이버 체크아웃 구매 버튼 -->
+        <!-- 상품상세페이지에 추가되는 앱 관련 결제버튼's div -->
         <div id="{$app_payment_button_box_id}"></div>
     </div>
     <a class="btnClose close" onclick='#'>닫기</a>

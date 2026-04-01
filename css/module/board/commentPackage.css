@@ -27,7 +27,7 @@
 /* 댓글 쓰기 */
 .xans-board-commentwrite { margin: 50px 0; color:#353535; }
 .xans-board-commentwrite legend { visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0; }
-.xans-board-commentwrite textarea { width:100%; height:148px; padding:20px; border-width: 1px 1px 0 1px; border-style: solid; border-color: #a7a7a7; outline: none; background: #fff; }
+.xans-board-commentwrite textarea { width:100%; height:148px; padding:20px 45px; border-width: 1px 1px 0 1px; border-style: solid; border-color: #a7a7a7; outline: none; background: #fff; }
 .xans-board-commentwrite .input { position: relative; border-width: 0 1px 1px 1px; border-style: solid; border-color: #a7a7a7; background: #fff; border-top: 1px solid #e0e0e0;  }
 .xans-board-commentwrite .input .ec-base-help { margin:10px 0 0; }
 .xans-board-commentwrite .input .btnSubmit { position: absolute; right: 20px; top: 13px; }
@@ -48,11 +48,8 @@
 .xans-board-commentwrite span.grade em { font-style:normal; }
 
 /* 댓글의 댓글 쓰기 */
-.xans-board-commentwrite.commentwrite-all {margin:50px 0;padding:0;border:0;background-color:#fff;color:#353535;}
-.xans-board-commentwrite.commentwrite-all .view { position:relative; margin:10px 0 19px; padding:0 120px 0 0; }
-.xans-board-commentwrite.commentwrite-all .view [class^="btn"] {  position:absolute; top:0; right:0; }
-.xans-board-commentwrite.commentwrite-all textarea {border:1px solid #a7a7a7;}
 .xans-board-commentlist .boardComment li .formGroup #commentReplyWriteForm {  flex-basis: 100%; }
+
 .xans-board-commentreply { position: relative; margin: 25px 0 -25px; padding: 25px 25px 25px 50px; background-color:#f6f6f6; }
 .xans-board-commentreply::before { content: ''; position: absolute; left: 20px; top: 25px; width: 10px; height: 12px; border-width: 0 0 1px 1px; border-style: solid; border-color: #a7a7a7; }
 .xans-board-commentreply legend { visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0; }
@@ -102,13 +99,18 @@
     .xans-board-commentreply,
     .xans-board-commentlist .boardComment li.replyArea { padding: 25px 16px; }
     .xans-board-commentlist .boardComment li.replyArea div.commentTop {margin-left: 20px; }
+
     .xans-board-commentlist .boardComment li .formGroup button,
     .xans-board-commentlist .boardComment li .formGroup .button {margin: 0 16px 5px; }
     span.ec-base-help { display: block; }
+
     .xans-board-commentreply textarea { width: calc(100% - 36px); margin-left: 36px; }
+
     .xans-board-commentlist .boardComment li div.commentTop {margin: 0 16px; }
     .xans-board-commentlist .boardComment li .comment {margin: 0 16px; }
+
     .xans-board-commentreply .input { position: relative; border: 0; background: none; }
+
     .xans-board-commentreply .inside { display: flex; margin-left: 36px; border-width: 0 1px 1px 1px; border-style: solid; border-color: #a7a7a7; border-top: 1px solid #e0e0e0; background: #fff; }
     .xans-board-commentreply .inside span { flex: 1; display: inline-block; }
     .xans-board-commentreply .inside span:first-child {margin-right: 10px; }
@@ -154,10 +156,6 @@
     .xans-board-commentform .inside input[type=password] { margin-left: 0; width: 100%; }
     .xans-board-commentform .outside { display: flex; align-items: center; margin: 10px 0; height: 45px;}
     .xans-board-commentform .submit {top: auto; right: 0; }
-	.xans-board-commentwrite.commentwrite-all .inputTypeText {width:100px;}
-	.xans-board-commentwrite.commentwrite-all .view {padding:0;text-align:right;}
-	.xans-board-commentwrite.commentwrite-all .view [class^="btn"] {position:relative;margin-top:10px;}
-
 }
 
 /********************* PC *********************/

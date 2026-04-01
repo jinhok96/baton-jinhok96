@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section" module="board_ReadPackage_4">
+<div module="board_ReadPackage_4">
     <!--@css(/css/module/board/readPackage.css)-->
     <!--@js(/js/module/board/readPackage.js)-->
     <div module="board_title_4">
@@ -7,14 +7,13 @@
             <span>현재 위치</span>
             <ol>
                 <li><a href="/">홈</a></li>
-                <li><a href="#">게시판</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
                 <li title="현재 위치"><strong>{$board_name}</strong></li>
             </ol>
         </div>
 
         <div class="titleArea">
             <h2>{$board_title} {$board_adult_icon}</h2>
-            <p>{$board_info}</p>
         </div>
     </div>
 
@@ -23,6 +22,7 @@
             <a href="{$link_product_detail}"><img id="{$product_img_id}" src="{$product_img}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" alt=""/></a>
         </p>
         <div class="information">
+            {$product_icon}
             <h3><a href="/product/detail.html{$param_product}" id="{$product_name_link_id}">{$product_name}</a></h3>
             <p class="price">{$product_price} {$product_tax_type_text}</p>
             <p class="button">
@@ -33,14 +33,14 @@
         </div>
     </div>
 
-    <div module="board_read_4" class="{$block_target_class}" {$block_data_attr}>
+    <div module="board_read_4">
         <!--
             $login_page_url = /member/login.html
             $deny_access_url = /board/product/list.html
         -->
         <div class="ec-base-table typeWrite">
             <div class="head">
-                <h3 class="{$block_content_class}">{$subject}</h3>
+                <h3>{$subject}</h3>
                 <div class="description">
                     <span class="name">{$member_icon} {$writer} <span class="{$config.display_ip|display}">(ip:{$ip})</span> {$admin_mileage}</span>
                     <ul class="etcArea">
@@ -65,15 +65,9 @@
                 <span class="ec-base-help txtInfo">삭제하려면 비밀번호를 입력하세요.</span>
             </div>
             <div class="attach {$config.use_attach|display}">{$attach_file}</div>
-			<div class="detail {$block_content_class}">{$content_image}{$content}</div>
-			<div class="ec-base-button report-button">
-				<span class="gRight">
-					<a href="#none" class="btnNormalFix sizeS {$is_report_display|display}" onclick="{$board_report_display}">신고</a>
-					<a href="#none" class="btnNormalFix sizeS {$block_request_btn}" onclick="{$block_action}">차단</a>
-					<a href="#none" class="btnNormalFix sizeS {$unblock_request_btn}" onclick="{$unblock_action}">차단해제</a>
-				</span>
-			</div>
-			<!--@import(/board/report_popup.html)-->
+            <div class="detail">
+                {$content_image}{$content}
+            </div>
         </div>
         <div class="ec-base-button gBottom gBreak">
             <span class="gLeft">
@@ -94,7 +88,7 @@
     </div>
 </div>
 
-<div class="section" module="board_CommentPackage_4">
+<div module="board_CommentPackage_4">
     <!--@css(/css/module/board/commentPackage.css)-->
     <div module="board_commentlist_4">
         <!--
@@ -287,7 +281,7 @@
     </div>
 </div>
 
-<div class="section" module="board_movement_4">
+<div module="board_movement_4">
     <!--@css(/css/module/board/movement.css)-->
     <ul>
         <li class="prev {$prev_display|display}">
@@ -299,7 +293,7 @@
     </ul>
 </div>
 
-<div class="section" module="board_listsgroup_4">
+<div module="board_listsgroup_4">
     <h4>관련 글 보기</h4>
     <!--@css(/css/module/board/listsgroup.css)-->
     <!--
@@ -328,23 +322,23 @@
                 </tr>
             </thead>
             <tbody class="center">
-                <tr class="{$block_target_class}" {$block_data_attr}>
+                <tr>
                     <td>{$idx}</td>
                     <td><span>{$product_name}</span></td>
                     <td class="subject left txtBreak">
                         {$icon_re}{$icon_lock}
-                        <a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}
+                        <a href="{$link_board_detail}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}
                     </td>
                     <td>{$member_icon}{$writer}</td>
                     <td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
                     <td class="{$hit_display|display}"><span class="txtNum">{$hit_count}</span></td>
                 </tr>
-                <tr class="{$block_target_class}" {$block_data_attr}>
+                <tr>
                     <td>{$idx}</td>
                     <td><span>{$product_name}</span></td>
                     <td class="subject left txtBreak">
                         {$icon_re}{$icon_lock}
-                        <a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}
+                        <a href="{$link_board_detail}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}
                     </td>
                     <td>{$member_icon}{$writer}</td>
                     <td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
@@ -356,7 +350,7 @@
 </div>
 
 <!-- Admin only -->
-<div class="section" module="board_function_4">
+<div module="board_function_4">
     <!--@css(/css/module/board/function.css)-->
     <!--
     	$success_return_url = /board/product/list.html

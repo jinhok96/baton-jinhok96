@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -20,13 +20,13 @@
                 <li><strong class="title">총 {$mileage_name}</strong> <strong class="data">{$total_mileage}</strong></li>
                 <li><strong class="title">사용가능 {$mileage_name}</strong> <strong class="data">{$avail_mileage}</strong></li>
                 <li><strong class="title">사용된 {$mileage_name}</strong> <span class="data">{$used_mileage}</span></li>
-			</ul>
-			<ul>
+			</ul>		
+			<ul>		
                 <li><strong class="title">미가용 {$mileage_name}</strong> <span class="data">{$unavail_mileage}</span></li>
                 <li><strong class="title">환불예정 {$mileage_name}</strong> <span class="data">{$refunded_mileage}</span></li>
             </ul>
         </div>
-
+		
         <div class="ec-base-tab typeNav">
             <ul class="menu">
                 <li><a href="/myshop/mileage/historyList.html">적립내역보기</a></li>
@@ -100,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            <p class="ec-base-prdEmpty {$display_unavail_none|display}"><!--@import(/svg/icon-empty.html)-->{$mileage_name} 내역이 없습니다.</p>
+            <p class="ec-base-prdEmpty {$display_unavail_none|display}">{$mileage_name} 내역이 없습니다.</p>
         </div>
     </div>
 
@@ -134,4 +134,4 @@
         </div>
     </div>
     <!--@import(/myshop/myshop_main.html)-->
-</div>
+</div>  

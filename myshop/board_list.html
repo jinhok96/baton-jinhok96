@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -62,10 +62,10 @@
                 </tr>
             </tbody>
             </table>
+            <p class="message {$nodata_display|display}">게시물이 없습니다.</p>
         </div>
-		<div class="myshop_boardlist_empty"><!--@import(/svg/icon-empty.html)-->게시물이 없습니다.</div>
     </div>
-
+    
     <div module="myshop_boardlistSearch">
         <!--@css(/css/module/myshop/boardlistSearch.css)-->
         <fieldset class="boardSearch">
@@ -85,6 +85,6 @@
         </ol>
         <a href="{$param_next}">다음 페이지</a>
     </div>
-
+    
     <!--@import(/myshop/myshop_main.html)-->
-</div>
+</div>    

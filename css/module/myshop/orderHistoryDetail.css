@@ -45,41 +45,6 @@
 .xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody td.left{border-left:0}
 .xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody + tbody{border-top:1px solid #dfdfdf}
 
-/* Alert */
-.xans-myshop-orderhistorydetail .alert {  position:relative; display:flex; align-items:center; gap:2px; background-color:#f9f9f9; padding:16px 16px 16px 38px; }
-.xans-myshop-orderhistorydetail .alert:before { content:''; position:absolute; top:16px; left:16px; background:url(//img.echosting.cafe24.com/skin/base/common/ico_exclamation.svg) center 2px no-repeat; height:20px; width:20px; }
-.xans-myshop-orderhistorydetail .alert .content { flex:1; display:flex; flex-direction:column; gap:4px; color:#444b59; font-size:13px; letter-spacing:-0.5px; line-height:20px; }
-.xans-myshop-orderhistorydetail .alert .content strong { color:#1b1e26; }
-.xans-myshop-orderhistorydetail .alert .button { margin:0 8px 0 32px; }
-.xans-myshop-orderhistorydetail .alert .button a { color:#616161; text-decoration:underline; }
-
-/* Add payment method */
-[class*="xans-myshop-orderhistorydetailpaymentadd"].ec-base-fold.theme1.gBottomLine.selected > .title { border:0; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"].ec-base-fold > .contents > .alert:first-child { margin-bottom:24px; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"].ec-base-fold > .contents .ec-base-table.total { border-top:2px solid #1a1a1a !important; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"].ec-base-fold.theme1 > .title h3 span { font-weight:400; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .ec-base-table tbody:not(:last-child) tr:last-child th,
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .ec-base-table tbody:not(:last-child) tr:last-child td { border-bottom:1px solid #1a1a1a !important; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .payMethod,
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .payMethod .row { display:flex; flex-direction:column; gap:4px; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .payMethod .row + .row { margin-top:12px; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .payMethod .data .txtInfo { margin-top:4px; font-size:12px; line-height:18px; color:#6d6d6d; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .payMethod select { max-width:421px; width:100%; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .payMethod .ec-base-button { display:flex; gap:8px; margin:0; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .payMethod .ec-base-button a { flex:1; margin:0; width:135px; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .payMethod a.sizeS { padding:10px 20px; height:32px; font-size:12px; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .payMethod + .gLabel { margin:16px 0; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .gLabel .txt a { text-decoration:underline; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .productList > ul > li { display:flex; flex-direction:column; gap:4px; box-sizing:border-box; line-height:20px; padding:20px; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .productList > ul > li > * { color:#474747; padding:0 !important; text-align:left !important; width:auto !important; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .productList .option { color:#6d6d6d; margin-top:2px; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .productList .quantity { margin-top:4px; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .productList .price { color:#000; }
-[class*="xans-myshop-orderhistorydetailpaymentadd"] .txtOrange { color:#e93425; }
-
-#addPayment { margin-top:-100px; padding-top:130px; }
-
-
 /* layer */
 .xans-myshop-orderhistorydetail .totalDetail { display:none;}
 .xans-myshop-orderhistorydetail .totalDetail .content p { margin:5px 0 20px; font-size:16px; font-weight:bold; text-align:right; }
@@ -96,10 +61,6 @@
     .colOrder { width:140px; }
 	.xans-myshop-orderhistorydetail .customer { padding:24px 16px; }
     .xans-myshop-orderhistorydetail .totalDetail { top:50% !important; left:0 !important; }
-
-    #addPayment { margin-top:-30px; padding-top:60px; }
-    .xans-myshop-orderhistorydetail .alert { flex-direction:column; align-items:flex-start; }
-    .xans-myshop-orderhistorydetail .alert .button { margin:8px 0; }
 }
 /********************* PC *********************/
 @media all and (min-width:1025px) {

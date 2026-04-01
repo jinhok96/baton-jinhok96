@@ -1,5 +1,5 @@
 #popup { width:600px; }
-.xans-myshop-ordersearchproductform .ec-base-table select { max-width:95%; }
+.xans-myshop-ordersearchproductform .ec-base-table select,
 .xans-myshop-ordersearchproductform .ec-base-table input { width:100%; }
 .xans-myshop-ordersearchproductform .btnSearch { margin:10px 0 20px; text-align:center; }
 .xans-myshop-ordersearchproductform .resultList { border-top:1px solid #000; }

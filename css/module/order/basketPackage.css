@@ -2,6 +2,7 @@
 .xans-order-basketpackage .title.subTitle:after { display:none; }
 .xans-order-basketpackage .title.subTitle h4 { display:block; padding:0 0 0 15px; line-height:55px; font-size:13px; font-weight:normal; background-color:#f6f6f6; }
 .xans-order-basketpackage .summary { padding:20px; border-bottom:1px solid #e5e5e5; background:#f9f9f9; }
+.xans-order-basketpackage .summary .title { margin:0 0 10px; }
 .xans-order-basketpackage .summary .title h5 { font-size:13px; font-weight:normal; }
 .xans-order-basketpackage .summary .contents { line-height:20px; }
 .xans-order-basketpackage .summary .total { display:block; margin:5px 0 0; }

@@ -14,7 +14,7 @@
     .xans-myshop-asyncbankbook li:not(:last-child):after { top:0; height:100%; }
     .xans-myshop-asyncbankbook .user { display:flex; text-align:left; padding:5px 16px; }
     .xans-myshop-asyncbankbook .user__thumb { width:42px; height:42px; margin:0 16px 0 0; overflow:hidden; border-radius:50%; }
-    .xans-myshop-asyncbankbook .user__info { font-size:15px; font-weight:bold; }
+    .xans-myshop-asyncbankbook .user__info { flex:1; font-size:15px; font-weight:bold; }
     .xans-myshop-asyncbankbook .user__data { display:block; margin:8px 0 0; font-size:14px; color:#6d6d6d; font-weight:normal; }
     .xans-myshop-asyncbankbook .thumb { width:30px; height:30px; margin:0 auto 10px; }
     .xans-myshop-asyncbankbook .data { display:block; font-size:14px; line-height:1; font-weight:bold; }

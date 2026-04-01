@@ -3,8 +3,8 @@
 .xans-product-restocksms .information .optionWrap { margin:20px 0 0; }
 .xans-product-restocksms .information .optionWrap ul li { overflow:hidden; padding:3px 0; }
 .xans-product-restocksms .information .optionWrap ul li:after { content:""; display:block; clear:both; }
-.xans-product-restocksms .information .optionWrap ul li .name { display:block;margin-bottom: 4px; }
-.xans-product-restocksms .information .optionWrap ul li .option select { width: 100%; }
+.xans-product-restocksms .information .optionWrap ul li .name { float:left; width:50px; margin:0 10px 0 0; }
+.xans-product-restocksms .information .optionWrap ul li .option { float:left; }
 .xans-product-restocksms .information .optionWrap ul li .option .value { color:#767479; word-break:break-all; }
 .xans-product-restocksms .information .optionWrap ul li .option .value .ec-product-value { color:#363437; }
 .xans-product-restocksms .information .optionWrap ul li .option .ec-product-button li { position:relative; overflow:hidden; display:inline-block; margin:0 5px 3px 0; vertical-align:top; border:1px solid #d7d7d7; background:#fff; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
@@ -38,16 +38,8 @@
 
 .xans-product-restocksms .smsArea { margin:17px 0 0; color:#353535; line-height:18px; }
 .xans-product-restocksms .smsArea p { margin:10px 0; }
+.xans-product-restocksms .smsArea strong { color:#000; }
 .xans-product-restocksms .smsArea .contact { padding:7px 10px; border-radius:5px; background:#f1f1f1; }
+
 .xans-product-restocksms .smsArea .contact strong { color:#2e2e2e; }
-.xans-product-restocksms .smsArea .contact p span { font-size: 11px; }
 .xans-product-restocksms .smsArea input[type=text] { width:60px; }
-.xans-product-restocksms .smsArea .info { margin: 10px 0;}
-.xans-product-restocksms .smsArea .info li { position:relative; padding-left: 12px; }
-.xans-product-restocksms .smsArea .info li:before { content: '-'; position: absolute; top:4; left: 0; }
-
-/** 오우이_style 220303 **/
-.ec-base-layer .header {margin-left:10px !important;margin-right:10px !important;}
-.ec-base-layer > .content {padding-left:10px !important;padding-right:10px !important;}
-.xans-product-restocksms .information .optionWrap ul li .name {width:auto;}
-

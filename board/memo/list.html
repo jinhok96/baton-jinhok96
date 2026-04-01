@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div module="board_MemoPackage_1001" class="section">
+<div module="board_MemoPackage_1001">
     <!--@css(/css/module/board/memoPackage_1001.css)-->
     <div module="board_title_1001">
         <div class="path">
@@ -13,7 +13,6 @@
 
         <div class="titleArea">
             <h2>{$board_title} {$board_adult_icon}</h2>
-            <p>{$board_info}</p>
         </div>
     </div>
 
@@ -188,7 +187,7 @@
     </div>
 </div>
 
-<div module="board_paging_1001" class="section ec-base-paginate typeList">
+<div module="board_paging_1001" class="ec-base-paginate typeList">
     <a href="{$param_prev}">이전 페이지</a>
     <ol>
         <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>

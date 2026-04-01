@@ -35,7 +35,7 @@ $(function(){
         if (iCheckPrdCnt > 0) {
             var sTotalPrice = SHOP_PRICE_FORMAT.toShopPrice(iSumPrice);
             $('#checked_order_count').html('<strong>' + sprintf(__('%s'),iCheckPrdCnt) + '</strong>' +'개 상품선택').css('padding-bottom','5px');
-            $('#checked_order_price').html('결제예정금액 <strong><em><span id="checked_total_order_price">'+sTotalPrice+'</span></em></strong>').css('padding-bottom','5px');
+            $('#checked_order_price').html('결제예정금액 <strong><em>'+sTotalPrice+'</em></strong>').css('padding-bottom','5px');
 
             var sPriceRef = SHOP_PRICE_FORMAT.shopPriceToSubPrice(iSumPrice);
             if (sPriceRef != '') $('#checked_order_price').find('strong').append(sPriceRef);
@@ -63,39 +63,3 @@ function selBasketDel(id) {
     $('[id="'+id+'"]').prop('checked', true);
     Basket.deleteBasket();
 }
-
-//pc 일때 cart-total 스크롤시 오른쪽 고정 스크립트
-function handleScrollEvent() {        
-    var cartEl = document.querySelector('.cart-container .cart-total');
-    if(cartEl){
-        var marginNum = 54;
-
-        if (window.innerWidth >= 1024) {
-            var scrollPosition = (window.scrollY-marginNum);
-            var divElement = document.querySelector('.xans-order-basketpackage');
-
-            if(divElement){
-                var divY = divElement.getBoundingClientRect().top;                
-                var divHeight = (divElement.offsetHeight-marginNum);
-                var cul = Math.ceil((scrollPosition+divY)-marginNum);
-                
-                if(scrollPosition > cul){
-                    if(divHeight > scrollPosition){
-                        cartEl.style.top = (scrollPosition-cul)+'px';
-                    }else {
-                        cartEl.style.top = (divHeight-cul)+'px';
-                    }
-                }else{
-                    cartEl.style.top = '';
-                }
-            }
-        }else{
-            cartEl.style.top = '';
-        }
-    }
-}
-
-handleScrollEvent();
-
-window.addEventListener('scroll', handleScrollEvent);
-window.addEventListener('resize', handleScrollEvent);

@@ -3,7 +3,7 @@
     /* myshop layout */
     .xans-myshop-main { display:none; }
     .myshopMain .xans-myshop-main { display:block; }
-
+    
     .xans-myshop-main .subTitle { padding:27px 16px 12px; background:#f6f6f6; }
     .xans-myshop-main h3 { color:#000; color:var(--font-color-heading); font-size:16px; }
     .xans-myshop-main .menu { border-top:1px solid #000; }
@@ -19,7 +19,7 @@
     /* myshop layout */
     .myshopArea { position:relative; margin:39px 0 0; padding:0 0 0 210px; }
     .xans-myshop-main { position:absolute; left:0; top:0; width:200px; }
-
+    
     .xans-myshop-main .title {  font-size:30px; }
     .xans-myshop-main .subTitle { margin:50px 0 0; }
     .xans-myshop-main h3 { color:#000; color:var(--font-color-heading); font-size:18px; font-weight:normal; font-weight:bold; }

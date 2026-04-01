@@ -8,7 +8,6 @@
 .xans-myshop-asyncbenefit .benefit .user .user__info { display:inline-block; vertical-align: middle; margin:0 0 0 15px; }
 .xans-myshop-asyncbenefit .benefit .user .user__info .title { display:inline-block; margin:0 0 5px 0; font-size:15px; font-weight:bold; color:var(--font-color-primary); }
 
-
 .xans-myshop-asyncbenefit .thumbnail img { max-width:70px; max-height:70px; }
 .xans-myshop-asyncbenefit .invite > strong { display:block; }
 .xans-myshop-asyncbenefit .invite .copy { margin:8px 0 0; }
@@ -21,7 +20,7 @@
     .xans-myshop-asyncbenefit .benefit { padding:15px; }
     .xans-myshop-asyncbenefit .benefit .user,
     .xans-myshop-asyncbenefit .benefit .description { padding:15px 0; }
-
+    .xans-myshop-asyncbenefit .benefit .user .user__info { width:calc(100% - 62px); }
 }
 
 /********************* PC *********************/

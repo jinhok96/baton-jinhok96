@@ -2,5 +2,6 @@ User-agent: *
 Disallow: /admin
 Disallow: /api
 Allow: /
-User-agent: bingbot
-Crawl-delay: 10
+
+#Sitemap
+Sitemap: https://ecudemo199138.cafe24.com/sitemap.xml

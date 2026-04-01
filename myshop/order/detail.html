@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -22,16 +22,6 @@
             $issue_cash_url = /myshop/order/issue/cash.html
             $select_gift_url = /order/gift_select.html
          -->
-
-        <div class="alert {$addition_payment_unpaid_display|display}">
-            <div class="content">
-                <strong>추가결제가 필요한 주문이 {$additional_payment_unpaid_count}건 있어요.</strong>
-                <p>결제가 완료되어야 배송이 진행되니, 내역을 꼭 확인해 주세요.</p>
-            </div>
-            <div class="button">
-                <a href="#addPayment" class="txtLink">추가결제 내역 보기</a>
-            </div>
-        </div>
 
         <div class="ec-base-fold theme1 gBottomLine selected eToggle">
         	<div class="title">
@@ -58,7 +48,7 @@
                                 <th scope="row">주문자</th>
                                 <td>{$order.name}</td>
                             </tr>
-                            <tr class="{$order_state_display|display}">
+                            <tr>
                                 <th scope="row">주문처리상태</th>
                                 <td>
                                     {$order.state}
@@ -70,7 +60,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="ec-base-fold theme1 gBottomLine selected eToggle">
         	<div class="title">
             	<h3>결제정보</h3>
@@ -101,8 +91,8 @@
                                         <ul class="ec-base-desc typeDot gLarge rightDD">
                                             <li><strong class="term">상품금액</strong><span class="desc">{$total.price_unit_head}{$total.total_product_price}{$total.price_unit_tail}</span></li>
                                             <li class="{$total.total_vat_price_display|display}"><strong class="term">부가세</strong><span class="desc">{$total.price_unit_head}{$total.total_vat_price}{$total.price_unit_tail}</span></li>
-                                            <li class="{$delivery.shipping_fee_display|display}"><strong class="term">배송비</strong><span class="desc">{$total.price_unit_head}{$total.total_ship_fee}{$total.price_unit_tail}</span></li>
-                                            <li class="{$delivery.shipping_info_display|display}"><strong class="term">지역별 배송비</strong><span class="desc">{$total.price_unit_head}{$total.total_local_ship_fee}{$total.price_unit_tail}</span></li>
+                                            <li><strong class="term">배송비</strong><span class="desc">{$total.price_unit_head}{$total.total_ship_fee}{$total.price_unit_tail}</span></li>
+                                            <li><strong class="term">지역별 배송비</strong><span class="desc">{$total.price_unit_head}{$total.total_local_ship_fee}{$total.price_unit_tail}</span></li>
                                         </ul>
                                     </div>
                                     <a href="#none" class="btnClose" onclick="{$total.total_order_layer_off}"></a>
@@ -216,7 +206,6 @@
                                 <p>
                                     {$payment.paymethod_detail} <a target="_blank" href="{$payment.bank_url}" class="btnNormal sizeS {$payment.display_banking|display}">인터넷뱅킹 바로가기</a>
                                     <a target="_blank" href="{$payment.pay_extra_url}" class="btnNormal sizeS {$payment.paymenturl_display|display}" id="{$payment.btn_payment_link_id}">결제사이트 바로가기</a>
-                                    <a href="#none" class="btnNormal sizeS {$payment.landingpayment_management_display|display}" onclick="{$payment.landingpayment_management}">관리</a>
                                 </p>
                             </td>
                         </tr>
@@ -255,9 +244,8 @@
                                     <ul class="info">
                                         <li class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></li>
                                         <li class="{$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></li>
-                                        <li class="{$shipping_type_display|display}">배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
+                                        <li>배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
                                         <li class="{$card_installment_display|display}">무이자할부 상품</li>
-                                        <li class="option {$service_period_display|display}">[서비스 이용 가능기간 : {$service_period_start} ~ {$service_period_end}]</li>
                                     </ul>
                                 </div>
                             </div>
@@ -272,8 +260,6 @@
                                     <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                                    <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                                    <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                                 </div>
                             </div>
                         </div>
@@ -296,13 +282,12 @@
                                     <ul class="info">
                                         <li class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></li>
                                         <li class="{$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></li>
-                                        <li class="{$shipping_type_display|display}">배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
+                                        <li>배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
                                         <li class="{$card_installment_display|display}">무이자할부 상품</li>
-                                        <li class="option {$service_period_display|display}">[서비스 이용 가능기간 : {$service_period_start} ~ {$service_period_end}]</li>
                                     </ul>
                                 </div>
                             </div>
-
+                            
                             <div class="prdFoot" title="주문처리상태">
                                 <div class="gLeft">
                                     <span class="txtStatus">{$status}</span>
@@ -314,13 +299,11 @@
                                     <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                                    <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                                    <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="summary {$amount_info_display|display}">
+                    <div class="summary">
                         <div class="title">
                             <h4>[기본배송]</h4>
                         </div>
@@ -354,9 +337,8 @@
                                     <ul class="info">
                                         <li class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></li>
                                         <li class="{$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></li>
-                                        <li class="{$shipping_type_display|display}">배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
+                                        <li>배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
                                         <li class="{$card_installment_display|display}">무이자할부 상품</li>
-                                        <li class="option {$service_period_display|display}">[서비스 이용 가능기간 : {$service_period_start} ~ {$service_period_end}]</li>
                                     </ul>
                                 </div>
                             </div>
@@ -371,8 +353,6 @@
                                     <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                                    <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                                    <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                                 </div>
                             </div>
                         </div>
@@ -395,9 +375,8 @@
                                     <ul class="info">
                                         <li class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></li>
                                         <li class="{$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></li>
-                                        <li class="{$shipping_type_display|display}">배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
+                                        <li>배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
                                         <li class="{$card_installment_display|display}">무이자할부 상품</li>
-                                        <li class="option {$service_period_display|display}">[서비스 이용 가능기간 : {$service_period_start} ~ {$service_period_end}]</li>
                                     </ul>
                                 </div>
                             </div>
@@ -412,13 +391,11 @@
                                     <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                                    <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                                    <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="summary {$amount_info_display|display}">
+                    <div class="summary">
                         <div class="title">
                             <h4>[개별배송]</h4>
                         </div>
@@ -452,9 +429,8 @@
                                     <ul class="info">
                                         <li class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></li>
                                         <li class="{$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></li>
-                                        <li class="{$shipping_type_display|display}">배송 : {$type_all}</li>
+                                        <li>배송 : {$type_all}</li>
                                         <li class="{$card_installment_display|display}">무이자할부 상품</li>
-                                        <li class="option {$service_period_display|display}">[서비스 이용 가능기간 : {$service_period_start} ~ {$service_period_end}]</li>
                                     </ul>
                                 </div>
                             </div>
@@ -468,8 +444,6 @@
                                     <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                                    <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                                    <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                                 </div>
                             </div>
                         </div>
@@ -492,9 +466,8 @@
                                     <ul class="info">
                                         <li class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></li>
                                         <li class="{$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></li>
-                                        <li class="{$shipping_type_display|display}">배송 : {$type_all}</li>
+                                        <li>배송 : {$type_all}</li>
                                         <li class="{$card_installment_display|display}">무이자할부 상품</li>
-                                        <li class="option {$service_period_display|display}">[서비스 이용 가능기간 : {$service_period_start} ~ {$service_period_end}]</li>
                                     </ul>
                                 </div>
                             </div>
@@ -508,13 +481,11 @@
                                     <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                                    <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                                    <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="summary {$amount_info_display|display}">
+                    <div class="summary">
                         <div class="title">
                             <h4>[해외배송]</h4>
                         </div>
@@ -542,7 +513,7 @@
                                     <ul class="info">
                                         <li class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></li>
                                         <li class="{$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></li>
-                                        <li class="{$shipping_type_display|display}">배송 : {$type_all}</li>
+                                        <li>배송 : {$type_all}</li>
                                         <li>수량 : {$quantity}개</li>
                                     </ul>
                                 </div>
@@ -556,8 +527,6 @@
                                     <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                                    <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                                    <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                                 </div>
                             </div>
                         </div>
@@ -575,7 +544,7 @@
                                     <ul class="info">
                                         <li class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></li>
                                         <li class="{$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></li>
-                                        <li class="{$shipping_type_display|display}">배송 : {$type_all}</li>
+                                        <li>배송 : {$type_all}</li>
                                         <li>수량 : {$quantity}개</li>
                                     </ul>
                                 </div>
@@ -589,12 +558,10 @@
                                     <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                                     <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                                    <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                                    <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="summary {$amount_info_display|display}">
+                        <div class="summary">
                             <div class="title">
                                 <h4>[사은품]</h4>
                             </div>
@@ -612,7 +579,7 @@
                         <button type="submit" class="btnNormal sizeS {$cancel_display|display}">주문취소</button>
                     </span>
                 </div>
-            </div>
+            </div>    
         </div>
 
         <div class="ec-base-fold theme1 gBottomLine selected eToggle {$final_payed_display|display}">
@@ -665,7 +632,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="ec-base-fold theme1 gBottomLine selected eToggle {$cs_info_display|display}">
             <div class="title">
                 <h3>취소/교환/반품 신청 정보</h3>
@@ -861,7 +828,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div>    
         </div>
 
         <div class="ec-base-fold theme1 gBottomLine selected eToggle" module="Myshop_OrderHistoryDetailRefundNew">
@@ -1068,7 +1035,7 @@
                         <tr class="{$cancel_form_display|display}">
                             <th scope="row">{$refund_amount_title}</th>
                             <td colspan="3" class="total">
-                                상품금액 {$product_amount_org}
+                                상품금액 {$product_amount_org} 
                                 <span class="amount">{$additional_amount}</span>
                                 = 합계 : <strong>{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span class="{$payment_amount_ref_display|display}">{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span></strong>
                             </td>
@@ -1111,32 +1078,36 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div>    
         </div>
 
-        <div id="addPayment" class="ec-base-fold theme1 gBottomLine selected eToggle" module="Myshop_OrderHistoryDetailPaymentAddUnpaid">
+        <div class="ec-base-fold theme1 gBottomLine selected eToggle" module="Myshop_OrderHistoryDetailPaymentAdd">
             <div class="title">
-                <h3>추가결제 대기</h3>
+                <h3>추가결제</h3>
             </div>
             <div class="contents">
-                <div class="alert">
-                    <i class="icon"></i>
-                    <div class="content">
-                        <strong>결제를 기다리는 주문이 있어요.</strong>
-                        <p>결제가 완료되면 바로 배송 준비를 시작할게요.</p>
-                    </div>
-                </div>
                 <div class="ec-base-table total">
                     <table border="1" >
                         <caption>추가결제</caption>
                         <colgroup>
                             <col style="width:170px" />
                             <col style="width:auto" />
+                            <col style="width:120px" class="RW" />
+                            <col style="width:150px" class="RW" />
                         </colgroup>
+                        <thead class="RW">
+                        <tr class="ec-payment-add-header">
+                            <th scope="col" class="left">구분</th>
+                            <th scope="col">상품정보</th>
+                            <th scope="col">수량</th>
+                            <th scope="col">상품구매금액</th>
+                        </tr>
+                        </thead>
                         <tbody>
                         <tr class="{$cancel_product_class} {$cancel_product_display|display}">
-                            <th scope="row">{$sType}</th>
-                            <td class="productList">
+                            <th scope="row" class="RW">{$sType}</th>
+                            <td class="productList" colspan="3">
+                                <h4 class="subTitle RTMB">{$sType}</h4>
                                 <ul module="Myshop_cancelProduct">
                                     <li>
                                         <div class="product">
@@ -1146,8 +1117,8 @@
                                                 <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
                                             </ul>
                                         </div>
-                                        <p class="quantity">{$quantity}<span>개</span></p>
-                                        <p class="price"><strong>{$product_price}</strong> (상품구매금액)</p>
+                                        <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                                        <p class="price RW">{$product_price}</p>
                                     </li>
                                     <li>
                                         <div class="product">
@@ -1157,29 +1128,29 @@
                                                 <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
                                             </ul>
                                         </div>
-                                        <p class="quantity">{$quantity}<span>개</span></p>
-                                        <p class="price"><strong>{$product_price}</strong> (상품구매금액)</p>
+                                        <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                                        <p class="price RW">{$product_price}</p>
                                     </li>
                                 </ul>
                             </td>
                         </tr>
                         <tr class="{$return_shipfee_title_class} {$return_shipfee_title_display|display}">
                             <th scope="row">{$shipfee_title_label}</th>
-                            <td>
+                            <td colspan="3">
                                 {$shipfee_title}
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">결제금액</th>
-                            <td class="total"><strong class="txtEm">{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail} <span class="{$total_payment_price_ref_display|display}">{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span></strong></td>
+                            <td colspan="3" class="total"><strong class="txtEm">{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail} <span class="{$total_payment_price_ref_display|display}">{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span></strong></td>
                         </tr>
                         <tr class="{$payer_name_area_display|display}">
                             <th scope="row">결제(입금)자</th>
-                            <td>{$payer_name} </td>
+                            <td colspan="3">{$payer_name} </td>
                         </tr>
                         <tr>
                             <th scope="row">결제수단</th>
-                            <td>
+                            <td colspan="3">
                                 {$paymethod} {$paymethod_detail}<span class="{$paid_display|display}">(결제완료)</span><span class="{$unpaid_display|display}">(<span class="txtWarn">결제취소</span>)</span>
                                 <ul class="{$payment_date_area_display|display}">
                                     <li class="{$pay_date_display|display}">결제일자 : {$pay_date}</li>
@@ -1190,8 +1161,9 @@
                         </tbody>
                         <tbody>
                         <tr class="{$cancel_product_class} {$cancel_product_display|display}">
-                            <th scope="row">{$sType}</th>
-                            <td class="productList">
+                            <th scope="row" class="RW">{$sType}</th>
+                            <td class="productList" colspan="3">
+                                <h4 class="subTitle RTMB">{$sType}</h4>
                                 <ul module="Myshop_cancelProduct">
                                     <li>
                                         <div class="product">
@@ -1201,8 +1173,8 @@
                                                 <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
                                             </ul>
                                         </div>
-                                        <p class="quantity">{$quantity}<span>개</span></p>
-                                        <p class="price"><strong>{$product_price}</strong> (상품구매금액)</p>
+                                        <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                                        <p class="price RW">{$product_price}</p>
                                     </li>
                                     <li>
                                         <div class="product">
@@ -1212,29 +1184,29 @@
                                                 <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
                                             </ul>
                                         </div>
-                                        <p class="quantity">{$quantity}<span>개</span></p>
-                                        <p class="price"><strong>{$product_price}</strong> (상품구매금액)</p>
+                                        <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                                        <p class="price RW">{$product_price}</p>
                                     </li>
                                 </ul>
                             </td>
                         </tr>
                         <tr class="{$return_shipfee_title_class} {$return_shipfee_title_display|display}">
                             <th scope="row">{$shipfee_title_label}</th>
-                            <td>
+                            <td colspan="3">
                                 {$shipfee_title}
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">결제금액</th>
-                            <td class="total"><strong class="txtEm">{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail} <span class="{$total_payment_price_ref_display|display}">{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span></strong></td>
+                            <td colspan="3" class="total"><strong class="txtEm">{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail} <span class="{$total_payment_price_ref_display|display}">{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span></strong></td>
                         </tr>
                         <tr class="{$payer_name_area_display|display}">
                             <th scope="row">결제(입금)자</th>
-                            <td>{$payer_name} </td>
+                            <td colspan="3">{$payer_name} </td>
                         </tr>
                         <tr>
                             <th scope="row">결제수단</th>
-                            <td>
+                            <td colspan="3">
                                 {$paymethod} {$paymethod_detail}<span class="{$paid_display|display}">(결제완료)</span><span class="{$unpaid_display|display}">(<span class="txtWarn">결제취소</span>)</span>
                                 <ul class="{$payment_date_area_display|display}">
                                     <li class="{$pay_date_display|display}">결제일자 : {$pay_date}</li>
@@ -1245,134 +1217,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-
-        <div class="ec-base-fold theme1 gBottomLine selected eToggle" module="Myshop_OrderHistoryDetailPaymentAddPaid">
-            <div class="title">
-                <h3>추가결제 완료</h3>
-            </div>
-            <div class="contents">
-                <div class="ec-base-table total">
-                    <table border="1" >
-                        <caption>추가결제</caption>
-                        <colgroup>
-                            <col style="width:170px" />
-                            <col style="width:auto" />
-                        </colgroup>
-                        <tbody>
-                        <tr class="{$cancel_product_class} {$cancel_product_display|display}">
-                            <th scope="row">{$sType}</th>
-                            <td class="productList">
-                                <ul module="Myshop_cancelProduct">
-                                    <li>
-                                        <div class="product">
-                                            {$product_name} <span class="option">{$option_str}</span>
-                                            <ul class="option" module="Myshop_optionSet">
-                                                <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                                                <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                                            </ul>
-                                        </div>
-                                        <p class="quantity">{$quantity}<span>개</span></p>
-                                        <p class="price"><strong>{$product_price}</strong> (상품구매금액)</p>
-                                    </li>
-                                    <li>
-                                        <div class="product">
-                                            {$product_name} <span class="option">{$option_str}</span>
-                                            <ul class="option" module="Myshop_optionSet">
-                                                <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                                                <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                                            </ul>
-                                        </div>
-                                        <p class="quantity">{$quantity}<span>개</span></p>
-                                        <p class="price"><strong>{$product_price}</strong> (상품구매금액)</p>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr class="{$return_shipfee_title_class} {$return_shipfee_title_display|display}">
-                            <th scope="row">{$shipfee_title_label}</th>
-                            <td>
-                                {$shipfee_title}
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">결제금액</th>
-                            <td class="total"><strong class="txtEm">{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail} <span class="{$total_payment_price_ref_display|display}">{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span></strong></td>
-                        </tr>
-                        <tr class="{$payer_name_area_display|display}">
-                            <th scope="row">결제(입금)자</th>
-                            <td>{$payer_name} </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">결제수단</th>
-                            <td>
-                                {$paymethod} {$paymethod_detail}<span class="{$paid_display|display}">(결제완료)</span><span class="{$unpaid_display|display}">(<span class="txtWarn">결제취소</span>)</span>
-                                <ul class="{$payment_date_area_display|display}">
-                                    <li class="{$pay_date_display|display}">결제일자 : {$pay_date}</li>
-                                    <li class="{$canel_date_display|display}">취소일자 : <span class="txtWarn">{$canel_date}</span></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        </tbody>
-                        <tbody>
-                        <tr class="{$cancel_product_class} {$cancel_product_display|display}">
-                            <th scope="row">{$sType}</th>
-                            <td class="productList">
-                                <ul module="Myshop_cancelProduct">
-                                    <li>
-                                        <div class="product">
-                                            {$product_name} <span class="option">{$option_str}</span>
-                                            <ul class="option" module="Myshop_optionSet">
-                                                <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                                                <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                                            </ul>
-                                        </div>
-                                        <p class="quantity">{$quantity}<span>개</span></p>
-                                        <p class="price"><strong>{$product_price}</strong> (상품구매금액)</p>
-                                    </li>
-                                    <li>
-                                        <div class="product">
-                                            {$product_name} <span class="option">{$option_str}</span>
-                                            <ul class="option" module="Myshop_optionSet">
-                                                <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                                                <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                                            </ul>
-                                        </div>
-                                        <p class="quantity">{$quantity}<span>개</span></p>
-                                        <p class="price"><strong>{$product_price}</strong> (상품구매금액)</p>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr class="{$return_shipfee_title_class} {$return_shipfee_title_display|display}">
-                            <th scope="row">{$shipfee_title_label}</th>
-                            <td>
-                                {$shipfee_title}
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">결제금액</th>
-                            <td class="total"><strong class="txtEm">{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail} <span class="{$total_payment_price_ref_display|display}">{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span></strong></td>
-                        </tr>
-                        <tr class="{$payer_name_area_display|display}">
-                            <th scope="row">결제(입금)자</th>
-                            <td>{$payer_name} </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">결제수단</th>
-                            <td>
-                                {$paymethod} {$paymethod_detail}<span class="{$paid_display|display}">(결제완료)</span><span class="{$unpaid_display|display}">(<span class="txtWarn">결제취소</span>)</span>
-                                <ul class="{$payment_date_area_display|display}">
-                                    <li class="{$pay_date_display|display}">결제일자 : {$pay_date}</li>
-                                    <li class="{$canel_date_display|display}">취소일자 : <span class="txtWarn">{$canel_date}</span></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            </div>    
         </div>
 
         <div class="ec-base-fold theme1 gBottomLine selected eToggle">
@@ -1580,8 +1425,8 @@
                         </tbody>
                     </table>
                 </div>
-
-            </div>
+                
+            </div>    
         </div>
 
         <div class="ec-base-fold theme1 gBottomLine selected eToggle {$ordadd.display|display}">
@@ -1739,7 +1584,7 @@
                 <a href="#none" onclick="{$action_print_store}" class="btnNormal sizeS RW {$delivery.print_store_display|display}">수령지정보 인쇄</a>
             </span>
         </div>
-
+        
         <div class="ec-base-button gBottom">
             <span class="gRight">
                 <a href="/myshop/order/list.html{$param_list}" class="btnSubmitFix sizeM">주문목록보기</a>
@@ -1776,7 +1621,7 @@
             </div>
         </div>
     </div>
-
-    <!--@import(/myshop/myshop_main.html)-->
-
-</div>
+    
+    <!--@import(/myshop/myshop_main.html)-->    
+    
+</div>    

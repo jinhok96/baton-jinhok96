@@ -22,23 +22,3 @@
     .xans-myshop-orderstate .state__order .count { font-size:30px; }
     .xans-myshop-orderstate .state__cs { display:none; }
 }
-
-
-/** 기본_style 210813 **/
-.xans-myshop-orderstate .state__cs {display:block;}
-.xans-myshop-orderstate .state {border:none;border-top:2px solid #1a1a1a;}
-.xans-myshop-orderstate .state__order .count {font-size:20px;font-weight:700;color:#1a1a1a;}
-.xans-myshop-orderstate .state__order .label {font-size:14px;color:#6a6a6a;letter-spacing:-0.02em;margin:4px 0 0;}
-.xans-myshop-orderstate .state__order li {padding-bottom:40px;}
-.xans-myshop-orderstate .state__cs {display:flex;justify-content:space-around;border:1px solid #e3e3e3;}
-.xans-myshop-orderstate .state__cs li {width:calc(100% / 3);height:56px;text-align:center;line-height:56px;border-left:1px solid #e3e3e3;}
-.xans-myshop-orderstate .state__cs li:nth-child(1) {border-left:none;}
-.xans-myshop-orderstate .state__cs li span {font-size:14px;font-weight:700;color:#1a1a1a;}
-
-@media screen and (max-width:1024px) {
-	.xans-myshop-orderstate .state__order li {padding:40px 0;position:relative;}
-	.xans-myshop-orderstate .state__order li:not(:last-child):after {content:"";width:0px;height:40px;position:absolute;border:none;border-left:1px dotted #c4c4c4;transform:translateY(-50%);top:50%;right:1px;background:#e5e5e5;}
-	.xans-myshop-orderstate .state__order li:not(:last-child) .label:after {display:none;}
-	.xans-myshop-orderstate .state__cs li {justify-content:center;padding:0;border:none;border-left:1px solid #e3e3e3;}
-	.xans-myshop-orderstate .state__cs li:nth-child(1) {border-left:1px solid #e3e3e3;}
-}

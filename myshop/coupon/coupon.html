@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -11,10 +11,10 @@
     <div class="titleArea titleArea--myshop">
         <h2>쿠폰내역</h2>
     </div>
-
+    
     <div class="{$serial_coupon_input_display|display}" module="myshop_CouponSerial">
         <!--@css(/css/module/myshop/couponSerial.css)-->
-
+        
         <div class="couponSerial">
             <!--
                 $login_page_url = /member/login.html
@@ -22,7 +22,7 @@
             <fieldset><legend>쿠폰번호 등록</legend>
                 {$form.coupon_code}
                 <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_coupon_submit}">쿠폰번호인증</a>
-                <p class="txtInfo">반드시 쇼핑몰에서 발행한 쿠폰번호만 입력해주세요.<br class="display_tablet_only">(10~35자 일련번호 "-" 제외)</p>
+                <p class="txtInfo">반드시 쇼핑몰에서 발행한 쿠폰번호만 입력해주세요. (10~35자 일련번호 "-" 제외)</p>
             </fieldset>
         </div>
     </div>
@@ -56,24 +56,24 @@
                     <tbody class="center">
                         <tr>
                             <td class="RW">{$coupon_no}</td>
-                            <td class="coupon_name"><span class="display_tablet_only">쿠폰명</span>{$coupon_name}</td>
-                            <td><span class="display_tablet_only">할인</span>{$coupon_discount}<br>{$coupon_discount_max_benefit_price}</td>
-                            <td><span class="display_tablet_only">적립</span>{$coupon_mileage}<br>{$coupon_mileage_max_benefit_price}</td>
-                            <td class="layer"><span class="display_tablet_only">쿠폰 상세보기</span>
+                            <td>{$coupon_name}</td>
+                            <td>{$coupon_discount}</td>
+                            <td>{$coupon_mileage}</td>
+                            <td class="layer center">
                                 <a href="#none">상세</a>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="5" class="contents">
+                            <td colspan="5" class="contents" title="쿠폰정보">
                                 <ul>
-                                    <li><strong>쿠폰번호</strong><span class="content">{$coupon_no}</span></li>
+                                    <li class="number"><strong>쿠폰번호</strong><span class="content">{$coupon_no}</span></li>
                                     <li><strong>구매금액</strong><span class="content">{$coupon_use_price}</span></li>
                                     <li class="{$display_paymethod|display}"><strong>결제수단</strong><span class="content">{$coupon_paymethod}</span></li>
-                                    <li><strong>쿠폰혜택</strong><span class="content">{$coupon_benefit_result} <span>{$coupon_max_benefit_price}</span></span></li>
+                                    <li><strong>쿠폰혜택</strong><span class="content">{$coupon_benefit_result}</span></li>
                                     <li><strong>할인액(률)</strong><span class="content">{$coupon_discount}</span></li>
                                     <li><strong>적립액(률)</strong><span class="content">{$coupon_mileage}</span></li>
                                     <li><strong>예치금</strong><span class="content">{$coupon_deposit}</span></li>
-                                    <li><strong>사용가능 기간</strong><span class="content">{$coupon_start_end_date}</span></li>
+                                    <li><strong>사용가능 기간</strong><span class="content">{$coupon_use_date}</span></li>
                                     <li class="gButton"><strong>쿠폰적용상품</strong><span class="content">{$coupon_use_product_icon}</span></li>
                                 </ul>
                             </td>
@@ -82,24 +82,24 @@
                     <tbody class="center">
                         <tr>
                             <td class="RW">{$coupon_no}</td>
-                            <td class="coupon_name"><span class="display_tablet_only">쿠폰명</span>{$coupon_name}</td>
-                            <td><span class="display_tablet_only">할인</span>{$coupon_discount}<br>{$coupon_discount_max_benefit_price}</td>
-                            <td><span class="display_tablet_only">적립</span>{$coupon_mileage}<br>{$coupon_mileage_max_benefit_price}</td>
-                            <td class="layer"><span class="display_tablet_only">쿠폰 상세보기</span>
+                            <td>{$coupon_name}</td>
+                            <td>{$coupon_discount}</td>
+                            <td>{$coupon_mileage}</td>
+                            <td class="layer center">
                                 <a href="#none">상세</a>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="5" class="contents" title="쿠폰정보">
                                 <ul>
-                                    <li><strong>쿠폰번호</strong><span class="content">{$coupon_no}</span></li>
+                                    <li class="number"><strong>쿠폰번호</strong><span class="content">{$coupon_no}</span></li>
                                     <li><strong>구매금액</strong><span class="content">{$coupon_use_price}</span></li>
                                     <li class="{$display_paymethod|display}"><strong>결제수단</strong><span class="content">{$coupon_paymethod}</span></li>
-                                    <li><strong>쿠폰혜택</strong><span class="content">{$coupon_benefit_result}<span>{$coupon_max_benefit_price}</span></span></li>
+                                    <li><strong>쿠폰혜택</strong><span class="content">{$coupon_benefit_result}</span></li>
                                     <li><strong>할인액(률)</strong><span class="content">{$coupon_discount}</span></li>
                                     <li><strong>적립액(률)</strong><span class="content">{$coupon_mileage}</span></li>
                                     <li><strong>예치금</strong><span class="content">{$coupon_deposit}</span></li>
-                                    <li><strong>사용가능 기간</strong><span class="content">{$coupon_start_end_date}</span></li>
+                                    <li><strong>사용가능 기간</strong><span class="content">{$coupon_use_date}</span></li>
                                     <li class="gButton"><strong>쿠폰적용상품</strong><span class="content">{$coupon_use_product_icon}</span></li>
                                 </ul>
                             </td>
@@ -109,12 +109,11 @@
             </div>
 
             <p class="ec-base-prdEmpty {$display_no_coupon_list|display}">
-				<!--@import(/svg/icon-empty.html)-->
                 보유하고 계신 쿠폰 내역이 없습니다.
             </p>
 
             <div class="ec-base-button gCenter {$coupon_mileage_display|display}">
-                <button type="button" class="btnStrong" onclick="COUPON.useCoupon()">사용하기</button>
+                <button type="button" class="btnSubmitFix sizeM" onclick="COUPON.useCoupon()">사용하기</button>
             </div>
         </div>
     </div>
@@ -145,4 +144,4 @@
         </div>
     </div>
     <!--@import(/myshop/myshop_main.html)-->
-</div>
+</div>       

@@ -39,6 +39,7 @@
     .xans-product-relation .prdList__item { width: calc(20% - 20px); margin:40px 10px 0; }
     .xans-product-relation .prdList__item .thumb { display:block; margin:0 0 23px; }
     .xans-product-relation .prdList__item .thumb img { max-width:232px; }
-    .xans-product-relation .prdList .hidden { display:none; }
     .xans-product-relation .button { margin:60px 0 0; text-align:center; }
+    .xans-product-relation .prdList__item:nth-child(5) ~ li { display:none; }
+    .xans-product-relationlist.showAll .prdList__item:nth-child(5) ~ li { display:block; }
 }

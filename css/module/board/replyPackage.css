@@ -6,12 +6,6 @@
 .xans-board-reply .file [id^="delfile"] { margin-left:20px; }
 .xans-board-reply .agree textarea { margin:0 0 14px; }
 
-.xans-board-reply .ec-base-table ul li img { margin:0 0 1px 4px; }
-.xans-board-replylist {  max-height:180px; overflow-y:scroll; }
-.xans-board-replylist li > a {display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap;}
-.xans-board-replylist li > a img {margin-left:5px;}
-.xans-board-commentpackage .ec-base-table.typeWrite td {padding:10px 0px 10px 20px;}
-
 /********************* Mobile / Tablet *********************/
 @media all and (max-width:1024px) {
 	.xans-board-reply .ec-base-table input[type="text"],
@@ -23,14 +17,6 @@
     .xans-board-reply #captcha { flex:1; margin-left:10px; }
     .xans-board-reply .file input[type="file"] { display:block; }
     .xans-board-reply .agree textarea { width:100%; height:140px; }
-	.reply_all .ec-base-table.typeWrite {padding:0;}
-	.reply_all .ec-base-table.typeWrite .reply_all_th {background-color:#f6f6f6;padding:12px 15px;}
-	.reply_all .ec-base-table.typeWrite .reply_all_td {padding:10px 0px 10px 15px;}
-	.reply_all .ec-base-table.typeWrite td span.txtInfo {width:auto;margin:0;}
-	.xans-board-commentpackage .ec-base-table.typeWrite {padding:0;}
-	.xans-board-commentpackage .ec-base-table.typeWrite th {background-color:#f6f6f6;padding:12px 15px;}
-	.xans-board-commentpackage .ec-base-table.typeWrite td {padding:10px 0px 10px 15px;border-bottom:1px solid #e5e5e5;}
-	.xans-board-commentpackage .ec-base-table.typeWrite td span.txtInfo {width:auto;margin:0;}
 }
 
 /********************* PC *********************/
@@ -41,7 +27,7 @@
     .xans-board-reply #email3 { width:138px; margin:0 0 0 10px; }
     .xans-board-reply #captcha { width:200px; margin:0 20px 0 10px; }
     .xans-board-reply #ucc { width:328px; }
-    .xans-board-reply #ucc_width,
+    .xans-board-reply #ucc_width, 
     .xans-board-reply #ucc_height { width:150px; margin-left:4px; }
     .xans-board-reply #password { width:200px; }
     .xans-board-reply .agree textarea { width:550px; height:140px; }

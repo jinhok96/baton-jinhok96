@@ -1,17 +1,19 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
         <li title="현재 위치"><strong>회사소개</strong></li>
     </ol>
 </div>
-<div class="section titleArea">
+
+<div class="titleArea">
     <h2>회사소개</h2>
 </div>
-<div module="mall_company" class="section">
-    <!--@css(/css/module/mall/company.css)-->
 
+<div module="mall_company">
+    <!--@css(/css/module/mall/company.css)-->
+    
     <div class="titleArea titleArea--middle">
         <h3>회사소개 정보</h3>
     </div>
@@ -24,7 +26,7 @@
         </div>
         <div class="map">{$map_image}</div>
     </div>
-
+    
     <div class="ec-base-table" module="Layout_footer">
         <table border="1">
             <caption>회사소개</caption>
@@ -47,7 +49,7 @@
                 </tr>
                 <tr>
                     <th scope="row">주소</th>
-                    <td>{$mall_addr1}<br>{$mall_addr2}</td>
+                    <td>{$mall_addr1}<br />{$mall_addr2}</td>
                 </tr>
                 <tr>
                     <th scope="row">사업자등록번호</th>
@@ -69,5 +71,5 @@
         </table>
     </div>
 
-
+    
 </div>

@@ -1,6 +1,6 @@
 $(function(){
     if($(".menuCategory > li").length==0){
-        $(".ec-base-tab.typeMenu").hide();	//중분류 없으면 영역 숨김 - 정환
+        $(".menuCategory").hide();
     }else {
         $(".menuCategory li").each(function(i){
             var ulElChk = $(this).find('ul').length;
@@ -11,10 +11,6 @@ $(function(){
 
         var domWidth = $(document).width();
         if(domWidth < 1024){
-			if($(".display_tablet_only .menuCategory > li").length==0){
-				$(".ec-base-tab.typeMenu").hide();	//Mobile에서 마지막분류 없으면 영역 숨김 - 정환
-			}
-
             $(".menuCategory .iconWrap").on('click', function(e){
                 var target = $(this).closest('li');
                 var ulEl = returnTarget(target);

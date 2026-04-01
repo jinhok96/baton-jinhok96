@@ -7,10 +7,8 @@
     <div class="orderList {$list_display|display}">
         <div class="order">
             <div class="{$display_column|display} order__number">
-				<span class="rentBadge {$rental_display|display}">렌탈</span>
-				<span>{$order_icon}</span>
                 <span class="date" title="주문일자">{$order_date}</span>
-                <span class="number" title="주문번호"><a href="/myshop/order/detail.html{$param_detail}">({$order_id})</a></span>
+                <span class="number" title="주문번호"><a href="detail.html{$param_detail}">({$order_id})</a></span>
             </div>
             <div class="ec-base-prdInfo">
                 <div class="prdBox">
@@ -43,25 +41,8 @@
                         <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                         <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                         <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                        <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                        <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                     </div>
                 </div>
-				<div class="payDetail {$total_display|display}">
-					<div class="title"><strong>총 결제금액</strong>
-						<div class="gRight">
-							<strong>{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail} </strong>
-							<span>{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span>
-						</div>
-					</div>
-					<div class="contents">
-						상품구매금액 <strong>{$total_product_price}</strong>
-						+ 배송비 <strong>{$total_ship_fee}</strong>
-						<span class="{$total_addsale_summary_display|display}"> - 총 할인금액 <strong>{$total_addsale_price}</strong></span>
-						<span class="{$total_addpay_summary_display|display}"> - 총 부가결제금액 <strong>{$total_addpay_price}</strong></span>
-						<span class="{$total_tax_amount_display|display}"> + 세액 <strong>{$total_tax_amount}</strong></span>
-					</div>
-				</div>
             </div>
             <div class="ec-base-button gMColumn {$cs_button_display_column|display}">
                 <span class="gRight">
@@ -69,17 +50,15 @@
                     <a href="/myshop/order/cancel.html{$param_apply}" class="btnNormalFix sizeM {$apply_cancel_display|display}">취소신청</a>
                     <a href="/myshop/order/exchange.html{$param_apply}"  class="btnNormalFix sizeM {$apply_exchange_display|display}">교환신청</a>
                     <a href="/myshop/order/return.html{$param_apply}" class="btnNormalFix sizeM {$apply_return_display|display}">반품신청</a>
-                </span>
+                </span>    
             </div>
             <a href="/myshop/order/detail.html{$param_detail}" class="btnDetail {$display_column|display}">상세보기 <i aria-hidden="true" class="icon icoArrowRight"></i></a>
         </div>
 
         <div class="order">
             <div class="{$display_column|display} order__number">
-				<span class="rentBadge {$rental_display|display}">렌탈</span>
-				<span>{$order_icon}</span>
                 <span class="date" title="주문일자">{$order_date}</span>
-                <span class="number" title="주문번호"><a href="/myshop/order/detail.html{$param_detail}">({$order_id})</a></span>
+                <span class="number" title="주문번호"><a href="detail.html{$param_detail}">({$order_id})</a></span>
             </div>
             <div class="ec-base-prdInfo">
                 <div class="prdBox">
@@ -112,25 +91,8 @@
                         <a href="#none" class="btnNormal sizeS {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
                         <a href="#none" class="btnNormal sizeS {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
                         <a href="#none" class="btnNormal sizeS {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                        <a href="#none" class="btnSubmit sizeS {$purchase_confirmation_display|display}" onclick="{$action_purchase_confirmation}">구매확정</a>
-                        <p class="deliveryDate {$shipping_expected_date_display|display}">{$shipping_expected_date} 발송예정</p>
                     </div>
                 </div>
-				<div class="payDetail {$total_display|display}">
-					<div class="title"><strong>총 결제금액</strong>
-						<div class="gRight">
-							<strong>{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail} </strong>
-							<span>{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span>
-						</div>
-					</div>
-					<div class="contents">
-						상품구매금액 <strong>{$total_product_price}</strong>
-						+ 배송비 <strong>{$total_ship_fee}</strong>
-						<span class="{$total_addsale_summary_display|display}"> - 총 할인금액 <strong>{$total_addsale_price}</strong></span>
-						<span class="{$total_addpay_summary_display|display}"> - 총 부가결제금액 <strong>{$total_addpay_price}</strong></span>
-						<span class="{$total_tax_amount_display|display}"> + 세액 <strong>{$total_tax_amount}</strong></span>
-					</div>
-				</div>
             </div>
             <div class="ec-base-button gMColumn {$cs_button_display_column|display}">
                 <span class="gRight">
@@ -138,12 +100,12 @@
                     <a href="/myshop/order/cancel.html{$param_apply}" class="btnNormalFix sizeM {$apply_cancel_display|display}">취소신청</a>
                     <a href="/myshop/order/exchange.html{$param_apply}"  class="btnNormalFix sizeM {$apply_exchange_display|display}">교환신청</a>
                     <a href="/myshop/order/return.html{$param_apply}" class="btnNormalFix sizeM {$apply_return_display|display}">반품신청</a>
-                </span>
+                </span>    
             </div>
             <a href="/myshop/order/detail.html{$param_detail}" class="btnDetail {$display_column|display}">상세보기 <i aria-hidden="true" class="icon icoArrowRight"></i></a>
         </div>
     </div>
-    <p class="ec-base-prdEmpty {$empty_display|display}"><!--@import(/svg/icon-empty.html)-->주문 내역이 없습니다.</p>
+    <p class="ec-base-prdEmpty {$empty_display|display}">주문 내역이 없습니다.</p>
 </div>
 
 <div module="Myshop_OrderHistoryPaging" class="ec-base-paginate typeList">

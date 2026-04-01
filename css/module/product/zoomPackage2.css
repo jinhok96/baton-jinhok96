@@ -25,3 +25,14 @@
 .xans-product-zoom .imgArea .listImg .prev .icon { margin-left:3px; }
 .xans-product-zoom .imgArea .listImg .next { right:0; background-position:-31px 0; }
 .xans-product-zoom .imgArea .listImg .next .icon { margin-left:-3px; }
+
+/* Thumbnail icon position */
+.ec-product-bgLT { background-position:left top; }
+.ec-product-bgLC { background-position:left center; }
+.ec-product-bgLB { background-position:left bottom; }
+.ec-product-bgRT { background-position:right top; }
+.ec-product-bgRC { background-position:right center; }
+.ec-product-bgRB { background-position:right bottom; }
+.ec-product-bgCT { background-position:center top; }
+.ec-product-bgCC { background-position:center center; }
+.ec-product-bgCB { background-position:center bottom; }

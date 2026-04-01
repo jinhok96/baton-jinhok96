@@ -1,19 +1,18 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section" module="Board_ListPackage_8">
+<div module="Board_ListPackage_8">
     <!--@css(/css/module/board/listPackage_gallary.css)-->
     <div module="board_title_8">
         <div class="path">
             <span>현재 위치</span>
             <ol>
                 <li><a href="/">홈</a></li>
-                <li><a href="#">게시판</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
                 <li title="현재 위치"><strong>{$board_name}</strong></li>
             </ol>
         </div>
 
         <div class="titleArea">
             <h2>{$board_title} {$board_adult_icon}</h2>
-            <p>{$board_info}</p>
         </div>
         <p class="imgArea">{$board_top_image}</p>
     </div>
@@ -35,21 +34,23 @@
 				$deny_access_url = /index.html
 			-->
 			<ul>
-				<li class="{$block_target_class}" {$block_data_attr}>
+			
+				<li>
 					<a href="{$link_board_detail}">
 						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span><span class="summary">
-							<strong class="subject {$block_content_class}">{$checkbox}<em>{$notice_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
+							<strong class="subject">{$checkbox}<em>{$notice_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
 							<span>{$member_icon}{$writer}</span>
-							<span class="date {$date_display|display}">{$write_date}</span>
+							<span class="date {$date_display|display}">{$write_date|date:Y-m-d}</span>
 						</span>
 					</a>
 				</li>
-				<li class="{$block_target_class}" {$block_data_attr}>
+				
+				<li>
 					<a href="{$link_board_detail}">
 						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span><span class="summary">
-							<strong class="subject {$block_content_class}">{$checkbox}<em>{$notice_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
+							<strong class="subject">{$checkbox}<em>{$notice_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
 							<span>{$member_icon}{$writer}</span>
-							<span class="date {$date_display|display}">{$write_date}</span>
+							<span class="date {$date_display|display}">{$write_date|date:Y-m-d}</span>
 						</span>
 					</a>
 				</li>
@@ -62,21 +63,21 @@
 				$deny_access_url = /index.html
 			-->
 			<ul>
-				<li class="{$block_target_class}" {$block_data_attr}>
+				<li>
 					<a href="{$link_board_detail}">
 						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span><span class="summary">
-							<strong class="subject {$block_content_class}">{$checkbox}<em>{$fixed_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
+							<strong class="subject">{$checkbox}<em>{$fixed_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
 							<span>{$member_icon}{$writer}</span>
-							<span class="date {$date_display|display}">{$write_date}</span>
+							<span class="date {$date_display|display}">{$write_date|date:Y-m-d}</span>
 						</span>
 					</a>
 				</li>
-				<li class="{$block_target_class}" {$block_data_attr}>
+				<li>
 					<a href="{$link_board_detail}">
 						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span><span class="summary">
-							<strong class="subject {$block_content_class}">{$checkbox}<em>{$fixed_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
+							<strong class="subject">{$checkbox}<em>{$fixed_icon}</em>{$subject}{$icon_new}<span class="comment">{$comment_count}</span></strong>
 							<span>{$member_icon}{$writer}</span>
-							<span class="date {$date_display|display}">{$write_date}</span>
+							<span class="date {$date_display|display}">{$write_date|date:Y-m-d}</span>
 						</span>
 					</a>
 				</li>
@@ -89,24 +90,24 @@
 				$deny_access_url = /index.html
 			-->
 			<ul>
-				<li class="{$block_target_class}" {$block_data_attr}>
+				<li>
 					<a href="{$link_board_detail}">
 						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span>
 						<span class="summary">
-							<strong class="subject {$block_content_class}">{$subject}<span class="comment">{$comment_count}</span></strong>
+							<strong class="subject">{$subject}<span class="comment">{$comment_count}</span></strong>
 							<span>{$member_icon}{$writer} </span>
-							<span class="date {$date_display|display}">{$write_date}</span>
+							<span class="date {$date_display|display}">{$write_date|date:Y-m-d}</span>
 						</span>
 					</a>
 					{$checkbox}
 				</li>
-				<li class="{$block_target_class}" {$block_data_attr}>
+				<li>
 					<a href="{$link_board_detail}">
 						<span class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></span>
 						<span class="summary">
-							<strong class="subject {$block_content_class}">{$subject}<span class="comment">{$comment_count}</span></strong>
+							<strong class="subject">{$subject}<span class="comment">{$comment_count}</span></strong>
 							<span>{$member_icon}{$writer} </span>
-							<span class="date {$date_display|display}">{$write_date}</span>
+							<span class="date {$date_display|display}">{$write_date|date:Y-m-d}</span>
 						</span>
 					</a>
 					{$checkbox}
@@ -132,7 +133,7 @@
 	</div>
 </div>
 
-<div module="board_paging_8" class="section ec-base-paginate typeList">
+<div module="board_paging_8" class="ec-base-paginate typeList">
     <a href="{$param_prev}">이전 페이지</a>
     <ol>
         <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
@@ -142,13 +143,13 @@
 </div>
 
 <!-- Admin only -->
-<div class="section" module="board_catemove_8">
+<div module="board_catemove_8">
     <!--@css(/css/module/board/catemove.css)-->
     <span class="gColumn">{$board_catemove_selectbox}</span>
     <span class="gColumn"><a href="#none" class="btnNormal sizeS" onclick="{$action_category_move}">{$category_move}</a></span>
 </div>
 
-<div class="section" module="board_function_8">
+<div module="board_function_8">
     <!--@css(/css/module/board/function.css)-->
     <span class="gColumn">{$board_function_selectbox}</span>
     <span class="gColumn">

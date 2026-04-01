@@ -1,3 +1,4 @@
+#popup { width:500px; overflow-y:scroll; }
 .xans-product-restockemail .information h2 { font-size:14px; color:#2e2e2e; }
 .xans-product-restockemail .information p { margin:5px 0 0; color:#757575; }
 .xans-product-restockemail .information .optionWrap { margin:10px 0 0; }
@@ -30,13 +31,6 @@
 
 .xans-product-restockemail .information .optionWrap ul li select { max-width:235px; }
 
-.xans-product-restockemail .information .optionWrap ul li .name { display:block;margin-bottom: 4px; }
-.xans-product-restockemail .information .optionWrap ul li .option select { width: 100%; }
-
 .xans-product-restockemail .emailArea { margin:10px 0 0; line-height:18px; }
 .xans-product-restockemail .emailArea .contact { margin:10px 0 0; padding:15px; background:#f6f6f6; }
-.xans-product-restockemail .emailArea .contact p span { font-size: 11px; }
 .xans-product-restockemail .emailArea input[type=text] { width:100%; margin:10px 0 0; }
-.xans-product-restockemail .emailArea .info { margin: 10px 0;}
-.xans-product-restockemail .emailArea .info li { position:relative; padding-left: 12px; }
-.xans-product-restockemail .emailArea .info li:before { content: '-'; position: absolute; top:4; left: 0; }

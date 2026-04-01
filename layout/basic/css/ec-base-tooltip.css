@@ -65,14 +65,14 @@
   .shippingFee .wrap th { width:80px; border-right-width:0; }
   .shippingFee .wrap td { white-space:normal; }
   .shippingFee .wrap .info { margin:0; color:#7d7d7d; }
+  .shippingFee .ec-base-button { text-align:center; }
+  .shippingFee .btnStrong { display:inline-block; padding:12px 20px; height:40px; font-size:13px; box-sizing:border-box; border:1px solid transparent; line-height:1; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#fff; background-color:#000; }  
 
 /********************* Mobile / Tablet *********************/
 @media all and (max-width:1024px) {
     .ec-base-tooltip { width:88%; margin:5px auto 0; }
     .ec-base-tooltip .edge { display:none; }
     .shippingFee { position:static; }
-    .shippingFee .ec-base-button { text-align:center; }
-    .shippingFee .btnStrong { display:inline-block; padding:12px 20px; height:40px; font-size:13px; box-sizing:border-box; border:1px solid transparent; line-height:1; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#fff; background-color:#000; }  
 }
 
 /********************* PC *********************/

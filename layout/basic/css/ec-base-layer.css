@@ -6,7 +6,7 @@ h1, h3 { margin:0; }
 
 .ec-base-layer-area {  position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,0.3); z-index: 1000; }
 .ec-base-layer { z-index:1001; border:1px solid #000; background:#fff; box-sizing:border-box; }
-.ec-base-layer .header { margin:0 20px; padding:20px 0; color:#000; border-bottom:1px solid #e5e5e5; }
+.ec-base-layer .header { margin:0 20px; padding:20px 20px 20px 0; color:#000; border-bottom:1px solid #e5e5e5; }
 .ec-base-layer > .header > h1,
 .ec-base-layer > .header > h3,
 .ec-base-layer > .header > h5 { font-size:16px; font-weight: normal; }
@@ -37,7 +37,7 @@ h1, h3 { margin:0; }
 
 /* popup */
 #popup { padding:0 0 30px; }
-#popup .ec-base-layer { border:0; }
+#popup .ec-base-layer { z-index:0; border:0; }
 #popup .ec-base-layer .btnClose { top:5px; }
 
 /********************* Mobile / Tablet *********************/
@@ -52,14 +52,4 @@ h1, h3 { margin:0; }
     .ec-base-layer { min-width:308px; }
     .ec-base-layer.typeSide { top: 0; right: 0; left: auto; bottom: 0; width: 458px; }
   	.ec-base-layer.gAlert { width:360px; }
-}
-
-/********************* Mobile *********************/
-@media all and (max-width:440px) {
-    #popup .xans-myshop-orderreceiverupdate.ec-base-layer,
-    #receiver_update_form .xans-myshop-orderreceiverupdate.ec-base-layer { position:relative; top:0; transform:translateY(0); width:400px; margin:0;}
-    #popup .xans-myshop-orderreceiverupdate.ec-base-layer .ec-base-table tr,
-    #receiver_update_form .xans-myshop-orderreceiverupdate.ec-base-layer .ec-base-table tr { width:370px;}
-    #popup .xans-myshop-orderreceiverupdate.ec-base-layer .ec-base-table td textarea,
-    #receiver_update_form .xans-myshop-orderreceiverupdate.ec-base-layer .ec-base-table td textarea { width:330px;}
 }

@@ -32,6 +32,7 @@
     .xans-layout-footer .info__customer .content { overflow:hidden; visibility:hidden; height:0; box-sizing:border-box; transition:.5s; }
     .xans-layout-footer .info__customer.selected .toggle .icon { margin-top:3px; transform: rotate(135deg); }
     .xans-layout-footer .info__customer.selected .content {  visibility:visible; height:auto; margin:20px 0 0; }
+    .xans-layout-footer .info__customer a[href^=tel] { color:inherit; text-decoration:none; }
 }
 
 /********************* Tablet *********************/

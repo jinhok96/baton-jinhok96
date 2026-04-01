@@ -14,24 +14,24 @@
 }
 
 /********************* Mobile / Tablet / PC 1340 *********************/
-@media all and (max-width:1430px) {
+@media all and (max-width:1340px) {
     .xans-myshop-orderhistoryhead { margin:40px 0 30px; }
     .xans-myshop-orderhistoryhead select { width:100%; }
     .xans-myshop-orderhistoryhead .period { display:flex; margin:10px 0; }
     .xans-myshop-orderhistoryhead .period .btnNormal { flex:1; }
-    .xans-myshop-orderhistoryhead .fText { flex:1; min-width:120px;  }
+    .xans-myshop-orderhistoryhead .fText { flex:1; width: calc(50% - 50px); }
     .xans-myshop-orderhistoryhead .datepicker { display:flex; align-items: center; }
     .xans-myshop-orderhistoryhead .date .btnSubmit { width:100%; margin:10px 0 0; }
 }
 
 /********************* PC *********************/
-@media all and (min-width:1431px) {
+@media all and (min-width:1341px) {
     .xans-myshop-orderhistoryhead { margin:50px 0 60px; }
     .xans-myshop-orderhistoryhead fieldset { display:flex; padding:30px 26px; background: #f6f6f6; border:1px solid #e5e5e5; }
     .xans-myshop-orderhistoryhead .stateSelect { display:inline-block; margin:0 20px 0 0; }
     .xans-myshop-orderhistoryhead .stateSelect select { width:155px; }
     .xans-myshop-orderhistoryhead .period { margin:0 20px 0 0; }
     .xans-myshop-orderhistoryhead .date { display:inline-block; }
-    .xans-myshop-orderhistoryhead .fText { width:149px;  }
+    .xans-myshop-orderhistoryhead .fText { width:149px; }
 }
 

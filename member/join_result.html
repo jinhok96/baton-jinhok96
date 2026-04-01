@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -7,11 +7,11 @@
     </ol>
 </div>
 
-<div class="section titleArea">
+<div class="titleArea">
     <h2>회원 가입 완료</h2>
 </div>
 
-<div class="section ec-base-step">
+<div class="ec-base-step">
     <ol class="step">
         <li>1. 약관동의</li>
         <li>2. 정보입력</li>
@@ -19,19 +19,16 @@
     </ol>
 </div>
 
-<div module="member_joinComplete" class="memberArea">
+<div module="member_joinComplete" class="memberArea gInnerMargin">
     <!--@css(/css/module/member/joincomplete.css)-->
     <div class="joinComplete">
-		<div class="member_icon">
-			<img src="/SkinImg/img/icon_joincomplete.svg" alt="아이콘">
-		</div>
         <p class="desc">회원가입이 완료 되었습니다.</p>
-
+        
         <div class="memberSpecial" module="member_BenefitJoin">
             <p><strong>{$member_name} 님</strong>은 <strong>[{$group_name}]</strong> 회원이십니다.</p>
             <ul>
-            	<li class="{$display_no_benefit|display}"><strong>{$dc_pay} {$dc_min_price}</strong> 구매시 <strong class="price">{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</li>
-                <li class="{$display_with_all|display}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <spstrongan class="price">{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</li>
+                <li class="{$display_no_benefit|display}"><strong>{$dc_pay} {$dc_min_price}</strong> 구매시 <strong class="price">{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</li>
+                <li class="{$display_with_all|display}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <strong class="price">{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</li>
             </ul>
         </div>
         <div class="ec-base-box typeMember gMessage">

@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -34,7 +34,7 @@
                 <li class="selected"><a href="/myshop/mileage/couponList.html">미가용쿠폰/회원등급적립내역</a></li>
             </ul>
         </div>
-
+		
         <div module="myshop_couponMemberList">
             <!--
                 $only_html = no
@@ -101,7 +101,7 @@
 					</div>
 				</div>
 			</div>
-			<p class="ec-base-prdEmpty {$display_coupon_none|display}"><!--@import(/svg/icon-empty.html)-->{$mileage_name} 내역이 없습니다.</p>
+			<p class="ec-base-prdEmpty {$display_coupon_none|display}">{$mileage_name} 내역이 없습니다.</p>
         </div>
     </div>
 
@@ -135,4 +135,4 @@
         </div>
     </div>
     <!--@import(/myshop/myshop_main.html)-->
-</div>
+</div>  

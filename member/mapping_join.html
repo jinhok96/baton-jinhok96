@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -7,17 +7,17 @@
     </ol>
 </div>
 
-<div class="section titleArea">
+<div class="titleArea">
     <h2>SNS 계정 연동</h2>
 </div>
 
-<div module="member_joinMapping">
+<div module="member_joinMapping" class="memberArea">
     <!--@css(/css/module/member/mapping_join.css)-->
-    <div class="boxTitle">
-        이미 <em>{$provider_member_email}</em> 으로 가입한 쇼핑몰 아이디가 있어요.<br />
-        기존 계정에 로그인해서 SNS 계정을 연동하시겠어요?
-    </div>
-    <div class="ec-base-box typeThin">
+	<div class="ec-base-box typeMember">
+        <h3 class="boxTitle">
+            이미 <em>{$provider_member_email}</em> 으로 가입한 쇼핑몰 아이디가 있어요.<br />
+            기존 계정에 로그인해서 SNS 계정을 연동하시겠어요?
+        </h3>
         <ul class="accountList">
             <li class="head">
                 <strong>아이디</strong>
@@ -48,9 +48,9 @@
                 <span class="center">{$regist_date}</span>
             </li>
         </ul>
-    </div>
-    <div class="ec-base-button">
-        <a href="#none" class="btnSubmit gFull sizeL" onclick="{$action_func_mapping}">선택한 아이디로 계정 연동</a><a href="#none" onclick="{$action_func_join}" class="btnNormal gFull sizeL {$display_join|disp1lay}">계정 연동하지 않고 신규 가입</a>
+	</div>
+    <div class="ec-base-button gBottom">
+        <a href="#none" class="btnSubmitFix sizeL" onclick="{$action_func_mapping}">선택한 아이디로 계정 연동</a><a href="#none" class="btnNormalFix sizeL {$display_join|display}" onclick="{$action_func_join}">계정 연동하지 않고 신규 가입</a>
     </div>
 </div>
 
@@ -75,9 +75,7 @@
                         </fieldset>
                     </div>
                 </div>
-                <div class="ec-base-button">
-                    <button class="btnNormalFix sizeS" type="button" onclick="$('.xans-layout-login').hide();">취소</button>
-                </div>
+                <a class="btnClose" onclick="$('.xans-layout-login').hide();">닫기</a>
             </div>
         </div>
     </div>

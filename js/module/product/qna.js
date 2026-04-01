@@ -22,10 +22,9 @@ $(function(){
     });
 
     // qna 탭 바로 활성화처리
-   var href = document.location.href.split('#')[1];
-    var winWidth = window.innerWidth;
-    if (winWidth < 1026 && href == 'use_qna' || href == 'prdQnA') {
-        $('a[name^="use_qna"]').trigger('click');
+    var href = document.location.href.split('#')[1];
+    if (href == 'use_qna' || href == 'prdQnA') {
+        $('a[name="use_qna"]').trigger('click');
     }
 });
 
@@ -104,23 +103,15 @@ var QNA = {
                         var sImg = '';
                     }
 
-                    aHtml.push('<div class="view '+ data.read['block_content_class'] +'">');
+                    aHtml.push('<div class="view">');
 					aHtml.push('<div id="ec-ucc-media-box-'+ data.read['no'] +'"></div>');
                     aHtml.push('<p class="attach">'+sImg+'</p>');
                     aHtml.push('<p>'+data.read['content']+'</p>');
                     aHtml.push('<div class="ec-base-button">');
                     if (data.comment != undefined) {
-                        aHtml.push('<div class="gLeft"><a href="#none" class="btnNormal sizeS" onclick="QNA.comment_view('+data.read['no']+');">댓글보기 <em>'+data.read['comment_count']+'</em><i aria-hidden="true" class="icon icoArrowBottom"></i></a><a href="#none" class="btnNormal sizeS" onclick="QNA.comment_write(this);">쓰기</a>');
-                        if (data.write_auth == true) {
-                            aHtml.push('<a href="#none" onclick="EC_PRODUCT_FRONT_BOARD_QNA.modify(' + data.no + ', ' + iProductNo + ');" class="btnNormal sizeS">수정</a>');
-                        }
-						aHtml.push('</div>');
+                        aHtml.push('<div class="gLeft"><a href="#none" class="btnNormal sizeS" onclick="QNA.comment_view('+data.read['no']+');">댓글보기 <em>'+data.read['comment_count']+'</em><i aria-hidden="true" class="icon icoArrowBottom"></i></a></div>');
+                        aHtml.push('<div class="gRight"><a href="/board/product/modify.html'+ data.read['param_modify'] +'&link_product_no='+iProductNo+'" class="btnNormal sizeS">수정</a><a href="#none" class="btnNormal sizeS" onclick="QNA.comment_write(this);">쓰기</a></div>');
                     }
-					aHtml.push('<div class="gRight">');
-					aHtml.push('<a href="#none" class="btnNormal sizeS ' + data.read['report_open_btn'] +'" onclick="'+ data.read['report_open_layer_action'] +'">신고</a> ');
-					aHtml.push('<a href="#none" class="btnNormal sizeS '+ data.read['block_request_btn'] +'" onclick="'+ data.read['block_action'] +'">차단</a> ');
-					aHtml.push('<a href="#none" class="btnNormal sizeS '+ data.read['unblock_request_btn'] +'" onclick="'+ data.read['unblock_action'] +'">차단해제</a> ');
-					aHtml.push('</div>');
                     aHtml.push('</div>');
                     aHtml.push('</div>');
 
@@ -200,14 +191,10 @@ var QNA = {
                     }
                 }
 
-                $(pNode).after('<tr id="product-qna-read'+data.key+'" class="'+ data.read['block_target_class'] +'" '+ data.read['block_data_attr'] +'><td colspan="6">'+aHtml.join('')+'</td></tr>');
+                $(pNode).after('<tr id="product-qna-read'+data.key+'"><td colspan="6">'+aHtml.join('')+'</td></tr>');
 
                 // 평점기능 사용안함일 경우 보여지는 td를 조절하기 위한 함수
                 PRODUCT_COMMENT.comment_colspan(pNode);
-                // 게시물 작성자 차단 기능
-                APP_BOARD_BLOCK.setBlockList();
-                // 게시물 신고 기능
-                APP_BOARD_REPORT.setReportLayerActions(data.read['report_action'], data.read['report_close_layer_action'], data.write_auth);
 
                 if (data.comment_write != undefined && data.comment_write['use_comment_size'] == '') PRODUCT_COMMENT.comment_byte(6, data.key);
                 if (data.comment_reply != undefined && data.comment_write['use_comment_size'] == '') PRODUCT_COMMENT.comment_byte(6, data.key, 'commentReplyWriteForm');

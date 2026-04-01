@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path" module="Myshop_Head">
+<div class="path" module="Myshop_Head">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -17,7 +17,7 @@
 
         <div module="myshop_summary" class="ec-base-box gHalf">
             <ul>
-                <li><strong class="title">총 {$mileage_name}</strong><strong class="data">{$total_mileage}</strong></li>
+                <li><strong class="title">총 {$mileage_name}</strong><strong class="data">{$total_mileage}</span></li>
 				<li><strong class="title">사용가능 {$mileage_name}</strong><strong class="data">{$avail_mileage}</strong></li>
 				<li><strong class="title">사용된 {$mileage_name}</strong><span class="data">{$used_mileage}</span></li>
             </ul>
@@ -93,7 +93,7 @@
 					</div>
 				</div>
 			</div>
-            <p class="ec-base-prdEmpty {$display_history_none|display}"><!--@import(/svg/icon-empty.html)-->{$mileage_name} 내역이 없습니다.</p>
+            <p class="ec-base-prdEmpty {$display_history_none|display}">{$mileage_name} 내역이 없습니다.</p>
         </div>
     </div>
 
@@ -126,6 +126,6 @@
             </ul>
         </div>
     </div>
-
+    
     <!--@import(/myshop/myshop_main.html)-->
-</div>
+</div>     

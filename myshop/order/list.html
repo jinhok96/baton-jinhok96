@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -22,6 +22,7 @@
 
     <div module="Myshop_OrderHistoryHead">
         <!--@css(/css/module/myshop/orderHistoryHead.css)-->
+        <!--@js(/js/module/myshop/orderHistoryHead.js)-->
         <fieldset class="form">
             <legend>검색기간설정</legend>
             <div class="stateSelect {$status_bar_display|display}">
@@ -35,7 +36,7 @@
             </span>
             <div class="date">
                 <span class="datepicker">{$form.start_date} ~ {$form.end_date}</span>
-                <span class="btnSubmit sizeM">조회{$form.submit_date}</span>
+                <span class="btnSubmit sizeM eDataSet">조회{$form.submit_date}</span>
             </div>
         </fieldset>
         <ul class="txtList">
@@ -49,6 +50,6 @@
 
     <!--@import(/myshop/order/history_list_item.html)-->
 
-    <!--@import(/myshop/myshop_main.html)-->
-
-</div>
+    <!--@import(/myshop/myshop_main.html)-->    
+    
+</div>    

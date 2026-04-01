@@ -21,12 +21,6 @@ $(function(){
         REVIEW.getReadData($(this));
     });
 
-    // review 탭 바로 활성화처리
-    var href = document.location.href.split('#')[1];
-    var winWidth = window.innerWidth;
-    if (winWidth < 1026 && href == 'use_review' || href == 'prdReview') {
-        $('a[name^="use_review"]').trigger('click');
-    }
 });
 
 var PARENT = '';
@@ -103,23 +97,20 @@ var REVIEW = {
                         var sImg = '';
                     }
 
-                    aHtml.push('<div class="view '+ data.read['block_content_class'] +'">');
+                    aHtml.push('<div class="view">');
 					aHtml.push('<div id="ec-ucc-media-box-'+ data.read['no'] +'"></div>');
                     aHtml.push('<p class="attach">'+sImg+'</p>');
                     aHtml.push('<p>'+data.read['content']+'</p>');
                     aHtml.push('<div class="ec-base-button">');
                     if (data.comment != undefined) {
-                        aHtml.push('<div class="gLeft"><a href="#none" class="btnNormal sizeS" onclick="REVIEW.comment_view('+data.read['no']+');">댓글보기 <em>'+data.read['comment_count']+'</em><i aria-hidden="true" class="icon icoArrowBottom"></i></a><a href="#none" class="btnNormal sizeS" onclick="REVIEW.comment_write(this);">쓰기</a>');
+                        aHtml.push('<div class="gLeft"><a href="#none" class="btnNormal sizeS" onclick="REVIEW.comment_view('+data.read['no']+');">댓글보기 <em>'+data.read['comment_count']+'</em><i aria-hidden="true" class="icon icoArrowBottom"></i></a></div>');
+                        aHtml.push('<div class="gRight">');
                         if (data.write_auth == true) {
                             aHtml.push('<a href="/board/product/modify.html?board_act=edit&no='+data.no+'&board_no=4&link_product_no='+iProductNo+'" class="btnNormal sizeS">수정</a>');
                         }
+                        aHtml.push('<a href="#none" class="btnNormal sizeS" onclick="REVIEW.comment_write(this);">쓰기</a>');
                         aHtml.push('</div>');
                     }
-					aHtml.push('<div class="gRight">');
-					aHtml.push('<a href="#none" class="btnNormal sizeS ' + data.read['report_open_btn'] +'" onclick="'+ data.read['report_open_layer_action'] +'">신고</a> ');
-					aHtml.push('<a href="#none" class="btnNormal sizeS '+ data.read['block_request_btn'] +'" onclick="'+ data.read['block_action'] +'">차단</a> ');
-					aHtml.push('<a href="#none" class="btnNormal sizeS '+ data.read['unblock_request_btn'] +'" onclick="'+ data.read['unblock_action'] +'">차단해제</a> ');
-					aHtml.push('</div>');
                     aHtml.push('</div>');
                     aHtml.push('</div>');
 
@@ -174,7 +165,7 @@ var REVIEW = {
                         aHtml.push('</div>');
                         aHtml.push('<div class="byteRating"><p class="rating ' +data.comment_write['use_point']+ '">' +data.comment_write['comment_point']+ '</p><p class="byte ' +data.comment_write['use_comment_size']+ '">/ byte</p></div>');
                         aHtml.push('<div class="captcha ' +data.comment_write['use_captcha']+ '"><span class="img"></span><div class="form">' +data.comment_write['captcha_image']+data.comment_write['captcha_refresh']+data.comment_write['captcha']+ '<p class="ec-base-help">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</p></div></div>');
-
+                        
                         aHtml.push('</div>');
                         aHtml.push('</form>');
                     }
@@ -197,7 +188,7 @@ var REVIEW = {
                         aHtml.push('</div>');
                         aHtml.push('<div class="byteRating"><p class="byte '+data.comment_reply['use_comment_size']+'">'+data.comment_reply['comment_byte']+' / '+data.comment_reply['comment_size']+' byte</p></div>');
                         aHtml.push('<div class="captcha ' +data.comment_reply['use_captcha']+ '"><span class="img"></span><div class="form">' +data.comment_reply['captcha_image']+data.comment_reply['captcha_refresh']+data.comment_reply['captcha']+ '<p class="ec-base-help">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</p></div></div>');
-
+                        
                         aHtml.push('</div>');
                         aHtml.push('</form>');
                     }
@@ -213,13 +204,10 @@ var REVIEW = {
                     }
 
                 }
-                $(pNode).after('<tr id="product-review-read'+data.key+'" class="'+ data.read['block_target_class'] +'" '+ data.read['block_data_attr'] +'><td colspan="6">'+aHtml.join('')+'</td></tr>');
+                $(pNode).after('<tr id="product-review-read'+data.key+'"><td colspan="6">'+aHtml.join('')+'</td></tr>');
 
                 // 평점기능 사용안함일 경우 보여지는 td를 조절하기 위한 함수
                 PRODUCT_COMMENT.comment_colspan(pNode);
-				// 게시물 작성자 차단 기능
-                APP_BOARD_BLOCK.setBlockList();
-                APP_BOARD_REPORT.setReportLayerActions(data.read['report_action'], data.read['report_close_layer_action'], data.write_auth);
 
                 if (data.comment_write != undefined && data.comment_write['use_comment_size'] == '') PRODUCT_COMMENT.comment_byte(4, data.key);
                 if (data.comment_reply != undefined && data.comment_write['use_comment_size'] == '') PRODUCT_COMMENT.comment_byte(4, data.key, 'commentReplyWriteForm');

@@ -1,12 +1,12 @@
-﻿<!--@layout(/layout/basic/layout.html)-->
-<div class="section" module="board_writePackage_4">
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_writePackage_4">
     <!--@css(/css/module/board/writePackage.css)-->
     <div module="board_title_4">
         <div class="path">
             <span>현재 위치</span>
             <ol>
                 <li><a href="/">홈</a></li>
-                <li><a href="#">게시판</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
                 <li title="현재 위치"><strong>{$board_name}</strong></li>
             </ol>
         </div>
@@ -28,6 +28,7 @@
         <div class="ec-base-box typeProduct {$display_product|display}">
             <p class="thumbnail"><a href="{$link_product_detail}"><img id="{$product_img_id}" src="{$url_product_img}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" alt="" /></a></p>
             <div class="information">
+                {$product_icon}
                 <h3><a href="/product/detail.html{$param_product}" id="{$product_name_link_id}">{$product_name}</a></h3>
                 <p class="price">{$product_price} {$product_tax_type_text}</p>
                 <p class="button">
@@ -113,7 +114,7 @@
                         <span class="ec-base-help">영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</span>
                     </td>
                 </tr>
-                <tr class="agree {$config.is_login|display} {$display_privacy_agreement|display}">
+                <tr class="agree {$config.is_login|display}">
                     <th scope="row">개인정보 수집 및 <br class="RW" />이용 동의</th>
                     <td>
                         {$form.privacy_agreement}
@@ -124,14 +125,9 @@
             </table>
         </div>
 
-        <ul class="info">
-            <li>- 상품과 관련없는 내용 또는 이미지, 욕설/비방, 개인정보유출, 광고/홍보글 등 적절하지 않은 게시물은 별도의 고지없이 비공개 처리 될 수 있습니다. </li>
-            <li>- 작성된 게시물(사진, 동영상 포함)은 운영 및 마케팅에 활용될 수 있습니다.</li>
-        </ul>
-
         <div class="ec-base-button gBottom">
             <span class="gLeft RW">
-                <span class="{$config.is_admin|display}"><a href="#none" class="btnNormalFix sizeM" onclick="{$action_comment_admin}">관리자 답변보기</a></span>
+                <a href="#none" class="btnNormal sizeM {$config.is_admin|display}" onclick="{$action_comment_admin}">관리자 답변보기</a>
                 <a href="{$link_board_list}" class="btnNormalFix sizeM">목록</a>
             </span>
             <span class="gRight">

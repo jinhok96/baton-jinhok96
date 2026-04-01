@@ -22,3 +22,9 @@
 .ec-base-paginate.typeSwipe .prev, .ec-base-paginate.typeSwipe .next{ display: none; }
 .ec-base-paginate.typeSwipe [id*='swipe-button'] button { display: inline-block; margin: 0 7px; width: 8px; height: 8px; overflow: hidden; font-size: 1px; line-height: 0; text-indent: -9999px; border-radius: 100%; background: #000; opacity: .2; }
 .ec-base-paginate.typeSwipe [id*='swipe-button'] button.selected { opacity: 1; }
+
+/********************* Mobile *********************/
+@media all and (max-width:767px) {
+    .ec-base-paginate.typeList { display:flex; justify-content:center; margin-bottom:50px; }
+    .ec-base-paginate.typeList li { margin-bottom:10px; }
+}

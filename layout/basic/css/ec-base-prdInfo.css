@@ -9,7 +9,6 @@
 .ec-base-prdInfo .description .prdName a { color:#000; }
 .ec-base-prdInfo .description .prdName .ec-set-product-name { display:block; margin:0 0 3px; }
 .ec-base-prdInfo .description .prdName img { margin:0 1px; vertical-align:middle; }
-.ec-base-prdInfo .description .prdName .prdIcon { height: 18px; }
 .ec-base-prdInfo .description .price,
 .ec-base-prdInfo .description .price li { font-size:13px; color:#000; line-height:20px; }
 .ec-base-prdInfo .description .price strong { font-weight:normal; }
@@ -87,11 +86,12 @@
     .ec-base-prdInfo .prdBox { padding:24px 16px; }
     .ec-base-prdInfo .description { padding:0 40px 0 0; }
     .ec-base-prdInfo .sumPrice { margin:20px 0 0; padding:0 0 0 98px; box-sizing:border-box; width:100%; }
-    .ec-base-prdInfo .buttonGroup { margin:20px 0 0; padding:0 0 0 98px; box-sizing:border-box; width:100%; }
+    .ec-base-prdInfo .buttonGroup { margin:10px 0 0; padding:0 0 0 98px; box-sizing:border-box; width:100%; }
+    .ec-base-prdInfo .buttonGroup [class^='btn'] { margin:10px 5px 0 0; }
     	/* gCheck */
         .ec-base-prdInfo.gCheck .sumPrice,
         .ec-base-prdInfo.gCheck .quantity,
-    	.ec-base-prdInfo.gCheck .buttonGroup { padding:0 0 0 125px; }
+        .ec-base-prdInfo.gCheck .buttonGroup { padding:0 0 0 125px; }
     .ec-base-prdInfo .btnDelete { right:12px; }
     .ec-base-prdInfo .optionSelect { margin:0 16px 24px; padding:10px 20px 20px; }
     .ec-base-prdInfo .optionSelect li { margin:10px 0 0; }

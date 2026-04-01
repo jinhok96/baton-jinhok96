@@ -7,7 +7,7 @@ $(function(){
             detail = param.target.find('a#prdDetailImg'),
             swipe  = param.target.find('.xans-product-mobileimage > ul > li'),      
             add    = param.target.find('.xans-product-addimage > ul > li');
-      
+
         var zoom = {
             init : function(){
                 function structMobile(){

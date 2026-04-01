@@ -127,10 +127,12 @@
 .ec-base-layer .xans-product-action .ec-base-button { padding:0; border-top:0; background:#fff; }
 
 #NaverChk_Button { clear:both; margin:10px 0 0; }
+
 #divNvPointInfo { display:none; position:absolute; z-index:99; width:245px; padding:10px; color:#777; background:#fff; border:1px solid #5B9761; }
 #divNvPointInfo a { display:block; padding:5px 0 0; color:#1ec228; }
 #divNvPointInfo a img { vertical-align:middle; }
 #imgNaverMileageHelp { cursor:pointer; }
+
 #appPaymentButtonBox { margin:10px 0 0; }
 
 /* 세트상품 */
@@ -153,6 +155,7 @@
 .xans-product-zoom .productSet .option .name { display:block; margin:0 0 5px; font-weight:normal; }
 .xans-product-zoom .productSet .option input[type=text] { width:80%; }
 .xans-product-zoom .productSet .option .ec-base-qty { margin:7px 0 0; }
+.xans-product-zoom .productSet .option .ec-base-qty input[type=text].single-quantity-input { width:45px; }
 .xans-product-zoom .productSet .option .selectButton { margin:0 0 6px; text-align:right; }
 .xans-product-zoom .productSet .guide { overflow:hidden; position:relative; margin:0 19px; }
 .xans-product-zoom .productSet .guide:after { content:""; display:block; clear:both; }
@@ -272,6 +275,17 @@
 .xans-product-zoom .productSet .description .btnClose { background:transparent; }
 .xans-product-zoom .productSet .description > .ec-base-tooltip { display:block; top:0; }
 .xans-product-zoom .productSet .description > .ec-base-tooltip > .edge { z-index:20; position:absolute; left:auto; right:40px; display:block; margin:0 0 0 -5px; width:9px; height:6px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_option_arrow.gif") no-repeat 0 0; }
+
+/* Thumbnail icon position */
+.ec-product-bgLT { background-position:left top; }
+.ec-product-bgLC { background-position:left center; }
+.ec-product-bgLB { background-position:left bottom; }
+.ec-product-bgRT { background-position:right top; }
+.ec-product-bgRC { background-position:right center; }
+.ec-product-bgRB { background-position:right bottom; }
+.ec-product-bgCT { background-position:center top; }
+.ec-product-bgCC { background-position:center center; }
+.ec-product-bgCB { background-position:center bottom; }
 
 /********************* Mobile / Tablet *********************/
 @media all and (max-width:1024px) {

@@ -4,10 +4,6 @@
 .xans-board-write-9 .file label { color:#000; }
 .xans-board-write-9 .file [id^="delfile"] { margin-left:20px; }
 
-ul.info { margin: 20px 0 0; color: #707070; line-height: 1.5; }
-ul.info li + li {padding: 4px 0 0 9px;}
-ul.info li { padding: 0 0 0 9px;}
-
 /********************* Mobile / Tablet *********************/
 @media all and (max-width:1024px) {
 	.xans-board-write-9 .ec-base-table input[type="text"],

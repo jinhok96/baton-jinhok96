@@ -82,7 +82,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color:#c
 input::-moz-placeholder, textarea::-moz-placeholder { color:#c1c1c1; opacity:1; }
 input.gFull { width:100%; }
 /* file */
-input[type="file"] { height:40px; line-height:1; font-size:13px; color:#7d7d7d; }
+input[type="file"] { height:40px; line-height:40px; font-size:13px; color:#7d7d7d; }
 input[type="file"]::file-selector-button,
 input[type="file"]::-webkit-file-upload-button { height:40px; padding:0 20px; font-size:13px; color:#1c1c1c; border:1px solid #bcbcbc; border-radius:0; background:#fff; box-sizing:border-box; -webkit-appearance:none; }
 /* select */
@@ -181,7 +181,7 @@ span.noBorder input { border:none !important; width:auto !important; height:auto
     	.titleArea--middle h2 { display:inline-block; color:var(--font-color-heading); font-size:16px; }
     .titleArea .desc { font-size:12px; color:#6d6d6d; }
     /* path */
-    .path { margin:0; opacity:0; overflow:hidden; width:1px; height:1px; font-size:1px; line-height:1px; white-space:nowrap; color:transparent; text-indent:150%; }
+    .path { position:absolute; top:0; left:0; margin:0; opacity:0; overflow:hidden; width:1px; height:1px; font-size:1px; line-height:1px; white-space:nowrap; color:transparent; text-indent:150%; }
     .ec-base-step li:not(:last-child):after { margin:-2px 15px 0; }
 
 }
@@ -191,7 +191,6 @@ span.noBorder input { border:none !important; width:auto !important; height:auto
     .gInnerMargin { margin:0 24px; }
     .titleArea { margin:40px 24px 30px; }
     .titleArea--middle { margin:0; }
-    .path { margin:0 24px; }
 }
 
 /********************* PC *********************/

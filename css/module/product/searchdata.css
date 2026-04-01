@@ -12,7 +12,6 @@
 .xans-product-searchdata .searchField .keywordArea .list { display:inline-block; }
 .xans-product-searchdata .searchField .keywordArea .list li { display:inline; margin:0 0 0 8px; }
 .xans-product-searchdata .searchField .keywordArea .list li a { display:inline-block; padding: 6px 10px; word-break:break-all; word-wrap:break-word; color:#545454; background:#f4f4f4; }
-.xans-product-searchdata .searchField .btnDelete {display:none;position:absolute;bottom:0px;right:40px;cursor:pointer;font-size:0;width:20px;height:54px;background: url('//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_delete.png') no-repeat 0 center;background-size:20px;}
 
 .xans-product-searchdata .xans-product-searchconditiondata { position:relative; padding:2px 8px 9px 127px; border:1px solid #d7d5d5; font-size:0; line-height:0; }
 #searchContent.xans-product-searchdata .xans-product-searchconditiondata { border-top:0; }
@@ -258,40 +257,3 @@
   #searchContent .suggest li { overflow:hidden; height:28px; padding:0 8px; color:#525252; line-height:30px; text-overflow:ellipsis; white-space:nowrap; }
 
   #searchContent .suggest li:hover, #searchContent .suggest li.selected { cursor:pointer; background:#f1f1f1; }
-
-
-/* 쇼핑큐레이션 220303 */
-#searchContent .searchArea {border:0;border-top:1px solid #111;border-bottom:1px solid #eee;}
-#searchContent .searchArea th {background-color:#fff;border-right:0;vertical-align:middle;}
-#searchContent .searchArea th,
-#searchContent .searchArea td {padding:18px 18px;border-top:1px solid #eee;}
-#searchContent tr .check li label {margin:0 15px 0 0;}
-#searchContent tr .content {width:auto;}
-#searchContent tr .colorChip .content {width:auto;margin:0;}
-#searchContent tr .colorChip li .circle {background:none;border:1px solid #eee;}
-.xans-product-searchdata .xans-product-searchconditiondata {padding:12px 8px 19px 127px;border:0;}
-.xans-product-searchdata .xans-product-searchconditiondata .btnRefresh {top:21px;}
-.xans-product-searchdata .xans-product-searchconditiondata .btnRefresh:after {display:none;top:4px;}
-.xans-product-searchdata {margin:-2px auto 0 auto !important;}
-.xans-product-searchdata .searchField fieldset .btnSearchOption {display:none;}
-.xans-product-searchdata .searchResult {border-top:1px solid #eee;}
-
-@media screen and (max-width:1024px) {
-	#searchContent .searchArea th {display:block;padding:10px 0;border:0;}
-	#searchContent .searchArea td {display:block;padding:0 0 10px;border:0;}
-	#searchContent .searchArea th {border-top:1px solid #eee;}
-	#searchContent tr .priceSlide .slider {width:96%;margin:7px 0px 5px 5px;}
-	#searchContent tr .priceSlide .value {width:100%;margin:0;}
-	#searchContent tr .extend {display:none;}
-	#searchContent tr .cell {height:auto;}
-	#searchContent tr .check li label {padding:0;}
-	#searchContent tr .check li label > input[type=checkbox] {margin:0 5px 0 0;}
-	#searchContent tr .button li:first-child {margin-left:0;}
-	.xans-product-searchdata .xans-product-searchconditiondata {padding:12px 8px 19px 87px;}
-	.xans-product-searchdata .xans-product-searchconditiondata .btnRefresh {left:0;}
-	.xans-product-searchdata .xans-product-categoryhashtag {padding-left:0;}
-	#searchContent {display:none;}
-	#searchContent .display_tablet_only {margin-bottom:10px;}
-	#shoppQbtn {border:1px solid #d6d6d6 !important;}
-}
-

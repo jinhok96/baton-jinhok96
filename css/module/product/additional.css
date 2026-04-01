@@ -3,9 +3,10 @@
 
 .ec-base-fold .info { color:#6d6d6d; line-height:22px; }
 .ec-base-fold .content { padding:0 0 60px; }
+.ec-base-fold .content .info img { max-width:100%; }
 
 /* board */
-.xans-product-additional .subject img { width: auto;margin: 0px 5px 1px 0;vertical-align:middle; }
+.xans-product-additional .subject img { width: auto;height: 21px; margin: 0px 5px 1px 0;vertical-align:middle; }
 .xans-product-additional .comment { display:inline-block; margin:0 5px 0 0; vertical-align:middle; color:#ef441f; }
 .xans-product-additional .noAccess,
 .xans-product-additional .nodata { padding:56px 0; color:#6d6d6d; text-align:center; }
@@ -13,17 +14,17 @@
 .xans-product-additional .minor p:first-child img { margin:-11px 8px 0 0; vertical-align:top; }
 .xans-product-additional .minor .button { margin:-7px 0 0; }
 .xans-product-additional .view { position:relative; z-index:1; overflow:hidden; margin-top:-1px; line-height:22px; text-align:left; color:#000; background:#f9f9f9; }
-.xans-product-additional .view .alert { margin:0 0 10px; }
+.xans-product-additional .view .alert { margin:0 0 10px; } 
 
-#product-review-read .btnNormal,
-#product-qna-read .btnNormal { vertical-align:middle; }
-#product-review-read,
-#product-qna-read,
-#product-review-read td,
-#product-qna-read td { padding:0; }
+.ec-base-table.typeList [id*="product-review-read"] .btnNormal,
+.ec-base-table.typeList #product-qna-read .btnNormal { color:#000; vertical-align:middle; }
+.ec-base-table.typeList [id*="product-review-read"],
+.ec-base-table.typeList #product-qna-read,
+.ec-base-table.typeList [id*="product-review-read"] td,
+.ec-base-table.typeList #product-qna-read td { padding:0; }
 
 .xans-product-additional .btnNormal em { font-style:normal; }
-.xans-product-additional .btnNormal .icon.icoArrowBottom { vertical-align:top; margin:0 0 0 15px; }
+.xans-product-additional .btnNormal .icon.icoArrowBottom { vertical-align:top; margin:-2px 0 0 15px; }
 .xans-product-additional .boardComment {  background:#f6f6f6; }
 .xans-product-additional .boardComment li { position:relative; overflow:hidden; border-top:1px solid #e0e0e0; text-align:left; line-height:14px; }
 .xans-product-additional .boardComment li:before { content:""; position:absolute; display:inline-block; overflow:hidden; width:9px; height:11px; border-left:1px solid #a7a7a7; border-bottom:1px solid #a7a7a7; }
@@ -53,8 +54,8 @@
 @media all and (max-width:1024px) {
     .xans-product-additional { margin:60px 0 0; }
     .ec-base-fold .info { margin:0 16px; }
-    #product-review-read td,
-	#product-qna-read td { width:100%; }
+    .ec-base-table.typeList [id*="product-review-read"] td,
+	.ec-base-table.typeList #product-qna-read td { width:100%; }
     .xans-product-additional .view { padding:25px 16px 0; }
     .xans-product-additional .view.secret { padding-bottom:25px; }
     .xans-product-additional .view .ec-base-button { margin:20px 0;  }
@@ -65,7 +66,7 @@
     .xans-product-additional .boardComment .replyArea:before { left:36px; }
     .xans-product-additional .memoCont { margin:20px -16px 0;  padding:25px 0 0; }
         .xans-product-additional .writeForm { position:relative; margin:0 16px 55px 36px; }
-        .xans-product-additional .writeForm:before { top:-2px; left:-20px; }
+        .xans-product-additional .writeForm:before { top:-2px; left:-20px; } 
         .xans-product-additional .writeForm .infoForm { display:flex; padding:10px 5px; }
         .xans-product-additional .writeForm .infoForm p { flex:1; margin:0 5px; }
         .xans-product-additional .writeForm .infoForm .label { display:block; margin:0 0 7px; color:#a7a7a7; }
@@ -91,7 +92,7 @@
     .xans-product-additional .memoCont { margin:20px -25px 0;  padding:25px 25px 25px 50px; }
     .xans-product-additional .memoCont.reply { margin-left:-50px; padding-bottom:0; }
         .xans-product-additional .writeForm { display:flex; flex-wrap:wrap; }
-        .xans-product-additional .writeForm:before { top:-2px; left:-26px; }
+        .xans-product-additional .writeForm:before { top:-2px; left:-26px; } 
         .xans-product-additional .writeForm .commentForm { width:100%; }
         .xans-product-additional .writeForm .infoForm { padding:13px 0 13px 19px; }
         .xans-product-additional .writeForm .infoForm input { width:200px; margin:0 20px 0 10px; }

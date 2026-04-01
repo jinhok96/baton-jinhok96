@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -14,6 +14,7 @@
     </div>
     <div module="myshop_wishlist">
         <!--@css(/css/module/myshop/wishlist.css)-->
+        <!--@js(/js/module/myshop/wishlist.js)-->
         <!--
             $login_page = /member/login.html
             $count = 10
@@ -25,8 +26,7 @@
                     <span class="check">{$checkbox}</span>
                     <div class="thumbnail"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" width="83" height="83"></a></div>
                     <div class="description">
-                        <strong class="prdName" title="상품명">{$product_name_link} {$regular_delivery_icon}</strong>
-                        <p class="ec-base-help txtWarn txt11 {$exclusive_purchase_olny|display}"> 단독구매상품</p>
+                        <strong class="prdName" title="상품명">{$product_name_link}</strong>
                         <ul class="price">
                             <li>
                                 <strong class="{$discount}" title="판매가">{$product_price}{$product_tax_type_text}</strong>
@@ -111,8 +111,7 @@
                     <span class="check">{$checkbox}</span>
                     <div class="thumbnail"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" width="83" height="83"></a></div>
                     <div class="description">
-                        <strong class="prdName" title="상품명">{$product_name_link} {$regular_delivery_icon}</strong>
-                        <p class="ec-base-help txtWarn txt11 {$exclusive_purchase_olny|display}"> 단독구매상품</p>
+                        <strong class="prdName" title="상품명">{$product_name_link}</strong>
                         <ul class="price">
                             <li>
                                 <strong class="{$discount}" title="판매가">{$product_price}{$product_tax_type_text}</strong>
@@ -193,13 +192,13 @@
                 <a href="#none" class="btnDelete {$class_del}" rel="{$rel_del}">삭제</a>
             </div>
         </div>
-        <p class="ec-base-prdEmpty {$empty_display|display}"><!--@import(/svg/icon-empty.html)-->관심상품 내역이 없습니다.</p>
+        <p class="ec-base-prdEmpty {$empty_display|display}">관심상품 내역이 없습니다.</p>
     </div>
-
+    
     <div module="Myshop_WishlistButton">
         <div class="ec-base-button">
             <span class="gRight">
-                <a href="#none" class="btnNormal sizeS" onclick="{$action_delete_all}">전체삭제</a>
+                <a href="#none" class="btnNormal sizeS" onclick="{$chk_wishlist}" id="product_select_all" data-status="off">전체선택</a>
                 <a href="#none" class="btnNormal sizeS" onclick="{$action_delete}">선택삭제</a>
             </span>
         </div>
@@ -221,6 +220,6 @@
         <a href="{$param_next}">다음 페이지</a>
         <a href="{$param_last}" class="last">마지막 페이지</a>
     </div>
-
-    <!--@import(/myshop/myshop_main.html)-->
-</div>
+    
+    <!--@import(/myshop/myshop_main.html)-->    
+</div>  

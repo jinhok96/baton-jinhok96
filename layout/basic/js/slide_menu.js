@@ -133,53 +133,24 @@ $(function(){
         if (!sParam) return;
         var iCateNo = Number(methods.getParam(sParam, 'cate_no'));
         var hasClass =  $(this).parent().hasClass('selected');
-
+        
+        //if ($(this).parent().attr('class') == 'xans-record- selected') {
         if(hasClass) {
             methods.close();
-            $(this).parent().removeClass('selected');
         } else {
             if (!iCateNo) return;
             $('#aside #slideCateList li').removeClass('selected');
-            $(this).parent().addClass('selected');
             methods.close();
             methods.show(this.parentNode, iCateNo);
         }
-        e.preventDefault();
     });
 
-	/* 모바일 슬라이드바 카테고리 중분류체크 */
-	jQuery('#slide_add_category li').each(function(){
-		if( jQuery(this).children('ul').length == 0 ){
-			jQuery(this).addClass('noChild');
-		} else {
-			jQuery(this).append('<a href="#none" class="cate">상품보기</a>');
-		}
-    });
-
-    /* 모바일 슬라이드바 카테고리 */
     $('#aside ul a.cate').on('click', function(e){
-        var sParam = $(this).attr('cate');
-        if(sParam) return;
-
-        $(this).parent().find('li').removeClass('selected');
-        $('#slideCateList .categoryList li').removeClass('selected');
-        $(this).parent().toggleClass('selected');
-
-        if (!$(this).parent('li').hasClass('noChild')){
-            e.preventDefault();
-        }
-    });
-
-	/* 슬라이드 고객센터 토글 */
-    jQuery('#aside .navigation-menu__board .icoCategory').click(function() {
-        var target = jQuery(this).parents('#aside .navigation-menu__board');
-        if(target.find('.categoryList').css("display") == "none"){
-            target.find('.categoryList').show();
-        }else{
-            target.find('.categoryList').hide();
-        }
-
-        jQuery(this).parents('.title').toggleClass('selected');
+            $(this).parent().find('li').removeClass('selected');
+            $(this).parent().toggleClass('selected');
+            if (!$(this).parent('li').hasClass('noChild')){
+                e.preventDefault();
+            }
     });
 
     $('#slideCateList h2').on('click', function() {
@@ -197,7 +168,7 @@ $(function(){
         }else{
             target.find('.categoryList').hide();
         }
-
+        
         $(this).parents('.title').toggleClass('selected');
     });
 

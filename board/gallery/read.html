@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section" module="board_ReadPackage_8">
+<div module="board_ReadPackage_8">
     <!--@css(/css/module/board/readPackage.css)-->
     <!--@js(/js/module/board/readPackage.js)-->
     <div module="board_title_8">
@@ -7,17 +7,16 @@
             <span>현재 위치</span>
             <ol>
                 <li><a href="/">홈</a></li>
-                <li><a href="#">게시판</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
                 <li title="현재 위치"><strong>{$board_name}</strong></li>
             </ol>
         </div>
 
         <div class="titleArea">
             <h2>{$board_title} {$board_adult_icon}</h2>
-            <p>{$board_info}</p>
         </div>
     </div>
-    <div module="board_read_8" class="{$block_target_class}" {$block_data_attr}>
+    <div module="board_read_8">
         <!--
             $delete_success_url = /board/gallery/list.html
             $login_page_url = /member/login.html
@@ -25,7 +24,7 @@
         -->
         <div class="ec-base-table typeWrite">
             <div class="head">
-                <h3 class="{$block_content_class}">{$subject}</h3>
+                <h3>{$subject}</h3>
                 <div class="description">
                     <span class="name">{$member_icon} {$writer} <span class="{$config.display_ip|display}">(ip:{$ip})</span> {$admin_mileage}</span>
                     <ul class="etcArea">
@@ -49,15 +48,9 @@
                 <span class="ec-base-help txtInfo">삭제하려면 비밀번호를 입력하세요.</span>
             </div>
             <div class="attach {$config.use_attach|display}">{$attach_file}</div>
-			<div class="detail {$block_content_class}">{$content_image}{$content}</div>
-			<div class="ec-base-button report-button">
-				<span class="gRight">
-					<a href="#none" class="btnNormalFix sizeS {$is_report_display|display}" onclick="{$board_report_display}">신고</a>
-					<a href="#none" class="btnNormalFix sizeS {$block_request_btn}" onclick="{$block_action}">차단</a>
-					<a href="#none" class="btnNormalFix sizeS {$unblock_request_btn}" onclick="{$unblock_action}">차단해제</a>
-				</span>
-			</div>
-			<!--@import(/board/report_popup.html)-->
+            <div class="detail">
+                {$content_image}{$content}
+            </div>
         </div>
 
         <div class="ec-base-button gBottom gBreak">
@@ -79,12 +72,12 @@
     </div>
 </div>
 
-<div class="section" module="board_CommentPackage_8">
+<div module="board_CommentPackage_8">
     <!--@css(/css/module/board/commentPackage.css)-->
     <div module="board_commentlist_8">
         <!--
             $delete_page_url = /board/gallery/comment_del.html
-            $delete_success_url = /board/gallery/
+            $delete_success_url = /board/gallery/read.html
         -->
         <ul class="boardComment">
             <li class="first {$comment_reply_css}" id="{$comment_reply_id}">
@@ -271,7 +264,7 @@
     </div>
 </div>
 
-<div class="section" module="board_movement_8">
+<div module="board_movement_8">
     <!--@css(/css/module/board/movement.css)-->
     <ul>
         <li class="prev {$prev_display|display}"><strong>이전<i aria-hidden="true" class="icon icoArrowTop"></i></strong><a href="{$link_board_detail_prev}">{$prev_subject}</a></li>
@@ -280,7 +273,7 @@
 </div>
 
 <!-- Admin only -->
-<div class="section" module="board_function_8">
+<div module="board_function_8">
     <!--@css(/css/module/board/function.css)-->
     <!--
     	$success_return_url = /board/gallery/list.html

@@ -45,6 +45,19 @@ function setAttributeAll(elements, name, value){
 };
 
 /**
+ *  상품 섬네일 로드되지 않을 경우, 기본값 설정
+ */
+function setDefaultImage(element) {
+    document.querySelectorAll(element).forEach(function(item){
+        var $img = new Image();
+        $img.onerror = function () {
+            item.src="//img.echosting.cafe24.com/thumb/img_product_big.gif";
+        }
+        $img.src = item.src;
+    });
+};
+
+/**
  *  tooltip
  */
 function setTooltipEvent(){
@@ -79,6 +92,9 @@ function returnTargetName(_this){
  * window load
  */
 window.addEventListener('load', function(){
+    if (document.querySelector('.thumbnail')){
+        setDefaultImage('.thumbnail img');
+    }
     if (document.querySelector('.eTooltip')){
         setAttributeAll(findElements('.eTooltip', '.btnClose'),'tabIndex','-1');
         setTooltipEvent();
@@ -86,4 +102,4 @@ window.addEventListener('load', function(){
     if (document.querySelector('div.eToggle')){
         toggleClassAll(false, 'div.eToggle .title', 'selected');
     }
-});
+}); 

@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -112,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <p class="ec-base-prdEmpty {$empty_display|display}"><!--@import(/svg/icon-empty.html)-->주문 내역이 없습니다.</p>
+        <p class="ec-base-prdEmpty {$empty_display|display}">주문 내역이 없습니다.</p>
     </div>
 
     <div module="Myshop_OrderHistoryPaging" class="ec-base-paginate typeList">
@@ -125,7 +125,7 @@
         <a href="{$param_next}">다음 페이지</a>
         <a href="{$param_last}" class="last">마지막 페이지</a>
     </div>
-
-    <!--@import(/myshop/myshop_main.html)-->
-
-</div>
+    
+    <!--@import(/myshop/myshop_main.html)-->    
+    
+</div>      

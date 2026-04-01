@@ -33,7 +33,6 @@
 .ec-base-product .prdList .description .name { display:block; text-align:left; font-weight:normal; }
 .ec-base-product .prdList .description .name a { color:#000; font-size:13px; }
 .ec-base-product .prdList .description span.grid { display:block; }
-.ec-base-product .prdList .description .ec-base-help { margin-left:0; }
 
 /* grid */
 .ec-base-product ul.grid2 > li { width:50%; }
@@ -53,8 +52,7 @@
 .ec-base-product .spec { margin:12px 0 0; }
 .ec-base-product .spec > li { margin: 0 0 14px; text-align:left; line-height:19px; }
 .ec-base-product .spec > li.price {margin-bottom: 14px; color: #000; font-size: 16px; }
-.ec-base-product .spec > li.price.sale{text-decoration: line-through; }
-.ec-base-product .spec > li.price ~ .sale{margin-bottom: 14px; color: #000; font-size: 16px; }
+.ec-base-product .spec > li.price ~ .sale {margin-bottom: 14px; color: #000; font-size: 16px; }
 .ec-base-product .spec .summary { color:#6d6d6d; font-size:12px; }
 .ec-base-product .spec .color { overflow:hidden; display:inline-block; margin:3px 0 0 0; line-height:1; }
 .ec-base-product .spec .chips { display: inline-block; width:10px; height:10px; margin:0 2px 2px 0; border:1px solid #e3e3e3; font-size:0; line-height:0; }

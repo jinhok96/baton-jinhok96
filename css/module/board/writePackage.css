@@ -5,10 +5,6 @@
 .xans-board-write #sPrdCommonImg { position:absolute; top:0; right:0; width:100px; text-align:right; }
 .xans-board-write .information .button { margin:15px 0 0; }
 
-ul.info { margin: 20px 0 0; color: #707070; line-height: 1.5; }
-ul.info li + li {padding: 4px 0 0 9px;}
-ul.info li { padding: 0 0 0 9px;}
-
 .xans-board-write .captcha img { vertical-align:middle; margin-left:4px; }
 .xans-board-write [class^="point"] em { font-style:normal; }
 .xans-board-write .file td { color:#7d7d7d; }
@@ -35,7 +31,7 @@ ul.info li { padding: 0 0 0 9px;}
     .xans-board-write #email3 { width:138px; margin:0 0 0 10px; }
     .xans-board-write #captcha { width:200px; margin:0 20px 0 10px; }
     .xans-board-write #ucc { width:328px; }
-    .xans-board-write #ucc_width,
+    .xans-board-write #ucc_width, 
     .xans-board-write #ucc_height { width:150px; margin-left:4px; }
     .xans-board-write #password { width:200px; }
     .xans-board-write .agree textarea { width:550px; height:140px; }

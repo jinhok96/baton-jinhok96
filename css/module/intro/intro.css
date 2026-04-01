@@ -31,20 +31,6 @@ body { height:100%; }
 .intro .member .ipin p { padding:18px 0 10px; }
 
 /* 회원전용 */
-.intro.membership {background:#fff;}
-.intro.membership .alert {border:0;}
-.intro.membership .alert .inner {width:auto;min-height:136px;padding:80px 0 0 0;text-align:center;background:#fff;}
-.intro .xans-member-login {padding:50px 0;width:92%;margin:0 auto;}
-.intro .xans-member-login .login__security .secret {height:17px;}
-.intro .xans-member-login input[type="checkbox"] {width:15px;height:15px;}
-
-/* 성인전용 + 본인인증 */
-@media all and (max-width:1024px) {
-	.intro.xans-member-adulthead .alert {margin:0 auto;padding-bottom:30px;}
-	.intro.xans-member-adulthead .alert .inner {width:92%;padding:263px 0 0 0;min-height:205px;background:#fff url('//img.echosting.cafe24.com/skin/skin_ko_KR/intro/bg_youth_protection.gif') center 30px no-repeat;background-size:200px;}
-	.intro.xans-member-adulthead .alert .advice {margin:0 auto;}
-	.intro.xans-member-adulthead .member {width:92%;padding:30px 0;}
-	.intro.xans-member-adulthead .member h2 {position:static;margin-bottom:20px;}
-	.intro.xans-member-adulthead .member label {display:none;}
-}
-
+.intro.membership .alert .inner { min-height:186px; padding:80px 0 0 0; text-align:center; background:#fff; }
+.intro.membership .member h2 { right:590px; font-size:20px; line-height:20px; }
+.intro.membership .member .login .security { margin:10px 0 0; }
