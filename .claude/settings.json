@@ -27,7 +27,8 @@
       "Bash(wc:*)",
       "Bash(where:*)",
       "mcp__chrome-devtools__*",
-      "mcp__figma__use_figma"
+      "mcp__figma__use_figma",
+      "Bash(npm run:*)"
     ],
     "deny": [],
     "ask": []
