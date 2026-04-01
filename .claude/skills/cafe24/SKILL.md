@@ -171,3 +171,41 @@ hreflang 태그로 언어별 쇼핑몰 연결 (URL 폴더 구조 아님):
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 ```
+
+---
+
+## 컴포넌트 레퍼런스
+
+### 공통
+- SDS 기본: @.claude/skills/cafe24/sds.md
+
+### PC 컴포넌트
+- Font: @.claude/skills/cafe24/pc/font.md
+- Grid: @.claude/skills/cafe24/pc/grid.md
+- Uses (유틸리티): @.claude/skills/cafe24/pc/uses.md
+- Help (도움말): @.claude/skills/cafe24/pc/help.md
+- Box: @.claude/skills/cafe24/pc/box.md
+- Tab: @.claude/skills/cafe24/pc/tab.md
+- Button: @.claude/skills/cafe24/pc/button.md
+- Layer (팝업): @.claude/skills/cafe24/pc/layer.md
+- Tooltip: @.claude/skills/cafe24/pc/tooltip.md
+- Product (상품): @.claude/skills/cafe24/pc/product.md
+- Table: @.claude/skills/cafe24/pc/table.md
+- Paginate (페이지네이션): @.claude/skills/cafe24/pc/paginate.md
+- Desc (설명): @.claude/skills/cafe24/pc/desc.md
+- Form: @.claude/skills/cafe24/pc/form.md
+
+### 모바일 컴포넌트
+- Font: @.claude/skills/cafe24/mobile/font.md
+- Grid: @.claude/skills/cafe24/mobile/grid.md
+- Uses (유틸리티): @.claude/skills/cafe24/mobile/uses.md
+- Help (도움말): @.claude/skills/cafe24/mobile/help.md
+- Tab: @.claude/skills/cafe24/mobile/tab.md
+- Button: @.claude/skills/cafe24/mobile/button.md
+- Layer (팝업): @.claude/skills/cafe24/mobile/layer.md
+- Tooltip: @.claude/skills/cafe24/mobile/tooltip.md
+- Prdinfo (상품정보): @.claude/skills/cafe24/mobile/prdinfo.md
+- Table: @.claude/skills/cafe24/mobile/table.md
+- Paginate (페이지네이션): @.claude/skills/cafe24/mobile/paginate.md
+- Fold (접기): @.claude/skills/cafe24/mobile/fold.md
+- Form: @.claude/skills/cafe24/mobile/form.md
