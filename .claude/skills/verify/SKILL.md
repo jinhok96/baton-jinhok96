@@ -23,17 +23,10 @@ description: Cafe24 스킨 코드 검증 절차. SFTP 배포 전 정적 검사 +
 
 ## 배포 후 검증
 
-SFTP 업로드 완료 후 실제 배포 URL로 확인한다.
+SFTP 업로드 완료 후 실제 배포 URL로 확인한다. 
 
-**WebFetch 활용** — 텍스트 기반 확인:
-
-```
-배포 URL: https://jinhok96.cafe24.com/skin-base
-CSS 파일: https://jinhok96.cafe24.com/skin-base/{경로}.css
-JS 파일:  https://jinhok96.cafe24.com/skin-base/{경로}.js
-```
-
-변경한 CSS 파일을 직접 fetch하여 수정 내용 반영 여부 확인.
+- 배포 URL: https://jinhok96.cafe24.com/skin-{skinName} ← @.vscode/sftp.json 에서 `remotePath`(/{skinName}/) 참조, ex: `"remotePath": "/skin4/"` → https://jinhok96.cafe24.com/skin-skin4
+- 변경사항 저장 후 페이지 새로고침 시 반영됨
 
 **크롬 MCP 활용** — 렌더링 기반 확인 (JavaScript 실행 결과 포함):
 - 페이지 실제 렌더링 결과 및 레이아웃 확인
