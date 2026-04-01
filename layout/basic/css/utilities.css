@@ -132,43 +132,101 @@
 /* --------------------------------------------------------------------------
    Color — Text
    -------------------------------------------------------------------------- */
-.text-primary   { color: var(--color-text-primary); }
-.text-secondary { color: var(--color-text-secondary); }
-.text-tertiary  { color: var(--color-text-tertiary); }
-.text-on-color  { color: var(--color-text-on-color); }
-.text-brand     { color: var(--color-text-brand); }
-.text-white     { color: var(--color-white); }
-.text-black     { color: var(--color-black); }
-.text-warning   { color: var(--color-warning); }
-.text-success   { color: var(--color-success); }
-.text-info      { color: var(--color-info); }
-.text-error     { color: var(--color-error); }
+.text-primary {
+  color: var(--color-text-primary);
+}
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+.text-tertiary {
+  color: var(--color-text-tertiary);
+}
+.text-on-color {
+  color: var(--color-text-on-color);
+}
+.text-brand {
+  color: var(--color-text-brand);
+}
+.text-white {
+  color: var(--color-white);
+}
+.text-black {
+  color: var(--color-black);
+}
+.text-warning {
+  color: var(--color-warning);
+}
+.text-success {
+  color: var(--color-success);
+}
+.text-info {
+  color: var(--color-info);
+}
+.text-error {
+  color: var(--color-error);
+}
 
 /* --------------------------------------------------------------------------
    Color — Background
    -------------------------------------------------------------------------- */
-.bg-primary   { background-color: var(--color-bg-primary); }
-.bg-secondary { background-color: var(--color-bg-secondary); }
-.bg-tertiary  { background-color: var(--color-bg-tertiary); }
-.bg-brand     { background-color: var(--color-bg-brand); }
-.bg-white     { background-color: var(--color-white); }
-.bg-black     { background-color: var(--color-black); }
-.bg-warning   { background-color: var(--color-warning); }
-.bg-success   { background-color: var(--color-success); }
-.bg-info      { background-color: var(--color-info); }
-.bg-error     { background-color: var(--color-error); }
-.bg-kakao     { background-color: var(--color-sns-kakao); }
-.bg-naver     { background-color: var(--color-sns-naver); }
-.bg-facebook  { background-color: var(--color-sns-facebook); }
+.bg-primary {
+  background-color: var(--color-bg-primary);
+}
+.bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+.bg-tertiary {
+  background-color: var(--color-bg-tertiary);
+}
+.bg-brand {
+  background-color: var(--color-bg-brand);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+.bg-black {
+  background-color: var(--color-black);
+}
+.bg-warning {
+  background-color: var(--color-warning);
+}
+.bg-success {
+  background-color: var(--color-success);
+}
+.bg-info {
+  background-color: var(--color-info);
+}
+.bg-error {
+  background-color: var(--color-error);
+}
+.bg-kakao {
+  background-color: var(--color-sns-kakao);
+}
+.bg-naver {
+  background-color: var(--color-sns-naver);
+}
+.bg-facebook {
+  background-color: var(--color-sns-facebook);
+}
 
 /* --------------------------------------------------------------------------
    Color — Border
    -------------------------------------------------------------------------- */
-.border-color-primary  { border-color: var(--color-border-primary); }
-.border-color-secondary { border-color: var(--color-border-secondary); }
-.border-color-tertiary { border-color: var(--color-border-tertiary); }
-.border-color-on-color { border-color: var(--color-border-on-color); }
-.border-color-brand    { border-color: var(--color-border-brand); }
+.border-color-primary {
+  border-color: var(--color-border-primary);
+}
+.border-color-secondary {
+  border-color: var(--color-border-secondary);
+}
+.border-color-tertiary {
+  border-color: var(--color-border-tertiary);
+}
+.border-color-on-color {
+  border-color: var(--color-border-on-color);
+}
+.border-color-brand {
+  border-color: var(--color-border-brand);
+}
 
 /* --------------------------------------------------------------------------
    Effects — Drop Shadow

@@ -7,8 +7,9 @@
   /* --------------------------------------------------------------------------
      Font
      -------------------------------------------------------------------------- */
-  --font-family-base: 'PretendardVariable', 'Pretendard', -apple-system,
-    BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --font-family-base:
+    'PretendardVariable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic',
+    sans-serif;
 
   /* --------------------------------------------------------------------------
      Font Size — type scale (base 18px, ratio 1.125)
