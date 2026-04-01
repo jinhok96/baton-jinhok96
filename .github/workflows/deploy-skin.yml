@@ -1,14 +1,22 @@
-name: Deploy main
+name: Deploy Skin
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set skin path
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "SKIN_PATH=/skin5/" >> $GITHUB_ENV
+          else
+            echo "SKIN_PATH=/skin6/" >> $GITHUB_ENV
+          fi
 
       - name: Install lftp & sshpass
         run: sudo apt-get install -y lftp sshpass
@@ -23,6 +31,6 @@ jobs:
           lftp <<LFTP
           set sftp:connect-program "sshpass -e ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
           open -u $CAFE24_USER,$SSHPASS sftp://$CAFE24_HOST:$CAFE24_PORT
-          mirror -R --parallel=4 --exclude-glob=*.json --exclude-glob=*.yml --exclude-glob=*.md --exclude=^\.git --exclude=^\.github --exclude=^\.vscode --exclude=^\.claude ./ /skin5/
+          mirror -R --parallel=4 --exclude-glob=*.json --exclude-glob=*.yml --exclude-glob=*.md --exclude-glob=.prettierrc --exclude-glob=.prettierignore --exclude-glob=eslint.config.mjs --exclude=^\.git --exclude=^\.github --exclude=^\.vscode --exclude=^\.claude --exclude=^node_modules ./ $SKIN_PATH
           quit
           LFTP

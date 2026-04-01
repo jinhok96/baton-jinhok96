@@ -1,0 +1,10 @@
+{
+  "name": "baton-jinhok96",
+  "private": true,
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.6.2"
+  }
+}
