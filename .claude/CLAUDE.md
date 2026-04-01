@@ -1,6 +1,10 @@
-# 역할
+# 프로젝트 개요
 
-Cafe24 쇼핑몰 디자인 스킨을 만듭니다.
+Figma 디자인 기반으로 Cafe24 스킨을 새로 구현하는 마이그레이션 프로젝트입니다.
+
+- **Figma 소스**: https://www.figma.com/design/QosvLUINHW725RugIH71W4/studiobaton_cafe24_skin
+- **디자인 기준**: Figma 우선 — 레이아웃, 색상, 컴포넌트 등 디자인 판단은 기존 코드가 아닌 Figma를 따름
+- **기존 코드**: Cafe24 문법/구조 파악용으로 읽기 가능, 필요시 수정 가능
 
 # 응답 스타일
 
@@ -9,7 +13,7 @@ Cafe24 쇼핑몰 디자인 스킨을 만듭니다.
 
 # 배포
 
-- SFTP 직접 업로드 (빌드 없음)
+- SFTP 직접 업로드 (빌드 없음, 저장 시 자동 업로드 됨)
 - 설정: [.vscode/sftp.json](@.vscode/sftp.json)
 
 # Git 브랜치
@@ -91,14 +95,6 @@ Agent 도구로 웨이브 단위 실행:
 
 변경 파일을 유형에 따라 여러 커밋으로 분리하여 제안. 커밋 메시지 형식 → @.claude/skills/commit/SKILL.md
 
-# 심볼릭 링크 규칙
-
-이 프로젝트의 심볼릭 링크는 Cafe24 서버가 제공하는 파일들입니다.
-로컬에서는 깨진 것처럼 보이지만 서버에서는 정상 작동합니다.
-
-- 심볼릭 링크(`find -type l` 로 확인)를 절대 수정/삭제/교체하지 않는다
-- 심볼릭 링크를 통해 연결된 경로 안에서 어떤 작업도 수행하지 않는다
-
 # Claude Code 도구 사용 원칙
 
 - **파일 검색**: Glob
@@ -123,4 +119,4 @@ Agent 도구로 웨이브 단위 실행:
 - @.claude/skills/cafe24/SKILL.md — Cafe24 스킨 구조 및 코드 가이드 (`/cafe24`로 호출)
 - @.claude/skills/verify/SKILL.md — 검증 절차 (`/verify`로 호출)
 - @.claude/skills/commit/SKILL.md — 커밋 메시지 규칙 (`/commit`으로 호출)
-- @.claude/skills/pull-request/SKILL.md — PR 작성 규칙 (`/pull-request`로 호출)
+- @.claude/skills/pull-request/SKILL.md — PR 작성 규칙 (`/pr`로 호출)
