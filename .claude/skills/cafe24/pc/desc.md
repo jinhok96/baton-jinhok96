@@ -3,6 +3,7 @@
 출처: https://developers.cafe24.com/design/front/component/pc/desc
 
 ## 클래스
+
 - 기본: `ec-base-desc` (`dl` 또는 `ul`에 적용)
 - 타입 수정자:
   - `typeBullet` — 블릿형 (제목 오른쪽에 블릿 추가)
@@ -91,6 +92,7 @@
 ```
 
 ## 주의사항
+
 - 기본형은 `dl > dt + dd` 구조 사용
 - 목록형은 `ul > li > strong.term + span.desc` 구조 사용
 - 그리드 수정자(`gSmall/gMedium/gLarge`)는 부모 너비에 따라 비율로 동작

@@ -3,11 +3,13 @@
 출처: https://developers.cafe24.com/design/front/component/pc/tooltip
 
 ## 클래스
+
 - 기본: `ec-base-tooltip`
 - 수정자:
   - `typeUpper` — 상단 노출형 (버튼 위쪽으로 툴팁 표시)
 
 ## 내부 구조
+
 - `h3` — 대제목
 - `p` — 설명 문단
 - `.content` — 상세 콘텐츠 영역
@@ -39,7 +41,9 @@
         <li>목록형 설명입니다.</li>
       </ul>
     </div>
-    <a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close_tip.gif" alt="닫기" /></a>
+    <a href="#none" class="btnClose"
+      ><img src="//img.echosting.cafe24.com/skin/base/common/btn_close_tip.gif" alt="닫기"
+    /></a>
     <span class="edge"></span>
   </div>
 </div>
@@ -63,13 +67,16 @@
         <li>문단형 설명입니다.</li>
       </ul>
     </div>
-    <a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close_tip.gif" alt="닫기" /></a>
+    <a href="#none" class="btnClose"
+      ><img src="//img.echosting.cafe24.com/skin/base/common/btn_close_tip.gif" alt="닫기"
+    /></a>
     <span class="edge"></span>
   </div>
 </div>
 ```
 
 ## 주의사항
+
 - 툴팁은 버튼을 감싸는 부모 요소가 반드시 필요
 - 크기 및 변형 디자인은 각 모듈 CSS 파일에서 별도 설정
 - `.edge`는 말풍선 꼬리 역할을 하는 장식 요소

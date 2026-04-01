@@ -3,6 +3,7 @@
 출처: https://developers.cafe24.com/design/front/component/pc/table
 
 ## 클래스
+
 - 기본: `ec-base-table`
 - 타입 수정자:
   - `typeWrite` — 입력형 (폼 태그 포함 시)
@@ -28,7 +29,9 @@
 <!-- 기본형 (가로형, 보기) -->
 <div class="ec-base-table">
   <table border="1" summary="">
-    <caption>제목</caption>
+    <caption>
+      제목
+    </caption>
     <colgroup>
       <col style="width:20%;" />
       <col style="width:30%;" />
@@ -39,7 +42,9 @@
       <tr>
         <th scope="row">제목</th>
         <td>내용</td>
-        <th scope="row">제목<img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /></th>
+        <th scope="row">
+          제목<img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" />
+        </th>
         <td>내용</td>
       </tr>
       <tr>
@@ -55,14 +60,18 @@
 <!-- 입력형 -->
 <div class="ec-base-table typeWrite">
   <table summary="" border="1">
-    <caption>제목</caption>
+    <caption>
+      제목
+    </caption>
     <colgroup>
       <col style="width:20%;" />
       <col style="width:auto;" />
     </colgroup>
     <tbody>
       <tr>
-        <th scope="row">ID <img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /></th>
+        <th scope="row">
+          ID <img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" />
+        </th>
         <td><input type="text" /> 영문 소문자/숫자, 4~16자</td>
       </tr>
     </tbody>
@@ -72,7 +81,9 @@
 <!-- 목록형 (세로형) -->
 <div class="ec-base-table typeList">
   <table border="1" summary="">
-    <caption>테이블명</caption>
+    <caption>
+      테이블명
+    </caption>
     <colgroup>
       <col style="width:70px;" />
       <col style="width:145px;" />
@@ -98,7 +109,9 @@
 <!-- 스크롤형 -->
 <div class="ec-base-table typeList">
   <table border="1" summary="">
-    <caption>테이블 제목</caption>
+    <caption>
+      테이블 제목
+    </caption>
     <colgroup>
       <col style="width:100px;" />
       <col style="width:auto;" />
@@ -114,7 +127,9 @@
   </table>
   <div class="scroll">
     <table border="1" summary="">
-      <caption>테이블 제목</caption>
+      <caption>
+        테이블 제목
+      </caption>
       <colgroup>
         <col style="width:100px;" />
         <col style="width:auto;" />
@@ -122,8 +137,12 @@
       </colgroup>
       <tbody class="center">
         <tr>
-          <td><a href="#none"><img src="" alt="" /></a></td>
-          <td class="left"><p><a href="#none">추가 구성 상품</a></p></td>
+          <td>
+            <a href="#none"><img src="" alt="" /></a>
+          </td>
+          <td class="left">
+            <p><a href="#none">추가 구성 상품</a></p>
+          </td>
           <td><strong>20,000원</strong></td>
         </tr>
       </tbody>
@@ -134,7 +153,9 @@
 <!-- 제목 미노출형 -->
 <div class="ec-base-table typeList">
   <table border="1" summary="">
-    <caption>테이블명</caption>
+    <caption>
+      테이블명
+    </caption>
     <thead class="blind">
       <tr>
         <th scope="col">제목</th>
@@ -153,7 +174,9 @@
 <!-- 라인형 -->
 <div class="ec-base-table typeList gLine">
   <table border="1" summary="">
-    <caption>테이블명</caption>
+    <caption>
+      테이블명
+    </caption>
     <thead class="blind">
       <tr>
         <th scope="col">제목</th>
@@ -172,7 +195,9 @@
 <!-- typeClear형 -->
 <div class="ec-base-table typeClear">
   <table summary="" border="1">
-    <caption>테이블명</caption>
+    <caption>
+      테이블명
+    </caption>
     <tbody>
       <tr>
         <th scope="row">상품명</th>
@@ -185,7 +210,9 @@
 <!-- 내역 없음 -->
 <div class="ec-base-table typeList">
   <table border="1" summary="">
-    <caption>테이블명</caption>
+    <caption>
+      테이블명
+    </caption>
     <thead>
       <tr>
         <th scope="col">상품 정보</th>
@@ -204,6 +231,7 @@
 ```
 
 ## 주의사항
+
 - 폼 태그 포함 시 반드시 `typeWrite` 추가
 - 스크롤형은 헤더 table의 `tbody`에 `head` 클래스, 내용 영역을 `.scroll`로 감쌈
 - `thead.blind`는 접근성을 위해 제목을 화면에서 숨기되 HTML 구조 유지
