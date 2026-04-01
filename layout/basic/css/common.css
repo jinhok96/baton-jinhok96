@@ -39,11 +39,10 @@ html {
 }
 body,
 code {
-  font-size: 13px;
-  font-family:
-    Arial, 'Apple SD Gothic Neo', 'Noto Sans Regular', '맑은 고딕', 'malgun gothic', '돋움', 'dotum', sans-serif;
-  color: #000;
-  color: var(--font-color-base);
+  font-size: 16px;
+  font-family: var(--font-family-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
   background: #fff;
 }
 body {
@@ -79,17 +78,14 @@ input,
 select,
 textarea {
   font-size: 100%;
-  font-family:
-    Arial, 'Apple SD Gothic Neo', 'Noto Sans Regular', '맑은 고딕', 'malgun gothic', '돋움', 'dotum', sans-serif;
-  color: #000;
-  color: var(--font-color-base);
+  font-family: var(--font-family-base);
+  color: var(--color-text-primary);
   vertical-align: middle;
   border-radius: 0;
   box-sizing: border-box;
 }
 button {
-  font-family:
-    Arial, 'Apple SD Gothic Neo', 'Noto Sans Regular', '맑은 고딕', 'malgun gothic', '돋움', 'dotum', sans-serif;
+  font-family: var(--font-family-base);
   overflow: visible;
   padding: 0;
   margin: 0;

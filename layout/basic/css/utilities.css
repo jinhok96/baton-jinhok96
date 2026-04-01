@@ -1,0 +1,256 @@
+/* ==========================================================================
+   Utility Classes — studiobaton_cafe24_skin
+   Source: Figma (QosvLUINHW725RugIH71W4)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+
+/* Heading — Bold / line-height 140% */
+.heading-h1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.heading-h2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.heading-h3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.heading-h4 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h4);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.heading-h5 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h5);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.heading-h6 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h6);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Label — Medium / line-height 150% */
+.label-l1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l1);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.label-l2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l2);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.label-l3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l3);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.label-l4 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l4);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.label-l5 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l5);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.label-l6 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l6);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Paragraph — Regular / line-height 160% */
+.paragraph-p1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p1);
+  font-weight: 400;
+  line-height: 1.6;
+}
+.paragraph-p2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p2);
+  font-weight: 400;
+  line-height: 1.6;
+}
+.paragraph-p3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p3);
+  font-weight: 400;
+  line-height: 1.6;
+}
+.paragraph-p4 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p4);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Caption — Medium / line-height 150% */
+.caption-c1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-c1);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.caption-c2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-c2);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.caption-c3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-c3);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Color — Text
+   -------------------------------------------------------------------------- */
+.text-primary {
+  color: var(--color-text-primary);
+}
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+.text-tertiary {
+  color: var(--color-text-tertiary);
+}
+.text-on-color {
+  color: var(--color-text-on-color);
+}
+.text-brand {
+  color: var(--color-text-brand);
+}
+.text-white {
+  color: var(--color-white);
+}
+.text-black {
+  color: var(--color-black);
+}
+.text-warning {
+  color: var(--color-warning);
+}
+.text-success {
+  color: var(--color-success);
+}
+.text-info {
+  color: var(--color-info);
+}
+.text-error {
+  color: var(--color-error);
+}
+
+/* --------------------------------------------------------------------------
+   Color — Background
+   -------------------------------------------------------------------------- */
+.bg-primary {
+  background-color: var(--color-bg-primary);
+}
+.bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+.bg-tertiary {
+  background-color: var(--color-bg-tertiary);
+}
+.bg-brand {
+  background-color: var(--color-bg-brand);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+.bg-black {
+  background-color: var(--color-black);
+}
+.bg-warning {
+  background-color: var(--color-warning);
+}
+.bg-success {
+  background-color: var(--color-success);
+}
+.bg-info {
+  background-color: var(--color-info);
+}
+.bg-error {
+  background-color: var(--color-error);
+}
+.bg-kakao {
+  background-color: var(--color-sns-kakao);
+}
+.bg-naver {
+  background-color: var(--color-sns-naver);
+}
+.bg-facebook {
+  background-color: var(--color-sns-facebook);
+}
+
+/* --------------------------------------------------------------------------
+   Color — Border
+   -------------------------------------------------------------------------- */
+.border-color-primary {
+  border-color: var(--color-border-primary);
+}
+.border-color-secondary {
+  border-color: var(--color-border-secondary);
+}
+.border-color-tertiary {
+  border-color: var(--color-border-tertiary);
+}
+.border-color-on-color {
+  border-color: var(--color-border-on-color);
+}
+.border-color-brand {
+  border-color: var(--color-border-brand);
+}
+
+/* --------------------------------------------------------------------------
+   Effects — Drop Shadow
+   -------------------------------------------------------------------------- */
+.shadow-100 {
+  box-shadow:
+    0 1px 4px 0 rgba(0, 0, 0, 0.05),
+    0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.shadow-200 {
+  box-shadow:
+    0 4px 4px -1px rgba(0, 0, 0, 0.05),
+    0 4px 4px -1px rgba(0, 0, 0, 0.1);
+}
+.shadow-300 {
+  box-shadow:
+    0 4px 4px -4px rgba(0, 0, 0, 0.05),
+    0 16px 32px -4px rgba(0, 0, 0, 0.1);
+}
+.shadow-400 {
+  box-shadow:
+    0 4px 4px -4px rgba(0, 0, 0, 0.05),
+    0 16px 16px -8px rgba(0, 0, 0, 0.1);
+}
+.shadow-500 {
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.4);
+}
