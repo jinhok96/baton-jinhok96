@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Design Tokens — studiobaton_cafe24_skin
+   Source: Figma (QosvLUINHW725RugIH71W4)
+   ========================================================================== */
+
+:root {
+  /* --------------------------------------------------------------------------
+     Font
+     -------------------------------------------------------------------------- */
+  --font-family-base: 'PretendardVariable', 'Pretendard', -apple-system,
+    BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+
+  /* --------------------------------------------------------------------------
+     Font Size — type scale (base 18px, ratio 1.125)
+     -------------------------------------------------------------------------- */
+
+  /* Heading */
+  --font-size-h1: 32.44px;
+  --font-size-h2: 28.83px;
+  --font-size-h3: 25.63px;
+  --font-size-h4: 22.78px;
+  --font-size-h5: 20.25px;
+  --font-size-h6: 18px;
+
+  /* Label */
+  --font-size-l1: 25.63px;
+  --font-size-l2: 22.78px;
+  --font-size-l3: 20.25px;
+  --font-size-l4: 18px;
+  --font-size-l5: 16px;
+  --font-size-l6: 14.22px;
+
+  /* Paragraph */
+  --font-size-p1: 20.25px;
+  --font-size-p2: 18px;
+  --font-size-p3: 16px;
+  --font-size-p4: 14.22px;
+
+  /* Caption */
+  --font-size-c1: 12.64px;
+  --font-size-c2: 11.24px;
+  --font-size-c3: 9.99px;
+
+  /* --------------------------------------------------------------------------
+     Color — Base
+     -------------------------------------------------------------------------- */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Gray */
+  --color-gray-50: #f6f6f6;
+  --color-gray-100: #e8e8e8;
+  --color-gray-200: #d1d1d1;
+  --color-gray-300: #bbbbbb;
+  --color-gray-400: #a4a4a4;
+  --color-gray-500: #8d8d8d;
+  --color-gray-600: #717171;
+  --color-gray-700: #555555;
+  --color-gray-800: #383838;
+  --color-gray-900: #1a1a1a;
+
+  /* Brand */
+  --color-brand-100: #eadaff;
+  --color-brand-200: #d5b5ff;
+  --color-brand-300: #c191ff;
+  --color-brand-400: #ac6cff;
+  --color-brand-500: #9747ff;
+  --color-brand-600: #7939cc;
+  --color-brand-700: #5b2b99;
+  --color-brand-800: #3c1c66;
+  --color-brand-900: #1e0e33;
+
+  /* --------------------------------------------------------------------------
+     Color — Semantic (Text / BG / Icon / Border)
+     -------------------------------------------------------------------------- */
+
+  /* Text */
+  --color-text-primary: #151515;
+  --color-text-secondary: #717171;
+  --color-text-tertiary: #bbbbbb;
+  --color-text-on-color: #ffffff;
+  --color-text-brand: #9747ff;
+
+  /* Background */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f6f6f6;
+  --color-bg-tertiary: #e8e8e8;
+  --color-bg-brand: #9747ff;
+
+  /* Icon */
+  --color-icon-primary: #151515;
+  --color-icon-secondary: #717171;
+  --color-icon-tertiary: #bbbbbb;
+  --color-icon-on-color: #ffffff;
+  --color-icon-brand: #9747ff;
+
+  /* Border */
+  --color-border-primary: #e8e8e8;
+  --color-border-secondary: #f6f6f6;
+  --color-border-tertiary: #000000;
+  --color-border-on-color: #ffffff;
+  --color-border-brand: #9747ff;
+
+  /* Status */
+  --color-warning: #f1c21b;
+  --color-success: #24a148;
+  --color-info: #0f62fe;
+  --color-error: #da1e28;
+
+  /* SNS */
+  --color-sns-kakao: #fee500;
+  --color-sns-naver: #03c75a;
+  --color-sns-facebook: #1877f2;
+
+  /* --------------------------------------------------------------------------
+     Spacing
+     -------------------------------------------------------------------------- */
+  --spacing-2: 2px;
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-60: 60px;
+  --spacing-80: 80px;
+}
