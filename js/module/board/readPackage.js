@@ -1,5 +1,5 @@
-$(function(){
-    $('[id^="replyArea_"]').each(function(e) {
-        $(this).hide();
-    });
+$(function () {
+  $('[id^="replyArea_"]').each(function (e) {
+    $(this).hide();
+  });
 });

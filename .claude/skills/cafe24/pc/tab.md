@@ -3,6 +3,7 @@
 출처: https://developers.cafe24.com/design/front/component/pc/tab
 
 ## 클래스
+
 - 기본: `ec-base-tab`
 - 수정자:
   - `typeLight` — 라인형 (선택된 탭 색상만 다름)
@@ -51,12 +52,8 @@
     <li class="selected"><a href="#tabCont1_1">탭 메뉴1</a></li>
     <li><a href="#tabCont1_2">탭 메뉴2</a></li>
   </ul>
-  <div id="tabCont1_1" class="tabCont" style="display:block;">
-    탭 메뉴1 내용영역입니다.
-  </div>
-  <div id="tabCont1_2" class="tabCont" style="display:none;">
-    탭 메뉴2 내용영역입니다.
-  </div>
+  <div id="tabCont1_1" class="tabCont" style="display:block;">탭 메뉴1 내용영역입니다.</div>
+  <div id="tabCont1_2" class="tabCont" style="display:none;">탭 메뉴2 내용영역입니다.</div>
 </div>
 
 <!-- 라인형 + eTab -->
@@ -65,16 +62,13 @@
     <li class="selected"><a href="#tabCont1_1">탭 메뉴1</a></li>
     <li><a href="#tabCont1_2">탭 메뉴2</a></li>
   </ul>
-  <div id="tabCont1_1" class="tabCont" style="display:block;">
-    탭 메뉴1 내용영역입니다.
-  </div>
-  <div id="tabCont1_2" class="tabCont" style="display:none;">
-    탭 메뉴2 내용영역입니다.
-  </div>
+  <div id="tabCont1_1" class="tabCont" style="display:block;">탭 메뉴1 내용영역입니다.</div>
+  <div id="tabCont1_2" class="tabCont" style="display:none;">탭 메뉴2 내용영역입니다.</div>
 </div>
 ```
 
 ## 주의사항
+
 - 탭 메뉴 1개당 최소 168px 너비, 디자인상 최대 4개까지 권장
 - 기본형은 페이지 이동(동기식); 비동기식은 `eTab` 클래스 + `tabCont` 사용
 - `eTab` 사용 시 `href`는 `#tabCont아이디` 형식으로 연결

@@ -1,2 +1,10 @@
-.xans-order-storepickupinfo .ec-base-table .map { overflow:hidden; padding:0; border-top:0; line-height:1.4em; background:#fff; }
-.xans-order-storepickupinfo .ec-base-table .map img { max-width:100%; }
+.xans-order-storepickupinfo .ec-base-table .map {
+  overflow: hidden;
+  padding: 0;
+  border-top: 0;
+  line-height: 1.4em;
+  background: #fff;
+}
+.xans-order-storepickupinfo .ec-base-table .map img {
+  max-width: 100%;
+}

@@ -18,35 +18,127 @@
 
 ```css
 /* Form reset */
-input, select, textarea { font-size:100%; color:#353535; vertical-align:middle; }
-input[type=radio], input[type=checkbox] { width:13px; height:13px; border:0; }
-input[type=text], input[type=password] { height:18px; line-height:20px; padding:2px 4px; border:1px solid #d5d5d5; font-size:12px; }
-input[type=radio] + label, input[type=checkbox] + label { margin:0 4px 0 2px; }
-select { height:24px; border:1px solid #d5d5d5; }
-textarea { padding:5px 6px; border:1px solid #d5d5d5; line-height:1.5; }
+input,
+select,
+textarea {
+  font-size: 100%;
+  color: #353535;
+  vertical-align: middle;
+}
+input[type='radio'],
+input[type='checkbox'] {
+  width: 13px;
+  height: 13px;
+  border: 0;
+}
+input[type='text'],
+input[type='password'] {
+  height: 18px;
+  line-height: 20px;
+  padding: 2px 4px;
+  border: 1px solid #d5d5d5;
+  font-size: 12px;
+}
+input[type='radio'] + label,
+input[type='checkbox'] + label {
+  margin: 0 4px 0 2px;
+}
+select {
+  height: 24px;
+  border: 1px solid #d5d5d5;
+}
+textarea {
+  padding: 5px 6px;
+  border: 1px solid #d5d5d5;
+  line-height: 1.5;
+}
 
 /* 너비 full */
-.fWidthFull input[type=text] { width:100%; height:24px; box-sizing:border-box; }
-.fWidthFull textarea { width:100%; box-sizing:border-box; }
-.fWidthFull select { width:100%; box-sizing:border-box; }
+.fWidthFull input[type='text'] {
+  width: 100%;
+  height: 24px;
+  box-sizing: border-box;
+}
+.fWidthFull textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+.fWidthFull select {
+  width: 100%;
+  box-sizing: border-box;
+}
 
 /* 라디오/체크 그룹 */
-.gLabel { display:inline-block; }
-.gLabel label { margin-right:20px; line-height:22px; }
-.fList.typeHor .gLabel { margin-right:20px; }
-.fList.typeVer .gLabel { display:block; }
+.gLabel {
+  display: inline-block;
+}
+.gLabel label {
+  margin-right: 20px;
+  line-height: 22px;
+}
+.fList.typeHor .gLabel {
+  margin-right: 20px;
+}
+.fList.typeVer .gLabel {
+  display: block;
+}
 
 /* 수량 입력 */
-.ec-base-qty { position:relative; display:inline-block; width:50px; margin:0 1px 0 0; }
-.ec-base-qty input[type="text"] { width:22px; height:23px; padding:0 0 0 5px; border:1px solid #d4d8d9; border-radius:3px 0 0 3px; }
-.ec-base-qty .up { position:absolute; left:27px; top:0; }
-.ec-base-qty .down { position:absolute; left:27px; bottom:0; }
+.ec-base-qty {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  margin: 0 1px 0 0;
+}
+.ec-base-qty input[type='text'] {
+  width: 22px;
+  height: 23px;
+  padding: 0 0 0 5px;
+  border: 1px solid #d4d8d9;
+  border-radius: 3px 0 0 3px;
+}
+.ec-base-qty .up {
+  position: absolute;
+  left: 27px;
+  top: 0;
+}
+.ec-base-qty .down {
+  position: absolute;
+  left: 27px;
+  bottom: 0;
+}
 
 /* 커스텀 체크박스 */
-.ec-base-chk { display:inline-block; position:relative; margin:0 8px 0 0; width:22px; height:22px; vertical-align:top; cursor:pointer; }
-.ec-base-chk input { z-index:1; position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; cursor:pointer; }
-.ec-base-chk .checkbox { position:absolute; top:0; left:0; width:100%; height:100%; background:url("//img.echosting.cafe24.com/skin/base/common/bg_join_check.png") no-repeat 0 0; }
-.ec-base-chk input:checked + .checkbox { background-position:-34px 0; }
+.ec-base-chk {
+  display: inline-block;
+  position: relative;
+  margin: 0 8px 0 0;
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.ec-base-chk input {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.ec-base-chk .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('//img.echosting.cafe24.com/skin/base/common/bg_join_check.png') no-repeat 0 0;
+}
+.ec-base-chk input:checked + .checkbox {
+  background-position: -34px 0;
+}
 ```
 
 ## 예제
@@ -63,7 +155,7 @@ textarea { padding:5px 6px; border:1px solid #d5d5d5; line-height:1.5; }
 </span>
 
 <!-- 파일 첨부 -->
-<input name="attach_file[]" type="file">
+<input name="attach_file[]" type="file" />
 ```
 
 ### 텍스트 입력 (멀티라인)
@@ -97,9 +189,9 @@ textarea { padding:5px 6px; border:1px solid #d5d5d5; line-height:1.5; }
 
 ```html
 <select>
-    <option>옵션1</option>
-    <option>옵션2</option>
-    <option>옵션3</option>
+  <option>옵션1</option>
+  <option>옵션2</option>
+  <option>옵션3</option>
 </select>
 ```
 

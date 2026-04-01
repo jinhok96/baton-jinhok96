@@ -14,8 +14,8 @@
 
 ```html
 <div class="ec-base-field">
-    {$form.search}
-    <button class="btnStrong" onclick="{$action_search}">검색</button>
+  {$form.search}
+  <button class="btnStrong" onclick="{$action_search}">검색</button>
 </div>
 ```
 
@@ -23,10 +23,24 @@
 
 ```html
 <div class="quantity">
-    <span>
-        <img class="QuantityDown" alt="down" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_down.jpg" width="33" height="29" onclick="{$out_shortcut}" />
-        {$form.quantity}
-        <img class="QuantityUp" alt="up" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_up.jpg" width="33" height="29" onclick="{$add_shortcut}" />
-    </span>
+  <span>
+    <img
+      class="QuantityDown"
+      alt="down"
+      src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_down.jpg"
+      width="33"
+      height="29"
+      onclick="{$out_shortcut}"
+    />
+    {$form.quantity}
+    <img
+      class="QuantityUp"
+      alt="up"
+      src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_up.jpg"
+      width="33"
+      height="29"
+      onclick="{$add_shortcut}"
+    />
+  </span>
 </div>
 ```

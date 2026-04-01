@@ -1,2 +1,6 @@
-#popup { width:800px; }
-.xans-myshop-addrlist .ec-base-table.typeList .scroll { max-height:250px; }
+#popup {
+  width: 800px;
+}
+.xans-myshop-addrlist .ec-base-table.typeList .scroll {
+  max-height: 250px;
+}

@@ -15,6 +15,7 @@
 #### 레이아웃 HTML 소스 구조
 
 레이아웃 HTML 소스의 필수 구성 요소:
+
 - `<!DOCTYPE html>` — 독타입 선언 (웹 표준 필수, HTML 버전 알림)
 - `<html>`, `<head>`, `<body>`
 
@@ -39,11 +40,11 @@ CSS와 JS 파일은 필요에 따라 불러올 수 있습니다.
 
 ### HTML, CSS, Javascript 역할
 
-| 언어 | 역할 |
-|------|------|
-| HTML | 구조 — 웹 문서 전체 구조와 콘텐츠 구성 |
-| CSS | 디자인 — HTML 문서를 꾸밀 때 사용 |
-| Javascript | 동작 — 경고창, Drag&Drop 등 상호작용 |
+| 언어       | 역할                                   |
+| ---------- | -------------------------------------- |
+| HTML       | 구조 — 웹 문서 전체 구조와 콘텐츠 구성 |
+| CSS        | 디자인 — HTML 문서를 꾸밀 때 사용      |
+| Javascript | 동작 — 경고창, Drag&Drop 등 상호작용   |
 
 - HTML이 웹페이지 구성의 **필수** 언어
 - CSS, Javascript는 선택 언어
@@ -82,6 +83,7 @@ CSS와 JS 파일은 필요에 따라 불러올 수 있습니다.
 `{$변수명}` 형태로 사용합니다.
 
 **예시 변수:**
+
 - `{$category_title_text}` — 메인분류 관리에서 설정한 분류명
 - `{$image_medium}` — 상품 목록 이미지 (`{$image_small}`, `{$image_large}` 사용 가능)
 - `{$product_name}` — 상품명
@@ -174,6 +176,7 @@ $move_basket=/order/basket.html             -> 장바구니 이동 url
 ```
 {$foo|cover:(,)}
 ```
+
 사용방법: `|cover:앞에 감쌀문자,뒤에 감쌀문자`
 
 ### 2. Cut
@@ -183,6 +186,7 @@ $move_basket=/order/basket.html             -> 장바구니 이동 url
 ```
 {$product_name|cut:10,...}
 ```
+
 사용방법: `|cut:자르고 싶은 숫자, 잘린 문자의 표현 형태`
 
 ### 3. Date
@@ -193,6 +197,7 @@ $move_basket=/order/basket.html             -> 장바구니 이동 url
 {$write_date|date:Y-m-d}
 {$write_date|date:Y-m-d H:i:s}
 ```
+
 사용방법: `|date:Y-m-d H:i:s`
 
 ### 4. Imgconv
@@ -202,6 +207,7 @@ $move_basket=/order/basket.html             -> 장바구니 이동 url
 ```
 {$name_or_img_tag|imgconv:'이미지 주소'}
 ```
+
 사용방법: `|imgconv:대체할 이미지주소, 값이 없는 경우 대체할 이미지주소`
 
 ### 5. Strconv
@@ -211,6 +217,7 @@ $move_basket=/order/basket.html             -> 장바구니 이동 url
 ```
 {$new_icon|strconv:신상품}
 ```
+
 사용방법: `|strconv:change`
 
 ### 6. Nl2br
@@ -236,6 +243,7 @@ $move_basket=/order/basket.html             -> 장바구니 이동 url
 ```
 {$notice_icon|replace:공지,공지사항}
 ```
+
 사용방법: `|replace:찾을문자,치환할 문자`
 
 ### 9. Striptag
