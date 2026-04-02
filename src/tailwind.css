@@ -193,6 +193,10 @@
   a {
     cursor: pointer;
   }
+
+  #contents {
+    position: relative;
+  }
 }
 
 /* ==========================================================================
@@ -530,4 +534,43 @@
 @utility underline {
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+/* ==========================================================================
+   Swiper — Hero (layout/home/hero.html)
+   ========================================================================== */
+
+@layer base {
+  /* Fade 전환 */
+  .swiper-container-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+  }
+  .swiper-container-fade .swiper-slide-active,
+  .swiper-container-fade .swiper-slide-active .swiper-slide-active {
+    pointer-events: auto;
+  }
+
+  /* Hero 페이지네이션 — bar 스타일 */
+  #heroPagination {
+    position: absolute;
+  }
+  #heroPagination .swiper-pagination-bullet {
+    flex: 1;
+    width: auto;
+    height: 4px;
+    border-radius: 6px;
+    background-color: rgb(from var(--color-bg-secondary) r g b / 0.4);
+    opacity: 1;
+    margin: 0;
+    display: block;
+  }
+  #heroPagination .swiper-pagination-bullet-active {
+    background-color: var(--color-bg-secondary);
+  }
+  @media (min-width: 768px) {
+    #heroPagination .swiper-pagination-bullet {
+      height: 6px;
+    }
+  }
 }
