@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+/* ==========================
+   Header
+   ========================== */
+
+#header {
+  background: var(--color-bg-primary);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--layout-header-height);
+  margin: 0 auto;
+  padding: 0 var(--layout-container-padding);
+  box-sizing: border-box;
+}
+
+/* ---- 로고 ---- */
+.header__logo {
+  flex-shrink: 0;
+  width: 172px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.header__logo a {
+  color: var(--color-text-primary);
+  height: 100%;
+}
+
+.header__logo a:hover {
+  text-decoration: none;
+}
+
+/* ---- 카테고리 nav (PC) ---- */
+.header__category ul {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-24);
+}
+
+.header__category a {
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.header__category a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* ---- 유틸리티 ---- */
+.header__utils {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-20);
+  flex-shrink: 0;
+}
+
+.header__btn {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.header__btn:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.header__login {
+  display: flex;
+  align-items: center;
+}
+
+.header__btn--cart {
+  gap: var(--spacing-4);
+}
+
+.header__cart-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 80px;
+  background-color: var(--color-text-secondary);
+  color: var(--color-text-on-color);
+}
+
+/* ---- fixed 헤더 ---- */
+#header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 200;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
+   Mobile/Tablet 반응형
+   ========================================================================== */
+
+@media all and (max-width: 1024px) {
+  .header__inner {
+    height: var(--layout-header-height);
+    max-width: 100%;
+    padding: 0 var(--layout-container-padding);
+  }
+}
+
+/* ==========================================================================
+   Drawer (Mobile/Tablet 전체화면 메뉴)
+   ========================================================================== */
+
+.drawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 300;
+  overflow: hidden;
+}
+
+.drawer.is-open {
+  display: block;
+}
+
+/* ---- 패널 공통 ---- */
+.drawer__panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ---- 2depth 패널 (우측에서 슬라이드 인) ---- */
+.drawer__panel--sub {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.drawer__panel--sub.is-active {
+  transform: translateX(0);
+}
+
+/* ---- 드로어 상단 바 ---- */
+.drawer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  height: var(--layout-header-height);
+  padding: 0 var(--layout-container-padding);
+  box-sizing: border-box;
+}
+
+.drawer__logo {
+  color: var(--color-text-primary);
+}
+
+.drawer__close {
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ---- 뒤로가기 버튼 ---- */
+.drawer__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-icon-primary);
+}
+
+.drawer__back-label {
+  color: var(--color-text-primary);
+}
+
+/* ---- 드로어 본문 ---- */
+.drawer__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-16);
+}
+
+/* ---- 카테고리 목록 (1depth) ---- */
+.drawer__cate-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+}
+
+.drawer__cate-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawer__cate-link {
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+.drawer__cate-link:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* ---- chevron 화살표 버튼 ---- */
+.drawer__cate-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-icon-primary);
+}
+
+.drawer__cate-item.noChild .drawer__cate-arrow {
+  display: none;
+}
+
+/* ---- 뒤로가기 영역 (2depth) ---- */
+.drawer__back-wrap {
+  flex-shrink: 0;
+  padding: var(--spacing-16);
+}
+
+/* ---- 하단 링크 ---- */
+.drawer__footer {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  padding: var(--spacing-20) var(--layout-container-padding);
+}
+
+.drawer__footer-link {
+  color: var(--color-text-secondary);
+}
+
+.drawer__footer-link:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* ---- 백드롭 ---- */
+.drawer__backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 299;
+}
+
+.drawer__backdrop.is-open {
+  display: block;
+}

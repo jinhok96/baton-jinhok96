@@ -1,227 +1,159 @@
-var aCategory = [];
-$(function () {
-  var methods = {
-    aCategory: [],
+(function ($) {
+  var drawer = {
     aSubCategory: {},
-    get: function () {
+    isOpen: false,
+
+    // Cafe24 API에서 서브카테고리 데이터 가져오기
+    fetchSubCategories: function () {
       $.ajax({
         url: '/exec/front/Product/SubCategory',
         dataType: 'json',
         success: function (aData) {
-          if (aData == null || aData == 'undefined') {
-            methods.checkSub();
+          if (!aData) {
+            drawer.checkNoChildItems();
             return;
           }
           for (var i = 0; i < aData.length; i++) {
             var sParentCateNo = aData[i].parent_cate_no;
-            var sCateNo = aData[i].cate_no;
-            if (!methods.aSubCategory[sParentCateNo]) {
-              methods.aSubCategory[sParentCateNo] = [];
+            if (!drawer.aSubCategory[sParentCateNo]) {
+              drawer.aSubCategory[sParentCateNo] = [];
             }
-            if (!aCategory[sCateNo]) {
-              aCategory[sCateNo] = [];
-            }
-            methods.aSubCategory[sParentCateNo].push(aData[i]);
-            aCategory[sCateNo] = aData[i];
+            drawer.aSubCategory[sParentCateNo].push(aData[i]);
           }
-          methods.checkSub();
+          drawer.checkNoChildItems();
         },
       });
     },
+
+    // 하위 카테고리가 없는 항목에 noChild 클래스 부여
+    checkNoChildItems: function () {
+      $('#drawerCateList .drawer__cate-item').each(function () {
+        var sParam = $(this).find('.drawer__cate-arrow').attr('cate');
+        if (!sParam) {
+          $(this).addClass('noChild');
+          return;
+        }
+        var iCateNo = Number(drawer.getParam(sParam, 'cate_no'));
+        if (!drawer.aSubCategory[iCateNo]) {
+          $(this).addClass('noChild');
+        }
+      });
+    },
+
     getParam: function (sUrl, sKey) {
-      if (typeof sUrl !== 'string') return;
+      if (typeof sUrl !== 'string') return undefined;
       var aUrl = sUrl.split('?');
-      var sQueryString = aUrl[1];
       var aParam = {};
+      var sQueryString = aUrl[1];
       if (sQueryString) {
         var aFields = sQueryString.split('&');
-        var aField = [];
         for (var i = 0; i < aFields.length; i++) {
-          aField = aFields[i].split('=');
+          var aField = aFields[i].split('=');
           aParam[aField[0]] = aField[1];
         }
       }
       return sKey ? aParam[sKey] : aParam;
     },
 
-    show: function (overNode, iCateNo) {
-      var oParentNode = overNode;
+    // 드로어 열기
+    open: function () {
+      $('#slideMenuWrap').addClass('is-open').attr('aria-hidden', 'false');
+      $('#drawerBackdrop').addClass('is-open');
+      document.body.style.overflow = 'hidden';
+      drawer.isOpen = true;
+    },
+
+    // 드로어 닫기
+    close: function () {
+      $('#slideMenuWrap').removeClass('is-open').attr('aria-hidden', 'true');
+      $('#drawerBackdrop').removeClass('is-open');
+      document.body.style.overflow = '';
+      drawer.isOpen = false;
+      drawer.hide2depth();
+    },
+
+    // 2depth 패널 표시
+    show2depth: function (iCateNo, sCateName) {
+      var aSubs = drawer.aSubCategory[iCateNo];
+      if (!aSubs || aSubs.length === 0) return;
+
       var aHtml = [];
-      var sMyCateList = localStorage.getItem('myCateList');
-      if (methods.aSubCategory[iCateNo] != undefined) {
-        aHtml.push('<ul class="slideSubMenu">');
-        $(methods.aSubCategory[iCateNo]).each(function () {
-          var sNextParentNo = this.cate_no;
-          var sCateSelected = checkInArray(sMyCateList, this.cate_no) == true ? ' selected' : '';
-          var sHref;
-          if (methods.aSubCategory[sNextParentNo] == undefined) {
-            aHtml.push('<li class="noChild" id="cate' + this.cate_no + '">');
-            sHref = '/product/list.html' + this.param;
-          } else {
-            aHtml.push('<li id="cate' + this.cate_no + '">');
-            sHref = '#none';
-          }
-          aHtml.push(
-            '<a href="/product/list.html' +
-              this.param +
-              '" class="view" cate="' +
-              this.param +
-              '" data-i18n="LIST.PRD_CATE_NO_' +
-              this.cate_no +
-              '" data-i18n-new>' +
-              this.name +
-              '</a>',
-          );
-          if (methods.aSubCategory[sNextParentNo] != undefined)
-            aHtml.push(
-              '<a href="' + sHref + '"' + this.param + '" onclick="subMenuEvent(this);" class="cate">상품보기</a>',
-            );
-
-          if (methods.aSubCategory[sNextParentNo] != undefined) {
-            aHtml.push('<ul>');
-            $(methods.aSubCategory[sNextParentNo]).each(function () {
-              var sNextParentNo2 = this.cate_no;
-              var sCateSelected = checkInArray(sMyCateList, this.cate_no) == true ? ' selected' : '';
-              var sHref;
-              if (methods.aSubCategory[sNextParentNo2] == undefined) {
-                aHtml.push('<li class="noChild" id="cate' + this.cate_no + '">');
-                sHref = '/product/list.html' + this.param;
-              } else {
-                aHtml.push('<li id="cate' + this.cate_no + '">');
-                sHref = '#none';
-              }
-              aHtml.push(
-                '<a href="/product/list.html' +
-                  this.param +
-                  '" class="view" cate="' +
-                  this.param +
-                  '" data-i18n="LIST.PRD_CATE_NO_' +
-                  this.cate_no +
-                  '" data-i18n-new>' +
-                  this.name +
-                  '</a>',
-              );
-              if (methods.aSubCategory[sNextParentNo] != undefined)
-                aHtml.push(
-                  '<a href="' + sHref + '"' + this.param + '" onclick="subMenuEvent(this);" class="cate">상품보기</a>',
-                );
-
-              if (methods.aSubCategory[sNextParentNo2] != undefined) {
-                aHtml.push('<ul>');
-
-                $(methods.aSubCategory[sNextParentNo2]).each(function () {
-                  aHtml.push('<li class="noChild" id="cate' + this.cate_no + '">');
-                  var sCateSelected = checkInArray(sMyCateList, this.cate_no) == true ? ' selected' : '';
-                  aHtml.push(
-                    '<a href="/product/list.html' +
-                      this.param +
-                      '" class="view" cate="' +
-                      this.param +
-                      '" onclick="subMenuEvent(this);" data-i18n="LIST.PRD_CATE_NO_' +
-                      this.cate_no +
-                      '" data-i18n-new>' +
-                      this.name +
-                      '</a>',
-                  );
-                  aHtml.push('</li>');
-                });
-                aHtml.push('</ul>');
-              }
-              aHtml.push('</li>');
-            });
-            aHtml.push('</ul>');
-          }
-          aHtml.push('</li>');
-        });
-        aHtml.push('</ul>');
+      for (var i = 0; i < aSubs.length; i++) {
+        var sub = aSubs[i];
+        aHtml.push('<li class="drawer__cate-item noChild" id="cate' + sub.cate_no + '">');
+        aHtml.push(
+          '<a href="/product/list.html' +
+            sub.param +
+            '" class="drawer__cate-link view"' +
+            ' data-i18n="LIST.PRD_CATE_NO_' +
+            sub.cate_no +
+            '" data-i18n-new>' +
+            sub.name +
+            '</a>',
+        );
+        aHtml.push('</li>');
       }
-      $(oParentNode).append(aHtml.join(''));
+
+      $('#drawerSubList').html(aHtml.join(''));
+      $('#drawerBackLabel').text(sCateName);
+      $('#drawerPanel2').addClass('is-active');
+
       if (window.i18nextCafe24) {
         i18nextCafe24.translate('data-i18n-new');
       }
     },
-    close: function () {
-      $('.slideSubMenu').remove();
-    },
-    checkSub: function () {
-      $('.cate').each(function () {
-        var sParam = $(this).attr('cate');
-        if (!sParam) return;
-        var iCateNo = Number(methods.getParam(sParam, 'cate_no'));
-        var result = methods.aSubCategory[iCateNo];
-        if (result == undefined) {
-          var sHref;
-          if ($(this).closest('#slideProjectList').length) {
-            sHref = '/product/project.html' + sParam;
-          } else {
-            sHref = '/product/list.html' + sParam;
-          }
 
-          $(this).attr('href', sHref);
-          $(this).parent().attr('class', 'noChild');
-        }
-      });
+    // 2depth 패널 숨기기
+    hide2depth: function () {
+      $('#drawerPanel2').removeClass('is-active');
+      $('#drawerSubList').empty();
     },
   };
 
-  methods.get();
-
-  $('#slideCateList li > a.cate').on('click', function (e) {
-    var sParam = $(this).attr('cate');
-    if (!sParam) return;
-    var iCateNo = Number(methods.getParam(sParam, 'cate_no'));
-    var hasClass = $(this).parent().hasClass('selected');
-
-    //if ($(this).parent().attr('class') == 'xans-record- selected') {
-    if (hasClass) {
-      methods.close();
-    } else {
-      if (!iCateNo) return;
-      $('#aside #slideCateList li').removeClass('selected');
-      methods.close();
-      methods.show(this.parentNode, iCateNo);
+  $(function () {
+    // 헤더 로고 텍스트를 드로어 로고에 복사
+    var headerLogoText = $('.header__logo a').text().trim();
+    if (headerLogoText) {
+      $('.drawer__logo').text(headerLogoText);
     }
-  });
 
-  $('#aside ul a.cate').on('click', function (e) {
-    $(this).parent().find('li').removeClass('selected');
-    $(this).parent().toggleClass('selected');
-    if (!$(this).parent('li').hasClass('noChild')) {
+    drawer.fetchSubCategories();
+
+    // 드로어 열기
+    $(document).on('click', '#btnDrawerOpen', function () {
+      drawer.open();
+    });
+
+    // 드로어 닫기
+    $(document).on('click', '#btnDrawerClose, #btnDrawerClose2', function () {
+      drawer.close();
+    });
+
+    // 백드롭 클릭 시 닫기
+    $(document).on('click', '#drawerBackdrop', function () {
+      drawer.close();
+    });
+
+    // 1depth → 2depth 전환
+    $(document).on('click', '#drawerCateList .drawer__cate-arrow', function (e) {
       e.preventDefault();
-    }
+      var sParam = $(this).attr('cate');
+      if (!sParam) return;
+      var iCateNo = Number(drawer.getParam(sParam, 'cate_no'));
+      var sCateName = $(this).closest('.drawer__cate-item').find('.drawer__cate-link').text().trim();
+      drawer.show2depth(iCateNo, sCateName);
+    });
+
+    // 2depth → 1depth 뒤로가기
+    $(document).on('click', '#btnDrawerBack', function () {
+      drawer.hide2depth();
+    });
+
+    // ESC 키로 닫기
+    $(document).on('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.isOpen) {
+        drawer.close();
+      }
+    });
   });
-
-  $('#slideCateList h2').on('click', function () {
-    var oParentId = $(this).parent().attr('id');
-    if (oParentId == 'slideCateList' || oParentId == 'slideMultishopList' || oParentId == 'slideProjectList') {
-      $(this).attr('class') == 'selected' ? $(this).next().hide() : $(this).next().show();
-    }
-    $(this).toggleClass('selected');
-  });
-
-  $('#slideProjectList .icoCategory').on('click', function () {
-    var target = $(this).parents('#slideProjectList');
-    if (target.find('.categoryList').css('display') == 'none') {
-      target.find('.categoryList').show();
-    } else {
-      target.find('.categoryList').hide();
-    }
-
-    $(this).parents('.title').toggleClass('selected');
-  });
-});
-function subMenuEvent(obj) {
-  $(obj).parent().find('li').removeClass('selected');
-  $(obj).parent().toggleClass('selected');
-}
-
-function checkInArray(sBookmarkList, iCateNo) {
-  if (sBookmarkList == null) return false;
-  var aBookmarkList = sBookmarkList.split('|');
-  for (var i = 0; i < aBookmarkList.length; i++) {
-    if (aBookmarkList[i] == iCateNo) {
-      return true;
-    }
-  }
-  return false;
-}
+})(jQuery);

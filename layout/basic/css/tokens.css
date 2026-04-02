@@ -4,16 +4,16 @@
    ========================================================================== */
 
 :root {
-  /* --------------------------------------------------------------------------
+  /* ---------------------
      Font
-     -------------------------------------------------------------------------- */
+     --------------------- */
   --font-family-base:
     'PretendardVariable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic',
     sans-serif;
 
-  /* --------------------------------------------------------------------------
-     Font Size — type scale (base 18px, ratio 1.125)
-     -------------------------------------------------------------------------- */
+  /* ---------------------
+     Font Size — type scale (base 16px)
+     --------------------- */
 
   /* Heading */
   --font-size-h1: 32.44px;
@@ -42,9 +42,9 @@
   --font-size-c2: 11.24px;
   --font-size-c3: 9.99px;
 
-  /* --------------------------------------------------------------------------
+  /* ---------------------
      Color — Base
-     -------------------------------------------------------------------------- */
+     --------------------- */
   --color-white: #ffffff;
   --color-black: #000000;
 
@@ -71,9 +71,9 @@
   --color-brand-800: #3c1c66;
   --color-brand-900: #1e0e33;
 
-  /* --------------------------------------------------------------------------
+  /* ---------------------
      Color — Semantic (Text / BG / Icon / Border)
-     -------------------------------------------------------------------------- */
+     --------------------- */
 
   /* Text */
   --color-text-primary: #151515;
@@ -113,9 +113,9 @@
   --color-sns-naver: #03c75a;
   --color-sns-facebook: #1877f2;
 
-  /* --------------------------------------------------------------------------
+  /* ---------------------
      Spacing
-     -------------------------------------------------------------------------- */
+     --------------------- */
   --spacing-2: 2px;
   --spacing-4: 4px;
   --spacing-8: 8px;
@@ -128,22 +128,151 @@
   --spacing-60: 60px;
   --spacing-80: 80px;
 
-  /* --------------------------------------------------------------------------
+  /* ---------------------
      Layout
-     -------------------------------------------------------------------------- */
-  --layout-header-height-desktop: 56px;
-  --layout-header-height-mobile: 48px;
-  --layout-footer-height-desktop: 72px;
-  --layout-content-max-width: 1240px;
-  --layout-container-padding-desktop: 50px;
-  --layout-container-padding-mobile: 16px;
+     --------------------- */
+  --layout-header-height: 56px;
+  --layout-content-max-width: 1440px;
+  --layout-container-padding: var(--spacing-24);
   --layout-section-gap: var(--spacing-80);
 
-  /* --------------------------------------------------------------------------
+  /* ---------------------
      Product
-     -------------------------------------------------------------------------- */
+     --------------------- */
   --product-card-ratio: 4 / 5;
-  --product-grid-cols-desktop: 5;
-  --product-grid-cols-mobile: 2;
+  --product-grid-cols: 5;
   --product-grid-gap: var(--spacing-20);
+}
+
+/* ---------------------
+     Responsive Layout
+     --------------------- */
+@media (max-width: 767px) {
+  :root {
+    --layout-header-height: 48px;
+    --layout-container-padding: var(--spacing-16);
+    --product-grid-cols: 2;
+  }
+}
+
+/* ---------------------
+     Typography
+     --------------------- */
+
+/* --- Heading ---*/
+.text-h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.text-h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.text-h3 {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.text-h4 {
+  font-size: var(--font-size-h4);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.text-h5 {
+  font-size: var(--font-size-h5);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.text-h6 {
+  font-size: var(--font-size-h6);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* --- Label ---*/
+.text-l1 {
+  font-size: var(--font-size-l1);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.text-l2 {
+  font-size: var(--font-size-l2);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.text-l3 {
+  font-size: var(--font-size-l3);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.text-l4 {
+  font-size: var(--font-size-l4);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.text-l5 {
+  font-size: var(--font-size-l5);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.text-l6 {
+  font-size: var(--font-size-l6);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* --- Paragraph ---*/
+.text-p1 {
+  font-size: var(--font-size-p1);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-p2 {
+  font-size: var(--font-size-p2);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-p3 {
+  font-size: var(--font-size-p3);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-p4 {
+  font-size: var(--font-size-p4);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* --- Caption ---*/
+.text-c1 {
+  font-size: var(--font-size-c1);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.text-c2 {
+  font-size: var(--font-size-c2);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.text-c3 {
+  font-size: var(--font-size-c3);
+  font-weight: 500;
+  line-height: 1.5;
 }

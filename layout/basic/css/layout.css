@@ -1,56 +1,60 @@
 @charset "utf-8";
 
 /* Layout */
-#header {
-  background: var(--color-bg-primary);
-  box-sizing: border-box;
+
+/* responsive class (mobile base) */
+.RTI,
+.RTB,
+.RTIB,
+.RWI,
+.RW,
+.RWB,
+.RWIB {
+  display: none !important;
 }
-#header .topArea {
-  position: relative;
+.RMB {
+  display: block !important;
 }
-#header .navigation .btnNav {
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 1px;
-  color: transparent;
-  line-height: 1px;
-  width: 24px;
-  height: 24px;
-  background: none;
+.RMI {
+  display: inline !important;
 }
-#header .navigation__util .menu {
-  display: inline-block;
-  overflow: hidden;
-  width: 24px;
-  height: 24px;
-  margin-left: 15px;
-  font-size: 1px;
-  line-height: 1px;
-  color: transparent;
-  white-space: nowrap;
-  text-indent: 150%;
-  vertical-align: top;
-  background: none;
+.RMIB {
+  display: inline-block !important;
 }
+.RTMB {
+  display: block !important;
+}
+.RTMI {
+  display: inline-block !important;
+}
+
+/* IOS Safari bug Fix */
+body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 #topBanner {
   position: relative;
   overflow: hidden;
-  height: 38px;
+  height: auto;
   text-align: center;
   background: var(--color-black);
 }
 #topBanner .desc {
-  overflow: hidden;
-  height: 16px;
+  overflow: visible;
+  height: auto;
   margin: 11px 56px;
   font-size: 12px;
+  line-height: 1.67;
   color: var(--color-text-on-color);
   box-sizing: border-box;
 }
 #topBanner .btnClose {
   position: absolute;
-  right: 50px;
-  top: 10px;
+  right: 16px;
+  top: 12px;
   width: 13px;
   height: 13px;
   background: none;
@@ -64,13 +68,16 @@
 #topBanner.hidden {
   display: none;
 }
+
 #footer {
   background: var(--color-bg-secondary);
+  padding: 0 0 82px;
 }
 #footer .inner {
   overflow: hidden;
   position: relative;
 }
+
 .dimmed {
   display: none;
   z-index: 1000;
@@ -84,246 +91,153 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-/********************* Mobile *********************/
-@media all and (max-width: 767px) {
-  /* responsive class */
-  .RTI,
-  .RTB,
-  .RTIB {
-    display: none !important;
-  }
-  .RMB {
-    display: block !important;
-  }
-  .RMI {
-    display: inline !important;
-  }
-  .RMIB {
-    display: inline-block !important;
-  }
-
-  #header .navigation .btnNav {
-    left: 16px;
-  }
-  #header .navigation__util {
-    right: 16px;
-  }
-
-  /* IOS Safari bug Fix */
-  body {
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-  }
+#capp-shop-new-product-optionselect-layer {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
 }
 
-/********************* Mobile / Tablet *********************/
-@media all and (max-width: 1024px) {
-  /* responsive class */
-  .RWI,
-  .RW,
-  .RWB,
-  .RWIB {
-    display: none !important;
-  }
-  .RTMB {
-    display: block !important;
-  }
-  .RTMI {
-    display: inline-block !important;
-  }
+.bottom-nav {
+  z-index: 901;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 52px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition:
+    -webkit-transform 0.3s linear,
+    padding-bottom 0.3s linear;
+  transition:
+    transform 0.3s linear,
+    padding-bottom 0.3s linear;
+}
+.bottom-nav--hide {
+  -webkit-transform: translate3d(0, 60px, 0);
+  transform: translate3d(0, 60px, 0);
+}
+.bottom-nav__tabBar {
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  padding: 14px 26px 0;
+  box-sizing: border-box;
+  background: var(--color-bg-primary);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition:
+    -webkit-transform 0.3s linear,
+    padding-bottom 0.3s linear;
+  transition:
+    transform 0.3s linear,
+    padding-bottom 0.3s linear;
+}
+.bottom-nav__tabBar li a,
+.bottom-nav__tabBar li button {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  width: 24px;
+  height: 24px;
+  font-size: 1px;
+  line-height: 1px;
+  color: transparent;
+  text-indent: 150%;
+  vertical-align: top;
+  background: none;
+}
+.bottom-nav__tabBar li button:focus {
+  outline: 0;
+}
+.bottom-nav__tabBar .count {
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: -5px;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+  color: var(--color-text-on-color);
+  text-align: center;
+  text-indent: 0;
+  line-height: 15px;
+  border-radius: 50%;
+  background: var(--color-black);
+}
+.bottom-nav__top {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: -72px;
+  right: 16px;
+  width: 54px;
+  height: 54px;
+  padding: 15px 0 0;
+  font-size: 14px;
+  border: 1px solid var(--color-border-primary);
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  background: var(--color-bg-primary);
+  transition: 0.5s;
+}
+.bottom-nav__top a {
+  display: block;
+}
+.bottom-nav__top .icon.icoArrowTop {
+  display: block;
+  margin: 0 auto;
+}
+.bottom-nav__top--show {
+  opacity: 1;
+  visibility: visible;
+}
+.bottom-nav__top span {
+  display: block;
+  margin: 4px 0 0;
+}
+#detail .bottom-nav {
+  z-index: 401;
+}
+#detail .bottom-nav--hide .bottom-nav__top {
+  opacity: 0;
+}
+.button--fixed .bottom-nav__tabBar {
+  display: none;
+}
 
-  #capp-shop-new-product-optionselect-layer {
-    position: fixed !important;
-    top: 0 !important;
-    right: 0 !important;
-    left: auto !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-  }
+#contents {
+  position: relative;
+  padding-bottom: 100px;
+}
+main#contents {
+  padding-bottom: 66px;
+}
 
-  #header {
-    position: relative;
-    height: var(--layout-header-height-mobile);
-    box-sizing: border-box;
-  }
-  #header .navigation .btnNav {
-    position: absolute;
-    top: 18px;
-  }
-  #header .navigation__util {
-    position: absolute;
-    top: 18px;
-  }
-  .bottom-nav {
-    z-index: 901;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 52px;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transition:
-      -webkit-transform 0.3s linear,
-      padding-bottom 0.3s linear;
-    transition:
-      transform 0.3s linear,
-      padding-bottom 0.3s linear;
-  }
-  .bottom-nav--hide {
-    -webkit-transform: translate3d(0, 60px, 0);
-    transform: translate3d(0, 60px, 0);
-  }
-  .bottom-nav__tabBar {
-    display: flex;
-    justify-content: space-between;
-    height: 52px;
-    padding: 14px 26px 0;
-    box-sizing: border-box;
-    background: var(--color-bg-primary);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transition:
-      -webkit-transform 0.3s linear,
-      padding-bottom 0.3s linear;
-    transition:
-      transform 0.3s linear,
-      padding-bottom 0.3s linear;
-  }
-  .bottom-nav__tabBar li a,
-  .bottom-nav__tabBar li button {
-    position: relative;
-    display: block;
-    white-space: nowrap;
-    width: 24px;
-    height: 24px;
-    font-size: 1px;
-    line-height: 1px;
-    color: transparent;
-    text-indent: 150%;
-    vertical-align: top;
-    background: none;
-  }
-  .bottom-nav__tabBar li button:focus {
-    outline: 0;
-  }
-  .bottom-nav__tabBar .count {
-    display: block;
-    position: absolute;
-    top: 12px;
-    right: -5px;
-    width: 16px;
-    height: 16px;
-    font-size: 11px;
-    color: var(--color-text-on-color);
-    text-align: center;
-    text-indent: 0;
-    line-height: 15px;
-    border-radius: 50%;
-    background: var(--color-black);
-  }
-  .bottom-nav__top {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: -72px;
-    right: 16px;
-    width: 54px;
-    height: 54px;
-    padding: 15px 0 0;
-    font-size: 14px;
-    border: 1px solid var(--color-border-primary);
-    box-sizing: border-box;
-    text-align: center;
-    text-transform: uppercase;
-    background: var(--color-bg-primary);
-    transition: 0.5s;
-  }
-  .bottom-nav__top a {
-    display: block;
-  }
-  .bottom-nav__top .icon.icoArrowTop {
-    display: block;
-    margin: 0 auto;
-  }
-  .bottom-nav__top--show {
-    opacity: 1;
-    visibility: visible;
-  }
-  .bottom-nav__top span {
-    display: block;
-    margin: 4px 0 0;
-  }
-  #detail .bottom-nav {
-    z-index: 401;
-  }
-  #detail .bottom-nav--hide .bottom-nav__top {
-    opacity: 0;
-  }
-  .button--fixed .bottom-nav__tabBar {
-    display: none;
-  }
-  .button--fixed #header.fixed {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: var(--layout-header-height-mobile);
-    z-index: 1000;
-    transition: 0.5s;
-  }
-  .button--fixed #header.fixed .navigation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--color-bg-primary);
-  }
-  #contents {
-    position: relative;
-    padding-bottom: 100px;
-  }
-  main#contents {
-    padding-bottom: 66px;
-  }
-  #footer {
-    padding: 0 0 82px;
-  }
-  #topBanner {
-    height: auto;
-  }
-  #topBanner .desc {
-    overflow: visible;
-    height: auto;
-    line-height: 1.67;
-  }
-  #topBanner .btnClose {
-    right: 16px;
-    top: 12px;
-  }
-
-  .xans-layout-mobileaction {
-    position: absolute;
-    top: 0;
-    left: 16px;
-  }
-  .xans-layout-mobileaction a {
-    overflow: hidden;
-    display: block;
-    text-indent: -150%;
-    color: transparent;
-    font-size: 1px;
-    line-height: 1px;
-    white-space: nowrap;
-  }
-  #detail .xans-layout-mobileaction {
-    top: 16px;
-  }
+.xans-layout-mobileaction {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+.xans-layout-mobileaction a {
+  overflow: hidden;
+  display: block;
+  text-indent: -150%;
+  color: transparent;
+  font-size: 1px;
+  line-height: 1px;
+  white-space: nowrap;
+}
+#detail .xans-layout-mobileaction {
+  top: 16px;
 }
 
 /********************* Tablet *********************/
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 768px) {
   /* responsive class */
   .RMI,
   .RMB,
@@ -338,13 +252,6 @@
   }
   .RTIB {
     display: inline-block !important;
-  }
-
-  #header .navigation .btnNav {
-    left: 24px;
-  }
-  #header .navigation__util {
-    right: 24px;
   }
 }
 
@@ -371,50 +278,19 @@
     display: inline-block !important;
   }
 
-  #header {
-    max-width: 1920px;
-    padding: 0;
-    transition: 0.5s;
+  .bottom-nav {
+    display: none;
   }
-  #header.fixed {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: var(--layout-header-height-desktop);
-    z-index: 1000;
-    transition: 0.5s;
-  }
-  #header.fixed .navigation {
-    position: absolute;
-    top: 0;
-    left: var(--layout-container-padding-desktop);
-    right: var(--layout-container-padding-desktop);
-    background: var(--color-bg-primary);
-  }
-  #header .navigation {
-    position: relative;
-    min-height: 64px;
-  }
-  #header .navigation .btnNav {
-    position: absolute;
-    left: 0;
-    top: 20px;
-  }
-  #header .navigation__util {
-    position: absolute;
-    right: 0;
-    top: 20px;
-  }
+
   #contents {
     max-width: var(--layout-content-max-width);
     min-height: 700px;
-    padding: 0 var(--layout-container-padding-desktop) 200px;
+    padding: 0 var(--layout-container-padding) 200px;
     margin: 0 auto;
   }
   main#contents {
     max-width: 100%;
-    margin: 0 var(--layout-container-padding-desktop);
+    margin: 0 var(--layout-container-padding);
     padding: 0 0 44px;
   }
   section.gInner {
@@ -437,7 +313,7 @@
   #footer .inner {
     max-width: 1340px;
     margin: 0 auto;
-    padding: 0 var(--layout-container-padding-desktop);
+    padding: 0 var(--layout-container-padding);
   }
 
   #quick {
