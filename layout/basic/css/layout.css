@@ -2,82 +2,6 @@
 
 /* Layout */
 
-/* responsive class (mobile base) */
-.RTI,
-.RTB,
-.RTIB,
-.RWI,
-.RW,
-.RWB,
-.RWIB {
-  display: none !important;
-}
-.RMB {
-  display: block !important;
-}
-.RMI {
-  display: inline !important;
-}
-.RMIB {
-  display: inline-block !important;
-}
-.RTMB {
-  display: block !important;
-}
-.RTMI {
-  display: inline-block !important;
-}
-
-/* IOS Safari bug Fix */
-body {
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-#topBanner {
-  position: relative;
-  overflow: hidden;
-  height: auto;
-  text-align: center;
-  background: var(--color-black);
-}
-#topBanner .desc {
-  overflow: visible;
-  height: auto;
-  margin: 11px 56px;
-  font-size: 12px;
-  line-height: 1.67;
-  color: var(--color-text-on-color);
-  box-sizing: border-box;
-}
-#topBanner .btnClose {
-  position: absolute;
-  right: 16px;
-  top: 12px;
-  width: 13px;
-  height: 13px;
-  background: none;
-  overflow: hidden;
-  white-space: nowrap;
-  text-indent: 150%;
-  font-size: 1px;
-  color: transparent;
-  line-height: 1px;
-}
-#topBanner.hidden {
-  display: none;
-}
-
-#footer {
-  background: var(--color-bg-secondary);
-  padding: 0 0 82px;
-}
-#footer .inner {
-  overflow: hidden;
-  position: relative;
-}
-
 .dimmed {
   display: none;
   z-index: 1000;
@@ -236,52 +160,8 @@ main#contents {
   top: 16px;
 }
 
-/********************* Tablet *********************/
-@media all and (min-width: 768px) {
-  /* responsive class */
-  .RMI,
-  .RMB,
-  .RMIB {
-    display: none !important;
-  }
-  .RTI {
-    display: inline !important;
-  }
-  .RTB {
-    display: block !important;
-  }
-  .RTIB {
-    display: inline-block !important;
-  }
-}
-
 /********************* PC *********************/
 @media all and (min-width: 1025px) {
-  /* responsive class */
-  .RMI,
-  .RMB,
-  .RMIB,
-  .RTI,
-  .RTB,
-  .RTIB,
-  .RTMI,
-  .RTMB {
-    display: none !important;
-  }
-  .RWI {
-    display: inline !important;
-  }
-  .RWB {
-    display: block !important;
-  }
-  .RWIB {
-    display: inline-block !important;
-  }
-
-  .bottom-nav {
-    display: none;
-  }
-
   #contents {
     max-width: var(--layout-content-max-width);
     min-height: 700px;
@@ -296,49 +176,6 @@ main#contents {
   section.gInner {
     max-width: var(--layout-content-max-width);
     margin: 0 auto;
-  }
-
-  #footer {
-    padding: 40px 0 44px;
-  }
-  #footer:before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 100px;
-    left: 0;
-    right: 0;
-    border-top: 1px solid var(--color-border-primary);
-  }
-  #footer .inner {
-    max-width: 1340px;
-    margin: 0 auto;
-    padding: 0 var(--layout-container-padding);
-  }
-
-  #quick {
-    z-index: 10;
-    position: absolute;
-    top: 284px;
-    right: 50%;
-    margin-right: -910px;
-    width: 93px;
-    background: var(--color-bg-primary);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
-  }
-  #quick.fixed {
-    position: fixed;
-    top: 84px;
-  }
-  #quick .pageTop a {
-    display: block;
-    padding: 19px 0;
-    text-align: center;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-  #quick .pageTop .icon {
-    vertical-align: middle;
   }
 }
 
