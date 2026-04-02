@@ -45,12 +45,13 @@ Figma 디자인(QosvLUINHW725RugIH71W4)을 기반으로 Cafe24 스킨 3페이지
 
 ## 완료된 작업
 
-| 파일                                  | Wave     | 상태    |
-| ------------------------------------- | -------- | ------- |
-| `src/tailwind.css`                    | Wave 0   | ✅ 완료 |
-| `layout/header/header.html`           | Wave 1-A | ✅ 완료 |
-| `layout/header/header.js`             | Wave 1-A | ✅ 완료 |
-| `layout/header/state_login.html`      | Wave 1-A | ✅ 완료 |
+| 파일                             | Wave     | 상태    |
+| -------------------------------- | -------- | ------- |
+| `src/tailwind.css`               | Wave 0   | ✅ 완료 |
+| `layout/header/header.html`      | Wave 1-A | ✅ 완료 |
+| `layout/header/header.js`        | Wave 1-A | ✅ 완료 |
+| `layout/header/state_login.html` | Wave 1-A | ✅ 완료 |
+| `layout/footer/footer.html`      | Wave 1-B | ✅ 완료 |
 
 ---
 
@@ -64,27 +65,27 @@ Figma 디자인(QosvLUINHW725RugIH71W4)을 기반으로 Cafe24 스킨 3페이지
 - hex 직접 입력 금지. `style=""` 인라인 스타일 금지.
 - 주요 시맨틱 클래스:
 
-| UI 요소                     | 사용 클래스                          |
-| --------------------------- | ------------------------------------ |
-| 기본 텍스트                 | `text-primary`                       |
-| 보조 텍스트                 | `text-secondary`                     |
-| 비활성/플레이스홀더         | `text-tertiary`                      |
-| 할인율 (빨강)               | `text-error`                         |
-| 장바구니 담기 버튼 (노랑)   | `bg-warning`                         |
-| 바로 구매하기 버튼 (검정)   | `bg-black`                           |
-| 기본 보더                   | `border-color-primary`               |
-| 강조 보더 (선택 상태)       | `border-color-tertiary`              |
-| 배경 기본                   | `bg-primary`                         |
-| 배경 보조                   | `bg-secondary`                       |
+| UI 요소                   | 사용 클래스             |
+| ------------------------- | ----------------------- |
+| 기본 텍스트               | `text-primary`          |
+| 보조 텍스트               | `text-secondary`        |
+| 비활성/플레이스홀더       | `text-tertiary`         |
+| 할인율 (빨강)             | `text-error`            |
+| 장바구니 담기 버튼 (노랑) | `bg-warning`            |
+| 바로 구매하기 버튼 (검정) | `bg-black`              |
+| 기본 보더                 | `border-color-primary`  |
+| 강조 보더 (선택 상태)     | `border-color-tertiary` |
+| 배경 기본                 | `bg-primary`            |
+| 배경 보조                 | `bg-secondary`          |
 
 ### 구조 — 반응형
 
 TailwindCSS의 반응형 prefix 사용:
 
-| prefix     | 적용 시점              | 기준              |
-| ---------- | ---------------------- | ----------------- |
-| (없음)     | 모바일 기본            | < 768px           |
-| `md:`      | 태블릿 이상            | ≥ 768px           |
+| prefix | 적용 시점   | 기준    |
+| ------ | ----------- | ------- |
+| (없음) | 모바일 기본 | < 768px |
+| `md:`  | 태블릿 이상 | ≥ 768px |
 
 **규칙 요약**:
 
@@ -157,7 +158,7 @@ grep -rn "style=\"" layout/ --include="*.html"
 
 ## Wave 1-B — Footer
 
-> 브랜치: `feature/footer` ← **현재** | 상태: ⬜ | Wave 0 완료 후 (Wave 1-A와 병렬)
+> 브랜치: `feature/footer` | 상태: ✅ 완료
 
 ### 수정 파일
 
@@ -336,9 +337,11 @@ grep -rn "style=\"" layout/ --include="*.html"
 **Desktop 레이아웃 (≥768px)**
 
 좌측 (이미지 영역):
+
 - 메인 이미지 / 하단 썸네일 목록
 
 우측 (정보 영역):
+
 - 브랜드명 / **제품명** / 현재가 + 원가(취소선) + 할인율(`text-error`) / 리뷰 별점
 - **색상 옵션**: 이미지 스와치 + 이름 (선택 시 `border-color-tertiary`)
 - **추가구성상품** 드롭다운
