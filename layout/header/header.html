@@ -3,8 +3,8 @@
 <header id="header" class="bg-primary sticky top-0 left-0 z-50 px-4 py-3 md:px-6 md:py-4">
   <div class="flex w-full items-center justify-between">
     <!-- 로고 -->
-    <h1 class="text-l5 text-primary md:w-43" module="Layout_LogoTop">
-      <a href="/index.html">{$mall_name}</a>
+    <h1 class="text-l5 text-primary md:w-43">
+      <a href="/index.html" module="Layout_LogoTop">{$mall_name}</a>
     </h1>
 
     <!-- 카테고리 nav (데스크톱만) -->
@@ -35,7 +35,7 @@
 
       <!-- 장바구니 -->
       <div module="Layout_OrderBasketcount" class="text-p4 text-secondary">
-        <a href="#" class="flex items-center gap-1">
+        <a href="#none" class="flex items-center gap-1">
           장바구니
           <span class="flex size-4 items-center justify-center rounded-full bg-gray-600">
             <span class="text-c3 text-on-color">{$basket_count}</span>
@@ -54,7 +54,7 @@
 >
   <!-- 공통 상단 헤더 (항상 표시) -->
   <div class="flex shrink-0 items-center justify-between px-4 py-3">
-    <span class="text-l5 text-primary" module="Layout_LogoTop">{$mall_name}</span>
+    <a href="/index.html" class="text-l5 text-primary" module="Layout_LogoTop">{$mall_name}</a>
     <button type="button" class="text-p4 text-secondary" id="btnDrawerClose" aria-label="메뉴 닫기">닫기</button>
   </div>
 
@@ -82,8 +82,8 @@
       </div>
       <div class="flex flex-col gap-4 px-4 py-5">
         <!--@import(/layout/header/state_login.html)-->
-        <a href="/board/free/list.html?board_no=1" class="text-p4 text-secondary">공지사항</a>
-        <a href="/board/free/list.html?board_no=3" class="text-p4 text-secondary">자주 묻는 질문</a>
+        <a href="#none" class="text-p4 text-secondary">공지사항</a>
+        <a href="#none" class="text-p4 text-secondary">자주 묻는 질문</a>
       </div>
     </div>
 

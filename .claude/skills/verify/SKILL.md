@@ -31,10 +31,11 @@ description: Cafe24 스킨 코드 검증 절차. SFTP 배포 전 정적 검사 +
 SFTP 업로드 완료 후 실제 배포 URL로 확인한다.
 
 - 배포 URL: https://jinhok96.cafe24.com/skin-{skinName} ← @.vscode/sftp.json 에서 `remotePath`(/{skinName}/) 참조, ex: `"remotePath": "/skin4/"` → https://jinhok96.cafe24.com/skin-skin4
-- 변경사항 저장 후 페이지 새로고침 시 반영됨
 
 **크롬 MCP 활용** — 렌더링 기반 확인 (JavaScript 실행 결과 포함):
 
+- `navigate_page` 도구로 URL을 열 때 반드시 `?t={현재 Unix 타임스탬프}` 쿼리를 붙여 캐시 없이 최신 콘텐츠를 로드함
+  - 예: `https://jinhok96.cafe24.com/skin-skin4?t=1743600000`
 - 페이지 실제 렌더링 결과 및 레이아웃 확인
 - 콘솔 에러 감지
 - Computed CSS (실제 적용된 스타일) 검사
