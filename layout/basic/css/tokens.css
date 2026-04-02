@@ -127,4 +127,23 @@
   --spacing-40: 40px;
   --spacing-60: 60px;
   --spacing-80: 80px;
+
+  /* --------------------------------------------------------------------------
+     Layout
+     -------------------------------------------------------------------------- */
+  --layout-header-height-desktop: 56px;
+  --layout-header-height-mobile: 48px;
+  --layout-footer-height-desktop: 72px;
+  --layout-content-max-width: 1240px;
+  --layout-container-padding-desktop: 50px;
+  --layout-container-padding-mobile: 16px;
+  --layout-section-gap: var(--spacing-80);
+
+  /* --------------------------------------------------------------------------
+     Product
+     -------------------------------------------------------------------------- */
+  --product-card-ratio: 4 / 5;
+  --product-grid-cols-desktop: 5;
+  --product-grid-cols-mobile: 2;
+  --product-grid-gap: var(--spacing-20);
 }

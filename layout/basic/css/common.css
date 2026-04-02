@@ -43,7 +43,7 @@ code {
   font-family: var(--font-family-base);
   line-height: 1.6;
   color: var(--color-text-primary);
-  background: #fff;
+  background: var(--color-bg-primary);
 }
 body {
   min-width: 360px;
@@ -98,8 +98,7 @@ hr.layout {
 }
 a {
   text-decoration: none;
-  color: #000;
-  color: var(--font-color-base);
+  color: var(--color-text-primary);
 }
 a:hover {
   text-decoration: underline;
@@ -139,7 +138,7 @@ a:active {
   height: 100%;
   filter: alpha(opacity=40);
   opacity: 0.3;
-  background-color: #000;
+  background-color: var(--color-black);
 }
 #progressPaybarView {
   position: fixed;
@@ -151,20 +150,20 @@ a:active {
 }
 #progressPaybarView h3 {
   font-size: 32px;
-  color: #444b59;
+  color: var(--color-text-primary);
 }
 #progressPaybarView .box {
   width: 586px;
   margin: 0 auto;
   padding: 67px 0;
   text-align: center;
-  background: #fff;
+  background: var(--color-bg-primary);
 }
 #progressPaybarView .box .txt {
   margin: 8px 0 36px;
   font-size: 15px;
   line-height: 26px;
-  color: #667084;
+  color: var(--color-text-secondary);
 }
 
 /* contents */
@@ -192,7 +191,7 @@ a:active {
   margin-left: -1px;
   margin-bottom: -1px;
   text-align: center;
-  color: #000;
+  color: var(--color-text-primary);
   white-space: nowrap;
 }
 #skipNavigation p a:focus,
@@ -201,8 +200,8 @@ a:active {
   width: 100%;
   height: auto;
   padding: 10px 0;
-  background: #c4122f;
-  color: #fff;
+  background: var(--color-error);
+  color: var(--color-text-on-color);
   z-index: 100;
 }
 
@@ -216,7 +215,7 @@ a:active {
   z-index: 99;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: var(--color-bg-primary);
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
@@ -231,14 +230,14 @@ a:active {
   white-space: nowrap;
 }
 
-/* IE Not Supoorted */
+/* IE Not Supported — 하위 호환 별칭 (tokens.css 변수 참조) */
 :root {
-  --font-color-base: #000;
-  --font-color-heading: #000;
-  --font-color-primary: #000;
-  --font-color-secondary: #ef441f;
-  --font-color-warn: #ec2a1d;
-  --font-color-success: #0985df;
+  --font-color-base: var(--color-text-primary);
+  --font-color-heading: var(--color-text-primary);
+  --font-color-primary: var(--color-text-primary);
+  --font-color-secondary: var(--color-error);
+  --font-color-warn: var(--color-error);
+  --font-color-success: var(--color-info);
 }
 
 /* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */
