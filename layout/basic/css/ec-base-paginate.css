@@ -101,7 +101,7 @@
 }
 
 /********************* Mobile *********************/
-@media all and (max-width: 767px) {
+@media all and (max-width: 767.98px) {
   .ec-base-paginate.typeList {
     display: flex;
     justify-content: center;

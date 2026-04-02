@@ -121,7 +121,7 @@
 }
 
 /********************* Mobile *********************/
-@media all and (max-width: 767px) {
+@media all and (max-width: 767.98px) {
   .xans-product-menupackage .gInner {
     margin: 0 16px;
   }

@@ -1202,7 +1202,7 @@
 }
 
 /********************* Mobile *********************/
-@media all and (max-width: 767px) {
+@media all and (max-width: 767.98px) {
   .xans-product-detail .productSet > .title .txtInfo {
     display: block;
     margin: 5px 0 0;

@@ -44,7 +44,7 @@
 }
 
 /********************* Mobile *********************/
-@media all and (max-width: 767px) {
+@media all and (max-width: 767.98px) {
   .xans-layout-footer {
     padding: 0 16px;
   }
