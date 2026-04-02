@@ -1,0 +1,146 @@
+<!--@css(/css/module/layout/header.css)-->
+<!--@js(/layout/basic/js/slide_menu.js)-->
+
+<header id="header">
+  <div class="header__inner">
+    <!-- 로고 -->
+    <h1 class="header__logo text-l5" module="Layout_LogoTop">
+      <a href="/index.html">{$mall_name}</a>
+    </h1>
+
+    <!-- 카테고리 nav (PC only) -->
+    <nav class="header__nav RW" aria-label="카테고리 메뉴">
+      <div class="header__category" module="Layout_category">
+        <ul>
+          <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+          <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+          <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 유틸리티 -->
+    <div class="header__utils">
+      <!-- 메뉴 버튼 (Mobile/Tablet only) -->
+      <button type="button" class="header__btn RTMB" id="btnDrawerOpen" aria-label="메뉴 열기">메뉴</button>
+
+      <!-- 검색 -->
+      <button type="button" class="header__btn eSearch" aria-label="검색">검색</button>
+
+      <!-- 로그인 / 로그아웃 -->
+      <div class="header__login">
+        <div module="Layout_statelogoff">
+          <a href="/member/login.html" class="header__btn">로그인</a>
+        </div>
+        <div module="Layout_stateLogon">
+          <a href="{$action_logout}" class="header__btn">로그아웃</a>
+        </div>
+      </div>
+
+      <!-- 장바구니 -->
+      <div module="Layout_OrderBasketcount">
+        <a href="/order/basket.html" class="header__btn header__btn--cart">
+          장바구니
+          <span class="header__cart-badge">
+            <span class="header__cart-count">{$basket_count}</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile/Tablet 드로어 메뉴 -->
+<div id="slideMenuWrap" class="drawer" aria-hidden="true">
+  <!-- 1depth 패널 -->
+  <div class="drawer__panel" id="drawerPanel1">
+    <div class="drawer__top">
+      <span class="drawer__logo">{$mall_name}</span>
+      <button type="button" class="drawer__close" id="btnDrawerClose">닫기</button>
+    </div>
+    <div class="drawer__body">
+      <ul id="drawerCateList" class="drawer__cate-list" module="layout_category">
+        <li id="cate{$cate_no}" class="drawer__cate-item">
+          <a href="{$link_product_list}" class="drawer__cate-link view">{$name}</a>
+          <button type="button" class="drawer__cate-arrow cate" cate="{$param}" aria-label="하위메뉴">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              viewBox="0 0 20 20"
+              aria-hidden="true"
+            >
+              <path
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M7.5 5l5 5-5 5"
+              />
+            </svg>
+          </button>
+        </li>
+        <li id="cate{$cate_no}" class="drawer__cate-item">
+          <a href="{$link_product_list}" class="drawer__cate-link view">{$name}</a>
+          <button type="button" class="drawer__cate-arrow cate" cate="{$param}" aria-label="하위메뉴">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              viewBox="0 0 20 20"
+              aria-hidden="true"
+            >
+              <path
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M7.5 5l5 5-5 5"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="drawer__footer">
+      <a href="/member/login.html" class="drawer__footer-link">로그인</a>
+      <a href="/board/free/list.html?board_no=1" class="drawer__footer-link">공지사항</a>
+      <a href="/board/free/list.html?board_no=3" class="drawer__footer-link">자주 묻는 질문</a>
+    </div>
+  </div>
+
+  <!-- 2depth 패널 -->
+  <div class="drawer__panel drawer__panel--sub" id="drawerPanel2">
+    <div class="drawer__top">
+      <span class="drawer__logo"></span>
+      <button type="button" class="drawer__close" id="btnDrawerClose2">닫기</button>
+    </div>
+    <div class="drawer__back-wrap">
+      <button type="button" class="drawer__back" id="btnDrawerBack">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="none"
+          viewBox="0 0 20 20"
+          aria-hidden="true"
+        >
+          <path
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12.5 15l-5-5 5-5"
+          />
+        </svg>
+        <span class="drawer__back-label" id="drawerBackLabel"></span>
+      </button>
+    </div>
+    <div class="drawer__body">
+      <ul class="drawer__cate-list" id="drawerSubList"></ul>
+    </div>
+  </div>
+</div>
+<div id="drawerBackdrop" class="drawer__backdrop"></div>

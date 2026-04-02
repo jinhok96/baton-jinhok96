@@ -17,9 +17,8 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
 
-    <!--@css(/layout/basic/css/tokens.css)-->
-    <!--@css(/layout/basic/css/utilities.css)-->
     <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/tailwind.css)-->
     <!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
     <!--@css(/layout/basic/css/layout.css)-->
     <!--@css(/layout/basic/css/ec-base-ui.css)-->
@@ -46,22 +45,8 @@
     </div>
 
     <div id="wrap">
-      <!--@import(/layout/basic/topbanner.html)-->
-      <header id="header">
-        <div class="inner">
-          <div class="topArea">
-            <h1 module="Layout_LogoTop" class="topArea__logo">
-              <!--@css(/css/module/layout/logotop.css)-->
-              <a href="/index.html"><img src="{$logo}" alt="{$mall_name}" /></a>
-            </h1>
-            <!--@import(/layout/basic/state_login.html)-->
-          </div>
-          <!--@import(/layout/basic/navigation.html)-->
-        </div>
-      </header>
+      <!--@import(/layout/header/header.html)-->
       <hr class="layout" />
-
-      <!--@import(/layout/basic/sidebar.html)-->
       <div id="container">
         <div id="contents">
           <span module="Layout_MobileAction" class="RTMB">
@@ -80,8 +65,6 @@
         <hr class="layout" />
       </div>
       <hr class="layout" />
-
-      <!--@import(/layout/basic/quick.html)-->
 
       <!--@import(/layout/basic/footer.html)-->
     </div>

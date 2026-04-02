@@ -2,111 +2,6 @@
 
 /* **************************** //필수 CSS 수정 및 삭제 불가 **************************** */
 
-/* tag reset */
-html,
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-textarea,
-p,
-blockquote,
-th,
-td,
-img {
-  margin: 0;
-  padding: 0;
-}
-html {
-  width: 100%;
-  height: 100%;
-}
-body,
-code {
-  font-size: 16px;
-  font-family: var(--font-family-base);
-  line-height: 1.6;
-  color: var(--color-text-primary);
-  background: #fff;
-}
-body {
-  min-width: 360px;
-  max-width: 1920px;
-}
-body#popup {
-  min-width: 0;
-}
-li {
-  list-style: none;
-}
-img,
-fieldset {
-  border: none;
-  vertical-align: top;
-}
-table {
-  width: 100%;
-  border: 0;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-caption {
-  display: none;
-}
-th,
-td {
-  border: 0;
-  vertical-align: top;
-}
-input,
-select,
-textarea {
-  font-size: 100%;
-  font-family: var(--font-family-base);
-  color: var(--color-text-primary);
-  vertical-align: middle;
-  border-radius: 0;
-  box-sizing: border-box;
-}
-button {
-  font-family: var(--font-family-base);
-  overflow: visible;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  cursor: pointer;
-  background: none;
-}
-hr.layout {
-  display: none;
-}
-a {
-  text-decoration: none;
-  color: #000;
-  color: var(--font-color-base);
-}
-a:hover {
-  text-decoration: underline;
-}
-a:active {
-  text-decoration: none;
-}
 .objHidden {
   visibility: hidden;
   position: absolute;
@@ -139,7 +34,7 @@ a:active {
   height: 100%;
   filter: alpha(opacity=40);
   opacity: 0.3;
-  background-color: #000;
+  background-color: var(--color-black);
 }
 #progressPaybarView {
   position: fixed;
@@ -151,20 +46,19 @@ a:active {
 }
 #progressPaybarView h3 {
   font-size: 32px;
-  color: #444b59;
 }
 #progressPaybarView .box {
   width: 586px;
   margin: 0 auto;
   padding: 67px 0;
   text-align: center;
-  background: #fff;
+  background: var(--color-bg-primary);
 }
 #progressPaybarView .box .txt {
   margin: 8px 0 36px;
   font-size: 15px;
   line-height: 26px;
-  color: #667084;
+  color: var(--color-text-secondary);
 }
 
 /* contents */
@@ -192,7 +86,6 @@ a:active {
   margin-left: -1px;
   margin-bottom: -1px;
   text-align: center;
-  color: #000;
   white-space: nowrap;
 }
 #skipNavigation p a:focus,
@@ -201,8 +94,8 @@ a:active {
   width: 100%;
   height: auto;
   padding: 10px 0;
-  background: #c4122f;
-  color: #fff;
+  background: var(--color-error);
+  color: var(--color-text-on-color);
   z-index: 100;
 }
 
@@ -216,7 +109,7 @@ a:active {
   z-index: 99;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: var(--color-bg-primary);
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
@@ -229,16 +122,6 @@ a:active {
   color: transparent;
   text-indent: -150%;
   white-space: nowrap;
-}
-
-/* IE Not Supoorted */
-:root {
-  --font-color-base: #000;
-  --font-color-heading: #000;
-  --font-color-primary: #000;
-  --font-color-secondary: #ef441f;
-  --font-color-warn: #ec2a1d;
-  --font-color-success: #0985df;
 }
 
 /* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */

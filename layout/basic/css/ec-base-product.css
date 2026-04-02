@@ -397,7 +397,7 @@
 }
 
 /********************* Mobile *********************/
-@media all and (max-width: 767px) {
+@media all and (max-width: 767.98px) {
   .ec-base-product ul.grid5 > li {
     width: 50%;
   }

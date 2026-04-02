@@ -1,0 +1,533 @@
+@import 'tailwindcss';
+
+@source '../**/*.html';
+@source '../layout/header/header.js';
+
+/* ==========================================================================
+   Design Tokens — @theme
+   색상(base)만 등록해 Tailwind 유틸리티 자동 생성
+   ex) bg-brand-500, text-gray-100, border-warning ...
+   ========================================================================== */
+
+@theme {
+  /* Color — Base */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Gray */
+  --color-gray-50: #f6f6f6;
+  --color-gray-100: #e8e8e8;
+  --color-gray-200: #d1d1d1;
+  --color-gray-300: #bbbbbb;
+  --color-gray-400: #a4a4a4;
+  --color-gray-500: #8d8d8d;
+  --color-gray-600: #717171;
+  --color-gray-700: #555555;
+  --color-gray-800: #383838;
+  --color-gray-900: #1a1a1a;
+
+  /* Brand */
+  --color-brand-100: #eadaff;
+  --color-brand-200: #d5b5ff;
+  --color-brand-300: #c191ff;
+  --color-brand-400: #ac6cff;
+  --color-brand-500: #9747ff;
+  --color-brand-600: #7939cc;
+  --color-brand-700: #5b2b99;
+  --color-brand-800: #3c1c66;
+  --color-brand-900: #1e0e33;
+
+  /* Status */
+  --color-warning: #f1c21b;
+  --color-success: #24a148;
+  --color-info: #0f62fe;
+  --color-error: #da1e28;
+}
+
+/* ==========================================================================
+   Design Tokens — @layer base
+   ========================================================================== */
+
+@layer base {
+  :root {
+    font-size: 16px;
+    line-height: normal;
+
+    /* Font Family */
+    --font-family-base:
+      'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic',
+      sans-serif;
+
+    /* Font Size — Heading */
+    --font-size-h1: 32.44px;
+    --font-size-h2: 28.83px;
+    --font-size-h3: 25.63px;
+    --font-size-h4: 22.78px;
+    --font-size-h5: 20.25px;
+    --font-size-h6: 18px;
+
+    /* Font Size — Label */
+    --font-size-l1: 25.63px;
+    --font-size-l2: 22.78px;
+    --font-size-l3: 20.25px;
+    --font-size-l4: 18px;
+    --font-size-l5: 16px;
+    --font-size-l6: 14.22px;
+
+    /* Font Size — Paragraph */
+    --font-size-p1: 20.25px;
+    --font-size-p2: 18px;
+    --font-size-p3: 16px;
+    --font-size-p4: 14.22px;
+
+    /* Font Size — Caption */
+    --font-size-c1: 12.64px;
+    --font-size-c2: 11.24px;
+    --font-size-c3: 9.99px;
+
+    /* Color — Semantic: Text */
+    --color-text-primary: #151515;
+    --color-text-secondary: #717171;
+    --color-text-tertiary: #bbbbbb;
+    --color-text-on-color: #ffffff;
+    --color-text-brand: #9747ff;
+
+    /* Color — Semantic: Background */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f6f6f6;
+    --color-bg-tertiary: #e8e8e8;
+    --color-bg-brand: #9747ff;
+
+    /* Color — Semantic: Icon */
+    --color-icon-primary: #151515;
+    --color-icon-secondary: #717171;
+    --color-icon-tertiary: #bbbbbb;
+    --color-icon-on-color: #ffffff;
+    --color-icon-brand: #9747ff;
+
+    /* Color — Semantic: Border */
+    --color-border-primary: #e8e8e8;
+    --color-border-secondary: #f6f6f6;
+    --color-border-tertiary: #000000;
+    --color-border-on-color: #ffffff;
+    --color-border-brand: #9747ff;
+
+    /* Color — SNS */
+    --color-sns-kakao: #fee500;
+    --color-sns-naver: #03c75a;
+    --color-sns-facebook: #1877f2;
+
+    /* Spacing */
+    --spacing-2: 2px;
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-20: 20px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-40: 40px;
+    --spacing-60: 60px;
+    --spacing-80: 80px;
+
+    /* Layout */
+    --layout-header-height: 48px;
+    --layout-content-max-width: 1440px;
+    --layout-container-padding: var(--spacing-16);
+    --layout-section-gap: var(--spacing-80);
+
+    /* Product */
+    --product-card-ratio: 4 / 5;
+    --product-grid-cols: 2;
+    --product-grid-gap: var(--spacing-20);
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --layout-header-height: 56px;
+      --layout-container-padding: var(--spacing-24);
+      --product-grid-cols: 5;
+    }
+  }
+
+  /* Project base reset */
+  body {
+    min-width: 360px;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: var(--font-family-base);
+    line-height: normal;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+
+  body#popup {
+    min-width: 0;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: var(--font-family-base);
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    vertical-align: top;
+  }
+
+  caption {
+    display: none;
+  }
+
+  hr.layout {
+    display: none;
+  }
+
+  button,
+  a {
+    cursor: pointer;
+  }
+}
+
+/* ==========================================================================
+   Typography Utilities — tokens.css (font-size + weight + line-height)
+   ========================================================================== */
+
+/* Heading */
+@utility text-h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility text-h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility text-h3 {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility text-h4 {
+  font-size: var(--font-size-h4);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility text-h5 {
+  font-size: var(--font-size-h5);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility text-h6 {
+  font-size: var(--font-size-h6);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Label */
+@utility text-l1 {
+  font-size: var(--font-size-l1);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility text-l2 {
+  font-size: var(--font-size-l2);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility text-l3 {
+  font-size: var(--font-size-l3);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility text-l4 {
+  font-size: var(--font-size-l4);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility text-l5 {
+  font-size: var(--font-size-l5);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility text-l6 {
+  font-size: var(--font-size-l6);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Paragraph */
+@utility text-p1 {
+  font-size: var(--font-size-p1);
+  font-weight: 400;
+  line-height: 1.6;
+}
+@utility text-p2 {
+  font-size: var(--font-size-p2);
+  font-weight: 400;
+  line-height: 1.6;
+}
+@utility text-p3 {
+  font-size: var(--font-size-p3);
+  font-weight: 400;
+  line-height: 1.6;
+}
+@utility text-p4 {
+  font-size: var(--font-size-p4);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Caption */
+@utility text-c1 {
+  font-size: var(--font-size-c1);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility text-c2 {
+  font-size: var(--font-size-c2);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility text-c3 {
+  font-size: var(--font-size-c3);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Typography Utilities — utilities.css (font-family + font-size + weight + line-height)
+   ========================================================================== */
+
+/* Heading */
+@utility heading-h1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility heading-h2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility heading-h3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility heading-h4 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h4);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility heading-h5 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h5);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@utility heading-h6 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h6);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Label */
+@utility label-l1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l1);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility label-l2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l2);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility label-l3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l3);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility label-l4 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l4);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility label-l5 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l5);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility label-l6 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l6);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Paragraph */
+@utility paragraph-p1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p1);
+  font-weight: 400;
+  line-height: 1.6;
+}
+@utility paragraph-p2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p2);
+  font-weight: 400;
+  line-height: 1.6;
+}
+@utility paragraph-p3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p3);
+  font-weight: 400;
+  line-height: 1.6;
+}
+@utility paragraph-p4 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p4);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Caption */
+@utility caption-c1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-c1);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility caption-c2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-c2);
+  font-weight: 500;
+  line-height: 1.5;
+}
+@utility caption-c3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-c3);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Color Utilities — Text (Semantic)
+   text-white/black/warning/success/info/error → @theme에서 자동 생성
+   ========================================================================== */
+
+@utility text-primary {
+  color: var(--color-text-primary);
+}
+@utility text-secondary {
+  color: var(--color-text-secondary);
+}
+@utility text-tertiary {
+  color: var(--color-text-tertiary);
+}
+@utility text-on-color {
+  color: var(--color-text-on-color);
+}
+@utility text-brand {
+  color: var(--color-text-brand);
+}
+
+/* ==========================================================================
+   Color Utilities — Background (Semantic)
+   bg-white/black/warning/success/info/error → @theme에서 자동 생성
+   ========================================================================== */
+
+@utility bg-primary {
+  background-color: var(--color-bg-primary);
+}
+@utility bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+@utility bg-tertiary {
+  background-color: var(--color-bg-tertiary);
+}
+@utility bg-brand {
+  background-color: var(--color-bg-brand);
+}
+@utility bg-kakao {
+  background-color: var(--color-sns-kakao);
+}
+@utility bg-naver {
+  background-color: var(--color-sns-naver);
+}
+@utility bg-facebook {
+  background-color: var(--color-sns-facebook);
+}
+
+/* ==========================================================================
+   Color Utilities — Border (Semantic)
+   ========================================================================== */
+
+@utility border-color-primary {
+  border-color: var(--color-border-primary);
+}
+@utility border-color-secondary {
+  border-color: var(--color-border-secondary);
+}
+@utility border-color-tertiary {
+  border-color: var(--color-border-tertiary);
+}
+@utility border-color-on-color {
+  border-color: var(--color-border-on-color);
+}
+@utility border-color-brand {
+  border-color: var(--color-border-brand);
+}
+
+/* ==========================================================================
+   Effects — Shadow
+   ========================================================================== */
+
+@utility shadow-100 {
+  box-shadow:
+    0 1px 4px 0 rgb(0 0 0 / 5%),
+    0 1px 4px 0 rgb(0 0 0 / 10%);
+}
+@utility shadow-200 {
+  box-shadow:
+    0 4px 4px -1px rgb(0 0 0 / 5%),
+    0 4px 4px -1px rgb(0 0 0 / 10%);
+}
+@utility shadow-300 {
+  box-shadow:
+    0 4px 4px -4px rgb(0 0 0 / 5%),
+    0 16px 32px -4px rgb(0 0 0 / 10%);
+}
+@utility shadow-400 {
+  box-shadow:
+    0 4px 4px -4px rgb(0 0 0 / 5%),
+    0 16px 16px -8px rgb(0 0 0 / 10%);
+}
+@utility shadow-500 {
+  box-shadow: 0 16px 32px -8px rgb(0 0 0 / 40%);
+}
+
+/* ==========================================================================
+   Decoration
+   ========================================================================== */
+@utility underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

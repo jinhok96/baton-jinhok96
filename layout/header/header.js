@@ -25,17 +25,17 @@
       });
     },
 
-    // 하위 카테고리가 없는 항목에 noChild 클래스 부여
+    // 하위 카테고리가 없는 항목의 화살표 버튼 숨기기
     checkNoChildItems: function () {
       $('#drawerCateList .drawer__cate-item').each(function () {
-        var sParam = $(this).find('.drawer__cate-arrow').attr('cate');
+        var sParam = $(this).find('.drawer__cate-link').attr('cate');
         if (!sParam) {
-          $(this).addClass('noChild');
+          $(this).find('.drawer__cate-arrow').addClass('hidden');
           return;
         }
         var iCateNo = Number(drawer.getParam(sParam, 'cate_no'));
         if (!drawer.aSubCategory[iCateNo]) {
-          $(this).addClass('noChild');
+          $(this).find('.drawer__cate-arrow').addClass('hidden');
         }
       });
     },
@@ -55,19 +55,40 @@
       return sKey ? aParam[sKey] : aParam;
     },
 
+    // 스크롤바 너비 계산 함수
+    getScrollbarWidth: function () {
+      return window.innerWidth - document.documentElement.clientWidth;
+    },
+
     // 드로어 열기
     open: function () {
-      $('#slideMenuWrap').addClass('is-open').attr('aria-hidden', 'false');
-      $('#drawerBackdrop').addClass('is-open');
-      document.body.style.overflow = 'hidden';
+      var scrollbarWidth = drawer.getScrollbarWidth();
+
+      $('#slideMenuWrap').removeClass('translate-x-full').addClass('translate-x-0').attr('aria-hidden', 'false');
+
+      // 스크롤 방지 및 레이아웃 시프트 방지
+      $('body').css({
+        overflow: 'hidden',
+        'padding-right': scrollbarWidth + 'px',
+      });
+
+      // 헤더 오른쪽에 여백 추가해서 레이아웃 시프트 방지
+      $('#header').css('right', scrollbarWidth + 'px');
+
       drawer.isOpen = true;
     },
 
     // 드로어 닫기
     close: function () {
-      $('#slideMenuWrap').removeClass('is-open').attr('aria-hidden', 'true');
-      $('#drawerBackdrop').removeClass('is-open');
-      document.body.style.overflow = '';
+      $('#slideMenuWrap').removeClass('translate-x-0').addClass('translate-x-full').attr('aria-hidden', 'true');
+
+      // 스크롤 및 여백 복구
+      $('body').css({
+        overflow: '',
+        'padding-right': '',
+      });
+      $('#header').css('right', '');
+
       drawer.isOpen = false;
       drawer.hide2depth();
     },
@@ -80,12 +101,11 @@
       var aHtml = [];
       for (var i = 0; i < aSubs.length; i++) {
         var sub = aSubs[i];
-        aHtml.push('<li class="drawer__cate-item noChild" id="cate' + sub.cate_no + '">');
+        aHtml.push('<li class="text-h4 text-primary" id="cate' + sub.cate_no + '">');
         aHtml.push(
           '<a href="/product/list.html' +
             sub.param +
-            '" class="drawer__cate-link view"' +
-            ' data-i18n="LIST.PRD_CATE_NO_' +
+            '" data-i18n="LIST.PRD_CATE_NO_' +
             sub.cate_no +
             '" data-i18n-new>' +
             sub.name +
@@ -96,7 +116,8 @@
 
       $('#drawerSubList').html(aHtml.join(''));
       $('#drawerBackLabel').text(sCateName);
-      $('#drawerPanel2').addClass('is-active');
+      $('#drawerPanel1').addClass('-translate-x-full');
+      $('#drawerPanel2').removeClass('translate-x-full').addClass('translate-x-0');
 
       if (window.i18nextCafe24) {
         i18nextCafe24.translate('data-i18n-new');
@@ -105,18 +126,13 @@
 
     // 2depth 패널 숨기기
     hide2depth: function () {
-      $('#drawerPanel2').removeClass('is-active');
+      $('#drawerPanel2').removeClass('translate-x-0').addClass('translate-x-full');
+      $('#drawerPanel1').removeClass('-translate-x-full');
       $('#drawerSubList').empty();
     },
   };
 
   $(function () {
-    // 헤더 로고 텍스트를 드로어 로고에 복사
-    var headerLogoText = $('.header__logo a').text().trim();
-    if (headerLogoText) {
-      $('.drawer__logo').text(headerLogoText);
-    }
-
     drawer.fetchSubCategories();
 
     // 드로어 열기
@@ -125,22 +141,18 @@
     });
 
     // 드로어 닫기
-    $(document).on('click', '#btnDrawerClose, #btnDrawerClose2', function () {
+    $(document).on('click', '#btnDrawerClose', function () {
       drawer.close();
     });
 
-    // 백드롭 클릭 시 닫기
-    $(document).on('click', '#drawerBackdrop', function () {
-      drawer.close();
-    });
-
-    // 1depth → 2depth 전환
-    $(document).on('click', '#drawerCateList .drawer__cate-arrow', function (e) {
-      e.preventDefault();
+    // 1depth → 2depth 전환 (하위 분류 있으면 패널 열기, 없으면 링크 이동)
+    $(document).on('click', '#drawerCateList .drawer__cate-link', function (e) {
       var sParam = $(this).attr('cate');
       if (!sParam) return;
       var iCateNo = Number(drawer.getParam(sParam, 'cate_no'));
-      var sCateName = $(this).closest('.drawer__cate-item').find('.drawer__cate-link').text().trim();
+      if (!drawer.aSubCategory[iCateNo]) return;
+      e.preventDefault();
+      var sCateName = $(this).find('span').first().text().trim();
       drawer.show2depth(iCateNo, sCateName);
     });
 
@@ -154,6 +166,17 @@
       if (e.key === 'Escape' && drawer.isOpen) {
         drawer.close();
       }
+    });
+
+    // 화면 리사이즈 시 스크롤 복구; 디바운스 0.2초
+    var resizeTimer;
+    $(window).on('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if (window.innerWidth >= 768 && drawer.isOpen) {
+          drawer.close();
+        }
+      }, 200);
     });
   });
 })(jQuery);
