@@ -193,15 +193,6 @@
   a {
     cursor: pointer;
   }
-
-  a:hover {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  a:active {
-    text-decoration: none;
-  }
 }
 
 /* ==========================================================================
