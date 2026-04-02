@@ -10,6 +10,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Tailwind CSS
+        run: npm run build
+
       - name: Set skin path
         run: |
           if [ "${{ github.ref_name }}" = "main" ]; then
@@ -31,6 +42,6 @@ jobs:
           lftp <<LFTP
           set sftp:connect-program "sshpass -e ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
           open -u $CAFE24_USER,$SSHPASS sftp://$CAFE24_HOST:$CAFE24_PORT
-          mirror -R --parallel=4 --exclude-glob=*.json --exclude-glob=*.yml --exclude-glob=*.md --exclude-glob=.prettierrc --exclude-glob=.prettierignore --exclude-glob=eslint.config.mjs --exclude=^\.git --exclude=^\.github --exclude=^\.vscode --exclude=^\.claude --exclude=^node_modules ./ $SKIN_PATH
+          mirror -R --parallel=4 --exclude-glob=*.json --exclude-glob=*.yml --exclude-glob=*.md --exclude-glob=.prettierrc --exclude-glob=.prettierignore --exclude-glob=eslint.config.mjs --exclude=^\.git --exclude=^\.github --exclude=^\.vscode --exclude=^\.claude --exclude=^node_modules --exclude=^src ./ $SKIN_PATH
           quit
           LFTP
