@@ -30,8 +30,7 @@
       src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_down.jpg"
       width="33"
       height="29"
-      onclick="{$out_shortcut}"
-    />
+      onclick="{$out_shortcut}" />
     {$form.quantity}
     <img
       class="QuantityUp"
@@ -39,8 +38,7 @@
       src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_up.jpg"
       width="33"
       height="29"
-      onclick="{$add_shortcut}"
-    />
+      onclick="{$add_shortcut}" />
   </span>
 </div>
 ```
