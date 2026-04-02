@@ -55,7 +55,7 @@
 
     /* Font Family */
     --font-family-base:
-      'PretendardVariable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic',
+      'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic',
       sans-serif;
 
     /* Font Size — Heading */
@@ -189,8 +189,14 @@
     display: none;
   }
 
+  button,
+  a {
+    cursor: pointer;
+  }
+
   a:hover {
     text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
   a:active {
@@ -525,4 +531,12 @@
 }
 @utility shadow-500 {
   box-shadow: 0 16px 32px -8px rgb(0 0 0 / 40%);
+}
+
+/* ==========================================================================
+   Decoration
+   ========================================================================== */
+@utility underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
