@@ -29,7 +29,8 @@
       "Bash(npm run:*)",
       "mcp__chrome-devtools__*",
       "mcp__figma__use_figma",
-      "mcp__figma__get_design_context"
+      "mcp__figma__get_design_context",
+      "mcp__figma__get_metadata"
     ],
     "deny": [],
     "ask": []
