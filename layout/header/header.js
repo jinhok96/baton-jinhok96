@@ -55,19 +55,40 @@
       return sKey ? aParam[sKey] : aParam;
     },
 
+    // 스크롤바 너비 계산 함수
+    getScrollbarWidth: function () {
+      return window.innerWidth - document.documentElement.clientWidth;
+    },
+
     // 드로어 열기
     open: function () {
+      var scrollbarWidth = drawer.getScrollbarWidth();
+
       $('#slideMenuWrap').removeClass('translate-x-full').addClass('translate-x-0').attr('aria-hidden', 'false');
-      $('#drawerBackdrop').removeClass('opacity-0 pointer-events-none').addClass('opacity-100 pointer-events-auto');
-      document.body.style.overflow = 'hidden';
+
+      // 스크롤 방지 및 레이아웃 시프트 방지
+      $('body').css({
+        overflow: 'hidden',
+        'padding-right': scrollbarWidth + 'px',
+      });
+
+      // 헤더 오른쪽에 여백 추가해서 레이아웃 시프트 방지
+      $('#header').css('right', scrollbarWidth + 'px');
+
       drawer.isOpen = true;
     },
 
     // 드로어 닫기
     close: function () {
       $('#slideMenuWrap').removeClass('translate-x-0').addClass('translate-x-full').attr('aria-hidden', 'true');
-      $('#drawerBackdrop').removeClass('opacity-100 pointer-events-auto').addClass('opacity-0 pointer-events-none');
-      document.body.style.overflow = '';
+
+      // 스크롤 및 여백 복구
+      $('body').css({
+        overflow: '',
+        'padding-right': '',
+      });
+      $('#header').css('right', '');
+
       drawer.isOpen = false;
       drawer.hide2depth();
     },
@@ -124,11 +145,6 @@
       drawer.close();
     });
 
-    // 백드롭 클릭 시 닫기
-    $(document).on('click', '#drawerBackdrop', function () {
-      drawer.close();
-    });
-
     // 1depth → 2depth 전환
     $(document).on('click', '#drawerCateList .drawer__cate-arrow', function (e) {
       e.preventDefault();
@@ -149,6 +165,17 @@
       if (e.key === 'Escape' && drawer.isOpen) {
         drawer.close();
       }
+    });
+
+    // 화면 리사이즈 시 스크롤 복구; 디바운스 0.2초
+    var resizeTimer;
+    $(window).on('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if (window.innerWidth >= 768 && drawer.isOpen) {
+          drawer.close();
+        }
+      }, 200);
     });
   });
 })(jQuery);
