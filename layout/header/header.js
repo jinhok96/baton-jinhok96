@@ -57,7 +57,7 @@
 
     // 드로어 열기
     open: function () {
-      $('#slideMenuWrap').removeClass('-translate-x-full').addClass('translate-x-0').attr('aria-hidden', 'false');
+      $('#slideMenuWrap').removeClass('translate-x-full').addClass('translate-x-0').attr('aria-hidden', 'false');
       $('#drawerBackdrop').removeClass('opacity-0 pointer-events-none').addClass('opacity-100 pointer-events-auto');
       document.body.style.overflow = 'hidden';
       drawer.isOpen = true;
@@ -65,7 +65,7 @@
 
     // 드로어 닫기
     close: function () {
-      $('#slideMenuWrap').removeClass('translate-x-0').addClass('-translate-x-full').attr('aria-hidden', 'true');
+      $('#slideMenuWrap').removeClass('translate-x-0').addClass('translate-x-full').attr('aria-hidden', 'true');
       $('#drawerBackdrop').removeClass('opacity-100 pointer-events-auto').addClass('opacity-0 pointer-events-none');
       document.body.style.overflow = '';
       drawer.isOpen = false;
@@ -80,12 +80,11 @@
       var aHtml = [];
       for (var i = 0; i < aSubs.length; i++) {
         var sub = aSubs[i];
-        aHtml.push('<li class="border-b border-color-primary px-4 py-5" id="cate' + sub.cate_no + '">');
+        aHtml.push('<li class="text-h4 text-primary" id="cate' + sub.cate_no + '">');
         aHtml.push(
           '<a href="/product/list.html' +
             sub.param +
-            '" class="text-h4 text-primary"' +
-            ' data-i18n="LIST.PRD_CATE_NO_' +
+            '" data-i18n="LIST.PRD_CATE_NO_' +
             sub.cate_no +
             '" data-i18n-new>' +
             sub.name +
@@ -96,6 +95,7 @@
 
       $('#drawerSubList').html(aHtml.join(''));
       $('#drawerBackLabel').text(sCateName);
+      $('#drawerPanel1').addClass('-translate-x-full');
       $('#drawerPanel2').removeClass('translate-x-full').addClass('translate-x-0');
 
       if (window.i18nextCafe24) {
@@ -106,6 +106,7 @@
     // 2depth 패널 숨기기
     hide2depth: function () {
       $('#drawerPanel2').removeClass('translate-x-0').addClass('translate-x-full');
+      $('#drawerPanel1').removeClass('-translate-x-full');
       $('#drawerSubList').empty();
     },
   };
@@ -119,7 +120,7 @@
     });
 
     // 드로어 닫기
-    $(document).on('click', '#btnDrawerClose, #btnDrawerClose2', function () {
+    $(document).on('click', '#btnDrawerClose', function () {
       drawer.close();
     });
 
