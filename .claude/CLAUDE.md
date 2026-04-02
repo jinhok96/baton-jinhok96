@@ -120,3 +120,4 @@ Agent 도구로 웨이브 단위 실행:
 - @.claude/skills/verify/SKILL.md — 검증 절차 (`/verify`로 호출)
 - @.claude/skills/commit/SKILL.md — 커밋 메시지 규칙 (`/commit`으로 호출)
 - @.claude/skills/pull-request/SKILL.md — PR 작성 규칙 (`/pr`로 호출)
+- @.claude/plans/skin-implementation.md — 스킨 구현 계획 (Figma NodeId, 브랜치, 웨이브)
