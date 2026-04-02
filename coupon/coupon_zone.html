@@ -1,14 +1,26 @@
 <!--@layout(/layout/basic/layout.html)-->
 <div class="path">
-  <span>현재 위치</span>
+  <span>
+    현재 위치
+  </span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li title="현재 위치"><strong>쿠폰존</strong></li>
+    <li>
+      <a href="/">
+        홈
+      </a>
+    </li>
+    <li title="현재 위치">
+      <strong>
+        쿠폰존
+      </strong>
+    </li>
   </ol>
 </div>
 
 <div class="titleArea">
-  <h2>쿠폰존</h2>
+  <h2>
+    쿠폰존
+  </h2>
 </div>
 
 <div module="Coupon_zonePackage">
@@ -16,8 +28,16 @@
   <!--@js(/js/module/coupon/zonePackage.js)-->
   <div class="ec-base-tab typeNav">
     <ul class="menu">
-      <li class="selected"><a href="#none" onclick="couponZone.showBestCoupon()">Best Coupons</a></li>
-      <li><a href="#none" onclick="couponZone.showNewCoupon()">New Coupons</a></li>
+      <li class="selected">
+        <a href="#none" onclick="couponZone.showBestCoupon()">
+          Best Coupons
+        </a>
+      </li>
+      <li>
+        <a href="#none" onclick="couponZone.showNewCoupon()">
+          New Coupons
+        </a>
+      </li>
     </ul>
   </div>
 
@@ -33,15 +53,22 @@
               <strong
                 class="title"
                 style="color: #483b1b; font-family: Arial, Verdana, Tahoma, sans-serif; font-size: 11px"
-                >{$coupon_name|cut:13,...}</strong
               >
+                {$coupon_name|cut:13,...}
+              </strong>
               <p class="discount" style="color: #d07b01">
-                <span style="font-family: Verdana, Tahoma, sans-serif">{$coupon_content}</span>
+                <span style="font-family: Verdana, Tahoma, sans-serif">
+                  {$coupon_content}
+                </span>
               </p>
-              <p class="period" style="color: #685219">{$coupon_period}</p>
+              <p class="period" style="color: #685219">
+                {$coupon_period}
+              </p>
             </div>
             <div class="button">
-              <a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a>
+              <a href="{$coupon_issue_url}">
+                <img src="{$download_url}" alt="다운받기" />
+              </a>
             </div>
           </div>
         </li>
@@ -51,15 +78,22 @@
               <strong
                 class="title"
                 style="color: #483b1b; font-family: Arial, Verdana, Tahoma, sans-serif; font-size: 11px"
-                >{$coupon_name|cut:13,...}</strong
               >
+                {$coupon_name|cut:13,...}
+              </strong>
               <p class="discount" style="color: #d07b01">
-                <span style="font-family: Verdana, Tahoma, sans-serif">{$coupon_content}</span>
+                <span style="font-family: Verdana, Tahoma, sans-serif">
+                  {$coupon_content}
+                </span>
               </p>
-              <p class="period" style="color: #685219">{$coupon_period}</p>
+              <p class="period" style="color: #685219">
+                {$coupon_period}
+              </p>
             </div>
             <div class="button">
-              <a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a>
+              <a href="{$coupon_issue_url}">
+                <img src="{$download_url}" alt="다운받기" />
+              </a>
             </div>
           </div>
         </li>
@@ -79,15 +113,22 @@
               <strong
                 class="title"
                 style="color: #483b1b; font-family: Arial, Verdana, Tahoma, sans-serif; font-size: 11px"
-                >{$coupon_name|cut:13,...}</strong
               >
+                {$coupon_name|cut:13,...}
+              </strong>
               <p class="discount" style="color: #d07b01">
-                <span style="font-family: Verdana, Tahoma, sans-serif">{$coupon_content}</span>
+                <span style="font-family: Verdana, Tahoma, sans-serif">
+                  {$coupon_content}
+                </span>
               </p>
-              <p class="period" style="color: #685219">{$coupon_period}</p>
+              <p class="period" style="color: #685219">
+                {$coupon_period}
+              </p>
             </div>
             <div class="button">
-              <a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a>
+              <a href="{$coupon_issue_url}">
+                <img src="{$download_url}" alt="다운받기" />
+              </a>
             </div>
           </div>
         </li>
@@ -97,15 +138,22 @@
               <strong
                 class="title"
                 style="color: #483b1b; font-family: Arial, Verdana, Tahoma, sans-serif; font-size: 11px"
-                >{$coupon_name|cut:13,...}</strong
               >
+                {$coupon_name|cut:13,...}
+              </strong>
               <p class="discount" style="color: #d07b01">
-                <span style="font-family: Verdana, Tahoma, sans-serif">{$coupon_content}</span>
+                <span style="font-family: Verdana, Tahoma, sans-serif">
+                  {$coupon_content}
+                </span>
               </p>
-              <p class="period" style="color: #685219">{$coupon_period}</p>
+              <p class="period" style="color: #685219">
+                {$coupon_period}
+              </p>
             </div>
             <div class="button">
-              <a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a>
+              <a href="{$coupon_issue_url}">
+                <img src="{$download_url}" alt="다운받기" />
+              </a>
             </div>
           </div>
         </li>
@@ -119,10 +167,16 @@
         -->
     <div class="couponZone">
       <div class="title">
-        <h3>{$zone_title}</h3>
+        <h3>
+          {$zone_title}
+        </h3>
         <p>
-          <a href="#none" class="btnNormal sizeS" onclick="couponZone.allCheck('{$zone_form_id}')">전체선택</a>
-          <a href="#none" class="btnNormal sizeS" onclick="couponZone.setDown('{$zone_form_id}')">선택쿠폰 다운받기</a>
+          <a href="#none" class="btnNormal sizeS" onclick="couponZone.allCheck('{$zone_form_id}')">
+            전체선택
+          </a>
+          <a href="#none" class="btnNormal sizeS" onclick="couponZone.setDown('{$zone_form_id}')">
+            선택쿠폰 다운받기
+          </a>
         </p>
       </div>
       {$form_start}
@@ -134,17 +188,26 @@
                 <strong
                   class="title"
                   style="color: #483b1b; font-family: Arial, Verdana, Tahoma, sans-serif; font-size: 11px"
-                  >{$coupon_name|cut:13,...}</strong
                 >
+                  {$coupon_name|cut:13,...}
+                </strong>
                 <p class="discount" style="color: #d07b01">
-                  <span style="font-family: Verdana, Tahoma, sans-serif">{$coupon_content}</span>
+                  <span style="font-family: Verdana, Tahoma, sans-serif">
+                    {$coupon_content}
+                  </span>
                 </p>
-                <p class="period" style="color: #685219">{$coupon_period}</p>
+                <p class="period" style="color: #685219">
+                  {$coupon_period}
+                </p>
               </div>
               <div class="button">
-                <a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a>
+                <a href="{$coupon_issue_url}">
+                  <img src="{$download_url}" alt="다운받기" />
+                </a>
               </div>
-              <p class="chkBtn">{$coupon_checkbox}</p>
+              <p class="chkBtn">
+                {$coupon_checkbox}
+              </p>
             </div>
           </li>
           <li>
@@ -153,17 +216,26 @@
                 <strong
                   class="title"
                   style="color: #483b1b; font-family: Arial, Verdana, Tahoma, sans-serif; font-size: 11px"
-                  >{$coupon_name|cut:13,...}</strong
                 >
+                  {$coupon_name|cut:13,...}
+                </strong>
                 <p class="discount" style="color: #d07b01">
-                  <span style="font-family: Verdana, Tahoma, sans-serif">{$coupon_content}</span>
+                  <span style="font-family: Verdana, Tahoma, sans-serif">
+                    {$coupon_content}
+                  </span>
                 </p>
-                <p class="period" style="color: #685219">{$coupon_period}</p>
+                <p class="period" style="color: #685219">
+                  {$coupon_period}
+                </p>
               </div>
               <div class="button">
-                <a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a>
+                <a href="{$coupon_issue_url}">
+                  <img src="{$download_url}" alt="다운받기" />
+                </a>
               </div>
-              <p class="chkBtn">{$coupon_checkbox}</p>
+              <p class="chkBtn">
+                {$coupon_checkbox}
+              </p>
             </div>
           </li>
         </ul>
@@ -173,10 +245,16 @@
 
     <div class="couponZone">
       <div class="title">
-        <h3>{$zone_title}</h3>
+        <h3>
+          {$zone_title}
+        </h3>
         <p>
-          <a href="#none" class="btnNormal sizeS" onclick="couponZone.allCheck('{$zone_form_id}')">전체선택</a>
-          <a href="#none" class="btnNormal sizeS" onclick="couponZone.setDown('{$zone_form_id}')">선택쿠폰 다운받기</a>
+          <a href="#none" class="btnNormal sizeS" onclick="couponZone.allCheck('{$zone_form_id}')">
+            전체선택
+          </a>
+          <a href="#none" class="btnNormal sizeS" onclick="couponZone.setDown('{$zone_form_id}')">
+            선택쿠폰 다운받기
+          </a>
         </p>
       </div>
       {$form_start}
@@ -188,17 +266,26 @@
                 <strong
                   class="title"
                   style="color: #483b1b; font-family: Arial, Verdana, Tahoma, sans-serif; font-size: 11px"
-                  >{$coupon_name|cut:13,...}</strong
                 >
+                  {$coupon_name|cut:13,...}
+                </strong>
                 <p class="discount" style="color: #d07b01">
-                  <span style="font-family: Verdana, Tahoma, sans-serif">{$coupon_content}</span>
+                  <span style="font-family: Verdana, Tahoma, sans-serif">
+                    {$coupon_content}
+                  </span>
                 </p>
-                <p class="period" style="color: #685219">{$coupon_period}</p>
+                <p class="period" style="color: #685219">
+                  {$coupon_period}
+                </p>
               </div>
               <div class="button">
-                <a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a>
+                <a href="{$coupon_issue_url}">
+                  <img src="{$download_url}" alt="다운받기" />
+                </a>
               </div>
-              <p class="chkBtn">{$coupon_checkbox}</p>
+              <p class="chkBtn">
+                {$coupon_checkbox}
+              </p>
             </div>
           </li>
           <li>
@@ -207,17 +294,26 @@
                 <strong
                   class="title"
                   style="color: #483b1b; font-family: Arial, Verdana, Tahoma, sans-serif; font-size: 11px"
-                  >{$coupon_name|cut:13,...}</strong
                 >
+                  {$coupon_name|cut:13,...}
+                </strong>
                 <p class="discount" style="color: #d07b01">
-                  <span style="font-family: Verdana, Tahoma, sans-serif">{$coupon_content}</span>
+                  <span style="font-family: Verdana, Tahoma, sans-serif">
+                    {$coupon_content}
+                  </span>
                 </p>
-                <p class="period" style="color: #685219">{$coupon_period}</p>
+                <p class="period" style="color: #685219">
+                  {$coupon_period}
+                </p>
               </div>
               <div class="button">
-                <a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a>
+                <a href="{$coupon_issue_url}">
+                  <img src="{$download_url}" alt="다운받기" />
+                </a>
               </div>
-              <p class="chkBtn">{$coupon_checkbox}</p>
+              <p class="chkBtn">
+                {$coupon_checkbox}
+              </p>
             </div>
           </li>
         </ul>
@@ -228,14 +324,34 @@
 </div>
 
 <div class="ec-base-help">
-  <h3>쿠폰이용안내</h3>
+  <h3>
+    쿠폰이용안내
+  </h3>
   <div class="inner">
     <ul>
-      <li>쿠폰 다운로드 및 사용은 <strong>로그인 후 이용가능</strong>합니다.</li>
-      <li>쿠폰 상세정보는 쿠폰을 클릭하면 확인하실 수 있습니다.</li>
-      <li>쿠폰의 이용기간이 만료되면 별도의 통보없이 자동 소멸됩니다.</li>
-      <li>동일쿠폰은 1장 이상 중복 소유가 불가능합니다. (쿠폰 사용 후 재발급은 가능합니다.)</li>
-      <li>쿠폰의 할인 적용은 <strong>쿠폰 할인 속성에 따라 다르게 적용</strong>될 수 있습니다.</li>
+      <li>
+        쿠폰 다운로드 및 사용은
+        <strong>
+          로그인 후 이용가능
+        </strong>
+        합니다.
+      </li>
+      <li>
+        쿠폰 상세정보는 쿠폰을 클릭하면 확인하실 수 있습니다.
+      </li>
+      <li>
+        쿠폰의 이용기간이 만료되면 별도의 통보없이 자동 소멸됩니다.
+      </li>
+      <li>
+        동일쿠폰은 1장 이상 중복 소유가 불가능합니다. (쿠폰 사용 후 재발급은 가능합니다.)
+      </li>
+      <li>
+        쿠폰의 할인 적용은
+        <strong>
+          쿠폰 할인 속성에 따라 다르게 적용
+        </strong>
+        될 수 있습니다.
+      </li>
     </ul>
   </div>
 </div>
