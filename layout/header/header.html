@@ -26,7 +26,7 @@
       </button>
 
       <!-- 검색 -->
-      <button type="button" class="text-p4 text-secondary hover:underline" aria-label="검색">검색</button>
+      <button type="button" class="text-p4 text-secondary" aria-label="검색">검색</button>
 
       <!-- 로그인 / 로그아웃 -->
       <div>
@@ -35,7 +35,7 @@
 
       <!-- 장바구니 -->
       <div module="Layout_OrderBasketcount" class="text-p4 text-secondary">
-        <a href="/order/basket.html" class="flex items-center gap-1">
+        <a href="#" class="flex items-center gap-1">
           장바구니
           <span class="flex size-4 items-center justify-center rounded-full bg-gray-600">
             <span class="text-c3 text-on-color">{$basket_count}</span>
@@ -62,18 +62,21 @@
   <div class="relative flex-1 overflow-hidden">
     <!-- 대분류 패널 -->
     <div id="drawerPanel1" class="absolute inset-0 flex flex-col transition-transform duration-300">
-      <div class="flex-1 overflow-y-auto">
-        <ul id="drawerCateList" module="layout_category" class="flex flex-col gap-5 p-4">
-          <li id="cate{$cate_no}" class="drawer__cate-item flex items-center justify-between">
-            <a href="{$link_product_list}" class="drawer__cate-link view text-h4 text-primary flex-1">{$name}</a>
-            <button
-              type="button"
-              class="drawer__cate-arrow cate flex items-center"
+      <div class="flex flex-1 flex-col gap-5 overflow-y-auto p-4">
+        <a href="/product/list.html?cate_no=43" class="text-h4 text-primary flex items-center justify-between"
+          ><span>전체</span>
+          <!--@import(/svg/icon/arrow_md_right.html)--></a
+        >
+        <ul id="drawerCateList" module="layout_category">
+          <li id="cate{$cate_no}" class="drawer__cate-item">
+            <a
+              href="{$link_product_list}"
+              class="drawer__cate-link text-h4 text-primary flex items-center justify-between"
               cate="{$param}"
-              aria-label="하위메뉴"
             >
-              <!--@import(/svg/icon/arrow_md_right.html)-->
-            </button>
+              <span>{$name}</span>
+              <span class="drawer__cate-arrow flex items-center"><!--@import(/svg/icon/arrow_md_right.html)--></span>
+            </a>
           </li>
         </ul>
       </div>

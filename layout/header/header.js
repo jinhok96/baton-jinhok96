@@ -28,7 +28,7 @@
     // 하위 카테고리가 없는 항목의 화살표 버튼 숨기기
     checkNoChildItems: function () {
       $('#drawerCateList .drawer__cate-item').each(function () {
-        var sParam = $(this).find('.drawer__cate-arrow').attr('cate');
+        var sParam = $(this).find('.drawer__cate-link').attr('cate');
         if (!sParam) {
           $(this).find('.drawer__cate-arrow').addClass('hidden');
           return;
@@ -145,13 +145,14 @@
       drawer.close();
     });
 
-    // 1depth → 2depth 전환
-    $(document).on('click', '#drawerCateList .drawer__cate-arrow', function (e) {
-      e.preventDefault();
+    // 1depth → 2depth 전환 (하위 분류 있으면 패널 열기, 없으면 링크 이동)
+    $(document).on('click', '#drawerCateList .drawer__cate-link', function (e) {
       var sParam = $(this).attr('cate');
       if (!sParam) return;
       var iCateNo = Number(drawer.getParam(sParam, 'cate_no'));
-      var sCateName = $(this).closest('.drawer__cate-item').find('.drawer__cate-link').text().trim();
+      if (!drawer.aSubCategory[iCateNo]) return;
+      e.preventDefault();
+      var sCateName = $(this).find('span').first().text().trim();
       drawer.show2depth(iCateNo, sCateName);
     });
 
