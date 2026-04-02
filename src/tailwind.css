@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 @source '../**/*.html';
+@source '../layout/header/header.js';
 
 /* ==========================================================================
    Design Tokens — @theme
@@ -45,11 +46,13 @@
 
 /* ==========================================================================
    Design Tokens — @layer base
-   Tailwind 유틸리티를 생성하지 않는 CSS 변수
    ========================================================================== */
 
 @layer base {
   :root {
+    font-size: 16px;
+    line-height: normal;
+
     /* Font Family */
     --font-family-base:
       'PretendardVariable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic',
@@ -145,6 +148,53 @@
       --layout-container-padding: var(--spacing-16);
       --product-grid-cols: 2;
     }
+  }
+
+  /* Project base reset */
+  body {
+    min-width: 360px;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: var(--font-family-base);
+    line-height: normal;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+
+  body#popup {
+    min-width: 0;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: var(--font-family-base);
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    vertical-align: top;
+  }
+
+  caption {
+    display: none;
+  }
+
+  hr.layout {
+    display: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:active {
+    text-decoration: none;
   }
 }
 

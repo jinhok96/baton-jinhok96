@@ -342,20 +342,6 @@ main#contents {
   }
 }
 
-/********************* PC *********************/
-@media all and (max-width: 1553px) {
-  #quick {
-    display: none;
-  }
-}
-
-/********************* PC *********************/
-@media all and (min-width: 1921px) {
-  body {
-    margin: 0 auto;
-  }
-}
-
 #modalBackpanel {
   display: none;
   position: absolute;
