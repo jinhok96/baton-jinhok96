@@ -45,30 +45,6 @@ main#contents {
   background: rgba(255, 255, 255, 0.9);
   text-decoration: none;
 }
-.collection-item {
-  margin: 0 20px 0 0;
-  flex: 1;
-}
-.collection-item picture {
-  font-size: 0;
-}
-.collection-item img {
-  max-width: 100%;
-  width: 100%;
-}
-.collection-item::before {
-  content: '';
-  width: 1px;
-  margin-left: -1px;
-  float: left;
-  height: 0;
-  padding-top: calc(591.44 / 1127.34 * 100%);
-}
-.collection-item::after {
-  content: '';
-  display: table;
-  clear: both;
-}
 .saleItem {
   text-align: center;
   background: #f6f6f6;

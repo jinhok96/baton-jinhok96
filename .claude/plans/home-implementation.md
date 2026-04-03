@@ -96,10 +96,10 @@ index.html                     — 전체 조립 (기존 파일 교체)
 
 **파일**: `layout/home/category-quicklinks.html`
 
-- 최상위에 `md:hidden` 적용 (모바일 전용)
-- `overflow-x-auto` 가로 스크롤 컨테이너
-- `custom_moduleedit_2` 내 4개 항목: 이미지 + 카테고리명 텍스트
-- 항목당 구조: `<a>` → 이미지 (rounded) + `<span>` 텍스트
+- `md:hidden` (모바일 전용)
+- **2×2 그리드** (`grid grid-cols-2 gap-3`) — Figma 기준 (가로 스크롤 아님)
+- `module="project_list"` — `{$project_link}`, `{$project_image}`, `{$project_name}` 변수 사용
+- 항목당 구조: `relative aspect-[4/5] rounded-lg overflow-hidden` + 배경 이미지 + 하단 텍스트 오버레이 (`text-l6 text-on-color`)
 
 ### Sub Wave 2-A-3: Curation 섹션
 
@@ -215,10 +215,10 @@ window.addEventListener('load', function () {
 
 | 서브 Wave | 파일                                   | 상태 |
 | --------- | -------------------------------------- | ---- |
-| 2-A-1     | `layout/home/hero.html`                | ⬜   |
-| 2-A-2     | `layout/home/category-quicklinks.html` | ⬜   |
+| 2-A-1     | `layout/home/hero.html`                | ✅   |
+| 2-A-2     | `layout/home/category-quicklinks.html` | ✅   |
 | 2-A-3     | `layout/home/curation.html`            | ⬜   |
 | 2-A-4     | `layout/home/product-grid.html`        | ⬜   |
 | 2-A-5     | `layout/home/newsletter.html`          | ⬜   |
-| 2-A-6     | `layout/home/home.js`                  | ⬜   |
+| 2-A-6     | `layout/home/home.js`                  | ✅   |
 | 2-A-7     | `index.html` (조립)                    | ⬜   |
