@@ -34,28 +34,56 @@
   }
 }
 
-@utility px-container {
+@utility pl-container {
   padding-left: var(--layout-container-padding);
+}
+
+@utility pr-container {
   padding-right: var(--layout-container-padding);
 }
 
-@utility py-container {
+@utility pt-container {
   padding-top: var(--layout-container-padding);
+}
+
+@utility pb-container {
   padding-bottom: var(--layout-container-padding);
+}
+
+@utility px-container {
+  @apply pl-container pr-container;
+}
+
+@utility py-container {
+  @apply pt-container pb-container;
 }
 
 @utility p-container {
   @apply px-container py-container;
 }
 
-@utility mx-container {
+@utility ml-container {
   margin-left: var(--layout-container-padding);
+}
+
+@utility mr-container {
   margin-right: var(--layout-container-padding);
 }
 
-@utility my-container {
+@utility mt-container {
   margin-top: var(--layout-container-padding);
+}
+
+@utility mb-container {
   margin-bottom: var(--layout-container-padding);
+}
+
+@utility mx-container {
+  @apply ml-container mr-container;
+}
+
+@utility my-container {
+  @apply mt-container mb-container;
 }
 
 @utility m-container {

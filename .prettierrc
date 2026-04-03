@@ -13,10 +13,11 @@
     {
       "files": "*.html",
       "options": {
-        "parser": "glimmer",
+        "parser": "html",
         "htmlWhitespaceSensitivity": "ignore",
         "singleQuote": false,
-        "singleAttributePerLine": false
+        "singleAttributePerLine": false,
+        "embeddedLanguageFormatting": "off"
       }
     }
   ]

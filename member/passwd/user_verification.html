@@ -1,50 +1,32 @@
 <!--@layout(/layout/basic/layout.html)-->
 <div class="path">
-  <span>
-    현재 위치
-  </span>
+  <span>현재 위치</span>
   <ol>
     <li>
-      <a href="/">
-        홈
-      </a>
+      <a href="/">홈</a>
     </li>
     <li title="현재 위치">
-      <strong>
-        비밀번호 찾기
-      </strong>
+      <strong>비밀번호 찾기</strong>
     </li>
   </ol>
 </div>
 <div class="titleArea">
-  <h2>
-    비밀번호 찾기
-  </h2>
+  <h2>비밀번호 찾기</h2>
 </div>
 <div module="member_passwordverification" class="memberArea gInnerMargin">
   <!--@css(/css/module/member/user_verification.css)-->
   <div class="ec-base-box typeMember">
     <fieldset class="content">
-      <legend>
-        비밀번호 찾기 본인확인 인증
-      </legend>
+      <legend>비밀번호 찾기 본인확인 인증</legend>
       <ul class="ec-base-desc gVer">
         <li>
-          <strong class="term">
-            본인확인 인증
-          </strong>
-          <div class="desc">
-            {$form.user_verification_method_type}
-          </div>
+          <strong class="term">본인확인 인증</strong>
+          <div class="desc">{$form.user_verification_method_type}</div>
         </li>
         <li id="{$user_verification_email_info}">
-          <strong class="term">
-            이메일
-          </strong>
+          <strong class="term">이메일</strong>
           <div class="desc">
-            <strong class="txtEm">
-              {$user_verification_email}
-            </strong>
+            <strong class="txtEm">{$user_verification_email}</strong>
             <br />
             <a href="#none" class="btnNormal sizeS gBlank10" onclick="{$action_func_user_verification;}">
               인증번호 받기
@@ -52,13 +34,9 @@
           </div>
         </li>
         <li id="{$user_verification_mobile_info}">
-          <strong class="term">
-            휴대폰 번호
-          </strong>
+          <strong class="term">휴대폰 번호</strong>
           <div class="desc">
-            <strong class="txtEm">
-              {$user_verification_mobile}
-            </strong>
+            <strong class="txtEm">{$user_verification_mobile}</strong>
             <br />
             <a href="#none" class="btnNormal sizeS gBlank10" onclick="{$action_func_user_verification;}">
               인증번호 받기
@@ -66,9 +44,7 @@
           </div>
         </li>
         <li>
-          <strong class="term">
-            인증번호
-          </strong>
+          <strong class="term">인증번호</strong>
           <div class="desc">
             {$form.verification_code}
             <div class="txtInfo">
@@ -85,11 +61,7 @@
     </fieldset>
   </div>
   <div class="ec-base-button gBottom">
-    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_user_verification_submit;}">
-      확인
-    </a>
-    <a href="#none" class="btnNormalFix sizeM" onclick="{$action_func_user_verification_cancel;}">
-      취소
-    </a>
+    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_user_verification_submit;}">확인</a>
+    <a href="#none" class="btnNormalFix sizeM" onclick="{$action_func_user_verification_cancel;}">취소</a>
   </div>
 </div>

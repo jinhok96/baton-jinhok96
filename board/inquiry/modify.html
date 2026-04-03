@@ -1,31 +1,21 @@
 <!--@layout(/layout/basic/layout.html)-->
 <div class="path">
-  <span>
-    현재 위치
-  </span>
+  <span>현재 위치</span>
   <ol>
     <li>
-      <a href="/">
-        홈
-      </a>
+      <a href="/">홈</a>
     </li>
     <li>
-      <a href="/myshop/index.html">
-        마이쇼핑
-      </a>
+      <a href="/myshop/index.html">마이쇼핑</a>
     </li>
     <li title="현재 위치">
-      <strong>
-        대량구매문의 관리
-      </strong>
+      <strong>대량구매문의 관리</strong>
     </li>
   </ol>
 </div>
 
 <div class="titleArea">
-  <h2>
-    대량구매문의 관리
-  </h2>
+  <h2>대량구매문의 관리</h2>
 </div>
 
 <div module="board_inquiryModify">
@@ -40,21 +30,13 @@
       </a>
     </p>
     <div class="information">
-      <span class="icon">
-        {$user_icon} {$new_icon} {$recommend_icon} {$soldout_icon} {$mileage_icon}
-      </span>
+      <span class="icon">{$user_icon} {$new_icon} {$recommend_icon} {$soldout_icon} {$mileage_icon}</span>
       <h3>
-        <a href="/product/detail.html{$param_product}">
-          {$product_name}
-        </a>
+        <a href="/product/detail.html{$param_product}">{$product_name}</a>
       </h3>
-      <p class="price">
-        {$product_price} {$product_tax_type_text}
-      </p>
+      <p class="price">{$product_price} {$product_tax_type_text}</p>
       <p class="button">
-        <a href="/product/detail.html{$param_product}" class="btnNormal sizeS" title="새창으로 이동">
-          상품상세보기
-        </a>
+        <a href="/product/detail.html{$param_product}" class="btnNormal sizeS" title="새창으로 이동">상품상세보기</a>
       </p>
     </div>
   </div>
@@ -66,9 +48,7 @@
 
   <div class="ec-base-table typeWrite">
     <table border="1">
-      <caption>
-        대량구매문의 글 수정 폼
-      </caption>
+      <caption>대량구매문의 글 수정 폼</caption>
       <colgroup>
         <col style="width: 190px" />
         <col style="width: auto" />
@@ -80,18 +60,13 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>
             <span class="ec-base-qty">
               {$form.bi_product_cnt}
-              <a href="#none" onclick="{$action_amount_up}" class="up">
-                수량증가
-              </a>
-              <a href="#none" onclick="{$action_amount_down}" class="down">
-                수량감소
-              </a>
+              <a href="#none" onclick="{$action_amount_up}" class="up">수량증가</a>
+              <a href="#none" onclick="{$action_amount_down}" class="down">수량감소</a>
             </span>
           </td>
         </tr>
@@ -101,74 +76,47 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
-          <td>
-            {$form.bi_inquire_subject}
-          </td>
+          <td>{$form.bi_inquire_subject}</td>
         </tr>
         <tr>
-          <th scope="row" class="RW top">
-            본문
-          </th>
-          <td>
-            {$form.bi_inquire_content}
-          </td>
+          <th scope="row" class="RW top">본문</th>
+          <td>{$form.bi_inquire_content}</td>
         </tr>
         <tr class="file">
-          <th scope="row">
-            첨부파일1
-          </th>
+          <th scope="row">첨부파일1</th>
           <td>
             {$form.inquiry_file1}
-            <p class="gBlank5 txtInfo">
-              첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf
-            </p>
+            <p class="gBlank5 txtInfo">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p>
           </td>
         </tr>
         <tr class="file">
-          <th scope="row">
-            첨부파일2
-          </th>
+          <th scope="row">첨부파일2</th>
           <td>
             {$form.inquiry_file2}
-            <p class="gBlank5 txtInfo">
-              첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf
-            </p>
+            <p class="gBlank5 txtInfo">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p>
           </td>
         </tr>
         <tr class="file">
-          <th scope="row">
-            첨부파일3
-          </th>
+          <th scope="row">첨부파일3</th>
           <td>
             {$form.inquiry_file3}
-            <p class="gBlank5 txtInfo">
-              첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf
-            </p>
+            <p class="gBlank5 txtInfo">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p>
           </td>
         </tr>
         <tr class="file">
-          <th scope="row">
-            첨부파일4
-          </th>
+          <th scope="row">첨부파일4</th>
           <td>
             {$form.inquiry_file4}
-            <p class="gBlank5 txtInfo">
-              첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf
-            </p>
+            <p class="gBlank5 txtInfo">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p>
           </td>
         </tr>
         <tr class="file">
-          <th scope="row">
-            첨부파일5
-          </th>
+          <th scope="row">첨부파일5</th>
           <td>
             {$form.inquiry_file5}
-            <p class="gBlank5 txtInfo">
-              첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf
-            </p>
+            <p class="gBlank5 txtInfo">첨부파일: 10M 이하 / csv, xls, doc, ppt, pdf</p>
           </td>
         </tr>
         <tr>
@@ -177,27 +125,20 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
-          <td>
-            {$form.bi_is_catalog}
-          </td>
+          <td>{$form.bi_is_catalog}</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <div class="titleArea titleArea--middle">
-    <h3>
-      고객 정보
-    </h3>
+    <h3>고객 정보</h3>
   </div>
   <div class="ec-base-table typeWrite">
     <table border="1">
-      <caption>
-        대량구매문의 고객정보
-      </caption>
+      <caption>대량구매문의 고객정보</caption>
       <colgroup>
         <col style="width: 190px" />
         <col style="width: auto" />
@@ -209,20 +150,13 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
-          <td>
-            {$form.bi_inquirer_name}
-          </td>
+          <td>{$form.bi_inquirer_name}</td>
         </tr>
         <tr>
-          <th scope="row">
-            회사명
-          </th>
-          <td>
-            {$form.bi_inquirer_company_name}
-          </td>
+          <th scope="row">회사명</th>
+          <td>{$form.bi_inquirer_company_name}</td>
         </tr>
         <tr>
           <th scope="row">
@@ -230,12 +164,9 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
-          <td>
-            {$form.bi_inquirer_email}
-          </td>
+          <td>{$form.bi_inquirer_email}</td>
         </tr>
         <tr>
           <th scope="row">
@@ -243,12 +174,9 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
-          <td>
-            {$form.address}
-          </td>
+          <td>{$form.address}</td>
         </tr>
         <tr>
           <th scope="row">
@@ -256,14 +184,11 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formGroup code">
             {$form.bi_inquirer_phone}
-            <span class="txtInfo">
-              숫자만 입력해주세요.
-            </span>
+            <span class="txtInfo">숫자만 입력해주세요.</span>
           </td>
         </tr>
       </tbody>
@@ -272,9 +197,7 @@
 
   <div class="ec-base-button gBottom">
     <span class="gRight">
-      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_modify}">
-        수정
-      </a>
+      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_modify}">수정</a>
     </span>
   </div>
 </div>

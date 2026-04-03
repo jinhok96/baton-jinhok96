@@ -4,9 +4,7 @@
   <!--@css(/css/module/product/stocklayer.css)-->
   <div id="{$stockLayerID}" class="layer {$stockLayerClass} ec-base-layer gScroll typeModal">
     <div class="header">
-      <h3>
-        재고수량
-      </h3>
+      <h3>재고수량</h3>
     </div>
     <div class="content">
       <p class="desc">
@@ -16,46 +14,30 @@
       </p>
       <div class="ec-base-table gBlank10">
         <table border="1">
-          <caption>
-            재고수량
-          </caption>
+          <caption>재고수량</caption>
           <colgroup>
             <col style="width: 70%" />
             <col style="width: 30%" />
           </colgroup>
           <thead>
             <tr>
-              <th scope="col">
-                옵션
-              </th>
-              <th scope="col">
-                재고수량
-              </th>
+              <th scope="col">옵션</th>
+              <th scope="col">재고수량</th>
             </tr>
           </thead>
           <tbody class="center">
             <tr>
-              <td class="left">
-                {$option_value}
-              </td>
-              <td>
-                {$stock_value}
-              </td>
+              <td class="left">{$option_value}</td>
+              <td>{$stock_value}</td>
             </tr>
             <tr>
-              <td class="left">
-                {$option_value}
-              </td>
-              <td>
-                {$stock_value}
-              </td>
+              <td class="left">{$option_value}</td>
+              <td>{$stock_value}</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-    <a href="#none" class="btnClose" onClick="{$stockLayerCloseAction}">
-      닫기
-    </a>
+    <a href="#none" class="btnClose" onClick="{$stockLayerCloseAction}">닫기</a>
   </div>
 </div>

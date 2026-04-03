@@ -5,35 +5,23 @@
     $jointbuy_page = /product/jointbuy.html
 -->
 <div class="path" module="product_headcategory">
-  <span>
-    현재 위치
-  </span>
+  <span>현재 위치</span>
   <ol>
     <li>
-      <a href="/">
-        홈
-      </a>
+      <a href="/">홈</a>
     </li>
     <li class="{$disp_cate_1|display}">
-      <a href="{$link_product_list_1}">
-        {$name_1}
-      </a>
+      <a href="{$link_product_list_1}">{$name_1}</a>
     </li>
     <li class="{$disp_cate_2|display}">
-      <a href="{$link_product_list_2}">
-        {$name_2}
-      </a>
+      <a href="{$link_product_list_2}">{$name_2}</a>
     </li>
     <li class="{$disp_cate_3|display}">
-      <a href="{$link_product_list_3}">
-        {$name_3}
-      </a>
+      <a href="{$link_product_list_3}">{$name_3}</a>
     </li>
     <li class="{$disp_cate_4|display}">
       <strong>
-        <a href="{$link_product_list_4}">
-          {$name_4}
-        </a>
+        <a href="{$link_product_list_4}">{$name_4}</a>
       </strong>
     </li>
   </ol>
@@ -63,8 +51,7 @@
                   this,
                 );
                 return false;
-              "
-            >
+              ">
               <img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class} {$img_display|display}" />
               <span module="product_Imagestyle">
                 <span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span>
@@ -76,12 +63,8 @@
         <div class="listImg" module="product_addimage">
           <div class="inner">
             <ul class="list">
-              <li>
-                {$add_img}
-              </li>
-              <li>
-                {$add_img}
-              </li>
+              <li>{$add_img}</li>
+              <li>{$add_img}</li>
             </ul>
           </div>
           <button type="button" class="prev">
@@ -126,12 +109,8 @@
 
     <div class="infoArea">
       <div class="headingArea">
-        <h1>
-          {$name}
-        </h1>
-        <span class="delivery {$delvtype_display|display}">
-          (해외배송 가능상품)
-        </span>
+        <h1>{$name}</h1>
+        <span class="delivery {$delvtype_display|display}">(해외배송 가능상품)</span>
         <span class="icon">
           {$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon}
           {$pickup_icon} {$benefit_icons}
@@ -143,25 +122,15 @@
                     count = 10
                 -->
         <table border="1">
-          <caption>
-            {$name} 기본 정보
-          </caption>
+          <caption>{$name} 기본 정보</caption>
           <tbody>
             <tr class="{$item_display|display}">
-              <th scope="row">
-                {$item_title}
-              </th>
-              <td>
-                {$item_content}
-              </td>
+              <th scope="row">{$item_title}</th>
+              <td>{$item_content}</td>
             </tr>
             <tr class="{$item_display|display}">
-              <th scope="row">
-                {$item_title}
-              </th>
-              <td>
-                {$item_content}
-              </td>
+              <th scope="row">{$item_title}</th>
+              <td>{$item_content}</td>
             </tr>
           </tbody>
         </table>
@@ -170,16 +139,14 @@
       <button
         type="button"
         class="btnNormal btnRestockSms {$sms_restock_display|display}"
-        onClick="{$action_sms_restock}"
-      >
+        onClick="{$action_sms_restock}">
         재입고 알림 SMS
       </button>
 
       <p class="{$naver_mileage_exception_display|display}">
         <img
           src="//img.echosting.cafe24.com/skin/base_ko_KR/product/txt_naver.gif"
-          alt="개인결제창을 통한 결제 시 네이버 마일리지 적립 및 사용이 가능합니다."
-        />
+          alt="개인결제창을 통한 결제 시 네이버 마일리지 적립 및 사용이 가능합니다." />
       </p>
 
       <div class="productOption">
@@ -187,25 +154,17 @@
           <!--
                     $use_per_add_option = yes
                     -->
-          <caption>
-            상품 옵션
-          </caption>
+          <caption>상품 옵션</caption>
           <tbody module="product_option">
             <tr>
-              <th scope="row">
-                {$option_name}
-              </th>
+              <th scope="row">{$option_name}</th>
               <td>
                 {$form.option}
-                <p class="value">
-                  {$option_desc}
-                </p>
+                <p class="value">{$option_desc}</p>
               </td>
             </tr>
             <tr module="product_quantity">
-              <th scope="row">
-                수량
-              </th>
+              <th scope="row">수량</th>
               <td>
                 <div class="ec-base-qty">
                   {$form.quantity}
@@ -216,8 +175,7 @@
                       alt="up"
                       src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                       width="33"
-                      height="29"
-                    />
+                      height="29" />
                   </a>
                   <a href="javascript:;" class="down qtyDown eClearDown">
                     <img
@@ -226,8 +184,7 @@
                       alt="down"
                       src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                       width="33"
-                      height="29"
-                    />
+                      height="29" />
                   </a>
                 </div>
               </td>
@@ -235,16 +192,12 @@
           </tbody>
           <tbody>
             <tr module="product_addoption">
-              <th scope="row">
-                {$add_option_name}
-              </th>
+              <th scope="row">{$add_option_name}</th>
               <td>
                 {$form.add_option}
                 <span class="txtByte" title="현재글자수/최대글자수">
                   (
-                  <strong class="length">
-                    0
-                  </strong>
+                  <strong class="length">0</strong>
                   /{$option_maxlength})
                 </span>
               </td>
@@ -253,21 +206,15 @@
           <tbody>
             <tr class="{$option_push_button_display|display}" id="{$option_push_button_id}">
               <td colspan="2" class="selectButton">
-                <a href="#none" class="btnSubmit sizeS" onclick="{$action_push_button;}">
-                  옵션선택
-                </a>
+                <a href="#none" class="btnSubmit sizeS" onclick="{$action_push_button;}">옵션선택</a>
               </td>
             </tr>
             <tr module="product_fileoption">
-              <th scope="row">
-                {$file_option_name}
-              </th>
+              <th scope="row">{$file_option_name}</th>
               <td class="fileInfo">
                 {$form.file_option}
                 <ul class="infoDesc">
-                  <li>
-                    - 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.
-                  </li>
+                  <li>- 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.</li>
                 </ul>
               </td>
             </tr>
@@ -276,9 +223,7 @@
       </div>
 
       <dl module="product_quantity" class="ec-base-desc quantity">
-        <dt>
-          수량
-        </dt>
+        <dt>수량</dt>
         <dd>
           <div class="ec-base-qty">
             {$form.quantity}
@@ -289,8 +234,7 @@
                 alt="up"
                 src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                 width="33"
-                height="29"
-              />
+                height="29" />
             </a>
             <a href="javascript:;" class="down qtyDown eClearDown">
               <img
@@ -299,8 +243,7 @@
                 alt="down"
                 src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                 width="33"
-                height="29"
-              />
+                height="29" />
             </a>
           </div>
         </dd>
@@ -309,9 +252,7 @@
       <div class="guideArea">
         <p class="info {$limit_display|display}">
           (최소주문수량 {$minimum_limit}개 이상
-          <span class="{$maximum_limit_display|display}">
-            / 최대주문수량 {$maximum_limit}개 이하
-          </span>
+          <span class="{$maximum_limit_display|display}">/ 최대주문수량 {$maximum_limit}개 이하</span>
           )
         </p>
         <span class="sizeGuide {$size_guide_display|display}">
@@ -327,9 +268,7 @@
                     $use_per_add_option = yes
                 -->
         <div class="title">
-          <h3>
-            세트상품
-          </h3>
+          <h3>세트상품</h3>
         </div>
         <ul class="product">
           <li>
@@ -340,38 +279,25 @@
                 </a>
               </div>
               <p class="name" title="상품명">
-                <a href="{$link_bind_product_detail}">
-                  {$product_name}
-                </a>
-                <span class="info {$set_quantity_display|display}">
-                  ({$set_quantity}개씩 구매되는 상품)
-                </span>
+                <a href="{$link_bind_product_detail}">{$product_name}</a>
+                <span class="info {$set_quantity_display|display}">({$set_quantity}개씩 구매되는 상품)</span>
               </p>
               <p class="price {$product_price_display|display}" title="판매가">
-                <span class="{$product_price_del}">
-                  {$product_price}{$product_tax_type_text}
-                </span>
+                <span class="{$product_price_del}">{$product_price}{$product_tax_type_text}</span>
               </p>
-              <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">
-                {$product_sale_price}
-              </p>
+              <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">{$product_sale_price}</p>
               <div class="stock">
                 <span class="gLabel {$stock_quantity_display|display}">
-                  <a href="#none" class="btnNormal sizeS" {$bind_stock_quantity}>
-                    재고수량보기
-                  </a>
+                  <a href="#none" class="btnNormal sizeS" {$bind_stock_quantity}>재고수량보기</a>
                 </span>
                 <span class="{$product_restock_button_display|display}">
-                  <a href="#none" class="btnNormal sizeS" {$product_restock_link}>
-                    재입고 알림 SMS
-                  </a>
+                  <a href="#none" class="btnNormal sizeS" {$product_restock_link}>재입고 알림 SMS</a>
                 </span>
               </div>
               <button
                 type="button"
                 class="btnNormal sizeS btnInfo eProductDetailInfo"
-                id="eProductDetailInfo_{$product_no}"
-              >
+                id="eProductDetailInfo_{$product_no}">
                 추가정보
               </button>
             </div>
@@ -379,13 +305,9 @@
               <li module="product_option">
                 <ul>
                   <li>
-                    <strong class="name">
-                      {$option_name}
-                    </strong>
+                    <strong class="name">{$option_name}</strong>
                     {$form.option}
-                    <p class="value">
-                      {$option_desc}
-                    </p>
+                    <p class="value">{$option_desc}</p>
                   </li>
                   <li module="product_quantity">
                     <div class="ec-base-qty">
@@ -397,8 +319,7 @@
                           alt="up"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                       <a href="javascript:;" class="down qtyDown eClearDown">
                         <img
@@ -407,8 +328,7 @@
                           alt="down"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                     </div>
                   </li>
@@ -417,9 +337,7 @@
               <li module="product_noneoption">
                 <ul>
                   <li>
-                    <span class="name">
-                      상품선택
-                    </span>
+                    <span class="name">상품선택</span>
                     {$form.noneoption}
                   </li>
                   <li module="product_quantity">
@@ -432,8 +350,7 @@
                           alt="up"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                       <a href="javascript:;" class="down qtyDown eClearDown">
                         <img
@@ -442,38 +359,29 @@
                           alt="down"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                     </div>
                   </li>
                 </ul>
               </li>
               <li module="product_addoption">
-                <span class="name">
-                  {$add_option_name}
-                </span>
+                <span class="name">{$add_option_name}</span>
                 {$form.add_option}
                 <span class="txtByte" title="현재글자수/최대글자수">
                   (
-                  <strong class="length">
-                    0
-                  </strong>
+                  <strong class="length">0</strong>
                   /{$option_maxlength})
                 </span>
               </li>
               <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">
-                  옵션선택
-                </a>
+                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">옵션선택</a>
               </li>
             </ul>
             <div class="guide">
               <p class="qty {$product_min_display|display}">
                 (최소주문수량 {$product_min}개 이상
-                <span class="{$product_max_display|display}">
-                  / 최대주문수량 {$product_max}개 이하
-                </span>
+                <span class="{$product_max_display|display}">/ 최대주문수량 {$product_max}개 이하</span>
                 )
               </p>
               <div class="sizeGuide {$size_guide_display|display}">
@@ -493,38 +401,25 @@
                 </a>
               </div>
               <p class="name" title="상품명">
-                <a href="{$link_bind_product_detail}">
-                  {$product_name}
-                </a>
-                <span class="info {$set_quantity_display|display}">
-                  ({$set_quantity}개씩 구매되는 상품)
-                </span>
+                <a href="{$link_bind_product_detail}">{$product_name}</a>
+                <span class="info {$set_quantity_display|display}">({$set_quantity}개씩 구매되는 상품)</span>
               </p>
               <p class="price {$product_price_display|display}" title="판매가">
-                <span class="{$product_price_del}">
-                  {$product_price}{$product_tax_type_text}
-                </span>
+                <span class="{$product_price_del}">{$product_price}{$product_tax_type_text}</span>
               </p>
-              <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">
-                {$product_sale_price}
-              </p>
+              <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">{$product_sale_price}</p>
               <div class="stock">
                 <span class="gLabel {$stock_quantity_display|display}">
-                  <a href="#none" class="btnNormal sizeS" {$bind_stock_quantity}>
-                    재고수량보기
-                  </a>
+                  <a href="#none" class="btnNormal sizeS" {$bind_stock_quantity}>재고수량보기</a>
                 </span>
                 <span class="{$product_restock_button_display|display}">
-                  <a href="#none" class="btnNormal sizeS" {$product_restock_link}>
-                    재입고 알림 SMS
-                  </a>
+                  <a href="#none" class="btnNormal sizeS" {$product_restock_link}>재입고 알림 SMS</a>
                 </span>
               </div>
               <button
                 type="button"
                 class="btnNormal sizeS btnInfo eProductDetailInfo"
-                id="eProductDetailInfo_{$product_no}"
-              >
+                id="eProductDetailInfo_{$product_no}">
                 추가정보
               </button>
             </div>
@@ -532,13 +427,9 @@
               <li module="product_option">
                 <ul>
                   <li>
-                    <span class="name">
-                      {$option_name}
-                    </span>
+                    <span class="name">{$option_name}</span>
                     {$form.option}
-                    <p class="value">
-                      {$option_desc}
-                    </p>
+                    <p class="value">{$option_desc}</p>
                   </li>
                   <li module="product_quantity">
                     <div class="ec-base-qty">
@@ -550,8 +441,7 @@
                           alt="up"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                       <a href="javascript:;" class="down qtyDown eClearDown">
                         <img
@@ -560,8 +450,7 @@
                           alt="down"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                     </div>
                   </li>
@@ -570,9 +459,7 @@
               <li module="product_noneoption">
                 <ul>
                   <li>
-                    <span class="name">
-                      상품선택
-                    </span>
+                    <span class="name">상품선택</span>
                     {$form.noneoption}
                   </li>
                   <li module="product_quantity">
@@ -585,8 +472,7 @@
                           alt="up"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                       <a href="javascript:;" class="down qtyDown eClearDown">
                         <img
@@ -595,39 +481,30 @@
                           alt="down"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                     </div>
                   </li>
                 </ul>
               </li>
               <li module="product_addoption">
-                <span class="name">
-                  {$add_option_name}
-                </span>
+                <span class="name">{$add_option_name}</span>
                 {$form.add_option}
                 <span class="txtByte" title="현재글자수/최대글자수">
                   (
-                  <span class="length">
-                    0
-                  </span>
+                  <span class="length">0</span>
                   /{$option_maxlength})
                 </span>
               </li>
 
               <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">
-                  옵션선택
-                </a>
+                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">옵션선택</a>
               </li>
             </ul>
             <div class="guide">
               <p class="qty {$product_min_display|display}">
                 (최소주문수량 {$product_min}개 이상
-                <span class="{$product_max_display|display}">
-                  / 최대주문수량 {$product_max}개 이하
-                </span>
+                <span class="{$product_max_display|display}">/ 최대주문수량 {$product_max}개 이하</span>
                 )
               </p>
               <div class="sizeGuide {$size_guide_display|display}">
@@ -641,9 +518,7 @@
           </li>
         </ul>
         <dl module="product_quantity" class="ec-base-desc quantity">
-          <dt>
-            수량
-          </dt>
+          <dt>수량</dt>
           <dd>
             <div class="ec-base-qty">
               {$form.quantity}
@@ -654,8 +529,7 @@
                   alt="up"
                   src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                   width="33"
-                  height="29"
-                />
+                  height="29" />
               </a>
               <a href="javascript:;" class="down qtyDown eClearDown">
                 <img
@@ -664,8 +538,7 @@
                   alt="down"
                   src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                   width="33"
-                  height="29"
-                />
+                  height="29" />
               </a>
             </div>
           </dd>
@@ -679,9 +552,7 @@
         <div class="title">
           <h3>
             추가구성상품
-            <span class="txtInfo">
-              추가로 구매를 원하시면 선택하세요.
-            </span>
+            <span class="txtInfo">추가로 구매를 원하시면 선택하세요.</span>
           </h3>
           <a href="#self" class="toggle">
             <img src="//img.echosting.cafe24.com/skin/base/product/btn_additional_close.gif" alt="추가구성상품 닫기" />
@@ -696,29 +567,19 @@
                   <img src="{$product_image}" alt="" id="{$image_id}" />
                 </a>
               </div>
-              <p class="name" title="상품명">
-                {$product_name}
-              </p>
+              <p class="name" title="상품명">{$product_name}</p>
               <p class="price {$product_price_display|display}" title="판매가">
-                <span class="{$product_price_del}">
-                  {$product_price}{$product_tax_type_text}
-                </span>
+                <span class="{$product_price_del}">{$product_price}{$product_tax_type_text}</span>
               </p>
-              <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">
-                {$product_sale_price}
-              </p>
+              <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">{$product_sale_price}</p>
             </div>
             <ul class="option">
               <li module="product_option">
                 <ul>
                   <li>
-                    <strong class="name">
-                      {$option_name}
-                    </strong>
+                    <strong class="name">{$option_name}</strong>
                     {$form.option}
-                    <p class="value">
-                      {$option_desc}
-                    </p>
+                    <p class="value">{$option_desc}</p>
                   </li>
                   <li module="product_quantity">
                     <div class="ec-base-qty">
@@ -730,8 +591,7 @@
                           alt="up"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                       <a href="javascript:;" class="down qtyDown eClearDown">
                         <img
@@ -740,8 +600,7 @@
                           alt="down"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                     </div>
                   </li>
@@ -750,9 +609,7 @@
               <li module="product_noneoption">
                 <ul>
                   <li>
-                    <strong class="name">
-                      상품선택
-                    </strong>
+                    <strong class="name">상품선택</strong>
                     {$form.noneoption}
                   </li>
                   <li module="product_quantity">
@@ -765,8 +622,7 @@
                           alt="up"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                       <a href="javascript:;" class="down qtyDown eClearDown">
                         <img
@@ -775,31 +631,24 @@
                           alt="down"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                     </div>
                   </li>
                 </ul>
               </li>
               <li module="product_addoption">
-                <span class="name">
-                  {$add_option_name}
-                </span>
+                <span class="name">{$add_option_name}</span>
                 {$form.add_option}
                 <span class="txtByte" title="현재글자수/최대글자수">
                   (
-                  <span class="length">
-                    0
-                  </span>
+                  <span class="length">0</span>
                   /{$option_maxlength})
                 </span>
               </li>
 
               <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">
-                  옵션선택
-                </a>
+                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">옵션선택</a>
               </li>
             </ul>
           </li>
@@ -810,29 +659,19 @@
                   <img src="{$product_image}" alt="" id="{$image_id}" />
                 </a>
               </div>
-              <p class="name" title="상품명">
-                {$product_name}
-              </p>
+              <p class="name" title="상품명">{$product_name}</p>
               <p class="price {$product_price_display|display}" title="판매가">
-                <span class="{$product_price_del}">
-                  {$product_price}{$product_tax_type_text}
-                </span>
+                <span class="{$product_price_del}">{$product_price}{$product_tax_type_text}</span>
               </p>
-              <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">
-                {$product_sale_price}
-              </p>
+              <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">{$product_sale_price}</p>
             </div>
             <ul class="option">
               <li module="product_option">
                 <ul>
                   <li>
-                    <strong class="name">
-                      {$option_name}
-                    </strong>
+                    <strong class="name">{$option_name}</strong>
                     {$form.option}
-                    <p class="value">
-                      {$option_desc}
-                    </p>
+                    <p class="value">{$option_desc}</p>
                   </li>
                   <li module="product_quantity">
                     <div class="ec-base-qty">
@@ -844,8 +683,7 @@
                           alt="up"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                       <a href="javascript:;" class="down qtyDown eClearDown">
                         <img
@@ -854,8 +692,7 @@
                           alt="down"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                     </div>
                   </li>
@@ -864,9 +701,7 @@
               <li module="product_noneoption">
                 <ul>
                   <li>
-                    <strong class="name">
-                      상품선택
-                    </strong>
+                    <strong class="name">상품선택</strong>
                     {$form.noneoption}
                   </li>
                   <li module="product_quantity">
@@ -879,8 +714,7 @@
                           alt="up"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                       <a href="javascript:;" class="down qtyDown eClearDown">
                         <img
@@ -889,30 +723,23 @@
                           alt="down"
                           src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg"
                           width="33"
-                          height="29"
-                        />
+                          height="29" />
                       </a>
                     </div>
                   </li>
                 </ul>
               </li>
               <li module="product_addoption">
-                <span class="name">
-                  {$add_option_name}
-                </span>
+                <span class="name">{$add_option_name}</span>
                 {$form.add_option}
                 <span class="txtByte" title="현재글자수/최대글자수">
                   (
-                  <span class="length">
-                    0
-                  </span>
+                  <span class="length">0</span>
                   /{$option_maxlength})
                 </span>
               </li>
               <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">
-                  옵션선택
-                </a>
+                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">옵션선택</a>
               </li>
             </ul>
           </li>
@@ -921,9 +748,7 @@
 
       <div id="{$total.total_id}" class="{$total.total_display|display}">
         <table border="1">
-          <caption>
-            상품 목록
-          </caption>
+          <caption>상품 목록</caption>
           <colgroup>
             <col style="width: auto" />
             <col style="width: 100px" />
@@ -931,43 +756,27 @@
           </colgroup>
           <thead>
             <tr>
-              <th scope="col">
-                상품명
-              </th>
-              <th scope="col">
-                상품수
-              </th>
-              <th scope="col">
-                가격
-              </th>
+              <th scope="col">상품명</th>
+              <th scope="col">상품수</th>
+              <th scope="col">가격</th>
             </tr>
           </thead>
           <tbody class="{$quantity_display|display}">
             <tr>
-              <td>
-                {$name}
-              </td>
+              <td>{$name}</td>
               <td>
                 <span class="quantity">
                   {$quantity}
-                  <a href="javascript:;" class="up {$quantity_up_class}">
-                    수량증가
-                  </a>
-                  <a href="javascript:;" class="down {$quantity_down_class}">
-                    수량감소
-                  </a>
+                  <a href="javascript:;" class="up {$quantity_up_class}">수량증가</a>
+                  <a href="javascript:;" class="down {$quantity_down_class}">수량감소</a>
                 </span>
               </td>
               <td class="right">
-                <span class="{$total.quantity_price}">
-                  {$product_price}
-                </span>
+                <span class="{$total.quantity_price}">{$product_price}</span>
                 <span class="mileage {$mileage_display|display}">
                   (
                   <img src="{$mileage_mileage_icon}" alt="" />
-                  <span class="{$total.mileage_price}">
-                    {$mileage_value}
-                  </span>
+                  <span class="{$total.mileage_price}">{$mileage_value}</span>
                   )
                 </span>
               </td>
@@ -979,39 +788,29 @@
                             -->
               <td class="middle" colspan="3">
                 <table border="1">
-                  <caption>
-                    옵션 정보
-                  </caption>
+                  <caption>옵션 정보</caption>
                   <colgroup>
                     <col style="width: 105px" />
                     <col style="width: auto" />
                   </colgroup>
                   <tbody>
                     <tr module="product_addoption">
-                      <th scope="row">
-                        {$add_option_name}
-                      </th>
+                      <th scope="row">{$add_option_name}</th>
                       <td>
                         {$form.add_option}
                         <span class="txtByte" title="현재글자수/최대글자수">
                           (
-                          <strong class="length">
-                            0
-                          </strong>
+                          <strong class="length">0</strong>
                           /{$option_maxlength})
                         </span>
                       </td>
                     </tr>
                     <tr module="product_fileoption">
-                      <th scope="row">
-                        {$file_option_name}
-                      </th>
+                      <th scope="row">{$file_option_name}</th>
                       <td class="fileInfo">
                         {$form.file_option}
                         <ul class="infoDesc">
-                          <li>
-                            - 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.
-                          </li>
+                          <li>- 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.</li>
                         </ul>
                       </td>
                     </tr>
@@ -1051,65 +850,48 @@
       <div id="{$total.total_price_id}" class="totalPrice">
         <strong class="title">
           TOTAL
-          <span class="qty">
-            (QUANTITY)
-          </span>
+          <span class="qty">(QUANTITY)</span>
         </strong>
         <span class="{$total.total_cnt}">
           <strong>
-            <em>
-              0
-            </em>
+            <em>0</em>
           </strong>
           (0개)
         </span>
       </div>
-      <p class="ec-base-help {$price_warning_class}">
-        할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수 있습니다.
-      </p>
+      <p class="ec-base-help {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수 있습니다.</p>
 
       <div module="product_action" id="{$fixed_action_button}" class="productAction">
         <div class="{$action_display|display}">
           <a href="#none" class="btnSubmit gFull sizeL {$buy_display|display}" onclick="{$action_buy;}">
-            <span id="{$btn_buy_mobile_id}">
-              바로구매
-            </span>
-            <span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">
-              예약주문
-            </span>
-            <span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">
-              정기배송 신청하기
-            </span>
+            <span id="{$btn_buy_mobile_id}">바로구매</span>
+            <span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span>
+            <span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청하기</span>
           </a>
           <span class="gActionButtonColumn">
             <button
               type="button"
               class="btnNormal sizeL RW actionCart {$basket_display|display}"
               onclick="{$action_basket;}"
-              id="actionCart"
-            >
+              id="actionCart">
               장바구니
             </button>
             <button
               type="button"
               class="btnNormal sizeL actionWish {$wishlist_display|display}"
               onclick="{$action_wishlist;}"
-              id="actionWish"
-            >
+              id="actionWish">
               위시리스트
             </button>
           </span>
         </div>
         <div class="ec-base-button soldout {$action_soldout_display|display}">
-          <button type="button" class="btnSubmit gFull sizeL {$soldout_display|display}">
-            SOLD OUT
-          </button>
+          <button type="button" class="btnSubmit gFull sizeL {$soldout_display|display}">SOLD OUT</button>
           <button
             type="button"
             class="btnNormal gFull sizeL {$wishlist_display|display}"
             onclick="{$action_wishlist;}"
-            id="actionWishSoldout"
-          >
+            id="actionWishSoldout">
             위시리스트
           </button>
         </div>
@@ -1122,29 +904,21 @@
           <button
             type="button"
             class="btnNormal sizeM actionCart {$basket_display|display}"
-            onclick="{$action_basket;}"
-          >
+            onclick="{$action_basket;}">
             장바구니
           </button>
           <a href="#none" class="btnSubmit sizeM {$buy_display|display}" onclick="{$action_buy;}">
-            <span id="{$btn_buy_mobile_id}">
-              바로구매
-            </span>
-            <span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">
-              예약주문
-            </span>
+            <span id="{$btn_buy_mobile_id}">바로구매</span>
+            <span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span>
           </a>
         </div>
         <div class="ec-base-button gColumn {$action_soldout_display|display}">
-          <button type="button" class="btnSubmit sizeM {$soldout_display|display}">
-            SOLD OUT
-          </button>
+          <button type="button" class="btnSubmit sizeM {$soldout_display|display}">SOLD OUT</button>
           <button
             type="button"
             class="btnNormal sizeM {$wishlist_display|display}"
             onclick="{$action_wishlist;}"
-            id="actionWishSoldout"
-          >
+            id="actionWishSoldout">
             위시리스트
           </button>
         </div>
@@ -1159,17 +933,13 @@
   <!--@css(/css/module/product/additional.css)-->
 
   <div id="prdDetail" class="productDetail">
-    <div>
-      {$product_detail}
-    </div>
+    <div>{$product_detail}</div>
   </div>
   <div module="product_relation">
     <!--@css(/css/module/product/relation.css)-->
     <!--@js(/js/module/product/relation.js)-->
     <div class="relation">
-      <h2>
-        관련상품
-      </h2>
+      <h2>관련상품</h2>
       <div module="product_relationlist">
         <ul class="prdList">
           <li class="prdList__item">
@@ -1178,17 +948,11 @@
                 <img src="{$img_small}" alt="{$seo_alt_tag}" />
               </a>
               <p class="name">
-                <a href="{$link_product_detail}">
-                  {$name}
-                </a>
+                <a href="{$link_product_detail}">{$name}</a>
               </p>
               <div class="price">
-                <span class="salePrice {$sale_price_display|display}">
-                  {$disp_sale_price}
-                </span>
-                <span class="prdPrice {$product_sale_strike}">
-                  {$disp_product_price}{$product_tax_type_text}
-                </span>
+                <span class="salePrice {$sale_price_display|display}">{$disp_sale_price}</span>
+                <span class="prdPrice {$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</span>
               </div>
             </div>
           </li>
@@ -1198,17 +962,11 @@
                 <img src="{$img_small}" alt="{$seo_alt_tag}" />
               </a>
               <p class="name">
-                <a href="{$link_product_detail}">
-                  {$name}
-                </a>
+                <a href="{$link_product_detail}">{$name}</a>
               </p>
               <div class="price">
-                <span class="salePrice {$sale_price_display|display}">
-                  {$disp_sale_price}
-                </span>
-                <span class="prdPrice {$product_sale_strike}">
-                  {$disp_product_price}{$product_tax_type_text}
-                </span>
+                <span class="salePrice {$sale_price_display|display}">{$disp_sale_price}</span>
+                <span class="prdPrice {$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</span>
               </div>
             </div>
           </li>
@@ -1225,102 +983,68 @@
 
   <div class="ec-base-fold theme1 selected eToggle">
     <div class="title">
-      <h2>
-        상품결제정보
-      </h2>
+      <h2>상품결제정보</h2>
     </div>
     <div class="contents">
-      <div class="info">
-        {$payment_info}
-      </div>
+      <div class="info">{$payment_info}</div>
     </div>
   </div>
 
   <div class="ec-base-fold theme1 selected eToggle">
     <div class="title">
-      <h2>
-        배송정보
-      </h2>
+      <h2>배송정보</h2>
     </div>
     <div class="contents">
       <ul class="info delivery">
-        <li>
-          배송 방법 : {$shipping_method}
-        </li>
-        <li>
-          배송 지역 : {$shipping_area}
-        </li>
-        <li>
-          배송 비용 : {$shipping_fee}
-        </li>
-        <li>
-          배송 기간 : {$shipping_period}
-        </li>
-        <li>
-          배송 안내 : {$shipping_info}
-        </li>
+        <li>배송 방법 : {$shipping_method}</li>
+        <li>배송 지역 : {$shipping_area}</li>
+        <li>배송 비용 : {$shipping_fee}</li>
+        <li>배송 기간 : {$shipping_period}</li>
+        <li>배송 안내 : {$shipping_info}</li>
       </ul>
     </div>
   </div>
 
   <div class="ec-base-fold theme1 selected eToggle">
     <div class="title">
-      <h2>
-        교환 및 반품정보
-      </h2>
+      <h2>교환 및 반품정보</h2>
     </div>
     <div class="contents">
-      <div class="info">
-        {$exchange_info}
-      </div>
+      <div class="info">{$exchange_info}</div>
     </div>
   </div>
 
   <div class="ec-base-fold theme1 selected eToggle">
     <div class="title">
-      <h2>
-        서비스문의
-      </h2>
+      <h2>서비스문의</h2>
     </div>
     <div class="contents">
-      <div class="info">
-        {$service_info}
-      </div>
+      <div class="info">{$service_info}</div>
     </div>
   </div>
 
   <div class="ec-base-fold theme1 selected eToggle {$review_display|display}">
     <div class="title">
-      <h2>
-        상품리뷰
-      </h2>
+      <h2>상품리뷰</h2>
     </div>
     <div class="contents">
       <div module="product_review">
         <!--@js(/js/module/product/review.js)-->
         <a name="use_review"></a>
-        <p class="noAccess {$deny_display|display}">
-          글읽기 권한이 없습니다.
-        </p>
+        <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
         <div class="minor {$adult_display|display}">
           <p>
             <img src="//img.echosting.cafe24.com/skin/skin/product/ico_under19.gif" alt="" />
-            <strong class="txtEm">
-              "19세 미만의 미성년자"
-            </strong>
+            <strong class="txtEm">"19세 미만의 미성년자"</strong>
             는 출입을 금합니다!
           </p>
           <p class="button">
-            <a href="/intro/board.html{$returnParam}" class="btnSubmit sizeS">
-              성인인증 하기
-            </a>
+            <a href="/intro/board.html{$returnParam}" class="btnSubmit sizeS">성인인증 하기</a>
           </p>
         </div>
         <div class="ec-base-table typeList">
           <table border="1" class="{$list_display|display}">
-            <caption>
-              상품사용후기
-            </caption>
+            <caption>상품사용후기</caption>
             <colgroup>
               <col style="width: 70px" class="RW" />
               <col style="width: auto" />
@@ -1331,87 +1055,49 @@
             </colgroup>
             <thead>
               <tr>
-                <th scope="col" class="RW">
-                  번호
-                </th>
-                <th scope="col">
-                  제목
-                </th>
-                <th scope="col">
-                  작성자
-                </th>
-                <th scope="col">
-                  작성일
-                </th>
-                <th scope="col">
-                  조회
-                </th>
-                <th scope="col" class="{$use_point_display|display}">
-                  평점
-                </th>
+                <th scope="col" class="RW">번호</th>
+                <th scope="col">제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col">작성일</th>
+                <th scope="col">조회</th>
+                <th scope="col" class="{$use_point_display|display}">평점</th>
               </tr>
             </thead>
             <tbody class="center">
               <tr>
-                <td class="RW">
-                  {$no}
-                </td>
+                <td class="RW">{$no}</td>
                 <td class="subject left txtBreak">
                   {$icon_re}{$icon_lock}
-                  <a href="{$link_board_detail}{$param_read}">
-                    {$subject}
-                  </a>
+                  <a href="{$link_board_detail}{$param_read}">{$subject}</a>
                   {$icon_file}
-                  <span class="comment">
-                    {$comment_count}
-                  </span>
+                  <span class="comment">{$comment_count}</span>
                   {$icon_hit}{$icon_new}
                 </td>
-                <td>
-                  {$member_icon} {$writer}
-                </td>
-                <td>
-                  {$write_date}
-                </td>
-                <td>
-                  {$hit_count}
-                </td>
+                <td>{$member_icon} {$writer}</td>
+                <td>{$write_date}</td>
+                <td>{$hit_count}</td>
                 <td class="{$use_point_display|display}">
                   <img
                     src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-                    alt="{$point_count}점"
-                  />
+                    alt="{$point_count}점" />
                 </td>
               </tr>
               <tr>
-                <td class="RW">
-                  {$no}
-                </td>
+                <td class="RW">{$no}</td>
                 <td class="subject left txtBreak">
                   {$icon_re}{$icon_lock}
-                  <a href="{$link_board_detail}{$param_read}">
-                    {$subject}
-                  </a>
+                  <a href="{$link_board_detail}{$param_read}">{$subject}</a>
                   {$icon_file}
-                  <span class="comment">
-                    {$comment_count}
-                  </span>
+                  <span class="comment">{$comment_count}</span>
                   {$icon_hit}{$icon_new}
                 </td>
-                <td>
-                  {$member_icon} {$writer}
-                </td>
-                <td>
-                  {$write_date}
-                </td>
-                <td>
-                  {$hit_count}
-                </td>
+                <td>{$member_icon} {$writer}</td>
+                <td>{$write_date}</td>
+                <td>{$hit_count}</td>
                 <td class="{$use_point_display|display}">
                   <img
                     src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-                    alt="{$point_count}점"
-                  />
+                    alt="{$point_count}점" />
                 </td>
               </tr>
             </tbody>
@@ -1420,90 +1106,58 @@
       </div>
       <div class="ec-base-button gMColumn">
         <span class="gRight">
-          <a href="{$review_list}" class="btnNormalFix sizeM">
-            전체 보기
-          </a>
-          <a href="{$review_write}" class="btnSubmitFix sizeM">
-            리뷰작성
-          </a>
+          <a href="{$review_list}" class="btnNormalFix sizeM">전체 보기</a>
+          <a href="{$review_write}" class="btnSubmitFix sizeM">리뷰작성</a>
         </span>
       </div>
       <div module="product_reviewpaging" class="ec-base-paginate typeList">
-        <a href="{$param_first}" class="first">
-          첫 페이지
-        </a>
-        <a href="{$param_before}">
-          이전 페이지
-        </a>
+        <a href="{$param_first}" class="first">첫 페이지</a>
+        <a href="{$param_before}">이전 페이지</a>
         <ol>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
         </ol>
-        <a href="{$param_next}">
-          다음 페이지
-        </a>
-        <a href="{$param_last}" class="last">
-          마지막 페이지
-        </a>
+        <a href="{$param_next}">다음 페이지</a>
+        <a href="{$param_last}" class="last">마지막 페이지</a>
       </div>
     </div>
   </div>
 
   <div class="ec-base-fold theme1 selected eToggle {$qna_display|display}">
     <div class="title">
-      <h2>
-        상품문의
-      </h2>
+      <h2>상품문의</h2>
     </div>
     <div class="contents">
       <div module="product_qna">
         <!--@js(/js/module/product/qna.js)-->
         <a name="use_qna"></a>
-        <p class="noAccess {$deny_display|display}">
-          글읽기 권한이 없습니다.
-        </p>
+        <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
         <div class="minor {$adult_display|display}">
           <p>
             <img src="//img.echosting.cafe24.com/skin/skin/product/ico_under19.gif" alt="" />
-            <strong>
-              "19세 미만의 미성년자"
-            </strong>
+            <strong>"19세 미만의 미성년자"</strong>
             는 출입을 금합니다!
           </p>
           <p class="button">
-            <a href="/intro/board.html{$returnParam}" class="btnEm sizeS">
-              성인인증 하기
-            </a>
+            <a href="/intro/board.html{$returnParam}" class="btnEm sizeS">성인인증 하기</a>
           </p>
         </div>
         <div class="ec-base-table typeList">
           <table border="1" class="{$list_display|display}">
-            <caption>
-              상품 Q&amp;A
-            </caption>
+            <caption>상품 Q&amp;A</caption>
             <colgroup>
               <col style="width: 70px" class="RW" />
               <col style="width: 134px" />
@@ -1514,82 +1168,42 @@
             </colgroup>
             <thead>
               <tr>
-                <th scope="col" class="RW">
-                  번호
-                </th>
-                <th scope="col">
-                  카테고리
-                </th>
-                <th scope="col">
-                  제목
-                </th>
-                <th scope="col">
-                  작성자
-                </th>
-                <th scope="col">
-                  작성일
-                </th>
-                <th scope="col">
-                  조회
-                </th>
+                <th scope="col" class="RW">번호</th>
+                <th scope="col">카테고리</th>
+                <th scope="col">제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col">작성일</th>
+                <th scope="col">조회</th>
               </tr>
             </thead>
             <tbody class="center">
               <tr>
-                <td class="RW">
-                  {$no}
-                </td>
-                <td>
-                  {$category_name}
-                </td>
+                <td class="RW">{$no}</td>
+                <td>{$category_name}</td>
                 <td class="subject left txtBreak">
                   {$icon_re}{$icon_lock}
-                  <a href="{$link_board_detail}{$param_read}">
-                    {$subject}
-                  </a>
+                  <a href="{$link_board_detail}{$param_read}">{$subject}</a>
                   {$icon_file}
-                  <span class="comment">
-                    {$comment_count}
-                  </span>
+                  <span class="comment">{$comment_count}</span>
                   {$icon_hit}{$icon_new}
                 </td>
-                <td>
-                  {$member_icon} {$writer}
-                </td>
-                <td>
-                  {$write_date}
-                </td>
-                <td>
-                  {$hit_count}
-                </td>
+                <td>{$member_icon} {$writer}</td>
+                <td>{$write_date}</td>
+                <td>{$hit_count}</td>
               </tr>
               <tr>
-                <td class="RW">
-                  {$no}
-                </td>
-                <td>
-                  {$category_name}
-                </td>
+                <td class="RW">{$no}</td>
+                <td>{$category_name}</td>
                 <td class="subject left txtBreak">
                   {$icon_re}{$icon_lock}
-                  <a href="{$link_board_detail}{$param_read}">
-                    {$subject}
-                  </a>
+                  <a href="{$link_board_detail}{$param_read}">{$subject}</a>
                   {$icon_file}
-                  <span class="comment">
-                    {$comment_count}
-                  </span>
+                  <span class="comment">{$comment_count}</span>
                   {$icon_hit}{$icon_new}
                 </td>
-                <td>
-                  {$member_icon} {$writer}
-                </td>
-                <td>
-                  {$write_date}
-                </td>
-                <td>
-                  {$hit_count}
-                </td>
+                <td>{$member_icon} {$writer}</td>
+                <td>{$write_date}</td>
+                <td>{$hit_count}</td>
               </tr>
             </tbody>
           </table>
@@ -1597,54 +1211,32 @@
       </div>
       <div class="ec-base-button gMColumn">
         <span class="gRight">
-          <a href="{$qna_list}" class="btnNormalFix sizeM">
-            전체 보기
-          </a>
-          <a href="{$qna_write}" class="btnSubmitFix sizeM">
-            상품문의하기
-          </a>
+          <a href="{$qna_list}" class="btnNormalFix sizeM">전체 보기</a>
+          <a href="{$qna_write}" class="btnSubmitFix sizeM">상품문의하기</a>
         </span>
       </div>
       <div module="product_qnapaging" class="ec-base-paginate typeList">
-        <a href="{$param_first}" class="first">
-          첫 페이지
-        </a>
-        <a href="{$param_before}">
-          이전 페이지
-        </a>
+        <a href="{$param_first}" class="first">첫 페이지</a>
+        <a href="{$param_before}">이전 페이지</a>
         <ol>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
           <li>
-            <a href="{$param}" class="{$param_class}">
-              {$no}
-            </a>
+            <a href="{$param}" class="{$param_class}">{$no}</a>
           </li>
         </ol>
-        <a href="{$param_next}">
-          다음 페이지
-        </a>
-        <a href="{$param_last}" class="last">
-          마지막 페이지
-        </a>
+        <a href="{$param_next}">다음 페이지</a>
+        <a href="{$param_last}" class="last">마지막 페이지</a>
       </div>
     </div>
   </div>

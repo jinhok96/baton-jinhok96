@@ -217,8 +217,8 @@ window.addEventListener('load', function () {
 | --------- | -------------------------------------- | ---- |
 | 2-A-1     | `layout/home/hero.html`                | ✅   |
 | 2-A-2     | `layout/home/category-quicklinks.html` | ✅   |
-| 2-A-3     | `layout/home/curation.html`            | ⬜   |
-| 2-A-4     | `layout/home/product-grid.html`        | ⬜   |
-| 2-A-5     | `layout/home/newsletter.html`          | ⬜   |
+| 2-A-3     | `layout/home/curation.html`            | ✅   |
+| 2-A-4     | `layout/home/product-grid.html`        | ✅   |
+| 2-A-5     | `layout/home/newsletter.html`          | ✅   |
 | 2-A-6     | `layout/home/home.js`                  | ✅   |
-| 2-A-7     | `index.html` (조립)                    | ⬜   |
+| 2-A-7     | `index.html` (조립)                    | ✅   |

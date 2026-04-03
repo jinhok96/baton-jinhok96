@@ -1,48 +1,32 @@
 <!--@layout(/layout/basic/layout.html)-->
 <div class="path">
-  <span>
-    현재 위치
-  </span>
+  <span>현재 위치</span>
   <ol>
     <li>
-      <a href="/">
-        홈
-      </a>
+      <a href="/">홈</a>
     </li>
     <li title="현재 위치">
-      <strong>
-        회원 가입
-      </strong>
+      <strong>회원 가입</strong>
     </li>
   </ol>
 </div>
 
 <div class="titleArea">
-  <h2>
-    회원 가입
-  </h2>
+  <h2>회원 가입</h2>
 </div>
 
 <div class="ec-base-step">
   <ol class="step">
-    <li class="selected">
-      1. 약관동의
-    </li>
-    <li>
-      2. 정보입력
-    </li>
-    <li>
-      3. 가입완료
-    </li>
+    <li class="selected">1. 약관동의</li>
+    <li>2. 정보입력</li>
+    <li>3. 가입완료</li>
   </ol>
 </div>
 
 <div module="member_join" class="gInnerMargin">
   <!--@css(/css/module/member/join_agreement.css)-->
   <div class="agreeAll">
-    <h3>
-      전체 동의
-    </h3>
+    <h3>전체 동의</h3>
     <p>
       {$sAgreeAllChecked}
       <label for="sAgreeAllChecked" class="{$display_marketing|display}">
@@ -59,14 +43,10 @@
         <div class="title">
           <h3>
             {$form.agree_service_check}
-            <label for="agree_service_check0" class="check">
-              이용약관 동의 (필수)
-            </label>
+            <label for="agree_service_check0" class="check">이용약관 동의 (필수)</label>
           </h3>
         </div>
-        <div class="contents">
-          {$service_desc}
-        </div>
+        <div class="contents">{$service_desc}</div>
       </div>
     </div>
     <div class="right">
@@ -74,74 +54,52 @@
         <div class="title">
           <h3>
             {$form.agree_privacy_check}
-            <label for="agree_privacy_check0" class="check">
-              개인정보처리방침 동의 (필수)
-            </label>
+            <label for="agree_privacy_check0" class="check">개인정보처리방침 동의 (필수)</label>
           </h3>
         </div>
-        <div class="contents">
-          {$privacy_desc}
-        </div>
+        <div class="contents">{$privacy_desc}</div>
       </div>
       <div class="{$display_privacy_optional|display} agreeArea">
         <div class="title">
           <h3>
             {$form.agree_privacy_optional_check}
-            <label for="agree_privacy_optional_check0" class="check">
-              개인정보 수집 및 이용 동의 (선택)
-            </label>
+            <label for="agree_privacy_optional_check0" class="check">개인정보 수집 및 이용 동의 (선택)</label>
           </h3>
         </div>
-        <div class="contents">
-          {$privacy_optional_desc}
-        </div>
+        <div class="contents">{$privacy_optional_desc}</div>
       </div>
       <div class="{$display_information|display} agreeArea">
         <div class="title">
           <h3>
             {$form.agree_information_check}
-            <label for="agree_information_check0" class="check">
-              개인정보 제3자 제공 동의 (선택)
-            </label>
+            <label for="agree_information_check0" class="check">개인정보 제3자 제공 동의 (선택)</label>
           </h3>
         </div>
-        <div class="contents">
-          {$information_desc}
-        </div>
+        <div class="contents">{$information_desc}</div>
       </div>
       <div class="{$display_consignment|display} agreeArea">
         <div class="title">
           <h3>
             {$form.agree_consignment_check}
-            <label for="agree_consignment_check0" class="check">
-              개인정보 처리 위탁 동의 (선택)
-            </label>
+            <label for="agree_consignment_check0" class="check">개인정보 처리 위탁 동의 (선택)</label>
           </h3>
         </div>
-        <div class="contents">
-          {$consignment_desc}
-        </div>
+        <div class="contents">{$consignment_desc}</div>
       </div>
       <div class="agreeArea {$display_marketing|display}">
         <div class="title">
           <h3>
             {$sMarketingAgreeAllChecked}
-            <label for="sMarketingAgreeAllChecked" class="check">
-              쇼핑정보 수신 동의 (선택)
-            </label>
+            <label for="sMarketingAgreeAllChecked" class="check">쇼핑정보 수신 동의 (선택)</label>
           </h3>
           <ul class="additional">
             <li class="{$display_is_sms|display}">
               {$form.is_sms}
-              <label for="is_sms0" class="check">
-                SMS 수신 동의 (선택)
-              </label>
+              <label for="is_sms0" class="check">SMS 수신 동의 (선택)</label>
             </li>
             <li class="{$display_is_news_mail|display}">
               {$form.is_news_mail}
-              <label for="is_news_mail0" class="check">
-                이메일 수신 동의 (선택)
-              </label>
+              <label for="is_news_mail0" class="check">이메일 수신 동의 (선택)</label>
             </li>
           </ul>
         </div>
@@ -166,12 +124,9 @@
       onclick="
         history.go(-1);
         return false;
-      "
-    >
+      ">
       취소
     </a>
-    <button type="button" class="btnSubmitFix sizeM" onclick="checkAgreement('/member/join.html')">
-      다음
-    </button>
+    <button type="button" class="btnSubmitFix sizeM" onclick="checkAgreement('/member/join.html')">다음</button>
   </div>
 </div>

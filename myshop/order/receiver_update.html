@@ -6,17 +6,13 @@
         $isRuleBasedAddrForm = T
     -->
   <div class="header">
-    <h1>
-      배송지 변경
-    </h1>
+    <h1>배송지 변경</h1>
   </div>
 
   <div class="content">
     <div class="ec-base-table typeWrite">
       <table border="1">
-        <caption>
-          배송지 변경
-        </caption>
+        <caption>배송지 변경</caption>
         <colgroup>
           <col style="width: 150px" />
           <col style="width: auto" />
@@ -30,12 +26,9 @@
               <img
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
                 class="icon icoRequired"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.r_name}
-            </td>
+            <td>{$form.r_name}</td>
           </tr>
           <tr id="ec-receiverUpdate-address">
             <th scope="row">
@@ -43,13 +36,10 @@
               <img
                 class="icon icoRequired {$is_receiverUpdate_address_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
             <td>
-              <span class="formMultiple">
-                {$form.address}
-              </span>
+              <span class="formMultiple">{$form.address}</span>
             </td>
           </tr>
           <tr class="{$use_delivery_tel_display|display}">
@@ -58,14 +48,11 @@
               <img
                 class="icon icoRequired {$is_delivery_tel_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
             <td class="formGroup code">
               {$form.r_phone}
-              <p class="gBlank5">
-                '-' 없이 숫자만 입력해 주세요.
-              </p>
+              <p class="gBlank5">'-' 없이 숫자만 입력해 주세요.</p>
             </td>
           </tr>
           <tr class="{$use_delivery_cell_display|display}">
@@ -74,14 +61,11 @@
               <img
                 class="icon icoRequired {$is_delivery_cell_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
             <td class="formGroup code">
               {$form.r_mobile}
-              <p class="gBlank5 txtInfo">
-                '-' 없이 숫자만 입력해 주세요.
-              </p>
+              <p class="gBlank5 txtInfo">'-' 없이 숫자만 입력해 주세요.</p>
             </td>
           </tr>
           <tr class="{$use_delivery_message_display|display}">
@@ -90,12 +74,9 @@
               <img
                 class="icon icoRequired {$is_delivery_message_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.r_message}
-            </td>
+            <td>{$form.r_message}</td>
           </tr>
         </tbody>
 
@@ -108,12 +89,9 @@
               <img
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
                 class="icon icoRequired"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.f_name}
-            </td>
+            <td>{$form.f_name}</td>
           </tr>
           <!-- 참고 : 이름 각각 입력 -->
           <tr class="{$use_seperate_name_input_display|display}">
@@ -122,12 +100,9 @@
               <img
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
                 class="icon icoRequired"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.f_name_1} {$form.f_name_2}
-            </td>
+            <td>{$form.f_name_1} {$form.f_name_2}</td>
           </tr>
 
           <!-- 참고 : 영문이름 한번에 입력 -->
@@ -137,12 +112,9 @@
               <img
                 class="icon icoRequired {$is_orders_english_name_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.f_name_en}
-            </td>
+            <td>{$form.f_name_en}</td>
           </tr>
           <!-- 참고 : 영문이름 각각 입력 -->
           <tr class="{$use_orders_english_name_display|display} {$use_seperate_name_input_display|display}">
@@ -151,12 +123,9 @@
               <img
                 class="icon icoRequired {$is_orders_english_name_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.f_name_en_1} {$form.f_name_en_2}
-            </td>
+            <td>{$form.f_name_en_1} {$form.f_name_en_2}</td>
           </tr>
 
           <!-- 참고 : 이름발음 한번에 입력 -->
@@ -166,12 +135,9 @@
               <img
                 class="icon icoRequired {$is_orders_pronounce_name_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.f_name_phonetic}
-            </td>
+            <td>{$form.f_name_phonetic}</td>
           </tr>
           <!-- 참고 : 이름발음 각각 입력 -->
           <tr class="{$use_orders_pronounce_name_display|display} {$use_seperate_name_input_display|display}">
@@ -180,12 +146,9 @@
               <img
                 class="icon icoRequired {$is_orders_pronounce_name_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.f_name_phonetic_1} {$form.f_name_phonetic_2}
-            </td>
+            <td>{$form.f_name_phonetic_1} {$form.f_name_phonetic_2}</td>
           </tr>
           <tr id="ec-freceiverUpdate-address">
             <th scope="row">
@@ -193,13 +156,10 @@
               <img
                 class="icon icoRequired {$is_freceiverUpdate_address_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
             <td>
-              <span class="formMultiple">
-                {$form.faddress}
-              </span>
+              <span class="formMultiple">{$form.faddress}</span>
             </td>
           </tr>
           <tr class="{$use_delivery_tel_display|display}">
@@ -208,14 +168,11 @@
               <img
                 class="icon icoRequired {$is_delivery_tel_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
             <td class="formGroup code">
               {$form.f_phone}
-              <p class="gBlank5 txtInfo">
-                '-' 없이 숫자만 입력해 주세요.
-              </p>
+              <p class="gBlank5 txtInfo">'-' 없이 숫자만 입력해 주세요.</p>
             </td>
           </tr>
           <tr class="{$use_delivery_cell_display|display}">
@@ -224,14 +181,11 @@
               <img
                 class="icon icoRequired {$is_delivery_cell_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
             <td class="formGroup code">
               {$form.f_mobile}
-              <p class="gBlank5 txtInfo">
-                '-' 없이 숫자만 입력해 주세요.
-              </p>
+              <p class="gBlank5 txtInfo">'-' 없이 숫자만 입력해 주세요.</p>
             </td>
           </tr>
           <tr class="{$use_receiver_id_card_key_display|display}">
@@ -240,12 +194,9 @@
               <img
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
                 class="icon icoRequired"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.f_receiver_id_card_type} {$form.f_receiver_id_card_key}
-            </td>
+            <td>{$form.f_receiver_id_card_type} {$form.f_receiver_id_card_key}</td>
           </tr>
           <tr>
             <th scope="row">
@@ -253,12 +204,9 @@
               <img
                 class="icon icoRequired {$is_delivery_message_required_display|display}"
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.f_message}
-            </td>
+            <td>{$form.f_message}</td>
           </tr>
         </tbody>
       </table>
@@ -266,11 +214,7 @@
   </div>
 
   <div class="ec-base-button">
-    <a href="#none" id="{$receiver_update_popup_close_id}" class="btnNormalFix sizeM">
-      닫기
-    </a>
-    <button id="{$receiver_update_submit_id}" type="button" class="btnSubmitFix sizeM">
-      변경하기
-    </button>
+    <a href="#none" id="{$receiver_update_popup_close_id}" class="btnNormalFix sizeM">닫기</a>
+    <button id="{$receiver_update_submit_id}" type="button" class="btnSubmitFix sizeM">변경하기</button>
   </div>
 </div>
