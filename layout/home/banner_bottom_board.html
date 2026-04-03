@@ -1,0 +1,20 @@
+<ul class="text-secondary flex flex-col gap-5 md:rounded-lg md:px-10 md:py-8">
+  <li module="board_fixed_2" count="2">
+    <div class="flex items-center justify-between gap-5">
+      <!--제목-->
+      <span class="text-l5 md:text-h6 flex-1 md:max-w-71.5">
+        {$subject}
+      </span>
+
+      <!--설명글 (모바일 숨김)-->
+      <span class="text-l5 flex-1 not-md:hidden">
+        {$content|striptags}
+      </span>
+
+      <!--링크-->
+      <a href="#none" class="border-color-primary bg-primary text-c1 md:text-l6 shrink-0 rounded border p-2 md:px-3">
+        더 알아보기
+      </a>
+    </div>
+  </li>
+</ul>
