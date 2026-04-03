@@ -2,8 +2,8 @@
   "name": "baton-jinhok96",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -i ./src/tailwind.css -o ./layout/basic/css/tailwind.css --minify",
-    "watch": "tailwindcss -i ./src/tailwind.css -o ./layout/basic/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/css/tailwind.css -o ./layout/basic/css/tailwind.css --minify",
+    "watch": "tailwindcss -i ./src/css/tailwind.css -o ./layout/basic/css/tailwind.css --watch",
     "lint": "npm run lf && npm run eslint",
     "lf": "prettier --write -l --end-of-line lf .",
     "eslint": "eslint . --fix"
