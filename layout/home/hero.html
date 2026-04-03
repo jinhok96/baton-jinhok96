@@ -1,16 +1,10 @@
 <section id="hero" module="custom_moduleedit_1" class="p-4 md:p-6">
   <div class="relative aspect-4/5 overflow-hidden rounded-lg md:aspect-2/1">
-    <!-- Pagination -->
-    <div
-      id="heroPagination"
-      class="absolute top-4 right-6 left-6 z-10 flex gap-1 md:top-6 md:right-14 md:left-14 md:gap-2"
-    ></div>
-
     <!-- Slides -->
     <div class="swiper-container relative h-full w-full overflow-hidden">
       <div class="swiper-wrapper flex h-full">
         <!-- Slide 1 -->
-        <div class="swiper-slide relative h-full w-full shrink-0">
+        <div class="swiper-slide relative h-full w-full shrink-0 transition-opacity">
           <picture>
             <img
               src="https://ecimg.cafe24img.com/pg2761b01354194048/jinhok96/web/upload/img_hero1.jpg"
@@ -44,7 +38,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="swiper-slide relative h-full w-full shrink-0">
+        <div class="swiper-slide relative h-full w-full shrink-0 transition-opacity">
           <picture>
             <img
               src="https://ecimg.cafe24img.com/pg2761b01354194048/jinhok96/web/upload/img_hero2.jpg"
@@ -78,7 +72,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="swiper-slide relative h-full w-full shrink-0">
+        <div class="swiper-slide relative h-full w-full shrink-0 transition-opacity">
           <picture>
             <img
               src="https://ecimg.cafe24img.com/pg2761b01354194048/jinhok96/web/upload/img_hero3.jpg"
@@ -111,6 +105,11 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Pagination Bar -->
+    <div class="absolute top-0 right-0 left-0 px-6 pt-4 md:px-14 md:pt-6">
+      <div id="heroPagination" class="flex w-full gap-2"></div>
     </div>
   </div>
 </section>

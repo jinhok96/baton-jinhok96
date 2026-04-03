@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Swiper — Hero (layout/home/hero.html)
+   ========================================================================== */
+
+@layer base {
+  /* Hero 페이지네이션 — bar 스타일 */
+  #heroPagination .swiper-pagination-bullet {
+    @apply bg-secondary m-0 block h-1 w-auto flex-1 cursor-pointer rounded-md opacity-40 transition-opacity md:h-1.5;
+  }
+  #heroPagination .swiper-pagination-bullet-active {
+    @apply opacity-100;
+  }
+}
