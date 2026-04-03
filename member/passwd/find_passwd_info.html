@@ -1,26 +1,18 @@
 <!--@layout(/layout/basic/layout.html)-->
 <div class="path">
-  <span>
-    현재 위치
-  </span>
+  <span>현재 위치</span>
   <ol>
     <li>
-      <a href="/">
-        홈
-      </a>
+      <a href="/">홈</a>
     </li>
     <li title="현재 위치">
-      <strong>
-        비밀번호 찾기
-      </strong>
+      <strong>비밀번호 찾기</strong>
     </li>
   </ol>
 </div>
 
 <div class="titleArea">
-  <h2>
-    비밀번호 찾기
-  </h2>
+  <h2>비밀번호 찾기</h2>
 </div>
 
 <div module="member_findpasswd" class="memberArea gInnerMargin">
@@ -30,83 +22,51 @@
      -->
   <div class="ec-base-box typeMember">
     <fieldset class="content">
-      <legend>
-        비밀번호 찾기 1단계 정보 입력
-      </legend>
+      <legend>비밀번호 찾기 1단계 정보 입력</legend>
       <ul class="ec-base-desc gVer">
         <li>
-          <strong class="term">
-            회원유형
-          </strong>
+          <strong class="term">회원유형</strong>
           <div class="desc">
             {$form.searchType}
-            <span class="check gBlank10">
-              {$form.check_method}
-            </span>
+            <span class="check gBlank10">{$form.check_method}</span>
           </div>
         </li>
         <li class="gBlank20 {$display_id|display}">
-          <strong class="term">
-            아이디
-          </strong>
-          <div class="desc">
-            {$form.member_id}
-          </div>
+          <strong class="term">아이디</strong>
+          <div class="desc">{$form.member_id}</div>
         </li>
         <li id="name_view" class="name">
-          <strong class="term" id="name_lable">
-            이름
-          </strong>
-          <div class="desc">
-            {$form.name}
-          </div>
+          <strong class="term" id="name_lable">이름</strong>
+          <div class="desc">{$form.name}</div>
         </li>
         <li id="ssn_view" class="ssn_no">
-          <strong class="term" id="ssn_name">
-            법인번호로 찾기
-          </strong>
+          <strong class="term" id="ssn_name">법인번호로 찾기</strong>
           <div class="desc">
             {$form.ssn}
-            <p class="gBlank5 txtInfo">
-              (-) 없이 숫자만 입력하세요.
-            </p>
+            <p class="gBlank5 txtInfo">(-) 없이 숫자만 입력하세요.</p>
           </div>
         </li>
         <li id="email_view" class="email" style="display: none">
-          <strong class="term">
-            이메일로 찾기
-          </strong>
-          <div class="desc">
-            {$form.email}
-          </div>
+          <strong class="term">이메일로 찾기</strong>
+          <div class="desc">{$form.email}</div>
         </li>
         <li id="mobile_view" class="mobile" style="display: none">
-          <strong class="term">
-            휴대폰 번호로 찾기
-          </strong>
+          <strong class="term">휴대폰 번호로 찾기</strong>
           <div class="desc">
-            <span class="ec-base-field code">
-              {$form.mobile1} - {$form.mobile2} - {$form.mobile3}
-            </span>
+            <span class="ec-base-field code">{$form.mobile1} - {$form.mobile2} - {$form.mobile3}</span>
           </div>
         </li>
         <li id="ipin_view" class="ipin" style="display: none">
-          <strong class="term">
-            아이핀인증으로 찾기
-          </strong>
+          <strong class="term">아이핀인증으로 찾기</strong>
           <div class="desc">
-            <p class="info">
-              회원가입을 아이핀으로 가입하신 회원님께서는 아이핀으로 인증하세요.
-            </p>
+            <p class="info">회원가입을 아이핀으로 가입하신 회원님께서는 아이핀으로 인증하세요.</p>
             <a href="#none" class="btnNormal sizeS gBlank10" onclick="{$action_func_find_passwd_question;}">
               아이핀인증
             </a>
           </div>
         </li>
         <li id="mobile_auth_view" class="mobileauth" style="display: none">
-          <strong class="term">
-            휴대폰인증으로 찾기
-          </strong>
+          <strong class="term">휴대폰인증으로 찾기</strong>
           <div class="desc">
             <p class="info">
               본인 명의의 휴대폰으로 아이디 찾기를 진행할 수 있습니다.
@@ -122,8 +82,6 @@
     </fieldset>
   </div>
   <div class="ec-base-button gBottom">
-    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_find_passwd_question;}">
-      확인
-    </a>
+    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_find_passwd_question;}">확인</a>
   </div>
 </div>

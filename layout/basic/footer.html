@@ -6,174 +6,120 @@
   </button>
   <ul module="Layout_multishopListitem">
     <li class="{$selected_class}">
-      <a href="//{$shop_domain}/">
-        {$locale_language}
-      </a>
+      <a href="//{$shop_domain}/">{$locale_language}</a>
     </li>
     <li class="{$selected_class}">
-      <a href="//{$shop_domain}/">
-        {$locale_language}
-      </a>
+      <a href="//{$shop_domain}/">{$locale_language}</a>
     </li>
   </ul>
 </div>
 
 <footer id="footer">
-  <h2 class="blind">
-    회사정보
-  </h2>
+  <h2 class="blind">회사정보</h2>
   <div class="inner">
     <div module="Layout_footer">
       <!--@css(/css/module/layout/footer.css)-->
       <ul class="util">
         <li>
-          <a href="/index.html">
-            Home
-          </a>
+          <a href="/index.html">Home</a>
         </li>
         <li>
-          <a href="/shopinfo/company.html">
-            About Us
-          </a>
+          <a href="/shopinfo/company.html">About Us</a>
         </li>
         <li>
-          <a href="/member/mall_agreement.html">
-            Terms&amp;Conditions
-          </a>
+          <a href="/member/mall_agreement.html">Terms&amp;Conditions</a>
         </li>
         <li>
           <a href="/member/privacy.html">
-            <strong>
-              Privacy Policy
-            </strong>
+            <strong>Privacy Policy</strong>
           </a>
         </li>
         <li>
-          <a href="/shopinfo/guide.html">
-            Help
-          </a>
+          <a href="/shopinfo/guide.html">Help</a>
         </li>
       </ul>
       <div class="sns">
         <a href="#none">
-          <!--@import(/svg/icon-instagram.html)-->instagram
+          <!--@import(/svg/icon-instagram.html)-->
+          instagram
         </a>
         <a href="#none">
-          <!--@import(/svg/icon-facebook.html)-->facebook
+          <!--@import(/svg/icon-facebook.html)-->
+          facebook
         </a>
         <a href="#none">
-          <!--@import(/svg/icon-youtube.html)-->youtube
+          <!--@import(/svg/icon-youtube.html)-->
+          youtube
         </a>
         <a href="#none">
-          <!--@import(/svg/icon-kakao.html)-->kakao
+          <!--@import(/svg/icon-kakao.html)-->
+          kakao
         </a>
       </div>
       <div class="info">
         <div class="info__address">
-          <h3 class="title RW">
-            Company info
-          </h3>
-          <span>
-            법인명(상호) : {$company_name}
-          </span>
+          <h3 class="title RW">Company info</h3>
+          <span>법인명(상호) : {$company_name}</span>
 
-          <span>
-            대표자(성명) : {$president_name}
-          </span>
-          <span>
-            사업자 등록번호 안내 : [{$company_regno}]
-          </span>
+          <span>대표자(성명) : {$president_name}</span>
+          <span>사업자 등록번호 안내 : [{$company_regno}]</span>
 
-          <span>
-            통신판매업 신고 {$network_regno}
-          </span>
-          <span>
-            {$biz_no_link}
-          </span>
+          <span>통신판매업 신고 {$network_regno}</span>
+          <span>{$biz_no_link}</span>
 
           <br />
-          <span>
-            전화 : {$phone}
-          </span>
+          <span>전화 : {$phone}</span>
 
-          <span>
-            팩스 : {$fax}
-          </span>
-          <span>
-            주소 : {$mall_zipcode} {$mall_addr1} {$mall_addr2}
-          </span>
+          <span>팩스 : {$fax}</span>
+          <span>주소 : {$mall_zipcode} {$mall_addr1} {$mall_addr2}</span>
           <br />
           <span class="{$cpo_email|display}">
             개인정보보호책임자 :
-            <a href="mailto:{$cpo_email}">
-              {$cpo_name}({$cpo_email})
-            </a>
+            <a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a>
           </span>
           <br />
           <span>
             Contact
-            <a href="mailto:{$email}">
-              {$email}
-            </a>
+            <a href="mailto:{$email}">{$email}</a>
             for more information.
           </span>
         </div>
         <div module="Layout_Info" class="info__customer">
           <div class="heading">
-            <h3 class="title">
-              Customer
-            </h3>
+            <h3 class="title">Customer</h3>
             <button type="button" class="toggle">
               <i aria-hidden="true" class="icon icoArrowBottom"></i>
               open
             </button>
           </div>
           <ul class="content">
-            <li class="tel">
-              {$phone}
-            </li>
-            <li class="runtime">
-              {$runtime}
-            </li>
+            <li class="tel">{$phone}</li>
+            <li class="runtime">{$runtime}</li>
           </ul>
         </div>
         <div class="info__community RW">
-          <h3 class="title">
-            Community
-          </h3>
+          <h3 class="title">Community</h3>
           <ul>
             <li>
-              <a href="/board/free/list.html?board_no=1">
-                Notice
-              </a>
+              <a href="/board/free/list.html?board_no=1">Notice</a>
             </li>
             <li>
-              <a href="/board/product/list.html?board_no=4">
-                Review
-              </a>
+              <a href="/board/product/list.html?board_no=4">Review</a>
             </li>
             <li>
-              <a href="/board/product/list.html?board_no=6">
-                Q&amp;A
-              </a>
+              <a href="/board/product/list.html?board_no=6">Q&amp;A</a>
             </li>
             <li>
-              <a href="/board/free/list.html?board_no=3">
-                FAQ
-              </a>
+              <a href="/board/free/list.html?board_no=3">FAQ</a>
             </li>
           </ul>
         </div>
       </div>
       <p class="copyright">
         Copyright &copy;
-        <strong>
-          {$mall_name}
-        </strong>
+        <strong>{$mall_name}</strong>
         . All rights reserved. Hosting by
-        <span class="hosting">
-          cafe24
-        </span>
+        <span class="hosting">cafe24</span>
       </p>
     </div>
   </div>
@@ -187,13 +133,9 @@
         $product_page=/product/detail.html
         $category_page=/product/list.html
     -->
-  <h3 class="title">
-    Search
-  </h3>
+  <h3 class="title">Search</h3>
   <fieldset>
-    <legend>
-      검색
-    </legend>
+    <legend>검색</legend>
     {$form.keyword}
     <button type="button" class="btnSearch" onclick="{$action_search_submit;}">
       <!--@import(/svg/icon-search.html)-->
@@ -211,9 +153,7 @@
   <div id="progressPaybarBackground" class="layerProgress"></div>
   <div id="progressPaybarView">
     <div class="box">
-      <h3>
-        현재 결제가 진행중입니다.
-      </h3>
+      <h3>현재 결제가 진행중입니다.</h3>
       <p class="txt">
         본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면
         <br />
@@ -232,39 +172,23 @@
   <!--@js(/js/module/layout/multishopShipping.js)-->
   <div class="worldshipLayer ec-base-layer typeModal">
     <div class="header">
-      <h3>
-        WORLD SHIPPING
-      </h3>
+      <h3>WORLD SHIPPING</h3>
     </div>
     <div class="content">
-      <p class="desc">
-        PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :
-      </p>
+      <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
       <select module="Layout_multishopShippingCountrylist">
-        <option value="{$country_code}" {$country_default_selected}>
-          SHIPPING TO : {$country_name}
-        </option>
-        <option value="{$country_code}" {$country_default_selected}>
-          SHIPPING TO : {$country_name}
-        </option>
+        <option value="{$country_code}" {$country_default_selected}>SHIPPING TO : {$country_name}</option>
+        <option value="{$country_code}" {$country_default_selected}>SHIPPING TO : {$country_name}</option>
       </select>
       <select module="Layout_multishopShippingLanguagelist">
-        <option value="{$shop_domain}" {$shop_default_selected}>
-          LANGUAGE : {$shop_language_name}
-        </option>
-        <option value="{$shop_domain}" {$shop_default_selected}>
-          LANGUAGE : {$shop_language_name}
-        </option>
+        <option value="{$shop_domain}" {$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+        <option value="{$shop_domain}" {$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
       </select>
     </div>
     <div class="ec-base-button">
-      <a href="#none" class="btnSubmitFix sizeM">
-        GO
-      </a>
+      <a href="#none" class="btnSubmitFix sizeM">GO</a>
     </div>
-    <a href="#none" class="btnClose">
-      닫기
-    </a>
+    <a href="#none" class="btnClose">닫기</a>
   </div>
 </div>
 

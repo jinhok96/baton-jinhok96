@@ -1,9 +1,7 @@
 <html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
   <head>
     <meta charset="utf-8" />
-    <title>
-      기본 레이아웃
-    </title>
+    <title>기본 레이아웃</title>
     <!--@css(/layout/basic/css/common.css)-->
     <!--@css(/layout/basic/css/ec-base-ui.css)-->
     <!--@css(/layout/basic/css/ec-base-paginate.css)-->
@@ -20,35 +18,23 @@
          -->
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              운영일지
-            </caption>
+            <caption>운영일지</caption>
             <colgroup>
               <col style="width: 130px" />
               <col style="width: auto" />
             </colgroup>
             <tbody>
               <tr>
-                <th scope="row">
-                  제목
-                </th>
-                <td class="subject">
-                  {$subject} {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
-                </td>
+                <th scope="row">제목</th>
+                <td class="subject">{$subject} {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
               </tr>
               <tr>
-                <th scope="row">
-                  작성일
-                </th>
-                <td>
-                  {$write_date}
-                </td>
+                <th scope="row">작성일</th>
+                <td>{$write_date}</td>
               </tr>
               <tr class="view">
                 <td colspan="2">
-                  <div class="detail">
-                    {$content}{$content_image}
-                  </div>
+                  <div class="detail">{$content}{$content_image}</div>
                 </td>
               </tr>
             </tbody>
@@ -67,28 +53,20 @@
         <ul class="boardComment">
           <li class="first {$comment_reply_css}">
             <div class="commentTop">
-              <strong class="name">
-                {$checkbox} {$comment_name}
-              </strong>
-              <span class="date">
-                {$comment_write_date}
-              </span>
+              <strong class="name">{$checkbox} {$comment_name}</strong>
+              <span class="date">{$comment_write_date}</span>
               <span class="grade {$config.is_use_point|display}">
                 <img
                   src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$comment_point_count}.svg"
-                  alt="{$comment_point_count}점"
-                />
+                  alt="{$comment_point_count}점" />
               </span>
             </div>
             <span class="button">
-              <a href="javascript:;" onclick="{$action_comment_delete}" class="btnNormal">
-                삭제
-              </a>
+              <a href="javascript:;" onclick="{$action_comment_delete}" class="btnNormal">삭제</a>
               <a
                 href="javascript:;"
                 onclick="{$action_comment_reply}"
-                class="btnNormal {$comment_reply_display|display}"
-              >
+                class="btnNormal {$comment_reply_display|display}">
                 댓글
               </a>
             </span>
@@ -101,17 +79,12 @@
           </li>
           <li class="{$comment_reply_css}">
             <div class="commentTop">
-              <strong class="name">
-                {$checkbox} {$comment_name}
-              </strong>
-              <span class="date">
-                {$comment_write_date}
-              </span>
+              <strong class="name">{$checkbox} {$comment_name}</strong>
+              <span class="date">{$comment_write_date}</span>
               <span class="grade {$config.is_use_point|display}">
                 <img
                   src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$comment_point_count}.svg"
-                  alt="{$comment_point_count}점"
-                />
+                  alt="{$comment_point_count}점" />
               </span>
             </div>
             <span class="button">
@@ -120,15 +93,13 @@
                 onclick="{$action_comment_delete;
                   }
                 "
-                class="btnNormal"
-              >
+                class="btnNormal">
                 삭제
               </a>
               <a
                 href="javascript:;"
                 onclick="{$action_comment_reply}"
-                class="btnNormal {$comment_reply_display|display}"
-              >
+                class="btnNormal {$comment_reply_display|display}">
                 댓글
               </a>
             </span>
@@ -143,51 +114,33 @@
 
         <div class="ec-base-button typeBG spam {$config.is_admin|display}">
           <span class="gLeft">
-            <a href="#none" onclick="{$action_spam}" class="btnNormalFix sizeS">
-              스팸신고
-            </a>
-            <a href="#none" onclick="{$action_spam_cancle}" class="btnNormalFix sizeS">
-              스팸해제
-            </a>
+            <a href="#none" onclick="{$action_spam}" class="btnNormalFix sizeS">스팸신고</a>
+            <a href="#none" onclick="{$action_spam_cancle}" class="btnNormalFix sizeS">스팸해제</a>
           </span>
         </div>
       </div>
 
       <div module="board_commentpaging_11" class="ec-base-paginate typeList">
-        <a href="{$param_prev}">
-          이전 페이지
-        </a>
+        <a href="{$param_prev}">이전 페이지</a>
         <ol>
           <li>
-            <a href="{$param_num}" class="{$param_class}">
-              {$page_num}
-            </a>
+            <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
           </li>
           <li>
-            <a href="{$param_num}" class="{$param_class}">
-              {$page_num}
-            </a>
+            <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
           </li>
         </ol>
-        <a href="{$param_next}">
-          다음 페이지
-        </a>
+        <a href="{$param_next}">다음 페이지</a>
       </div>
 
       <div module="board_commentwrite_11">
         <!-- 댓글권한 있음 -->
         <div class="{$comment_write_display|display}">
           <fieldset>
-            <legend>
-              댓글 입력
-            </legend>
+            <legend>댓글 입력</legend>
             <p>
-              <strong>
-                댓글달기
-              </strong>
-              <span class="{$comment_input_name|display}">
-                이름 :{$form.comment_name}
-              </span>
+              <strong>댓글달기</strong>
+              <span class="{$comment_input_name|display}">이름 :{$form.comment_name}</span>
               비밀번호 : {$form.comment_password}
               <a href="#none" onclick="{$action_comment_admin}" class="btnNormal {$config.pre_comment|display}">
                 관리자답변보기
@@ -195,29 +148,19 @@
             </p>
             <div class="view">
               {$form.comment}
-              <a href="#none" onclick="{$action_comment_insert}" class="btnSubmitFix {$comment_button|display}">
-                확인
-              </a>
+              <a href="#none" onclick="{$action_comment_insert}" class="btnSubmitFix {$comment_button|display}">확인</a>
             </div>
-            <p class="grade {$config.is_use_point|display}">
-              {$form.comment_point}
-            </p>
-            <p class="{$config.comment_size|display}">
-              {$comment_byte} / {$comment_size} byte
-            </p>
+            <p class="grade {$config.is_use_point|display}">{$form.comment_point}</p>
+            <p class="{$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
             <p class="captcha {$config.use_captcha_comment|display}">
               {$captcha_image} {$captcha_refresh} {$form.captcha}
-              <span class="ec-base-help">
-                왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)
-              </span>
+              <span class="ec-base-help">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
             </p>
           </fieldset>
         </div>
         <!-- 댓글권한 없음 -->
         <div class="{$comment_write_display_none|display}">
-          <p>
-            {$comment_auth_name}에게만 댓글 작성 권한이 있습니다.
-          </p>
+          <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
         </div>
       </div>
 
@@ -225,40 +168,26 @@
         <!-- 댓글권한 있음 -->
         <div class="{$comment_write_display|display}">
           <fieldset>
-            <legend>
-              댓글 입력
-            </legend>
+            <legend>댓글 입력</legend>
             <p>
-              <strong>
-                댓글달기
-              </strong>
-              <span class="{$comment_input_name|display}">
-                이름 :{$form.comment_name}
-              </span>
+              <strong>댓글달기</strong>
+              <span class="{$comment_input_name|display}">이름 :{$form.comment_name}</span>
               비밀번호 : {$form.comment_password}
             </p>
             <div class="view">
               {$form.comment}
-              <a href="#none" onclick="{$action_comment_insert}" class="btnSubmitFix {$comment_button|display}">
-                확인
-              </a>
+              <a href="#none" onclick="{$action_comment_insert}" class="btnSubmitFix {$comment_button|display}">확인</a>
             </div>
-            <p class="{$config.comment_size|display}">
-              {$comment_byte} / {$comment_size} byte
-            </p>
+            <p class="{$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
             <p class="captcha {$config.use_captcha_comment|display}">
               {$captcha_image} {$captcha_refresh} {$form.captcha}
-              <span class="ec-base-help">
-                왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)
-              </span>
+              <span class="ec-base-help">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
             </p>
           </fieldset>
         </div>
         <!-- 댓글권한 없음 -->
         <div class="{$comment_write_display_none|display}">
-          <p>
-            {$comment_auth_name}에게만 댓글 작성 권한이 있습니다.
-          </p>
+          <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
         </div>
       </div>
     </div>

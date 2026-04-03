@@ -3,9 +3,7 @@
 
 <div class="ec-base-layer">
   <div class="header">
-    <h1>
-      수령자 정보 변경
-    </h1>
+    <h1>수령자 정보 변경</h1>
   </div>
   <div class="content" module="myshop_OrderRegularManageDetailReceiveredit">
     <!--
@@ -13,9 +11,7 @@
         -->
     <div class="ec-base-table typeWrite">
       <table border="1">
-        <caption>
-          수령자 정보 변경
-        </caption>
+        <caption>수령자 정보 변경</caption>
         <colgroup>
           <col style="width: 150px" />
           <col style="width: auto" />
@@ -27,28 +23,17 @@
               <img
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
                 class="icon icoRequired"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.receiver_name}
-            </td>
+            <td>{$form.receiver_name}</td>
           </tr>
           <tr>
-            <th scope="row">
-              일반전화
-            </th>
-            <td class="formGroup code">
-              {$form.tel}
-            </td>
+            <th scope="row">일반전화</th>
+            <td class="formGroup code">{$form.tel}</td>
           </tr>
           <tr>
-            <th scope="row">
-              휴대전화
-            </th>
-            <td class="formGroup code">
-              {$form.phone}
-            </td>
+            <th scope="row">휴대전화</th>
+            <td class="formGroup code">{$form.phone}</td>
           </tr>
           <tr id="ec-regularDeliveryUpdate-address">
             <th scope="row">
@@ -56,29 +41,18 @@
               <img
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
                 class="icon icoRequired"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
-            <td>
-              {$form.address}
-            </td>
+            <td>{$form.address}</td>
           </tr>
           <tr>
-            <th scope="row">
-              배송메시지
-            </th>
-            <td>
-              {$form.delivery_msg}
-            </td>
+            <th scope="row">배송메시지</th>
+            <td>{$form.delivery_msg}</td>
           </tr>
           <tr>
-            <th scope="row">
-              희망배송시간
-            </th>
+            <th scope="row">희망배송시간</th>
             <td>
-              <div class="quickdelivery">
-                {$form.use_hope_shipping_time}
-              </div>
+              <div class="quickdelivery">{$form.use_hope_shipping_time}</div>
               {$form.hope_shipping_time}
             </td>
           </tr>
@@ -87,15 +61,9 @@
       </table>
     </div>
     <div class="ec-base-button">
-      <a href="#none" onclick="self.close()" class="btnNormalFix sizeM">
-        닫기
-      </a>
-      <button id="{$updateReceiverScriptionId}" type="submit" class="btnSubmitFix sizeM">
-        변경하기
-      </button>
+      <a href="#none" onclick="self.close()" class="btnNormalFix sizeM">닫기</a>
+      <button id="{$updateReceiverScriptionId}" type="submit" class="btnSubmitFix sizeM">변경하기</button>
     </div>
-    <a href="#none" class="btnClose">
-      닫기
-    </a>
+    <a href="#none" class="btnClose">닫기</a>
   </div>
 </div>

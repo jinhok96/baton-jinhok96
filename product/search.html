@@ -1,26 +1,18 @@
 <!--@layout(/layout/basic/layout.html)-->
 <div class="path">
-  <span>
-    현재 위치
-  </span>
+  <span>현재 위치</span>
   <ol>
     <li>
-      <a href="/">
-        홈
-      </a>
+      <a href="/">홈</a>
     </li>
     <li title="현재 위치">
-      <strong>
-        상품검색
-      </strong>
+      <strong>상품검색</strong>
     </li>
   </ol>
 </div>
 
 <div class="titleArea">
-  <h2>
-    상품검색
-  </h2>
+  <h2>상품검색</h2>
 </div>
 
 <!--@import(/product/shoppQ/searchForm_typeTop.html)-->
@@ -40,31 +32,21 @@
               </span>
             </a>
             <div class="icon__box">
-              <span class="wish">
-                {$list_wish_icon}
-              </span>
-              <span class="cart">
-                {$basket_icon}
-              </span>
+              <span class="wish">{$list_wish_icon}</span>
+              <span class="cart">{$basket_icon}</span>
             </div>
           </div>
           <div class="description">
             <strong class="name {$product_name_display|display}">
-              <a href="{$link_product_detail}">
-                {$product_name}
-              </a>
+              <a href="{$link_product_detail}">{$product_name}</a>
             </strong>
             <ul module="search_ListItem" class="spec">
               <li class="{$item_display|display}">
-                <strong class="title {$item_title_display|display}">
-                  {$item_title} :
-                </strong>
+                <strong class="title {$item_title_display|display}">{$item_title} :</strong>
                 {$item_content}
               </li>
               <li class="{$item_display|display}">
-                <strong class="title {$item_title_display|display}">
-                  {$item_title} :
-                </strong>
+                <strong class="title {$item_title_display|display}">{$item_title} :</strong>
                 {$item_content}
               </li>
             </ul>
@@ -84,31 +66,21 @@
               </span>
             </a>
             <div class="icon__box">
-              <span class="wish">
-                {$list_wish_icon}
-              </span>
-              <span class="cart">
-                {$basket_icon}
-              </span>
+              <span class="wish">{$list_wish_icon}</span>
+              <span class="cart">{$basket_icon}</span>
             </div>
           </div>
           <div class="description">
             <strong class="name {$product_name_display|display}">
-              <a href="{$link_product_detail}">
-                {$product_name}
-              </a>
+              <a href="{$link_product_detail}">{$product_name}</a>
             </strong>
             <ul module="search_ListItem" class="spec">
               <li class="{$item_display|display}">
-                <strong class="title {$item_title_display|display}">
-                  {$item_title} :
-                </strong>
+                <strong class="title {$item_title_display|display}">{$item_title} :</strong>
                 {$item_content}
               </li>
               <li class="{$item_display|display}">
-                <strong class="title {$item_title_display|display}">
-                  {$item_title} :
-                </strong>
+                <strong class="title {$item_title_display|display}">{$item_title} :</strong>
                 {$item_content}
               </li>
             </ul>
@@ -122,68 +94,40 @@
   </div>
 </div>
 <div module="search_paging" class="ec-base-paginate typeList">
-  <a href="{$param_first}" class="first">
-    첫 페이지
-  </a>
-  <a href="{$param_before}">
-    이전 페이지
-  </a>
+  <a href="{$param_first}" class="first">첫 페이지</a>
+  <a href="{$param_before}">이전 페이지</a>
   <ol>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
     <li>
-      <a href="{$param}" class="{$param_class}">
-        {$no}
-      </a>
+      <a href="{$param}" class="{$param_class}">{$no}</a>
     </li>
   </ol>
-  <a href="{$param_next}">
-    다음 페이지
-  </a>
-  <a href="{$param_last}" class="last">
-    마지막 페이지
-  </a>
+  <a href="{$param_next}">다음 페이지</a>
+  <a href="{$param_last}" class="last">마지막 페이지</a>
 </div>

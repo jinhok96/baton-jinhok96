@@ -1,26 +1,18 @@
 <!--@layout(/layout/basic/layout.html)-->
 <div class="path">
-  <span>
-    현재 위치
-  </span>
+  <span>현재 위치</span>
   <ol>
     <li>
-      <a href="/">
-        홈
-      </a>
+      <a href="/">홈</a>
     </li>
     <li title="현재 위치">
-      <strong>
-        비밀번호 변경
-      </strong>
+      <strong>비밀번호 변경</strong>
     </li>
   </ol>
 </div>
 
 <div class="titleArea">
-  <h2>
-    비밀번호 변경
-  </h2>
+  <h2>비밀번호 변경</h2>
 </div>
 
 <div module="member_changepasswd" class="memberArea gInnerMargin">
@@ -36,43 +28,23 @@
   <div class="ec-base-box typeMember">
     {$form.enc_password} {$form.returnUrl}
     <div class="content">
-      <p class="{$display_update_event|display}">
-        이벤트 안내 - 비밀번호 변경 시 {$update_event_reward} 지급됩니다.
-      </p>
+      <p class="{$display_update_event|display}">이벤트 안내 - 비밀번호 변경 시 {$update_event_reward} 지급됩니다.</p>
       <fieldset>
-        <legend>
-          비밀번호 변경
-        </legend>
+        <legend>비밀번호 변경</legend>
         <dl class="ec-base-desc gVer">
-          <dt>
-            아이디
-          </dt>
+          <dt>아이디</dt>
           <dd>
-            <strong class="txtEm">
-              {$member_id}
-            </strong>
+            <strong class="txtEm">{$member_id}</strong>
           </dd>
-          <dt>
-            현재 비밀번호
-          </dt>
-          <dd>
-            {$form.passwd}
-          </dd>
-          <dt>
-            새 비밀번호
-          </dt>
+          <dt>현재 비밀번호</dt>
+          <dd>{$form.passwd}</dd>
+          <dt>새 비밀번호</dt>
           <dd>
             {$form.new_passwd}
-            <p class="txtInfo gBlank10">
-              {$passwd_type_desc}
-            </p>
+            <p class="txtInfo gBlank10">{$passwd_type_desc}</p>
           </dd>
-          <dt>
-            새 비밀번호 확인
-          </dt>
-          <dd>
-            {$form.new_passwd_confirm}
-          </dd>
+          <dt>새 비밀번호 확인</dt>
+          <dd>{$form.new_passwd_confirm}</dd>
         </dl>
       </fieldset>
     </div>
@@ -81,8 +53,6 @@
     <a href="#none" class="btnNormalFix sizeM {$display_change_password|display}" onclick="{$after_action;}">
       다음에 변경
     </a>
-    <a href="#none" class="btnSubmitFix sizeM" onclick="{$change_password_action;}">
-      비밀번호 변경
-    </a>
+    <a href="#none" class="btnSubmitFix sizeM" onclick="{$change_password_action;}">비밀번호 변경</a>
   </div>
 </div>

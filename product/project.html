@@ -2,30 +2,20 @@
 <div module="Project_Package">
   <!--@css(/css/module/product/project_package.css)-->
   <div class="path" module="project_head">
-    <span>
-      현재 위치
-    </span>
+    <span>현재 위치</span>
     <ol>
       <li>
-        <a href="/">
-          홈
-        </a>
+        <a href="/">홈</a>
       </li>
       <li title="현재 위치">
-        <strong>
-          기획전
-        </strong>
+        <strong>기획전</strong>
       </li>
     </ol>
   </div>
 
   <div class="title" module="product_headcategory">
-    <p class="banner">
-      {$top_image_tag}
-    </p>
-    <h2>
-      {$title_text_or_image}
-    </h2>
+    <p class="banner">{$top_image_tag}</p>
+    <h2>{$title_text_or_image}</h2>
   </div>
 
   <div class="ec-base-tab typeMenu gScroll">
@@ -33,9 +23,7 @@
       <li module="product_projectcategory" style="display:{$display};">
         <a href="#{$cate_id}">
           {$category_name}
-          <span class="count {$product_count_display|display}">
-            ({$product_count})
-          </span>
+          <span class="count {$product_count_display|display}">({$product_count})</span>
         </a>
       </li>
     </ul>
@@ -49,9 +37,7 @@
             $moreview = yes
         -->
     <h3>
-      <span id="{$cate_id}">
-        {$category_name}
-      </span>
+      <span id="{$cate_id}">{$category_name}</span>
     </h3>
 
     <div module="project_productlist" class="ec-base-product">
@@ -66,31 +52,21 @@
                 </span>
               </a>
               <div class="icon__box">
-                <span class="wish">
-                  {$list_wish_icon}
-                </span>
-                <span class="cart">
-                  {$basket_icon}
-                </span>
+                <span class="wish">{$list_wish_icon}</span>
+                <span class="cart">{$basket_icon}</span>
               </div>
             </div>
             <div class="description">
               <strong class="name {$product_name_display|display}">
-                <a href="{$link_product_detail}">
-                  {$product_name}
-                </a>
+                <a href="{$link_product_detail}">{$product_name}</a>
               </strong>
               <ul module="project_ListItem" class="spec">
                 <li class="{$item_display|display}">
-                  <strong class="title {$item_title_display|display}">
-                    {$item_title} :
-                  </strong>
+                  <strong class="title {$item_title_display|display}">{$item_title} :</strong>
                   {$item_content}
                 </li>
                 <li class="{$item_display|display}">
-                  <strong class="title {$item_title_display|display}">
-                    {$item_title} :
-                  </strong>
+                  <strong class="title {$item_title_display|display}">{$item_title} :</strong>
                   {$item_content}
                 </li>
               </ul>
@@ -110,31 +86,21 @@
                 </span>
               </a>
               <div class="icon__box">
-                <span class="wish">
-                  {$list_wish_icon}
-                </span>
-                <span class="cart">
-                  {$basket_icon}
-                </span>
+                <span class="wish">{$list_wish_icon}</span>
+                <span class="cart">{$basket_icon}</span>
               </div>
             </div>
             <div class="description">
               <strong class="name {$product_name_display|display}">
-                <a href="{$link_product_detail}">
-                  {$product_name}
-                </a>
+                <a href="{$link_product_detail}">{$product_name}</a>
               </strong>
               <ul module="project_ListItem" class="spec">
                 <li class="{$item_display|display}">
-                  <strong class="title {$item_title_display|display}">
-                    {$item_title} :
-                  </strong>
+                  <strong class="title {$item_title_display|display}">{$item_title} :</strong>
                   {$item_content}
                 </li>
                 <li class="{$item_display|display}">
-                  <strong class="title {$item_title_display|display}">
-                    {$item_title} :
-                  </strong>
+                  <strong class="title {$item_title_display|display}">{$item_title} :</strong>
                   {$item_content}
                 </li>
               </ul>
