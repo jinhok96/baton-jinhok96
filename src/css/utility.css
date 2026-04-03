@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Effects — Shadow
+   ========================================================================== */
+
+@utility shadow-100 {
+  box-shadow:
+    0 1px 4px 0 rgb(0 0 0 / 5%),
+    0 1px 4px 0 rgb(0 0 0 / 10%);
+}
+@utility shadow-200 {
+  box-shadow:
+    0 4px 4px -1px rgb(0 0 0 / 5%),
+    0 4px 4px -1px rgb(0 0 0 / 10%);
+}
+@utility shadow-300 {
+  box-shadow:
+    0 4px 4px -4px rgb(0 0 0 / 5%),
+    0 16px 32px -4px rgb(0 0 0 / 10%);
+}
+@utility shadow-400 {
+  box-shadow:
+    0 4px 4px -4px rgb(0 0 0 / 5%),
+    0 16px 16px -8px rgb(0 0 0 / 10%);
+}
+@utility shadow-500 {
+  box-shadow: 0 16px 32px -8px rgb(0 0 0 / 40%);
+}
+
+/* ==========================================================================
+   Decoration
+   ========================================================================== */
+@utility underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

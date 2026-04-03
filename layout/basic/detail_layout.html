@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
@@ -10,7 +9,9 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <!-- // PG크로스브라우징필수내용 -->
 
-    <title>기본 레이아웃</title>
+    <title>
+      기본 레이아웃
+    </title>
     <link rel="preconnect" href="https://img.echosting.cafe24.com" />
     <link
       rel="stylesheet"
@@ -39,8 +40,16 @@
   </head>
   <body id="detail">
     <div id="skipNavigation">
-      <p><a href="#category">전체상품목록 바로가기</a></p>
-      <p><a href="#contents">본문 바로가기</a></p>
+      <p>
+        <a href="#category">
+          전체상품목록 바로가기
+        </a>
+      </p>
+      <p>
+        <a href="#contents">
+          본문 바로가기
+        </a>
+      </p>
     </div>
 
     <div id="wrap">
@@ -50,15 +59,11 @@
         <div id="contents">
           <!--@contents-->
           <span module="Layout_MobileAction" class="RTMB">
-            <a
-              href="#none"
-              onclick="
-                {
-                  $go_back;
-                }
-              "
-              ><!--@import(/svg/icon-go-back.html)--><span>뒤로가기</span></a
-            >
+            <a href="#none" onclick="{$go_back}">
+              <!--@import(/svg/icon-go-back.html)--><span>
+                뒤로가기
+              </span>
+            </a>
           </span>
         </div>
         <hr class="layout" />

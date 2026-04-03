@@ -2,7 +2,9 @@
 <div module="MyShop_OrderIssueCash" class="ec-base-layer">
   <!--@css(/css/module/myshop/orderIssueCash.css)-->
   <div class="header">
-    <h1>현금영수증 신청양식 작성</h1>
+    <h1>
+      현금영수증 신청양식 작성
+    </h1>
   </div>
 
   {$form.order_id}
@@ -19,20 +21,32 @@
         </colgroup>
         <tbody>
           <tr>
-            <th scope="row">구분</th>
-            <td>{$form.user_type}</td>
+            <th scope="row">
+              구분
+            </th>
+            <td>
+              {$form.user_type}
+            </td>
           </tr>
         </tbody>
         <tbody id="{$personal_info_id}">
           <tr>
-            <th scope="row">{$form.mobile_identity} {$form_label.mobile}</th>
-            <td class="formGroup code">{$form.mobile}</td>
+            <th scope="row">
+              {$form.mobile_identity} {$form_label.mobile}
+            </th>
+            <td class="formGroup code">
+              {$form.mobile}
+            </td>
           </tr>
         </tbody>
         <tbody id="{$company_info_id}" class="{$company_info_display|display}">
           <tr>
-            <th scope="row">{$form.regno_identity} {$form_label.regno}</th>
-            <td>{$form.regno}</td>
+            <th scope="row">
+              {$form.regno_identity} {$form_label.regno}
+            </th>
+            <td>
+              {$form.regno}
+            </td>
           </tr>
         </tbody>
       </table>
@@ -40,6 +54,8 @@
   </div>
 
   <div class="ec-base-button">
-    <button type="submit" class="btnSubmit sizeM">현금영수증 신청</button>
+    <button type="submit" class="btnSubmit sizeM">
+      현금영수증 신청
+    </button>
   </div>
 </div>

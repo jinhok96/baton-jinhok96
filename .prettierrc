@@ -7,5 +7,17 @@
   "trailingComma": "all",
   "endOfLine": "lf",
   "printWidth": 120,
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "bracketSameLine": true,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "glimmer",
+        "htmlWhitespaceSensitivity": "ignore",
+        "singleQuote": false,
+        "singleAttributePerLine": false
+      }
+    }
+  ]
 }

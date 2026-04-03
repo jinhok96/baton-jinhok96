@@ -209,14 +209,19 @@ grep -rn "style=\"" layout/ --include="*.html"
 
 ## Wave 2-A — 홈 페이지
 
-> 브랜치: `feature/home` | 상태: ⬜ | Wave 1 완료 후
+> 브랜치: `feature/homepage` | 상태: 🔄 진행 중 | **세부 계획**: [home-implementation.md](home-implementation.md)
 
 ### 수정 파일
 
+- `layout/home/hero.html` ✦
+- `layout/home/category-quicklinks.html` ✦
+- `layout/home/curation.html` ✦
+- `layout/home/product-grid.html` ✦
+- `layout/home/newsletter.html` ✦
+- `layout/home/home.js` ✦
 - `index.html` ✧
-- `layout/basic/js/main.js` ✧ (또는 `js/main.js` 신규)
 
-### 요구사항 (Figma: 29301:11799 / 29301:11693)
+### 요구사항 (Figma: [29301-11799](https://www.figma.com/design/QosvLUINHW725RugIH71W4/studiobaton_cafe24_skin?node-id=29301-11799&m=dev) / [29301-11693](https://www.figma.com/design/QosvLUINHW725RugIH71W4/studiobaton_cafe24_skin?node-id=29301-11693&m=dev))
 
 **섹션 구성**
 

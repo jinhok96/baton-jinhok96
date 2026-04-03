@@ -3,7 +3,13 @@
   <!--@css(/css/module/myshop/orderHistoryAccount.css)-->
   <div class="header">
     <h1>
-      환불계좌 <span class="{$acc_reg_display|display}">등록</span><span class="{$acc_mod_display|display}">변경</span>
+      환불계좌
+      <span class="{$acc_reg_display|display}">
+        등록
+      </span>
+      <span class="{$acc_mod_display|display}">
+        변경
+      </span>
     </h1>
   </div>
 
@@ -12,8 +18,12 @@
       <table border="1">
         <caption>
           환불계좌 관리
-          <span class="{$acc_reg_display|display}">등록</span
-          ><span class="{$acc_mod_display|display}">변경</span>
+          <span class="{$acc_reg_display|display}">
+            등록
+          </span>
+          <span class="{$acc_mod_display|display}">
+            변경
+          </span>
         </caption>
         <colgroup>
           <col style="width: 170px" />
@@ -21,28 +31,44 @@
         </colgroup>
         <tbody>
           <tr>
-            <th scope="row">예금주</th>
+            <th scope="row">
+              예금주
+            </th>
             <td>
               {$form.acc_depositor}
-              <p class="txtInfo">예금주명은 주문자명과 동일해야 합니다.</p>
+              <p class="txtInfo">
+                예금주명은 주문자명과 동일해야 합니다.
+              </p>
             </td>
           </tr>
           <tr>
-            <th scope="row">은행명</th>
-            <td>{$form.acc_bank}</td>
+            <th scope="row">
+              은행명
+            </th>
+            <td>
+              {$form.acc_bank}
+            </td>
           </tr>
           <tr>
-            <th scope="row">계좌번호</th>
+            <th scope="row">
+              계좌번호
+            </th>
             <td>
               {$form.acc_no}
-              <p class="txtInfo">'-' 없이 숫자만 입력해 주세요.</p>
+              <p class="txtInfo">
+                '-' 없이 숫자만 입력해 주세요.
+              </p>
             </td>
           </tr>
           <tr>
-            <th scope="row">비밀번호 확인</th>
+            <th scope="row">
+              비밀번호 확인
+            </th>
             <td>
               {$form.check_password}
-              <p class="txtInfo">등록된 비밀번호를 확인합니다.</p>
+              <p class="txtInfo">
+                등록된 비밀번호를 확인합니다.
+              </p>
             </td>
           </tr>
         </tbody>
@@ -56,8 +82,9 @@
           RefundAccount.cancel();
           return false;
         "
-        >취소</a
       >
+        취소
+      </a>
       <a
         href="#none"
         class="btnSubmitFix sizeM {$acc_reg_display|display}"
@@ -65,8 +92,9 @@
           RefundAccount.register();
           return false;
         "
-        >등록</a
       >
+        등록
+      </a>
       <a
         href="#none"
         class="btnSubmitFix sizeM {$acc_mod_display|display}"
@@ -74,8 +102,9 @@
           RefundAccount.modify();
           return false;
         "
-        >변경</a
       >
+        변경
+      </a>
     </div>
   </div>
 </div>

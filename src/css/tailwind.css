@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+@import './color.css';
+@import './layout.css';
+@import './typography.css';
+@import './utility.css';
+@import './swiper.css';
+
+@source '../**/*.html';
+@source '../layout/header/header.js';
+
+@layer base {
+  /* css reset */
+  body {
+    @apply bg-primary text-primary mx-auto my-0 max-w-360;
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  button,
+  a {
+    @apply cursor-pointer disabled:cursor-not-allowed;
+  }
+
+  /* 접근성을 위해 물리적으로 숨기되 스크린 리더는 읽도록 sr-only 설정 */
+  caption,
+  hr.layout {
+    @apply sr-only;
+  }
+
+  #contents {
+    @apply relative;
+  }
+}

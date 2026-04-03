@@ -3,16 +3,32 @@
   <!--@css(/css/module/board/replyPackage_9.css)-->
   <div module="board_title_9">
     <div class="path">
-      <span>현재 위치</span>
+      <span>
+        현재 위치
+      </span>
       <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/myshop/index.html">마이쇼핑</a></li>
-        <li title="현재 위치"><strong>{$board_name}</strong></li>
+        <li>
+          <a href="/">
+            홈
+          </a>
+        </li>
+        <li>
+          <a href="/myshop/index.html">
+            마이쇼핑
+          </a>
+        </li>
+        <li title="현재 위치">
+          <strong>
+            {$board_name}
+          </strong>
+        </li>
       </ol>
     </div>
 
     <div class="titleArea">
-      <h2>{$board_title}</h2>
+      <h2>
+        {$board_title}
+      </h2>
     </div>
   </div>
 
@@ -33,22 +49,40 @@
         </colgroup>
         <tbody>
           <tr>
-            <th scope="row">제목</th>
-            <td colspan="3">{$subject}</td>
+            <th scope="row">
+              제목
+            </th>
+            <td colspan="3">
+              {$subject}
+            </td>
           </tr>
           <tr>
-            <th scope="row">작성자</th>
-            <td>{$writer}</td>
-            <th scope="row">답변여부</th>
-            <td>{$consult}</td>
+            <th scope="row">
+              작성자
+            </th>
+            <td>
+              {$writer}
+            </td>
+            <th scope="row">
+              답변여부
+            </th>
+            <td>
+              {$consult}
+            </td>
           </tr>
           <tr class="{$config.use_date|display}">
-            <th scope="row">문의일시</th>
-            <td colspan="3">{$write_date}</td>
+            <th scope="row">
+              문의일시
+            </th>
+            <td colspan="3">
+              {$write_date}
+            </td>
           </tr>
           <tr class="view">
             <td colspan="4">
-              <div class="detail">{$content}</div>
+              <div class="detail">
+                {$content}
+              </div>
             </td>
           </tr>
         </tbody>
@@ -69,8 +103,12 @@
 
         <tbody>
           <tr>
-            <th scope="row" class="RW top">답변 쓰기</th>
-            <td>{$form.content}</td>
+            <th scope="row" class="RW top">
+              답변 쓰기
+            </th>
+            <td>
+              {$form.content}
+            </td>
           </tr>
         </tbody>
       </table>
@@ -78,32 +116,22 @@
 
     <div class="ec-base-button gBottom">
       <span class="gLeft RW">
-        <span class="{$config.is_admin|display}"
-          ><a
-            href="#none"
-            class="btnNormalFix sizeM"
-            onclick="
-              {
-                $action_comment_admin;
-              }
-            "
-            >관리자 답변보기</a
-          ></span
-        >
-        <a href="{$link_board_list}" class="btnNormalFix sizeM">목록</a>
+        <span class="{$config.is_admin|display}">
+          <a href="#none" class="btnNormalFix sizeM" onclick="{$action_comment_admin}">
+            관리자 답변보기
+          </a>
+        </span>
+        <a href="{$link_board_list}" class="btnNormalFix sizeM">
+          목록
+        </a>
       </span>
       <span class="gRight">
-        <a href="{$link_board_list}" class="btnNormalFix sizeM">취소</a>
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_reply;
-            }
-          "
-          class="btnSubmitFix sizeM"
-          >등록</a
-        >
+        <a href="{$link_board_list}" class="btnNormalFix sizeM">
+          취소
+        </a>
+        <a href="#none" onclick="{$action_reply}" class="btnSubmitFix sizeM">
+          등록
+        </a>
       </span>
     </div>
   </div>
