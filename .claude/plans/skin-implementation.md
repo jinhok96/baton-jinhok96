@@ -45,13 +45,16 @@ Figma 디자인(QosvLUINHW725RugIH71W4)을 기반으로 Cafe24 스킨 3페이지
 
 ## 완료된 작업
 
-| 파일                             | Wave     | 상태    |
-| -------------------------------- | -------- | ------- |
-| `src/tailwind.css`               | Wave 0   | ✅ 완료 |
-| `layout/header/header.html`      | Wave 1-A | ✅ 완료 |
-| `layout/header/header.js`        | Wave 1-A | ✅ 완료 |
-| `layout/header/state_login.html` | Wave 1-A | ✅ 완료 |
-| `layout/footer/footer.html`      | Wave 1-B | ✅ 완료 |
+| 파일                                   | Wave     | 상태    |
+| -------------------------------------- | -------- | ------- |
+| `src/tailwind.css`                     | Wave 0   | ✅ 완료 |
+| `layout/header/header.html`            | Wave 1-A | ✅ 완료 |
+| `layout/header/header.js`              | Wave 1-A | ✅ 완료 |
+| `layout/header/state_login.html`       | Wave 1-A | ✅ 완료 |
+| `layout/footer/footer.html`            | Wave 1-B | ✅ 완료 |
+| `layout/home/hero.html`                | Wave 2-A | ✅ 완료 |
+| `layout/home/home.js`                  | Wave 2-A | ✅ 완료 |
+| `layout/home/category-quicklinks.html` | Wave 2-A | ✅ 완료 |
 
 ---
 
@@ -209,7 +212,7 @@ grep -rn "style=\"" layout/ --include="*.html"
 
 ## Wave 2-A — 홈 페이지
 
-> 브랜치: `feature/homepage` | 상태: 🔄 진행 중 | **세부 계획**: [home-implementation.md](home-implementation.md)
+> 브랜치: `feature/homepage` | 상태: 🔄 진행 중 (3/7) | **세부 계획**: [home-implementation.md](home-implementation.md)
 
 ### 수정 파일
 
