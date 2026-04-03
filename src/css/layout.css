@@ -33,3 +33,31 @@
     }
   }
 }
+
+@utility px-container {
+  padding-left: var(--layout-container-padding);
+  padding-right: var(--layout-container-padding);
+}
+
+@utility py-container {
+  padding-top: var(--layout-container-padding);
+  padding-bottom: var(--layout-container-padding);
+}
+
+@utility p-container {
+  @apply px-container py-container;
+}
+
+@utility mx-container {
+  margin-left: var(--layout-container-padding);
+  margin-right: var(--layout-container-padding);
+}
+
+@utility my-container {
+  margin-top: var(--layout-container-padding);
+  margin-bottom: var(--layout-container-padding);
+}
+
+@utility m-container {
+  @apply mx-container my-container;
+}
