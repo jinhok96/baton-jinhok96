@@ -1,0 +1,19 @@
+<a href="{$link_product_detail}" class="w-full">
+  <div class="relative block aspect-4/5 w-full overflow-hidden rounded-lg">
+    <img src="{$image_big}" alt="{$seo_alt_tag}" class="absolute inset-0 size-full object-cover" />
+  </div>
+
+  <div class="flex items-center gap-4 py-3">
+    <div href="{$link_product_detail}" class="relative size-25 shrink-0 overflow-hidden rounded-lg">
+      <img src="{$image_small}" alt="{$seo_alt_tag}" class="absolute inset-0 size-full object-cover" />
+    </div>
+
+    <div class="max-w-65.5">
+      <p class="text-c1 text-secondary truncate pr-5">{$prd_trand}</p>
+      <div class="flex flex-col gap-1">
+        <p class="text-l6 md:text-l5 text-primary truncate pr-5">{$product_name}</p>
+        <p class="text-c1 text-secondary truncate">{$simple_desc}</p>
+      </div>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,56 @@
+<div class="w-full">
+  <div class="relative aspect-4/5 w-full overflow-hidden rounded-lg">
+    <a href="{$link_product_detail}" class="absolute inset-0">
+      <img src="{$image_big}" alt="{$seo_alt_tag}" class="size-full object-cover" />
+    </a>
+    <div class="text-c1 text-secondary md:text-l6 absolute top-0 left-0 px-3 py-2 md:px-4 md:py-3">베스트</div>
+  </div>
+
+  <div class="flex w-full flex-col gap-3 pt-3">
+    <!--담기 버튼-->
+    <a
+      href="{$link_product_detail}"
+      class="border-color-primary bg-primary flex w-full items-center justify-center gap-2 rounded border p-2 md:px-3 md:py-2">
+      <span class="text-secondary size-4.5 shrink-0">
+        <!--@import(/svg/icon/cart.html)-->
+      </span>
+      <span class="text-c1 md:text-l6 text-secondary">담기</span>
+    </a>
+
+    <!--정보-->
+    <div class="flex flex-col gap-1">
+      <!--카테고리, 제품명-->
+      <div class="flex w-full flex-col gap-0.5 pr-5">
+        <a href="{$link_product_list}" class="text-secondary flex items-center">
+          <span class="text-c1">{$category_name}</span>
+          <span class="size-5 shrink-0">
+            <!--@import(/svg/icon/arrow_sm_right.html)-->
+          </span>
+        </a>
+        <p class="text-l6 md:text-l5 text-primary">{$product_name}</p>
+      </div>
+
+      <!--가격-->
+      <div class="price-wrapper flex flex-col items-start gap-1 md:flex-row md:items-center">
+        <!--판매가-->
+        <span class="sale-price text-l6 md:text-l5 text-primary leading-[140%] font-bold!">{$disp_product_price}</span>
+
+        <span class="flex items-center gap-1" style="display:{$product_sale_display|display}">
+          <!--소비자가-->
+          <span class="consumer-price text-l6 md:text-l5 text-tertiary strike">{$disp_product_custom}</span>
+          <!--할인률-->
+          <span class="js-discount-rate text-l6 md:text-l5 text-brand leading-[140%] font-bold!"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () { var wrapper = document.currentScript.previousElementSibling.querySelector('.price-wrapper'); if
+  (!wrapper) return; var saleEl = wrapper.querySelector('.sale-price'); var origEl =
+  wrapper.querySelector('.consumer-price'); var rateEl = wrapper.querySelector('.js-discount-rate'); if (!saleEl ||
+  !origEl || !rateEl) return; var sale = parseInt(saleEl.textContent.replace(/[^0-9]/g, ''), 10); var orig =
+  parseInt(origEl.textContent.replace(/[^0-9]/g, ''), 10); if (orig > 0 && sale < orig) { rateEl.textContent =
+  Math.round((1 - sale / orig) * 100) + '%'; } })();
+</script>
