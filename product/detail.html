@@ -257,10 +257,48 @@
   </div>
 </div>
 
-<div module="product_additional" class="mx-auto">
+<div module="product_additional" class="relative mx-auto">
+  <!--스크롤 헬퍼 탭-->
+  <nav
+    id="detailTabNav"
+    module="product_detail"
+    class="bg-primary border-color-primary sticky top-24 z-40 flex border-b md:top-14">
+    <button
+      type="button"
+      class="detail-tab-btn font-base text-tertiary flex flex-1 items-center justify-center py-3 leading-[140%]"
+      data-target="tab-color">
+      색상
+    </button>
+    <button
+      type="button"
+      class="detail-tab-btn font-base text-tertiary flex flex-1 items-center justify-center py-3 leading-[140%]"
+      data-target="tab-detail">
+      상세
+    </button>
+    <button
+      type="button"
+      class="detail-tab-btn font-base text-tertiary flex flex-1 items-center justify-center gap-1 py-3 leading-[140%]"
+      data-target="tab-review">
+      후기
+      <span class="text-c1">{$review_count}</span>
+    </button>
+    <button
+      type="button"
+      class="detail-tab-btn font-base text-tertiary flex flex-1 items-center justify-center py-3 leading-[140%]"
+      data-target="tab-inquiry">
+      문의
+    </button>
+    <button
+      type="button"
+      class="detail-tab-btn font-base text-tertiary flex flex-1 items-center justify-center py-3 leading-[140%]"
+      data-target="tab-recommend">
+      추천
+    </button>
+  </nav>
+
   <!--색상 정보-->
   <!--@js(/layout/product/product_colorchip.js)-->
-  <section id="tab-color" class="color-chip-section border-color-primary border-b pb-0.75 md:pb-0">
+  <section id="tab-color" class="detail-tab-section color-chip-section border-color-primary border-b pb-0.75 md:pb-0">
     <div class="py-5 md:py-10">
       <!--헤더-->
       <div class="px-container flex h-19 items-center py-3 pr-10 md:h-26.5 md:items-start md:py-5">
@@ -279,7 +317,7 @@
   </section>
 
   <!--상품 상세-->
-  <section class="border-color-primary border-b pb-0.75 md:pb-0">
+  <section id="tab-detail" class="detail-tab-section border-color-primary border-b pb-0.75 md:pb-0">
     <div class="py-5 md:py-10">
       <!--헤더-->
       <div class="px-container h-19 py-3 pr-10 md:h-26.5 md:py-5">
@@ -480,22 +518,22 @@
       </div>
     </div>
   </section>
-</div>
 
-<!--추천 상품-->
-<section module="product_listrecommend" class="py-5">
-  <!--
+  <!--추천 상품-->
+  <section id="tab-recommend" module="product_listrecommend" class="detail-tab-section py-5">
+    <!--
     $count = 5
   -->
-  <div
-    class="pl-container md:px-container flex h-19 w-full flex-col justify-center py-3 pr-10 md:h-26.5 md:justify-start md:py-5">
-    <h2 class="text-h6 md:text-h5 text-primary">추천 상품</h2>
-  </div>
+    <div
+      class="pl-container md:px-container flex h-19 w-full flex-col justify-center py-3 pr-10 md:h-26.5 md:justify-start md:py-5">
+      <h2 class="text-h6 md:text-h5 text-primary">추천 상품</h2>
+    </div>
 
-  <ul class="grid w-full grid-cols-2 gap-x-3 gap-y-15 p-4 pb-15 md:grid-cols-5 md:gap-5 md:p-6">
-    <li class="w-full shrink-0 not-md:last:hidden"><!--@import(/layout/product/product_colorchip.html)--></li>
-    <li class="w-full shrink-0 not-md:last:hidden"><!--@import(/layout/product/product_colorchip.html)--></li>
-  </ul>
-</section>
+    <ul class="grid w-full grid-cols-2 gap-x-3 gap-y-15 p-4 pb-15 md:grid-cols-5 md:gap-5 md:p-6">
+      <li class="w-full shrink-0 not-md:last:hidden"><!--@import(/layout/product/product_colorchip.html)--></li>
+      <li class="w-full shrink-0 not-md:last:hidden"><!--@import(/layout/product/product_colorchip.html)--></li>
+    </ul>
+  </section>
+</div>
 
 <!--@define(cmc_log)-->
