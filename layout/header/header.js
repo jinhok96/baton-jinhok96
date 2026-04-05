@@ -86,13 +86,15 @@
           }
         });
       } else if (iCurrentCateNo === 43) {
-        $('a[href*="cate_no=43"]').not('[cate]').each(function () {
-          if ($(this).closest('#mobileNav').length) {
-            $(this).addClass('nav-tab-active');
-          } else {
-            $(this).addClass('underline');
-          }
-        });
+        $('a[href*="cate_no=43"]')
+          .not('[cate]')
+          .each(function () {
+            if ($(this).closest('#mobileNav').length) {
+              $(this).addClass('nav-tab-active');
+            } else {
+              $(this).addClass('underline');
+            }
+          });
       }
     },
 
@@ -238,13 +240,17 @@
         $mobileNav[0].scrollLeft = iScrollLeft - dx;
       });
 
-      $mobileNav[0].addEventListener('click', function (e) {
-        if (bDragged) {
-          bDragged = false;
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      }, true);
+      $mobileNav[0].addEventListener(
+        'click',
+        function (e) {
+          if (bDragged) {
+            bDragged = false;
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        },
+        true,
+      );
     }
 
     // 드로어 열기
