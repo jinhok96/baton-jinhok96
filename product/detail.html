@@ -259,14 +259,22 @@
 
 <div module="product_additional" class="mx-auto">
   <!--색상 정보-->
-  <section class="border-color-primary border-b pb-0.75 md:pb-0">
+  <!--@js(/layout/product/product_colorchip.js)-->
+  <section id="tab-color" class="color-chip-section border-color-primary border-b pb-0.75 md:pb-0">
     <div class="py-5 md:py-10">
       <!--헤더-->
       <div class="px-container flex h-19 items-center py-3 pr-10 md:h-26.5 md:items-start md:py-5">
         <h2 class="text-h6 md:text-h5 text-primary">색상 정보</h2>
       </div>
-      <!--컬러칩-->
-      <div id="prdDetail" class="p-container flex flex-col gap-2">컬러칩</div>
+      <!--컬러칩 + 메인 이미지-->
+      <div class="px-container flex flex-col gap-2">
+        <!--컬러칩 목록 (JS로 채움)-->
+        <div id="colorChipList" class="scrollbar-hidden flex gap-2 overflow-x-auto py-2"></div>
+        <!--메인 이미지-->
+        <div class="relative aspect-square overflow-hidden rounded-lg md:aspect-auto md:size-89.5">
+          <img id="colorChipBigImg" src="" alt="" class="absolute inset-0 size-full object-cover" />
+        </div>
+      </div>
     </div>
   </section>
 
