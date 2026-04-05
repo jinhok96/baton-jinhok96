@@ -76,15 +76,23 @@
       }
 
       if (iActiveCateNo) {
-        // 대분류 nav 항목 밑줄
         $('[cate]').each(function () {
           if (Number(drawer.getParam($(this).attr('cate'), 'cate_no')) === iActiveCateNo) {
-            $(this).addClass('underline');
+            if ($(this).closest('#mobileNav').length) {
+              $(this).addClass('nav-tab-active');
+            } else {
+              $(this).addClass('underline');
+            }
           }
         });
       } else if (iCurrentCateNo === 43) {
-        // 전체 페이지 직접 접근
-        $('a[href*="cate_no=43"]').not('[cate]').addClass('underline');
+        $('a[href*="cate_no=43"]').not('[cate]').each(function () {
+          if ($(this).closest('#mobileNav').length) {
+            $(this).addClass('nav-tab-active');
+          } else {
+            $(this).addClass('underline');
+          }
+        });
       }
     },
 
@@ -199,6 +207,46 @@
     drawer.fetchSubCategories();
     drawer.setActiveCategory();
 
+    // 모바일 nav sticky top + 드래그 스크롤
+    var $mobileNav = $('#mobileNav');
+    if ($mobileNav.length) {
+      var bDragActive = false;
+      var bDragged = false;
+      var iStartX, iScrollLeft;
+
+      $mobileNav.css('top', $('#header').outerHeight() + 'px');
+
+      $mobileNav.on('mousedown', function (e) {
+        bDragActive = true;
+        bDragged = false;
+        iStartX = e.pageX;
+        iScrollLeft = $mobileNav[0].scrollLeft;
+        $mobileNav.css({ cursor: 'grabbing', 'user-select': 'none' });
+        e.preventDefault();
+      });
+
+      $(document).on('mouseup.mobileNav', function () {
+        if (!bDragActive) return;
+        bDragActive = false;
+        $mobileNav.css({ cursor: '', 'user-select': '' });
+      });
+
+      $(document).on('mousemove.mobileNav', function (e) {
+        if (!bDragActive) return;
+        var dx = e.pageX - iStartX;
+        if (Math.abs(dx) > 4) bDragged = true;
+        $mobileNav[0].scrollLeft = iScrollLeft - dx;
+      });
+
+      $mobileNav[0].addEventListener('click', function (e) {
+        if (bDragged) {
+          bDragged = false;
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+    }
+
     // 드로어 열기
     $(document).on('click', '#btnDrawerOpen', function () {
       drawer.open();
@@ -232,13 +280,16 @@
       }
     });
 
-    // 화면 리사이즈 시 스크롤 복구; 디바운스 0.2초
+    // 화면 리사이즈 시 스크롤 복구 + 모바일 nav top 갱신; 디바운스 0.2초
     var resizeTimer;
     $(window).on('resize', function () {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () {
         if (window.innerWidth >= 768 && drawer.isOpen) {
           drawer.close();
+        }
+        if ($mobileNav.length) {
+          $mobileNav.css('top', $('#header').outerHeight() + 'px');
         }
       }, 200);
     });

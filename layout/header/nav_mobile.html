@@ -1,0 +1,21 @@
+<!-- 모바일/태블릿 카테고리 탭 (md 미만) -->
+<nav
+  id="mobileNav"
+  class="bg-primary border-color-primary scrollbar-hidden sticky z-40 flex items-center gap-5 overflow-x-auto border-b px-4 md:hidden"
+  aria-label="카테고리 탭">
+  <a
+    href="/product/list.html?cate_no=43"
+    class="text-l5 text-primary flex shrink-0 items-center py-3">
+    전체
+  </a>
+  <ul class="flex shrink-0 gap-5" module="layout_category">
+    <li class="flex shrink-0">
+      <a
+        href="{$link_product_list}"
+        class="text-l5 text-primary flex items-center py-3"
+        cate="{$param}">
+        {$name}
+      </a>
+    </li>
+  </ul>
+</nav>
