@@ -1,0 +1,283 @@
+@import 'tailwindcss';
+@import './color.css';
+@import './layout.css';
+@import './typography.css';
+@import './utility.css';
+@import './swiper.css';
+
+@layer base {
+  /* css reset */
+  body {
+    @apply bg-primary text-primary mx-auto my-0 max-w-360;
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  button,
+  a {
+    @apply cursor-pointer disabled:cursor-not-allowed;
+  }
+
+  /* 접근성을 위해 물리적으로 숨기되 스크린 리더는 읽도록 sr-only 설정 */
+  caption,
+  hr.layout {
+    @apply sr-only;
+  }
+
+  table {
+    border-spacing: 0;
+  }
+
+  #contents {
+    @apply relative;
+  }
+}
+
+@variant last-visible {
+  &:not(.displaynone):not(:has(~ li:not(.displaynone))) {
+    @slot;
+  }
+}
+
+/* ==========================================================================
+   회원등급 할인혜택 레이어
+   ========================================================================== */
+
+@layer base {
+  .ec-base-tooltip.discount_layer {
+    @apply shadow-400 bg-primary absolute right-0! left-0! z-100 min-w-auto! rounded-lg p-4;
+  }
+
+  /* 헤더: 제목 + 닫기 버튼 */
+  .ec-base-tooltip.discount_layer h3 {
+    @apply text-l6 text-primary mb-1;
+  }
+
+  .ec-base-tooltip.discount_layer .btnClose {
+    @apply absolute top-3.5 right-3.5 size-5 cursor-pointer bg-transparent bg-no-repeat text-[0px] text-transparent;
+    background-image: url('/svg/icon/close.html');
+    background-size: 20px 20px;
+  }
+
+  /* 설명 텍스트 */
+  .ec-base-tooltip.discount_layer > p:not(.info):not(.ec-base-button) {
+    @apply text-c1 text-secondary mb-3;
+  }
+
+  /* 테이블 영역 */
+  .ec-base-tooltip.discount_layer .content {
+    @apply scrollbar-hidden mb-3 max-h-50 overflow-y-auto;
+  }
+
+  .ec-base-tooltip.discount_layer table {
+    @apply w-full border-collapse border-none;
+  }
+
+  /* thead — sr-only */
+  .ec-base-tooltip.discount_layer thead th {
+    @apply sr-only;
+  }
+
+  /* tbody 행 */
+  .ec-base-tooltip.discount_layer tbody tr {
+    @apply border-color-primary border-t;
+  }
+  .ec-base-tooltip.discount_layer tbody tr:first-child {
+    @apply border-t-0;
+  }
+
+  .ec-base-tooltip.discount_layer tbody th,
+  .ec-base-tooltip.discount_layer tbody td {
+    @apply text-c1 text-primary w-auto border-none px-0 py-2 font-normal;
+  }
+
+  .ec-base-tooltip.discount_layer tbody th {
+    @apply pr-3 text-left font-medium whitespace-nowrap;
+  }
+
+  .ec-base-tooltip.discount_layer tbody td.right {
+    @apply text-secondary text-right;
+  }
+
+  /* 안내 문구 */
+  .ec-base-tooltip.discount_layer p.info {
+    @apply text-c2 text-tertiary mb-3;
+  }
+
+  /* 확인 버튼 */
+  .ec-base-tooltip.discount_layer .ec-base-button {
+    @apply m-0 text-center;
+  }
+
+  .ec-base-tooltip.discount_layer .btnStrong {
+    @apply text-c1 text-on-color box-border block h-auto w-full cursor-pointer rounded border-none bg-(--color-text-primary) px-3 py-2;
+  }
+
+  /* .edge (말풍선 꼬리) 숨김 */
+  .ec-base-tooltip.discount_layer .edge {
+    @apply hidden!;
+  }
+}
+
+/* ==========================================================================
+   고른 상품 목록
+   ========================================================================== */
+
+/* table 초기화 */
+#totalProducts table {
+  @apply w-full border-collapse;
+}
+
+#totalProducts:not(:has(tbody.option_products tr.option_product)) {
+  @apply hidden;
+}
+
+/* 옵션 컨테이너 */
+tbody.option_products {
+  @apply flex flex-col gap-2;
+}
+
+/* 각 옵션 행 */
+tbody.option_products tr.option_product {
+  @apply border-color-primary flex flex-wrap items-start gap-x-4 gap-y-2 rounded border p-4;
+}
+
+/* === td1: 상품명 + 수량 === */
+tbody.option_products tr.option_product td:nth-child(1) {
+  @apply order-1 flex min-w-0 flex-1 items-start justify-between gap-2;
+}
+
+/* 상품명/옵션 */
+tbody.option_products tr.option_product td:nth-child(1) p.product {
+  @apply m-0 min-w-0 flex-1;
+  font-size: 0; /* 텍스트 노드 숨기기 */
+}
+
+tbody.option_products tr.option_product td:nth-child(1) p.product strong {
+  @apply text-primary block text-xs leading-[140%] font-normal;
+}
+
+tbody.option_products tr.option_product td:nth-child(1) p.product span {
+  @apply text-secondary block text-sm leading-[140%];
+}
+
+/* 수량 스테퍼 컨테이너 */
+tbody.option_products tr.option_product td:nth-child(1) p:not(.product) {
+  @apply bg-secondary m-0 flex shrink-0 items-center rounded-xs;
+}
+
+/* input: 가운데 */
+tbody.option_products tr.option_product .quantity_opt {
+  @apply order-2 size-7 border-0 p-1 text-center text-sm leading-[140%] font-normal focus:outline-none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+tbody.option_products tr.option_product .quantity_opt::-webkit-inner-spin-button,
+tbody.option_products tr.option_product .quantity_opt::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* - 버튼: 왼쪽 */
+tbody.option_products tr.option_product a.eProductQuantityDownClass {
+  @apply order-1 flex size-7 shrink-0 items-center justify-center no-underline;
+}
+
+/* + 버튼: 오른쪽 */
+tbody.option_products tr.option_product a.eProductQuantityUpClass {
+  @apply order-3 flex size-7 shrink-0 items-center justify-center no-underline;
+}
+
+tbody.option_products tr.option_product .option_box_up,
+tbody.option_products tr.option_product .option_box_down {
+  @apply hidden;
+}
+
+tbody.option_products tr.option_product a.eProductQuantityDownClass::after {
+  content: url('/svg/icon/count_remove.svg');
+}
+
+tbody.option_products tr.option_product a.eProductQuantityUpClass::after {
+  content: url('/svg/icon/count_add_small.svg');
+}
+
+/* === 모바일 HTML: td2=가격, td3=삭제 ===
+   구별: tr에 td:nth-child(2) 안에 .quantity가 없음 */
+
+tbody.option_products tr.option_product:not(:has(> td:nth-child(2) > span.quantity)) td:nth-child(2) {
+  @apply order-3 mt-2 w-full text-left;
+}
+
+tbody.option_products tr.option_product:not(:has(> td:nth-child(2) > span.quantity)) td:nth-child(2) strong {
+  @apply text-sm leading-[140%] font-normal;
+}
+
+tbody.option_products tr.option_product:not(:has(> td:nth-child(2) > span.quantity)) td:nth-child(3) {
+  @apply order-2 self-start;
+}
+
+/* === 데스크탑 HTML: td2=수량+삭제(.quantity), td3.right=가격 ===
+   구별: tr에 td:nth-child(2) > span.quantity 가 있음 */
+
+/* td1: 상품명 — 텍스트 노드 표시 (데스크탑은 <strong> 없음) */
+tbody.option_products tr.option_product:has(> td:nth-child(2) > span.quantity) td:nth-child(1) p.product {
+  font-size: 12px;
+}
+
+tbody.option_products tr.option_product:has(> td:nth-child(2) > span.quantity) td:nth-child(1) p.product br {
+  display: none;
+}
+
+/* td2: 수량+삭제 — row1에 배치 */
+tbody.option_products tr.option_product:has(> td:nth-child(2) > span.quantity) td:nth-child(2) {
+  @apply order-2 flex items-center gap-2;
+}
+
+/* .quantity span: 인라인 width 오버라이드 + stepper 컨테이너 */
+tbody.option_products tr.option_product:has(> td:nth-child(2) > span.quantity) .quantity {
+  @apply bg-secondary flex items-center rounded-xs;
+  width: auto !important;
+  position: static;
+}
+
+/* td3.right: 가격 — row2에 배치 */
+tbody.option_products tr.option_product:has(> td:nth-child(2) > span.quantity) td:nth-child(3) {
+  @apply order-3 mt-2 w-full text-left;
+}
+
+tbody.option_products
+  tr.option_product:has(> td:nth-child(2) > span.quantity)
+  td:nth-child(3)
+  span.ec-front-product-item-price {
+  @apply text-sm leading-[140%] font-normal;
+}
+
+/* 공통: 삭제 버튼 */
+tbody.option_products tr.option_product .option_box_del {
+  @apply hidden;
+}
+
+tbody.option_products tr.option_product a.delete {
+  @apply flex size-6 items-center justify-center no-underline;
+}
+
+tbody.option_products tr.option_product a.delete::after {
+  content: url('/svg/icon/close.svg');
+}
+
+/* ==========================================================================
+   상품 카드 가격 컴포넌트 (product_price.html)
+   {$prd_price_sale} 분리는 product_price.js (정규식)가 처리
+   ========================================================================== */
+
+/* 할인 없음: sale-price가 비어있을 때 판매가를 일반 가격으로 표시 */
+.sale-price:empty {
+  display: none;
+}
+.price-wrapper:has(.sale-price:empty) .original-price {
+  color: var(--color-text-primary) !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}

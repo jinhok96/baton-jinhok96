@@ -5,9 +5,15 @@
     <div class="path">
       <span>현재 위치</span>
       <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/myshop/index.html">마이쇼핑</a></li>
-        <li title="현재 위치"><strong>{$board_name}</strong></li>
+        <li>
+          <a href="/">홈</a>
+        </li>
+        <li>
+          <a href="/myshop/index.html">마이쇼핑</a>
+        </li>
+        <li title="현재 위치">
+          <strong>{$board_name}</strong>
+        </li>
       </ol>
     </div>
 
@@ -24,9 +30,7 @@
 
   <div class="ec-base-table typeList">
     <table border="1">
-      <caption>
-        1:1 맞춤상담 목록
-      </caption>
+      <caption>1:1 맞춤상담 목록</caption>
       <colgroup module="board_listheader_9">
         <col style="width: 70px" />
         <col style="width: 135px" class="{$config.is_category|display}" />
@@ -53,21 +57,31 @@
           <td>{$no}</td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td class="subject left txtBreak">
-            <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}
+            <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+            {$icon_new}{$icon_hit}{$icon_file}
           </td>
           <td>{$member_icon}{$writer}</td>
-          <td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
-          <td><span class="txtNum">{$consult}</span></td>
+          <td class="{$date_display|display}">
+            <span class="txtNum">{$write_date}</span>
+          </td>
+          <td>
+            <span class="txtNum">{$consult}</span>
+          </td>
         </tr>
         <tr style="{$list_bg_color} {$list_char_color}">
           <td>{$no}</td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td class="subject left txtBreak">
-            <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}
+            <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+            {$icon_new}{$icon_hit}{$icon_file}
           </td>
           <td>{$member_icon}{$writer}</td>
-          <td class="{$date_display|display}"><span class="txtNum">{$write_date}</span></td>
-          <td><span class="txtNum">{$consult}</span></td>
+          <td class="{$date_display|display}">
+            <span class="txtNum">{$write_date}</span>
+          </td>
+          <td>
+            <span class="txtNum">{$consult}</span>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -84,8 +98,12 @@
 <div module="board_paging_9" class="ec-base-paginate typeList">
   <a href="{$param_prev}">이전 페이지</a>
   <ol>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
   </ol>
   <a href="{$param_next}">다음 페이지</a>
 </div>
@@ -96,16 +114,7 @@
     <legend>게시물 검색</legend>
     <div class="form">
       {$form.consult} {$form.search_date} {$form.search_key} {$form.search}
-      <a
-        href="#none"
-        class="btnNormal"
-        onclick="
-          {
-            $action_search;
-          }
-        "
-        >찾기</a
-      >
+      <a href="#none" class="btnNormal" onclick="{$action_search}">찾기</a>
     </div>
   </fieldset>
 </div>

@@ -6,9 +6,15 @@
     <div class="path">
       <span>현재 위치</span>
       <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/board/index.html">게시판</a></li>
-        <li title="현재 위치"><strong>{$board_name}</strong></li>
+        <li>
+          <a href="/">홈</a>
+        </li>
+        <li>
+          <a href="/board/index.html">게시판</a>
+        </li>
+        <li title="현재 위치">
+          <strong>{$board_name}</strong>
+        </li>
       </ol>
     </div>
 
@@ -26,36 +32,31 @@
       <div class="head">
         <h3>{$subject}</h3>
         <div class="description">
-          <span class="name"
-            >{$member_icon} {$writer}
-            <span class="{$config.display_ip|display}">(ip:{$ip})</span> {$admin_mileage}</span
-          >
+          <span class="name">
+            {$member_icon} {$writer}
+            <span class="{$config.display_ip|display}">(ip:{$ip})</span>
+            {$admin_mileage}
+          </span>
           <ul class="etcArea">
             <li class="{$config.use_date|display}">
               <span class="txtNum">{$write_date}</span>
             </li>
             <li class="{$config.is_use_recom|display} displaynone">
               <span>추천</span>
-              <span class="txtNum"
-                >{$vote_count}
-                <a
-                  href="#none"
-                  class="btnNormal sizeS"
-                  onclick="
-                    {
-                      $action_vote;
-                    }
-                  "
-                  >추천하기</a
-                ></span
-              >
+              <span class="txtNum">
+                {$vote_count}
+                <a href="#none" class="btnNormal sizeS" onclick="{$action_vote}">추천하기</a>
+              </span>
             </li>
-            <li class="{$config.use_cnt|display}"><span>조회</span> <span class="txtNum">{$hit_count}</span></li>
+            <li class="{$config.use_cnt|display}">
+              <span>조회</span>
+
+              <span class="txtNum">{$hit_count}</span>
+            </li>
             <li class="{$config.is_use_point|display}">
               <img
                 src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-                alt="{$point_count}점"
-              />
+                alt="{$point_count}점" />
             </li>
           </ul>
         </div>
@@ -72,66 +73,27 @@
     <div class="ec-base-button gBottom gBreak">
       <span class="gLeft">
         <span class="{$config.is_admin|display}">
-          <a
-            href="#none"
-            onclick="
-              {
-                $action_post;
-              }
-            "
-            class="btnNormalFix sizeS admin {$config.is_post|display}"
-            >{$admin_publish_message}</a
-          >
-          <a
-            href="#none"
-            onclick="
-              {
-                $action_post;
-              }
-            "
-            class="btnNormalFix sizeS admin {$config.not_post|display}"
-            >{$not_publish_message}</a
-          >
-          <a
-            href="#none"
-            onclick="
-              {
-                $action_spam;
-              }
-            "
-            class="btnNormalFix sizeS {$is_global_display|display}"
-            >스팸신고</a
-          >
-          <a
-            href="#none"
-            onclick="
-              {
-                $action_spam_cancle;
-              }
-            "
-            class="btnNormalFix sizeS {$is_global_display|display}"
-            >스팸해제</a
-          >
+          <a href="#none" onclick="{$action_post}" class="btnNormalFix sizeS admin {$config.is_post|display}">
+            {$admin_publish_message}
+          </a>
+          <a href="#none" onclick="{$action_post}" class="btnNormalFix sizeS admin {$config.not_post|display}">
+            {$not_publish_message}
+          </a>
+          <a href="#none" onclick="{$action_spam}" class="btnNormalFix sizeS {$is_global_display|display}">스팸신고</a>
+          <a href="#none" onclick="{$action_spam_cancle}" class="btnNormalFix sizeS {$is_global_display|display}">
+            스팸해제
+          </a>
         </span>
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_delete;
-            }
-          "
-          class="btnNormalFix sizeM {$delete_button_auth|display}"
-          >삭제</a
-        >
-        <a href="/board/product/modify.html{$param_modify}" class="btnNormalFix sizeM {$modify_button_auth|display}"
-          >수정</a
-        >
+        <a href="#none" onclick="{$action_delete}" class="btnNormalFix sizeM {$delete_button_auth|display}">삭제</a>
+        <a href="/board/product/modify.html{$param_modify}" class="btnNormalFix sizeM {$modify_button_auth|display}">
+          수정
+        </a>
       </span>
       <span class="gRight gBreak">
         <a href="{$link_board_list}" class="btnNormalFix sizeM">목록</a>
-        <a href="/board/product/reply.html{$param_reply}" class="btnSubmitFix sizeM {$reply_button_auth|display}"
-          >답변쓰기</a
-        >
+        <a href="/board/product/reply.html{$param_reply}" class="btnSubmitFix sizeM {$reply_button_auth|display}">
+          답변쓰기
+        </a>
       </span>
     </div>
   </div>
@@ -149,61 +111,46 @@
         <div class="commentTop">
           <strong class="name">{$checkbox} {$member_icon} {$comment_name}</strong>
           <span class="date">{$comment_write_date}</span>
-          <span class="grade {$config.is_use_point|display}"
-            ><img
+          <span class="grade {$config.is_use_point|display}">
+            <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$comment_point_count}.svg"
-              alt="{$comment_point_count}점"
-          /></span>
+              alt="{$comment_point_count}점" />
+          </span>
         </div>
         <div class="comment">
-          <span class="{$is_spam_display|display}"
-            ><img src="//img.echosting.cafe24.com/skin/skin/board/ico_spam.gif" alt="스팸글"
-          /></span>
+          <span class="{$is_spam_display|display}">
+            <img src="//img.echosting.cafe24.com/skin/skin/board/ico_spam.gif" alt="스팸글" />
+          </span>
           {$comment_icon_lock} {$comment_content}
         </div>
         <div class="formGroup">
           <button
             type="button"
             class="btnNormal sizeS typeReplyList eReply {$comment_reply_list_display|display}"
-            onclick="
-              {
-                $action_comment_view;
-              }
-            "
-          >
-            댓글<span class="number">{$comment_reply_count}</span><i aria-hidden="true" class="icon icoArrowBottom"></i>
+            onclick="{$action_comment_view}">
+            댓글
+            <span class="number">{$comment_reply_count}</span>
+            <i aria-hidden="true" class="icon icoArrowBottom"></i>
           </button>
           <span class="button">
             <a
               href="javascript:;"
               class="btnNormal sizeS {$comment_modify_display|display}"
-              onclick="
-                {
-                  $action_comment_update;
-                }
-              "
-              >수정</a
-            >
+              onclick="{$action_comment_update}">
+              수정
+            </a>
             <a
               href="javascript:;"
               class="btnNormal sizeS {$comment_delete_display|display}"
-              onclick="
-                {
-                  $action_comment_delete;
-                }
-              "
-              >삭제</a
-            >
+              onclick="{$action_comment_delete}">
+              삭제
+            </a>
             <a
               href="javascript:;"
-              onclick="
-                {
-                  $action_comment_reply;
-                }
-              "
-              class="btnNormal sizeS {$comment_reply_display|display}"
-              >쓰기</a
-            >
+              onclick="{$action_comment_reply}"
+              class="btnNormal sizeS {$comment_reply_display|display}">
+              쓰기
+            </a>
           </span>
         </div>
       </li>
@@ -214,58 +161,43 @@
           <span class="grade {$config.is_use_point|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$comment_point_count}.svg"
-              alt="{$comment_point_count}점"
-          /></span>
+              alt="{$comment_point_count}점" />
+          </span>
         </div>
         <div class="comment">
-          <span class="{$is_spam_display|display}"
-            ><img src="//img.echosting.cafe24.com/skin/skin/board/ico_spam.gif" alt="스팸글"
-          /></span>
+          <span class="{$is_spam_display|display}">
+            <img src="//img.echosting.cafe24.com/skin/skin/board/ico_spam.gif" alt="스팸글" />
+          </span>
           {$comment_icon_lock} {$comment_content}
         </div>
         <div class="formGroup">
           <button
             type="button"
             class="btnNormal sizeS typeReplyList eReply {$comment_reply_list_display|display}"
-            onclick="
-              {
-                $action_comment_view;
-              }
-            "
-          >
-            댓글<span class="number">{$comment_reply_count}</span><i aria-hidden="true" class="icon icoArrowBottom"></i>
+            onclick="{$action_comment_view}">
+            댓글
+            <span class="number">{$comment_reply_count}</span>
+            <i aria-hidden="true" class="icon icoArrowBottom"></i>
           </button>
           <span class="button">
             <a
               href="javascript:;"
               class="btnNormal sizeS {$comment_modify_display|display}"
-              onclick="
-                {
-                  $action_comment_update;
-                }
-              "
-              >수정</a
-            >
+              onclick="{$action_comment_update}">
+              수정
+            </a>
             <a
               href="javascript:;"
               class="btnNormal sizeS {$comment_delete_display|display}"
-              onclick="
-                {
-                  $action_comment_delete;
-                }
-              "
-              >삭제</a
-            >
+              onclick="{$action_comment_delete}">
+              삭제
+            </a>
             <a
               href="javascript:;"
-              onclick="
-                {
-                  $action_comment_reply;
-                }
-              "
-              class="btnNormal sizeS {$comment_reply_display|display}"
-              >쓰기</a
-            >
+              onclick="{$action_comment_reply}"
+              class="btnNormal sizeS {$comment_reply_display|display}">
+              쓰기
+            </a>
           </span>
         </div>
       </li>
@@ -273,26 +205,10 @@
 
     <div class="ec-base-button spam {$config.is_admin|display}">
       <span class="gLeft">
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_spam;
-            }
-          "
-          class="btnNormalFix sizeS {$is_global_display|display}"
-          >스팸신고</a
-        >
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_spam_cancle;
-            }
-          "
-          class="btnNormalFix sizeS {$is_global_display|display}"
-          >스팸해제</a
-        >
+        <a href="#none" onclick="{$action_spam}" class="btnNormalFix sizeS {$is_global_display|display}">스팸신고</a>
+        <a href="#none" onclick="{$action_spam_cancle}" class="btnNormalFix sizeS {$is_global_display|display}">
+          스팸해제
+        </a>
       </span>
     </div>
   </div>
@@ -300,8 +216,12 @@
   <div module="board_commentpaging_1002" class="ec-base-paginate typeList">
     <a href="{$param_prev}">이전 페이지</a>
     <ol>
-      <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-      <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+      <li>
+        <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+      </li>
+      <li>
+        <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+      </li>
     </ol>
     <a href="{$param_next}">다음 페이지</a>
   </div>
@@ -323,26 +243,8 @@
               <label>{$form.secure}비밀댓글</label>
             </span>
             <span class="submit">
-              <a
-                href="#none"
-                class="btnNormal sizeM"
-                onclick="
-                  {
-                    $action_comment_cancel;
-                  }
-                "
-                >취소</a
-              >
-              <a
-                href="#none"
-                class="btnSubmit sizeM"
-                onclick="
-                  {
-                    $action_comment_update;
-                  }
-                "
-                >수정</a
-              >
+              <a href="#none" class="btnNormal sizeM" onclick="{$action_comment_cancel}">취소</a>
+              <a href="#none" class="btnSubmit sizeM" onclick="{$action_comment_update}">수정</a>
             </span>
           </span>
         </div>
@@ -354,26 +256,8 @@
     <p>
       {$form.secure_password}
       <span>
-        <a
-          href="#none"
-          class="btnNormal"
-          onclick="
-            {
-              $action_secret_submit;
-            }
-          "
-          >확인</a
-        >
-        <a
-          href="#none"
-          class="btnNormal"
-          onclick="
-            {
-              $action_secret_cancel;
-            }
-          "
-          >취소</a
-        >
+        <a href="#none" class="btnNormal" onclick="{$action_secret_submit}">확인</a>
+        <a href="#none" class="btnNormal" onclick="{$action_secret_cancel}">취소</a>
       </span>
     </p>
   </div>
@@ -401,19 +285,10 @@
               <span class="secret {$comment_secret_display|display}">
                 <label>{$form.secure}비밀댓글</label>
               </span>
-              <span class="ec-base-help {$password_rule_help_display|display}"
-                >영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</span
-              >
-              <a
-                href="#none"
-                onclick="
-                  {
-                    $action_comment_insert;
-                  }
-                "
-                class="btnSubmit {$comment_button|display}"
-                >등록</a
-              >
+              <span class="ec-base-help {$password_rule_help_display|display}">
+                영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자
+              </span>
+              <a href="#none" onclick="{$action_comment_insert}" class="btnSubmit {$comment_button|display}">등록</a>
             </span>
           </div>
         </div>
@@ -455,19 +330,12 @@
               <span class="secret {$comment_secret_display|display}">
                 <label>{$form.secure}비밀댓글</label>
               </span>
-              <span class="ec-base-help {$password_rule_help_display|display}"
-                >영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</span
-              >
-              <a
-                href="#none"
-                onclick="
-                  {
-                    $action_comment_insert;
-                  }
-                "
-                class="btnSubmit sizeM {$comment_button|display}"
-                >등록</a
-              >
+              <span class="ec-base-help {$password_rule_help_display|display}">
+                영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자
+              </span>
+              <a href="#none" onclick="{$action_comment_insert}" class="btnSubmit sizeM {$comment_button|display}">
+                등록
+              </a>
             </span>
           </div>
         </div>
@@ -492,12 +360,18 @@
   <!--@css(/css/module/board/movement.css)-->
   <ul>
     <li class="prev {$prev_display|display}">
-      <strong>이전<i aria-hidden="true" class="icon icoArrowTop"></i></strong
-      ><a href="{$link_board_detail_prev}">{$prev_subject}</a>
+      <strong>
+        이전
+        <i aria-hidden="true" class="icon icoArrowTop"></i>
+      </strong>
+      <a href="{$link_board_detail_prev}">{$prev_subject}</a>
     </li>
     <li class="next {$next_display|display}">
-      <strong>다음<i aria-hidden="true" class="icon icoArrowBottom"></i></strong
-      ><a href="{$link_board_detail_next}">{$next_subject}</a>
+      <strong>
+        다음
+        <i aria-hidden="true" class="icon icoArrowBottom"></i>
+      </strong>
+      <a href="{$link_board_detail_next}">{$next_subject}</a>
     </li>
   </ul>
 </div>
@@ -510,26 +384,8 @@
     -->
   <span class="gColumn">{$board_function_selectbox}</span>
   <span class="gColumn">
-    <a
-      href="#none"
-      class="btnNormal sizeS"
-      onclick="
-        {
-          $action_article_move;
-        }
-      "
-      >{$article_move}</a
-    >
-    <a
-      href="#none"
-      class="btnNormal sizeS"
-      onclick="
-        {
-          $action_article_copy;
-        }
-      "
-      >{$article_copy}</a
-    >
+    <a href="#none" class="btnNormal sizeS" onclick="{$action_article_move}">{$article_move}</a>
+    <a href="#none" class="btnNormal sizeS" onclick="{$action_article_copy}">{$article_copy}</a>
   </span>
   <span class="ec-base-help">{$board_function_help|replace:*,}</span>
 </div>

@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>대량구매문의 관리</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>대량구매문의 관리</strong>
+    </li>
   </ol>
 </div>
 
@@ -15,13 +21,15 @@
 
 <div module="board_InquiryHead" class="ec-base-box typeProduct">
   <p class="thumbnail">
-    <a href="/product/detail.html{$param_product}"
-      ><img src="{$product_img}" alt="" onerror="this.src = '//img.echosting.cafe24.com/thumb/75x75.gif'"
-    /></a>
+    <a href="/product/detail.html{$param_product}">
+      <img src="{$product_img}" alt="" onerror="this.src = '//img.echosting.cafe24.com/thumb/75x75.gif'" />
+    </a>
   </p>
   <div class="information">
     {$user_icon}{$new_icon}{$recommend_icon}{$soldout_icon}{$mileage_icon}
-    <h3><a href="/product/detail.html{$param_product}">{$product_name}</a></h3>
+    <h3>
+      <a href="/product/detail.html{$param_product}">{$product_name}</a>
+    </h3>
     <p class="price">{$product_price} {$product_tax_type_text}</p>
     <p class="button">
       <a href="/product/detail.html{$param_product}" class="btnNormal sizeS" title="새창으로 이동">상품상세보기</a>
@@ -37,9 +45,7 @@
     -->
   <div class="ec-base-table gLayoutFixed">
     <table border="1">
-      <caption>
-        대량구매문의 상세
-      </caption>
+      <caption>대량구매문의 상세</caption>
       <colgroup>
         <col style="width: 130px" />
         <col style="width: auto" />
@@ -88,8 +94,12 @@
         <tr module="board_inquiryViewFile_1" class="attach">
           <th scope="row">첨부파일</th>
           <td colspan="3">
-            <p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
-            <p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+            <p>
+              <a href="{$inquery_file_path}">{$inquiry_file}</a>
+            </p>
+            <p>
+              <a href="{$inquery_file_path}">{$inquiry_file}</a>
+            </p>
           </td>
         </tr>
       </tbody>
@@ -99,9 +109,7 @@
   <div class="{$display_answer|display}">
     <div class="ec-base-table">
       <table border="1">
-        <caption>
-          대량구매문의 답변
-        </caption>
+        <caption>대량구매문의 답변</caption>
         <colgroup>
           <col style="width: 130px" />
           <col style="width: auto" />
@@ -121,8 +129,12 @@
           <tr module="myshop_inquiryViewFile_2" class="attach">
             <th scope="row">첨부파일</th>
             <td>
-              <p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
-              <p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+              <p>
+                <a href="{$inquery_file_path}">{$inquiry_file}</a>
+              </p>
+              <p>
+                <a href="{$inquery_file_path}">{$inquiry_file}</a>
+              </p>
             </td>
           </tr>
         </tbody>
@@ -137,18 +149,11 @@
   </div>
 
   <div module="myshop_inquiryButton" class="ec-base-button gBottom">
-    <span class="gLeft"><a href="/board/inquiry/list.html{$list_param}" class="btnNormalFix sizeM">목록</a></span>
+    <span class="gLeft">
+      <a href="/board/inquiry/list.html{$list_param}" class="btnNormalFix sizeM">목록</a>
+    </span>
     <span class="gRight">
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_delete;
-          }
-        "
-        class="btnNormalFix sizeM"
-        >삭제</a
-      >
+      <a href="#none" onclick="{$action_delete}" class="btnNormalFix sizeM">삭제</a>
       <a href="/board/inquiry/modify.html{$modify_param}" class="btnSubmitFix sizeM">수정</a>
     </span>
   </div>

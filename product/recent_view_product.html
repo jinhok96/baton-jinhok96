@@ -2,8 +2,12 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li title="현재 위치"><strong>최근 본 상품</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li title="현재 위치">
+      <strong>최근 본 상품</strong>
+    </li>
   </ol>
 </div>
 
@@ -22,11 +26,15 @@
         <div class="ec-base-prdInfo">
           <div class="prdBox">
             <div class="thumbnail">
-              <a href="{$link_product_detail}"><img src="{$image_medium}" alt="" width="83" height="83" /></a>
+              <a href="{$link_product_detail}">
+                <img src="{$image_medium}" alt="" width="83" height="83" />
+              </a>
               <span class="wishIcon">{$list_wish_icon}</span>
             </div>
             <div class="description">
-              <strong class="prdName"><a href="{$link_product_detail}">{$product_name}</a></strong>
+              <strong class="prdName">
+                <a href="{$link_product_detail}">{$product_name}</a>
+              </strong>
               <ul module="product_setproduct" class="item">
                 <li>{$product_name}</li>
                 <li>{$product_name}</li>
@@ -35,7 +43,10 @@
                 <li class="{$strike_custom_price} {$custom_price_display|display}">
                   <strong>{$product_custom}</strong>
                 </li>
-                <li class="{$discount}"><strong class="txtEm">{$price}</strong>{$product_tax_type_text}</li>
+                <li class="{$discount}">
+                  <strong class="txtEm">{$price}</strong>
+                  {$product_tax_type_text}
+                </li>
                 <li class="{$product_sale_price_display|display}">{$product_sale_price}</li>
               </ul>
               <ul class="info">
@@ -44,26 +55,10 @@
             </div>
             <div class="buttonGroup">
               <span class="gRight">
-                <button
-                  type="button"
-                  class="btnNormal sizeS {$disp_basket|display}"
-                  onclick="
-                    {
-                      $act_basket;
-                    }
-                  "
-                >
+                <button type="button" class="btnNormal sizeS {$disp_basket|display}" onclick="{$act_basket}">
                   장바구니
                 </button>
-                <button
-                  type="button"
-                  class="btnSubmit sizeS {$disp_order|display}"
-                  onclick="
-                    {
-                      $act_order;
-                    }
-                  "
-                >
+                <button type="button" class="btnSubmit sizeS {$disp_order|display}" onclick="{$act_order}">
                   주문하기
                 </button>
               </span>
@@ -71,18 +66,30 @@
           </div>
           <ul class="optionSelect" module="product_mainoption">
             <li>
-              <div class="name"><span class="optionDesc">{$option_name}</span> {$form.option}</div>
+              <div class="name">
+                <span class="optionDesc">{$option_name}</span>
+                {$form.option}
+              </div>
             </li>
             <li>
-              <div class="name"><span class="optionDesc">{$option_name}</span> {$form.option}</div>
+              <div class="name">
+                <span class="optionDesc">{$option_name}</span>
+                {$form.option}
+              </div>
             </li>
           </ul>
           <ul class="optionSelect" module="product_addoption">
             <li>
-              <div class="name"><span class="optionDesc">{$add_option_name}</span> {$form.add_option}</div>
+              <div class="name">
+                <span class="optionDesc">{$add_option_name}</span>
+                {$form.add_option}
+              </div>
             </li>
             <li>
-              <div class="name"><span class="optionDesc">{$add_option_name}</span> {$form.add_option}</div>
+              <div class="name">
+                <span class="optionDesc">{$add_option_name}</span>
+                {$form.add_option}
+              </div>
             </li>
           </ul>
           <button type="button" class="btnDelete {$class_del}" href="#none" rel="{$rel_del}">삭제</button>
@@ -92,11 +99,15 @@
         <div class="ec-base-prdInfo">
           <div class="prdBox">
             <div class="thumbnail">
-              <a href="{$link_product_detail}"><img src="{$image_medium}" alt="" width="83" height="83" /></a>
+              <a href="{$link_product_detail}">
+                <img src="{$image_medium}" alt="" width="83" height="83" />
+              </a>
               <span class="wishIcon">{$list_wish_icon}</span>
             </div>
             <div class="description">
-              <strong class="prdName"><a href="{$link_product_detail}">{$product_name}</a></strong>
+              <strong class="prdName">
+                <a href="{$link_product_detail}">{$product_name}</a>
+              </strong>
               <ul module="product_setproduct" class="item">
                 <li>{$product_name}</li>
                 <li>{$product_name}</li>
@@ -105,7 +116,10 @@
                 <li class="{$strike_custom_price} {$custom_price_display|display}">
                   <strong>{$product_custom}</strong>
                 </li>
-                <li class="{$discount}"><strong class="txtEm">{$price}</strong>{$product_tax_type_text}</li>
+                <li class="{$discount}">
+                  <strong class="txtEm">{$price}</strong>
+                  {$product_tax_type_text}
+                </li>
                 <li class="{$product_sale_price_display|display}">{$product_sale_price}</li>
               </ul>
               <ul class="info">
@@ -114,26 +128,10 @@
             </div>
             <div class="buttonGroup">
               <span class="gRight">
-                <button
-                  type="button"
-                  class="btnNormal sizeS {$disp_basket|display}"
-                  onclick="
-                    {
-                      $act_basket;
-                    }
-                  "
-                >
+                <button type="button" class="btnNormal sizeS {$disp_basket|display}" onclick="{$act_basket}">
                   장바구니
                 </button>
-                <button
-                  type="button"
-                  class="btnSubmit sizeS {$disp_order|display}"
-                  onclick="
-                    {
-                      $act_order;
-                    }
-                  "
-                >
+                <button type="button" class="btnSubmit sizeS {$disp_order|display}" onclick="{$act_order}">
                   주문하기
                 </button>
               </span>
@@ -141,18 +139,30 @@
           </div>
           <ul class="optionSelect" module="product_mainoption">
             <li>
-              <div class="name"><span class="optionDesc">{$option_name}</span> {$form.option}</div>
+              <div class="name">
+                <span class="optionDesc">{$option_name}</span>
+                {$form.option}
+              </div>
             </li>
             <li>
-              <div class="name"><span class="optionDesc">{$option_name}</span> {$form.option}</div>
+              <div class="name">
+                <span class="optionDesc">{$option_name}</span>
+                {$form.option}
+              </div>
             </li>
           </ul>
           <ul class="optionSelect" module="product_addoption">
             <li>
-              <div class="name"><span class="optionDesc">{$add_option_name}</span> {$form.add_option}</div>
+              <div class="name">
+                <span class="optionDesc">{$add_option_name}</span>
+                {$form.add_option}
+              </div>
             </li>
             <li>
-              <div class="name"><span class="optionDesc">{$add_option_name}</span> {$form.add_option}</div>
+              <div class="name">
+                <span class="optionDesc">{$add_option_name}</span>
+                {$form.add_option}
+              </div>
             </li>
           </ul>
           <button type="button" class="btnDelete {$class_del}" href="#none" rel="{$rel_del}">삭제</button>
@@ -166,11 +176,21 @@
     <a href="{$param_first}" class="first">첫 페이지</a>
     <a href="{$param_before}">이전 페이지</a>
     <ol>
-      <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-      <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-      <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-      <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-      <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+      <li>
+        <a href="{$param}" class="{$param_class}">{$no}</a>
+      </li>
+      <li>
+        <a href="{$param}" class="{$param_class}">{$no}</a>
+      </li>
+      <li>
+        <a href="{$param}" class="{$param_class}">{$no}</a>
+      </li>
+      <li>
+        <a href="{$param}" class="{$param_class}">{$no}</a>
+      </li>
+      <li>
+        <a href="{$param}" class="{$param_class}">{$no}</a>
+      </li>
     </ol>
     <a href="{$param_next}">다음 페이지</a>
     <a href="{$param_last}" class="last">마지막 페이지</a>

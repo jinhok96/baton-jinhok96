@@ -2,8 +2,12 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이 쇼핑</a></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이 쇼핑</a>
+    </li>
     <li title="현재 위치">적립금</li>
   </ol>
 </div>
@@ -17,21 +21,47 @@
 
     <div module="myshop_summary" class="ec-base-box gHalf">
       <ul>
-        <li><strong class="title">총 {$mileage_name}</strong> <strong class="data">{$total_mileage}</strong></li>
-        <li><strong class="title">사용가능 {$mileage_name}</strong> <strong class="data">{$avail_mileage}</strong></li>
-        <li><strong class="title">사용된 {$mileage_name}</strong> <span class="data">{$used_mileage}</span></li>
+        <li>
+          <strong class="title">총 {$mileage_name}</strong>
+
+          <strong class="data">{$total_mileage}</strong>
+        </li>
+        <li>
+          <strong class="title">사용가능 {$mileage_name}</strong>
+
+          <strong class="data">{$avail_mileage}</strong>
+        </li>
+        <li>
+          <strong class="title">사용된 {$mileage_name}</strong>
+
+          <span class="data">{$used_mileage}</span>
+        </li>
       </ul>
       <ul>
-        <li><strong class="title">미가용 {$mileage_name}</strong> <span class="data">{$unavail_mileage}</span></li>
-        <li><strong class="title">환불예정 {$mileage_name}</strong> <span class="data">{$refunded_mileage}</span></li>
+        <li>
+          <strong class="title">미가용 {$mileage_name}</strong>
+
+          <span class="data">{$unavail_mileage}</span>
+        </li>
+        <li>
+          <strong class="title">환불예정 {$mileage_name}</strong>
+
+          <span class="data">{$refunded_mileage}</span>
+        </li>
       </ul>
     </div>
 
     <div class="ec-base-tab typeNav">
       <ul class="menu">
-        <li><a href="/myshop/mileage/historyList.html">적립내역보기</a></li>
-        <li class="selected"><a href="/myshop/mileage/unavailList.html">미가용적립내역보기</a></li>
-        <li><a href="/myshop/mileage/couponList.html">미가용쿠폰/회원등급적립내역</a></li>
+        <li>
+          <a href="/myshop/mileage/historyList.html">적립내역보기</a>
+        </li>
+        <li class="selected">
+          <a href="/myshop/mileage/unavailList.html">미가용적립내역보기</a>
+        </li>
+        <li>
+          <a href="/myshop/mileage/couponList.html">미가용쿠폰/회원등급적립내역</a>
+        </li>
       </ul>
     </div>
     <div module="myshop_unavailList">
@@ -44,15 +74,13 @@
         <div class="item">
           <h3>
             <span class="date" title="주문날짜">{$order_date}</span>
-            <span class="number" title="관련주문번호"
-              ><a href="/myshop/order/detail.html?order_id={$order_id}">({$order_id})</a></span
-            >
+            <span class="number" title="관련주문번호">
+              <a href="/myshop/order/detail.html?order_id={$order_id}">({$order_id})</a>
+            </span>
           </h3>
           <div class="ec-base-table gClearBorderTop">
             <table border="1">
-              <caption>
-                적립금
-              </caption>
+              <caption>적립금</caption>
               <colgroup>
                 <col style="width: 120px" />
                 <col style="width: auto" />
@@ -63,7 +91,11 @@
                   <td>{$product_mileage}</td>
                 </tr>
                 <tr>
-                  <th scope="row">사용가능<br />예정일</th>
+                  <th scope="row">
+                    사용가능
+                    <br />
+                    예정일
+                  </th>
                   <td>{$can_use_date}</td>
                 </tr>
                 <tr>
@@ -77,15 +109,13 @@
         <div class="item">
           <h3>
             <span class="date" title="주문날짜">{$order_date}</span>
-            <span class="number" title="관련주문번호"
-              ><a href="/myshop/order/detail.html?order_id={$order_id}">({$order_id})</a></span
-            >
+            <span class="number" title="관련주문번호">
+              <a href="/myshop/order/detail.html?order_id={$order_id}">({$order_id})</a>
+            </span>
           </h3>
           <div class="ec-base-table gClearBorderTop">
             <table border="1">
-              <caption>
-                적립금
-              </caption>
+              <caption>적립금</caption>
               <colgroup>
                 <col style="width: 120px" />
                 <col style="width: auto" />
@@ -96,7 +126,11 @@
                   <td>{$product_mileage}</td>
                 </tr>
                 <tr>
-                  <th scope="row">사용가능<br />예정일</th>
+                  <th scope="row">
+                    사용가능
+                    <br />
+                    예정일
+                  </th>
                   <td>{$can_use_date}</td>
                 </tr>
                 <tr>
@@ -116,16 +150,36 @@
     <a href="{$first_url}" class="first">첫 페이지</a>
     <a href="{$prev_url}">이전 페이지</a>
     <ol>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
     </ol>
     <a href="{$next_url}">다음 페이지</a>
     <a href="{$last_url}" class="last">마지막 페이지</a>

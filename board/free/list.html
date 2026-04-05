@@ -5,9 +5,15 @@
     <div class="path">
       <span>현재 위치</span>
       <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/board/index.html">게시판</a></li>
-        <li title="현재 위치"><strong>{$board_name}</strong></li>
+        <li>
+          <a href="/">홈</a>
+        </li>
+        <li>
+          <a href="/board/index.html">게시판</a>
+        </li>
+        <li title="현재 위치">
+          <strong>{$board_name}</strong>
+        </li>
       </ol>
     </div>
 
@@ -19,8 +25,12 @@
 
   <div module="Layout_BoardInfo" class="ec-base-tab typeMenu gScroll">
     <ul class="menu">
-      <li><a href="{$board_list_url}" class="button">{$board_name}</a></li>
-      <li><a href="{$board_list_url}" class="button">{$board_name}</a></li>
+      <li>
+        <a href="{$board_list_url}" class="button">{$board_name}</a>
+      </li>
+      <li>
+        <a href="{$board_list_url}" class="button">{$board_name}</a>
+      </li>
     </ul>
   </div>
 
@@ -31,9 +41,7 @@
 
   <div class="ec-base-table typeList gBorderClear">
     <table border="1">
-      <caption>
-        게시판 목록
-      </caption>
+      <caption>게시판 목록</caption>
       <colgroup module="board_listheader_1002">
         <col style="width: 80px" />
         <col style="width: auto" />
@@ -61,43 +69,59 @@
                     $deny_access_url = /index.html
                 -->
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk">{$checkbox}<span class="RW">{$notice_icon}</span></td>
+          <td class="chk">
+            {$checkbox}
+            <span class="RW">{$notice_icon}</span>
+          </td>
           <td class="subject left txtBreak">
             <span class="badge">{$notice_icon}</span>
-            <strong
-              >{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a
-              >{$icon_file}<span class="comment">{$comment_count}</span>{$icon_mobile}{$icon_new}{$icon_hit}</strong
-            >
+            <strong>
+              {$icon_re}{$icon_lock}
+              <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+              {$icon_file}
+              <span class="comment">{$comment_count}</span>
+              {$icon_mobile}{$icon_new}{$icon_hit}
+            </strong>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk">{$checkbox}<span class="RW">{$notice_icon}</span></td>
+          <td class="chk">
+            {$checkbox}
+            <span class="RW">{$notice_icon}</span>
+          </td>
           <td class="subject left txtBreak">
             <span class="badge">{$notice_icon}</span>
-            <strong
-              >{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a
-              >{$icon_file}<span class="comment">{$comment_count}</span>{$icon_mobile}{$icon_new}{$icon_hit}</strong
-            >
+            <strong>
+              {$icon_re}{$icon_lock}
+              <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+              {$icon_file}
+              <span class="comment">{$comment_count}</span>
+              {$icon_mobile}{$icon_new}{$icon_hit}
+            </strong>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
       </tbody>
@@ -108,43 +132,59 @@
                     $deny_access_url = /index.html
                 -->
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk">{$checkbox}<span class="RW">{$fixed_icon}</span></td>
+          <td class="chk">
+            {$checkbox}
+            <span class="RW">{$fixed_icon}</span>
+          </td>
           <td class="subject left txtBreak">
             <span class="badge">{$fixed_icon}</span>
-            <strong
-              >{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a
-              >{$icon_file}<span class="comment">{$comment_count}</span>{$icon_new}{$icon_hit}</strong
-            >
+            <strong>
+              {$icon_re}{$icon_lock}
+              <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+              {$icon_file}
+              <span class="comment">{$comment_count}</span>
+              {$icon_new}{$icon_hit}
+            </strong>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk">{$checkbox}<span class="RW">{$fixed_icon}</span></td>
+          <td class="chk">
+            {$checkbox}
+            <span class="RW">{$fixed_icon}</span>
+          </td>
           <td class="subject left txtBreak">
             <span class="badge">{$fixed_icon}</span>
-            <strong
-              >{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a
-              >{$icon_file}<span class="comment">{$comment_count}</span>{$icon_new}{$icon_hit}</strong
-            >
+            <strong>
+              {$icon_re}{$icon_lock}
+              <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+              {$icon_file}
+              <span class="comment">{$comment_count}</span>
+              {$icon_new}{$icon_hit}
+            </strong>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
       </tbody>
@@ -154,41 +194,53 @@
                     $deny_access_url = /index.html
                 -->
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk no">{$checkbox}<span class="RW">{$no}</span></td>
+          <td class="chk no">
+            {$checkbox}
+            <span class="RW">{$no}</span>
+          </td>
           <td class="subject left txtBreak">
-            {$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>{$icon_file}<span
-              class="comment"
-              >{$comment_count}</span
-            >{$icon_mobile}{$icon_new}{$icon_hit}
+            {$icon_re}{$icon_lock}
+            <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+            {$icon_file}
+            <span class="comment">{$comment_count}</span>
+            {$icon_mobile}{$icon_new}{$icon_hit}
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk no">{$checkbox}<span class="RW">{$no}</span></td>
+          <td class="chk no">
+            {$checkbox}
+            <span class="RW">{$no}</span>
+          </td>
           <td class="subject left txtBreak">
-            {$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>{$icon_file}<span
-              class="comment"
-              >{$comment_count}</span
-            >{$icon_mobile}{$icon_new}{$icon_hit}
+            {$icon_re}{$icon_lock}
+            <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+            {$icon_file}
+            <span class="comment">{$comment_count}</span>
+            {$icon_mobile}{$icon_new}{$icon_hit}
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
       </tbody>
@@ -206,16 +258,7 @@
       <legend>게시물 검색</legend>
       <div class="form">
         {$form.search_date} {$form.search_key} {$form.search}
-        <a
-          href="#none"
-          class="btnNormal"
-          onclick="
-            {
-              $action_search;
-            }
-          "
-          >찾기</a
-        >
+        <a href="#none" class="btnNormal" onclick="{$action_search}">찾기</a>
       </div>
     </fieldset>
   </div>
@@ -224,8 +267,12 @@
 <div module="board_paging_1002" class="ec-base-paginate typeList">
   <a href="{$param_prev}">이전 페이지</a>
   <ol>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
   </ol>
   <a href="{$param_next}">다음 페이지</a>
 </div>
@@ -234,44 +281,17 @@
 <div module="board_catemove_1002">
   <!--@css(/css/module/board/catemove.css)-->
   <span class="gColumn">{$board_catemove_selectbox}</span>
-  <span class="gColumn"
-    ><a
-      href="#none"
-      class="btnNormal sizeS"
-      onclick="
-        {
-          $action_category_move;
-        }
-      "
-      >{$category_move}</a
-    ></span
-  >
+  <span class="gColumn">
+    <a href="#none" class="btnNormal sizeS" onclick="{$action_category_move}">{$category_move}</a>
+  </span>
 </div>
 
 <div module="board_function_1002">
   <!--@css(/css/module/board/function.css)-->
   <span class="gColumn">{$board_function_selectbox}</span>
   <span class="gColumn">
-    <a
-      href="#none"
-      class="btnNormal sizeS"
-      onclick="
-        {
-          $action_article_move;
-        }
-      "
-      >{$article_move}</a
-    >
-    <a
-      href="#none"
-      class="btnNormal sizeS"
-      onclick="
-        {
-          $action_article_copy;
-        }
-      "
-      >{$article_copy}</a
-    >
+    <a href="#none" class="btnNormal sizeS" onclick="{$action_article_move}">{$article_move}</a>
+    <a href="#none" class="btnNormal sizeS" onclick="{$action_article_copy}">{$article_copy}</a>
   </span>
   <span class="ec-base-help">{$board_function_help|replace:*,}</span>
 </div>

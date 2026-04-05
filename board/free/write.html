@@ -5,9 +5,15 @@
     <div class="path">
       <span>현재 위치</span>
       <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/board/index.html">게시판</a></li>
-        <li title="현재 위치"><strong>{$board_name}</strong></li>
+        <li>
+          <a href="/">홈</a>
+        </li>
+        <li>
+          <a href="/board/index.html">게시판</a>
+        </li>
+        <li title="현재 위치">
+          <strong>{$board_name}</strong>
+        </li>
       </ol>
     </div>
 
@@ -18,14 +24,12 @@
 
   <div module="board_write_1002">
     <!--
-            $login_page_url = /member/login.html
-            $deny_access_url = /index.html
-        -->
+      $login_page_url = /member/login.html
+      $deny_access_url = /index.html
+    -->
     <div class="ec-base-table typeWrite">
       <table border="1">
-        <caption>
-          글쓰기 폼
-        </caption>
+        <caption>글쓰기 폼</caption>
         <colgroup>
           <col style="width: 190px" />
           <col style="width: auto" />
@@ -34,8 +38,9 @@
           <tr>
             <th scope="row" class="RW">제목</th>
             <td>
-              {$form.board_category}{$form.subject}<span class="ec-base-label">{$form.notice}</span
-              ><span class="ec-base-label">{$form.is_post}</span>
+              {$form.board_category}{$form.subject}
+              <span class="ec-base-label">{$form.notice}</span>
+              <span class="ec-base-label">{$form.is_post}</span>
             </td>
           </tr>
           <tr class="{$config.is_login|display}">
@@ -88,9 +93,9 @@
             <th scope="row">비밀번호</th>
             <td>
               {$form.password}
-              <span class="{$password_rule_help_display|display} txtInfo"
-                >(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</span
-              >
+              <span class="{$password_rule_help_display|display} txtInfo">
+                (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)
+              </span>
             </td>
           </tr>
           <tr class="{$config.use_secret|display}">
@@ -105,12 +110,17 @@
             </td>
           </tr>
           <tr class="agree {$config.is_login|display}">
-            <th scope="row">개인정보 수집 및 <br class="RW" />이용 동의</th>
+            <th scope="row">
+              개인정보 수집 및
+              <br class="RW" />
+              이용 동의
+            </th>
             <td>
               {$form.privacy_agreement}
               <div>
-                <span class="gSpace20">개인정보 수집 및 이용에 동의하십니까?</span
-                ><br class="RMB" />{$form.privacy_agreement_radio}
+                <span class="gSpace20">개인정보 수집 및 이용에 동의하십니까?</span>
+                <br class="RMB" />
+                {$form.privacy_agreement_radio}
               </div>
             </td>
           </tr>
@@ -120,32 +130,14 @@
 
     <div class="ec-base-button gBottom">
       <span class="gLeft RW">
-        <span class="{$config.is_admin|display}"
-          ><a
-            href="#none"
-            class="btnNormalFix sizeM"
-            onclick="
-              {
-                $action_comment_admin;
-              }
-            "
-            >관리자 답변보기</a
-          ></span
-        >
+        <span class="{$config.is_admin|display}">
+          <a href="#none" class="btnNormalFix sizeM" onclick="{$action_comment_admin}">관리자 답변보기</a>
+        </span>
         <a href="{$link_board_list}" class="btnNormalFix sizeS">목록</a>
       </span>
       <span class="gRight">
         <a href="{$link_board_list}" class="btnNormalFix sizeM">취소</a>
-        <a
-          href="#none"
-          class="btnSubmitFix sizeM"
-          onclick="
-            {
-              $action_write;
-            }
-          "
-          >등록</a
-        >
+        <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_write}">등록</a>
       </span>
     </div>
   </div>

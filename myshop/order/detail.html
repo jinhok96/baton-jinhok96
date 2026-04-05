@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>주문상세조회</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>주문상세조회</strong>
+    </li>
   </ol>
 </div>
 
@@ -30,9 +36,7 @@
       <div class="contents">
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              주문정보
-            </caption>
+            <caption>주문정보</caption>
             <colgroup>
               <col class="colOrder" />
               <col style="width: auto" />
@@ -41,12 +45,15 @@
               <tr>
                 <th scope="row">주문번호</th>
                 <td>
-                  {$order.order_id} <span>{$order.order_icon}</span><br /><a
+                  {$order.order_id}
+                  <span>{$order.order_icon}</span>
+                  <br />
+                  <a
                     href="{$order.subscription_invoice_link}"
                     class="btnText {$order.subscription_invoice_order_display|display}"
-                    title="페이지 이동"
-                    >[{$order.subscription_invoice_no}]</a
-                  >
+                    title="페이지 이동">
+                    [{$order.subscription_invoice_no}]
+                  </a>
                 </td>
               </tr>
               <tr>
@@ -77,9 +84,7 @@
       <div class="contents">
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              결제정보
-            </caption>
+            <caption>결제정보</caption>
             <colgroup>
               <col class="colOrder" />
               <col style="width: auto" />
@@ -89,21 +94,14 @@
                 <th scope="row">총 주문금액</th>
                 <td>
                   <span class="gSpace20">
-                    {$total.total_order_price_front_head}<strong>{$total.total_order_price_front}</strong>{$total.total_order_price_front_tail}
-                    <span class="{$total.total_order_price_ref_display|display}"
-                      >{$total.total_order_price_back_head}{$total.total_order_price_back}{$total.total_order_price_back_tail}</span
-                    >
+                    {$total.total_order_price_front_head}
+                    <strong>{$total.total_order_price_front}</strong>
+                    {$total.total_order_price_front_tail}
+                    <span class="{$total.total_order_price_ref_display|display}">
+                      {$total.total_order_price_back_head}{$total.total_order_price_back}{$total.total_order_price_back_tail}
+                    </span>
                   </span>
-                  <a
-                    href="#none"
-                    onclick="
-                      {
-                        $total.total_order_layer_on;
-                      }
-                    "
-                    class="btnNormal sizeS"
-                    >내역보기</a
-                  >
+                  <a href="#none" onclick="{$total.total_order_layer_on}" class="btnNormal sizeS">내역보기</a>
                   <div id="{$total.total_order_layer}" class="totalDetail ec-base-layer typeLayer">
                     <div class="header">
                       <h3>총 주문금액 상세내역</h3>
@@ -112,40 +110,32 @@
                       <p>{$total.price_unit_head}{$total.total_order_price}{$total.price_unit_tail}</p>
                       <ul class="ec-base-desc typeDot gLarge rightDD">
                         <li>
-                          <strong class="term">상품금액</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_product_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">상품금액</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_product_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_vat_price_display|display}">
-                          <strong class="term">부가세</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_vat_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">부가세</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_vat_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li>
-                          <strong class="term">배송비</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_ship_fee}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">배송비</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_ship_fee}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li>
-                          <strong class="term">지역별 배송비</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_local_ship_fee}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">지역별 배송비</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_local_ship_fee}{$total.price_unit_tail}
+                          </span>
                         </li>
                       </ul>
                     </div>
-                    <a
-                      href="#none"
-                      class="btnClose"
-                      onclick="
-                        {
-                          $total.total_order_layer_off;
-                        }
-                      "
-                    ></a>
+                    <a href="#none" class="btnClose" onclick="{$total.total_order_layer_off}"></a>
                   </div>
                 </td>
               </tr>
@@ -154,44 +144,36 @@
               <tr>
                 <th scope="row">총 할인금액</th>
                 <td>
-                  {$total.price_unit_head}<strong class="txt14">{$total.total_addsale_price}</strong
-                  >{$total.price_unit_tail}
+                  {$total.price_unit_head}
+                  <strong class="txt14">{$total.total_addsale_price}</strong>
+                  {$total.price_unit_tail}
                 </td>
               </tr>
               <tr class="{$total.total_coupon_price_display|display}">
                 <th scope="row">쿠폰할인</th>
                 <td>
-                  <span class="gSpace20"
-                    >{$total.price_unit_head}{$total.total_coupon_price}{$total.price_unit_tail}</span
-                  >
+                  <span class="gSpace20">
+                    {$total.price_unit_head}{$total.total_coupon_price}{$total.price_unit_tail}
+                  </span>
                   <a href="#none" class="btnNormal sizeS RW eUsedCouponDetail">내역보기</a>
                 </td>
               </tr>
               <tr class="{$total.total_discountcode_price_display|display}">
                 <th scope="row">할인코드 적용</th>
                 <td>
-                  <span class="gSpace20"
-                    >{$total.price_unit_head}{$total.total_discountcode_price}{$total.price_unit_tail} /
-                    {$total.total_discountcode_price_detail}</span
-                  >
+                  <span class="gSpace20">
+                    {$total.price_unit_head}{$total.total_discountcode_price}{$total.price_unit_tail} /
+                    {$total.total_discountcode_price_detail}
+                  </span>
                 </td>
               </tr>
               <tr class="{$total.total_benefit_price_display|display}">
                 <th scope="row">추가할인금액</th>
                 <td>
-                  <span class="gSpace20"
-                    >{$total.price_unit_head}{$total.total_benefit_price}{$total.price_unit_tail}</span
-                  >
-                  <a
-                    href="#none"
-                    class="btnNormal sizeS"
-                    onclick="
-                      {
-                        $total.total_benefit_layer_on;
-                      }
-                    "
-                    >내역보기</a
-                  >
+                  <span class="gSpace20">
+                    {$total.price_unit_head}{$total.total_benefit_price}{$total.price_unit_tail}
+                  </span>
+                  <a href="#none" class="btnNormal sizeS" onclick="{$total.total_benefit_layer_on}">내역보기</a>
                   <div id="{$total.total_benefit_layer}" class="totalDetail ec-base-layer typeLayer">
                     <div class="header">
                       <h3>추가금액할인 내역보기</h3>
@@ -200,115 +182,105 @@
                       <p>{$total.price_unit_head}{$total.total_benefit_price}{$total.price_unit_tail}</p>
                       <ul class="ec-base-desc typeDot gLarge rightDD">
                         <li class="{$total.total_mobilesale_price_display|display}">
-                          <strong class="term">모바일할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_mobilesale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">모바일할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_mobilesale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_subscriptionpayseqsale_price_display|display}">
-                          <strong class="term">정기배송할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_subscriptionpayseqsale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">정기배송할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_subscriptionpayseqsale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_periodsale_price_display|display}">
-                          <strong class="term">기간할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_periodsale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">기간할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_periodsale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_membersale_price_display|display}">
-                          <strong class="term">회원할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_membersale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">회원할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_membersale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_rebuysale_price_display|display}">
-                          <strong class="term">{$rebuysale_head}재구매할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_rebuysale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">{$rebuysale_head}재구매할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_rebuysale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_paymethodsale_price_display|display}">
-                          <strong class="term">결제수단할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_paymethodsale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">결제수단할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_paymethodsale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_newproductsale_price_display|display}">
-                          <strong class="term">신규상품할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_newproductsale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">신규상품할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_newproductsale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_bulksale_price_display|display}">
-                          <strong class="term">대량구매할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_bulksale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">대량구매할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_bulksale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_pbpsale_price_display|display}">
-                          <strong class="term">어바웃pbp할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_pbpsale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">어바웃pbp할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_pbpsale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_livelinkonsale_price_display|display}">
-                          <strong class="term">바로가기(링콘)할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_livelinkonsale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">바로가기(링콘)할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_livelinkonsale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_membergroupsale_price_display|display}">
-                          <strong class="term">회원등급할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_membergroupsale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">회원등급할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_membergroupsale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_setproductsale_price_display|display}">
-                          <strong class="term">세트할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_setproductsale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">세트할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_setproductsale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.explode_set_product_discount_amount_display|display}">
-                          <strong class="term">세트상품할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.explode_set_product_discount_amount}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">세트상품할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.explode_set_product_discount_amount}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_shipfeesale_price_display|display}">
-                          <strong class="term">배송비할인</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_shipfeesale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">배송비할인</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_shipfeesale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                         <li class="{$total.total_externaladdsale_price_display|display}">
-                          <strong class="term">추가할인(상품)</strong
-                          ><span class="desc"
-                            >{$total.price_unit_head}{$total.total_externaladdsale_price}{$total.price_unit_tail}</span
-                          >
+                          <strong class="term">추가할인(상품)</strong>
+                          <span class="desc">
+                            {$total.price_unit_head}{$total.total_externaladdsale_price}{$total.price_unit_tail}
+                          </span>
                         </li>
                       </ul>
                       <ul
-                        class="ec-base-desc typeDot gLarge rightDD {$total.total_appproductsale_price_display|display}"
-                      >
+                        class="ec-base-desc typeDot gLarge rightDD {$total.total_appproductsale_price_display|display}">
                         {$total.total_appproductsale_price_detail}
                       </ul>
                       <ul class="ec-base-desc typeDot gLarge rightDD {$total.total_appordersale_price_display|display}">
                         {$total.total_appordersale_price_detail}
                       </ul>
                     </div>
-                    <a
-                      href="#none"
-                      class="btnClose"
-                      onclick="
-                        {
-                          $total.total_benefit_layer_off;
-                        }
-                      "
-                      >닫기</a
-                    >
+                    <a href="#none" class="btnClose" onclick="{$total.total_benefit_layer_off}">닫기</a>
                   </div>
                 </td>
               </tr>
@@ -316,7 +288,11 @@
             <tbody class="{$total.total_addpay_summary_display|display}">
               <tr>
                 <th scope="row">총 부가결제금액</th>
-                <td>{$total.price_unit_head}<strong>{$total.total_addpay_price}</strong>{$total.price_unit_tail}</td>
+                <td>
+                  {$total.price_unit_head}
+                  <strong>{$total.total_addpay_price}</strong>
+                  {$total.price_unit_tail}
+                </td>
               </tr>
               <tr class="{$total.mileage_display|display}">
                 <th scope="row">{$mileage_name}</th>
@@ -327,8 +303,11 @@
                 <td>
                   {$total.total_naver_mileage_rate} 적립 /
                   {$total.price_unit_head}{$total.naver_mileage_cash_used}{$total.price_unit_tail} (마일리지
-                  {$total.price_unit_head}<strong>{$total.naver_mileage_used}</strong>{$total.price_unit_tail} + 캐쉬
-                  {$total.price_unit_head}<strong>{$total.naver_cash_used}</strong>{$total.price_unit_tail})
+                  {$total.price_unit_head}
+                  <strong>{$total.naver_mileage_used}</strong>
+                  {$total.price_unit_tail} + 캐쉬 {$total.price_unit_head}
+                  <strong>{$total.naver_cash_used}</strong>
+                  {$total.price_unit_tail})
                 </td>
               </tr>
               <tr class="{$total.deposit_display|display}">
@@ -340,9 +319,7 @@
         </div>
         <div class="ec-base-table total">
           <table border="1">
-            <caption>
-              결제정보
-            </caption>
+            <caption>결제정보</caption>
             <colgroup>
               <col class="colOrder" />
               <col style="width: auto" />
@@ -352,10 +329,11 @@
                 <th scope="row">총 결제금액</th>
                 <td>
                   <span class="txtEm">
-                    <strong>{$payment.price_front_head}{$payment.price_front}</strong>{$payment.price_front_tail}
-                    <span class="{$payment.price_ref_display|display}"
-                      >{$payment.price_back_head}{$payment.price_back}{$payment.price_back_tail}</span
-                    >
+                    <strong>{$payment.price_front_head}{$payment.price_front}</strong>
+                    {$payment.price_front_tail}
+                    <span class="{$payment.price_ref_display|display}">
+                      {$payment.price_back_head}{$payment.price_back}{$payment.price_back_tail}
+                    </span>
                   </span>
                 </td>
               </tr>
@@ -368,21 +346,25 @@
                     <a
                       target="_blank"
                       href="{$payment.bank_url}"
-                      class="btnNormal sizeS {$payment.display_banking|display}"
-                      >인터넷뱅킹 바로가기</a
-                    >
+                      class="btnNormal sizeS {$payment.display_banking|display}">
+                      인터넷뱅킹 바로가기
+                    </a>
                     <a
                       target="_blank"
                       href="{$payment.pay_extra_url}"
                       class="btnNormal sizeS {$payment.paymenturl_display|display}"
-                      id="{$payment.btn_payment_link_id}"
-                      >결제사이트 바로가기</a
-                    >
+                      id="{$payment.btn_payment_link_id}">
+                      결제사이트 바로가기
+                    </a>
                   </p>
                 </td>
               </tr>
               <tr class="{$payment.eguarantee_display|display}">
-                <th scope="row">전자보증보험<br />서비스정보</th>
+                <th scope="row">
+                  전자보증보험
+                  <br />
+                  서비스정보
+                </th>
                 <td>{$payment.eguarantee_detail}</td>
               </tr>
             </tbody>
@@ -395,9 +377,9 @@
       <div class="title">
         <h3>
           주문 상품 정보
-          <span class="order"
-            >(총 {$item_count}개 / {$total.price_unit_head}{$total.total_order_price}{$total.price_unit_tail})</span
-          >
+          <span class="order">
+            (총 {$item_count}개 / {$total.price_unit_head}{$total.total_order_price}{$total.price_unit_tail})
+          </span>
         </h3>
       </div>
       <div class="contents">
@@ -406,46 +388,48 @@
             <div class="ec-base-prdInfo">
               <div class="prdBox">
                 <div class="thumbnail">
-                  <a href="/product/detail.html{$param_product}"
-                    ><img
+                  <a href="/product/detail.html{$param_product}">
+                    <img
                       src="{$thumbnail}"
                       alt="{$product_name_alt}"
                       onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                       width="83"
-                      height="83"
-                  /></a>
+                      height="83" />
+                  </a>
                 </div>
                 <div class="description">
                   <strong class="prdName" title="상품명">{$product_name_link}</strong>
                   <div class="price" title="상품구매금액">
-                    {$product_purchase_price_front_head}<strong>{$product_purchase_price_front}</strong>{$product_purchase_price_front_tail}
-                    <span class="refer {$product_purchase_price_ref_display|display}"
-                      >({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span
-                    >
+                    {$product_purchase_price_front_head}
+                    <strong>{$product_purchase_price_front}</strong>
+                    {$product_purchase_price_front_tail}
+                    <span class="refer {$product_purchase_price_ref_display|display}">
+                      ({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})
+                    </span>
                     <span class="qty">({$quantity}개)</span>
                   </div>
                   <p class="optionGroup {$option_display|display}">{$option_str}</p>
                   <ul class="optionGroup" module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <ul class="info">
                     <li class="{$shipping_company_display|display}">
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a
-                        href="#none"
-                        class="line"
-                        onclick="
-                          {
-                            $shipping_trace_popup;
-                          }
-                        "
-                        >[{$invoice_no}]</a
-                      >
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
-                    <li>배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
+                    <li>
+                      배송 : {$type_all}
+                      <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+                    </li>
                     <li class="{$card_installment_display|display}">무이자할부 상품</li>
                   </ul>
                 </div>
@@ -454,55 +438,34 @@
                 <div class="gLeft">
                   <span class="txtStatus">{$status}</span>
                   <span class="store">{$mobile_store_info}</span>
-                  <span class="{$detail_info_display|display}"
-                    ><a
-                      href="#none"
-                      onclick="
-                        {
-                          $detail_info;
-                        }
-                      "
-                      class="btnText"
-                      >상세정보</a
-                    ></span
-                  >
+                  <span class="{$detail_info_display|display}">
+                    <a href="#none" onclick="{$detail_info}" class="btnText">상세정보</a>
+                  </span>
                 </div>
                 <div class="gRight">
                   <a
                     href="/board/product/write.html{$param_postscript}"
-                    class="btnNormal sizeS {$postscript_display|display}"
-                    >구매후기</a
-                  >
+                    class="btnNormal sizeS {$postscript_display|display}">
+                    구매후기
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_cancel;
-                      }
-                    "
-                    >취소철회</a
-                  >
+                    onclick="{$action_withdraw_cancel}">
+                    취소철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_exchange;
-                      }
-                    "
-                    >교환철회</a
-                  >
+                    onclick="{$action_withdraw_exchange}">
+                    교환철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_return;
-                      }
-                    "
-                    >반품철회</a
-                  >
+                    onclick="{$action_withdraw_return}">
+                    반품철회
+                  </a>
                 </div>
               </div>
             </div>
@@ -510,46 +473,48 @@
             <div class="ec-base-prdInfo">
               <div class="prdBox">
                 <div class="thumbnail">
-                  <a href="/product/detail.html{$param_product}"
-                    ><img
+                  <a href="/product/detail.html{$param_product}">
+                    <img
                       src="{$thumbnail}"
                       alt="{$product_name_alt}"
                       onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                       width="83"
-                      height="83"
-                  /></a>
+                      height="83" />
+                  </a>
                 </div>
                 <div class="description">
                   <strong class="prdName" title="상품명">{$product_name_link}</strong>
                   <div class="price" title="상품구매금액">
-                    {$product_purchase_price_front_head}<strong>{$product_purchase_price_front}</strong>{$product_purchase_price_front_tail}
-                    <span class="refer {$product_purchase_price_ref_display|display}"
-                      >({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span
-                    >
+                    {$product_purchase_price_front_head}
+                    <strong>{$product_purchase_price_front}</strong>
+                    {$product_purchase_price_front_tail}
+                    <span class="refer {$product_purchase_price_ref_display|display}">
+                      ({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})
+                    </span>
                     <span class="qty">({$quantity}개)</span>
                   </div>
                   <p class="optionGroup {$option_display|display}">{$option_str}</p>
                   <ul class="optionGroup" module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <ul class="info">
                     <li class="{$shipping_company_display|display}">
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a
-                        href="#none"
-                        class="line"
-                        onclick="
-                          {
-                            $shipping_trace_popup;
-                          }
-                        "
-                        >[{$invoice_no}]</a
-                      >
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
-                    <li>배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
+                    <li>
+                      배송 : {$type_all}
+                      <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+                    </li>
                     <li class="{$card_installment_display|display}">무이자할부 상품</li>
                   </ul>
                 </div>
@@ -559,55 +524,34 @@
                 <div class="gLeft">
                   <span class="txtStatus">{$status}</span>
                   <span class="store">{$mobile_store_info}</span>
-                  <span class="{$detail_info_display|display}"
-                    ><a
-                      href="#none"
-                      onclick="
-                        {
-                          $detail_info;
-                        }
-                      "
-                      class="btnText"
-                      >상세정보</a
-                    ></span
-                  >
+                  <span class="{$detail_info_display|display}">
+                    <a href="#none" onclick="{$detail_info}" class="btnText">상세정보</a>
+                  </span>
                 </div>
                 <div class="gRight">
                   <a
                     href="/board/product/write.html{$param_postscript}"
-                    class="btnNormal sizeS {$postscript_display|display}"
-                    >구매후기</a
-                  >
+                    class="btnNormal sizeS {$postscript_display|display}">
+                    구매후기
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_cancel;
-                      }
-                    "
-                    >취소철회</a
-                  >
+                    onclick="{$action_withdraw_cancel}">
+                    취소철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_exchange;
-                      }
-                    "
-                    >교환철회</a
-                  >
+                    onclick="{$action_withdraw_exchange}">
+                    교환철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_return;
-                      }
-                    "
-                    >반품철회</a
-                  >
+                    onclick="{$action_withdraw_return}">
+                    반품철회
+                  </a>
                 </div>
               </div>
             </div>
@@ -619,18 +563,18 @@
             <div class="contents">
               상품구매금액 {$basic.product_price}
               <span class="{$total.total_vat_price_display|display}">+ 부가세 {$basic.vat_price}</span>
-              + 배송비 {$basic.ship_fee} + 지역별배송비 {$basic.special_ship_fee}<span
-                class="{$basic.product_benefit_price_display|display}"
-              >
-                - 상품할인금액 {$basic.product_benefit_price}</span
-              >
-              <span class="total"
-                >합계 :
-                {$basic.total_price_front_head}<strong>{$basic.total_price_front}</strong>{$basic.total_price_front_tail}<span
-                  class="{$basic.total_price_ref_display|display}"
-                  >{$basic.total_price_back_head}{$basic.total_price_back}{$basic.total_price_back_tail}</span
-                ></span
-              >
+              + 배송비 {$basic.ship_fee} + 지역별배송비 {$basic.special_ship_fee}
+              <span class="{$basic.product_benefit_price_display|display}">
+                - 상품할인금액 {$basic.product_benefit_price}
+              </span>
+              <span class="total">
+                합계 : {$basic.total_price_front_head}
+                <strong>{$basic.total_price_front}</strong>
+                {$basic.total_price_front_tail}
+                <span class="{$basic.total_price_ref_display|display}">
+                  {$basic.total_price_back_head}{$basic.total_price_back}{$basic.total_price_back_tail}
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -640,46 +584,48 @@
             <div class="ec-base-prdInfo">
               <div class="prdBox">
                 <div class="thumbnail">
-                  <a href="/product/detail.html{$param_product}"
-                    ><img
+                  <a href="/product/detail.html{$param_product}">
+                    <img
                       src="{$thumbnail}"
                       alt="{$product_name_alt}"
                       onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                       width="83"
-                      height="83"
-                  /></a>
+                      height="83" />
+                  </a>
                 </div>
                 <div class="description">
                   <strong class="prdName" title="상품명">{$product_name_link}</strong>
                   <div class="price" title="상품구매금액">
-                    {$product_purchase_price_front_head}<strong>{$product_purchase_price_front}</strong>{$product_purchase_price_front_tail}
-                    <span class="refer {$product_purchase_price_ref_display|display}"
-                      >({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span
-                    >
+                    {$product_purchase_price_front_head}
+                    <strong>{$product_purchase_price_front}</strong>
+                    {$product_purchase_price_front_tail}
+                    <span class="refer {$product_purchase_price_ref_display|display}">
+                      ({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})
+                    </span>
                     <span class="qty">({$quantity}개)</span>
                   </div>
                   <p class="optionGroup {$option_display|display}">{$option_str}</p>
                   <ul class="optionGroup" module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <ul class="info">
                     <li class="{$shipping_company_display|display}">
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a
-                        href="#none"
-                        class="line"
-                        onclick="
-                          {
-                            $shipping_trace_popup;
-                          }
-                        "
-                        >[{$invoice_no}]</a
-                      >
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
-                    <li>배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
+                    <li>
+                      배송 : {$type_all}
+                      <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+                    </li>
                     <li class="{$card_installment_display|display}">무이자할부 상품</li>
                   </ul>
                 </div>
@@ -688,46 +634,34 @@
                 <div class="gLeft">
                   <span class="txtStatus">{$status}</span>
                   <span class="store">{$mobile_store_info}</span>
-                  <span class="{$detail_info_display|display}"
-                    ><a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a></span
-                  >
+                  <span class="{$detail_info_display|display}">
+                    <a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a>
+                  </span>
                 </div>
                 <div class="gRight">
                   <a
                     href="/board/product/write.html{$param_postscript}"
-                    class="btnNormal sizeS {$postscript_display|display}"
-                    >구매후기</a
-                  >
+                    class="btnNormal sizeS {$postscript_display|display}">
+                    구매후기
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_cancel;
-                      }
-                    "
-                    >취소철회</a
-                  >
+                    onclick="{$action_withdraw_cancel}">
+                    취소철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_exchange;
-                      }
-                    "
-                    >교환철회</a
-                  >
+                    onclick="{$action_withdraw_exchange}">
+                    교환철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_return;
-                      }
-                    "
-                    >반품철회</a
-                  >
+                    onclick="{$action_withdraw_return}">
+                    반품철회
+                  </a>
                 </div>
               </div>
             </div>
@@ -735,46 +669,48 @@
             <div class="ec-base-prdInfo">
               <div class="prdBox">
                 <div class="thumbnail">
-                  <a href="/product/detail.html{$param_product}"
-                    ><img
+                  <a href="/product/detail.html{$param_product}">
+                    <img
                       src="{$thumbnail}"
                       alt="{$product_name_alt}"
                       onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                       width="83"
-                      height="83"
-                  /></a>
+                      height="83" />
+                  </a>
                 </div>
                 <div class="description">
                   <strong class="prdName" title="상품명">{$product_name_link}</strong>
                   <div class="price" title="상품구매금액">
-                    {$product_purchase_price_front_head}<strong>{$product_purchase_price_front}</strong>{$product_purchase_price_front_tail}
-                    <span class="refer {$product_purchase_price_ref_display|display}"
-                      >({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span
-                    >
+                    {$product_purchase_price_front_head}
+                    <strong>{$product_purchase_price_front}</strong>
+                    {$product_purchase_price_front_tail}
+                    <span class="refer {$product_purchase_price_ref_display|display}">
+                      ({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})
+                    </span>
                     <span class="qty">({$quantity}개)</span>
                   </div>
                   <p class="optionGroup {$option_display|display}">{$option_str}</p>
                   <ul class="optionGroup" module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <ul class="info">
                     <li class="{$shipping_company_display|display}">
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a
-                        href="#none"
-                        class="line"
-                        onclick="
-                          {
-                            $shipping_trace_popup;
-                          }
-                        "
-                        >[{$invoice_no}]</a
-                      >
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
-                    <li>배송 : {$type_all} <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
+                    <li>
+                      배송 : {$type_all}
+                      <span class="{$oversea_able_display|display}">(해외배송가능)</span>
+                    </li>
                     <li class="{$card_installment_display|display}">무이자할부 상품</li>
                   </ul>
                 </div>
@@ -783,46 +719,34 @@
                 <div class="gLeft">
                   <span class="txtStatus">{$status}</span>
                   <span class="store">{$mobile_store_info}</span>
-                  <span class="{$detail_info_display|display}"
-                    ><a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a></span
-                  >
+                  <span class="{$detail_info_display|display}">
+                    <a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a>
+                  </span>
                 </div>
                 <div class="gRight">
                   <a
                     href="/board/product/write.html{$param_postscript}"
-                    class="btnNormal sizeS {$postscript_display|display}"
-                    >구매후기</a
-                  >
+                    class="btnNormal sizeS {$postscript_display|display}">
+                    구매후기
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_cancel;
-                      }
-                    "
-                    >취소철회</a
-                  >
+                    onclick="{$action_withdraw_cancel}">
+                    취소철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_exchange;
-                      }
-                    "
-                    >교환철회</a
-                  >
+                    onclick="{$action_withdraw_exchange}">
+                    교환철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_return;
-                      }
-                    "
-                    >반품철회</a
-                  >
+                    onclick="{$action_withdraw_return}">
+                    반품철회
+                  </a>
                 </div>
               </div>
             </div>
@@ -834,18 +758,18 @@
             <div class="contents">
               상품구매금액 {$individual.product_price}
               <span class="{$total.total_vat_price_display|display}">+ 부가세 {$individual.vat_price}</span>
-              + 배송비 {$individual.ship_fee} + 지역별배송비 {$individual.special_ship_fee}<span
-                class="{$individual.product_benefit_price_display|display}"
-              >
-                - 상품할인금액 {$individual.product_benefit_price}</span
-              >
-              <span class="total"
-                >합계 :
-                {$individual.total_price_front_head}<strong>{$individual.total_price_front}</strong>{$individual.total_price_front_tail}<span
-                  class="{$individual.total_price_ref_display|display}"
-                  >{$individual.total_price_back_head}{$individual.total_price_back}{$individual.total_price_back_tail}</span
-                ></span
-              >
+              + 배송비 {$individual.ship_fee} + 지역별배송비 {$individual.special_ship_fee}
+              <span class="{$individual.product_benefit_price_display|display}">
+                - 상품할인금액 {$individual.product_benefit_price}
+              </span>
+              <span class="total">
+                합계 : {$individual.total_price_front_head}
+                <strong>{$individual.total_price_front}</strong>
+                {$individual.total_price_front_tail}
+                <span class="{$individual.total_price_ref_display|display}">
+                  {$individual.total_price_back_head}{$individual.total_price_back}{$individual.total_price_back_tail}
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -855,44 +779,43 @@
             <div class="ec-base-prdInfo">
               <div class="prdBox">
                 <p class="thumbnail">
-                  <a href="/product/detail.html{$param_product}"
-                    ><img
+                  <a href="/product/detail.html{$param_product}">
+                    <img
                       src="{$thumbnail}"
                       alt="{$product_name_alt}"
                       onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                       width="83"
-                      height="83"
-                  /></a>
+                      height="83" />
+                  </a>
                 </p>
                 <div class="description">
                   <strong class="prdName" title="상품명">{$product_name_link}</strong>
                   <div class="price" title="상품구매금액">
-                    {$product_purchase_price_front_head}<strong>{$product_purchase_price_front}</strong>{$product_purchase_price_front_tail}
-                    <span class="refer {$product_purchase_price_ref_display|display}"
-                      >({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span
-                    >
+                    {$product_purchase_price_front_head}
+                    <strong>{$product_purchase_price_front}</strong>
+                    {$product_purchase_price_front_tail}
+                    <span class="refer {$product_purchase_price_ref_display|display}">
+                      ({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})
+                    </span>
                     <span class="qty">({$quantity}개)</span>
                   </div>
                   <p class="optionGroup {$option_display|display}">{$option_str}</p>
                   <ul class="optionGroup" module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <ul class="info">
                     <li class="{$shipping_company_display|display}">
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a
-                        href="#none"
-                        class="line"
-                        onclick="
-                          {
-                            $shipping_trace_popup;
-                          }
-                        "
-                        >[{$invoice_no}]</a
-                      >
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>배송 : {$type_all}</li>
                     <li class="{$card_installment_display|display}">무이자할부 상품</li>
@@ -902,46 +825,34 @@
               <div class="prdFoot" title="주문처리상태">
                 <div class="gLeft">
                   <span class="txtStatus">{$status}</span>
-                  <span class="{$detail_info_display|display}"
-                    ><a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a></span
-                  >
+                  <span class="{$detail_info_display|display}">
+                    <a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a>
+                  </span>
                 </div>
                 <div class="gRight">
                   <a
                     href="/board/product/write.html{$param_postscript}"
-                    class="btnNormal sizeS {$postscript_display|display}"
-                    >구매후기</a
-                  >
+                    class="btnNormal sizeS {$postscript_display|display}">
+                    구매후기
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_cancel;
-                      }
-                    "
-                    >취소철회</a
-                  >
+                    onclick="{$action_withdraw_cancel}">
+                    취소철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_exchange;
-                      }
-                    "
-                    >교환철회</a
-                  >
+                    onclick="{$action_withdraw_exchange}">
+                    교환철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_return;
-                      }
-                    "
-                    >반품철회</a
-                  >
+                    onclick="{$action_withdraw_return}">
+                    반품철회
+                  </a>
                 </div>
               </div>
             </div>
@@ -949,44 +860,43 @@
             <div class="ec-base-prdInfo">
               <div class="prdBox">
                 <p class="thumbnail">
-                  <a href="/product/detail.html{$param_product}"
-                    ><img
+                  <a href="/product/detail.html{$param_product}">
+                    <img
                       src="{$thumbnail}"
                       alt="{$product_name_alt}"
                       onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                       width="83"
-                      height="83"
-                  /></a>
+                      height="83" />
+                  </a>
                 </p>
                 <div class="description">
                   <strong class="prdName" title="상품명">{$product_name_link}</strong>
                   <div class="price" title="상품구매금액">
-                    {$product_purchase_price_front_head}<strong>{$product_purchase_price_front}</strong>{$product_purchase_price_front_tail}
-                    <span class="refer {$product_purchase_price_ref_display|display}"
-                      >({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span
-                    >
+                    {$product_purchase_price_front_head}
+                    <strong>{$product_purchase_price_front}</strong>
+                    {$product_purchase_price_front_tail}
+                    <span class="refer {$product_purchase_price_ref_display|display}">
+                      ({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})
+                    </span>
                     <span class="qty">({$quantity}개)</span>
                   </div>
                   <p class="optionGroup {$option_display|display}">{$option_str}</p>
                   <ul class="optionGroup" module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <ul class="info">
                     <li class="{$shipping_company_display|display}">
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a
-                        href="#none"
-                        class="line"
-                        onclick="
-                          {
-                            $shipping_trace_popup;
-                          }
-                        "
-                        >[{$invoice_no}]</a
-                      >
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>배송 : {$type_all}</li>
                     <li class="{$card_installment_display|display}">무이자할부 상품</li>
@@ -996,46 +906,34 @@
               <div class="prdFoot" title="주문처리상태">
                 <div class="gLeft">
                   <span class="txtStatus">{$status}</span>
-                  <span class="{$detail_info_display|display}"
-                    ><a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a></span
-                  >
+                  <span class="{$detail_info_display|display}">
+                    <a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a>
+                  </span>
                 </div>
                 <div class="gRight">
                   <a
                     href="/board/product/write.html{$param_postscript}"
-                    class="btnNormal sizeS {$postscript_display|display}"
-                    >구매후기</a
-                  >
+                    class="btnNormal sizeS {$postscript_display|display}">
+                    구매후기
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_cancel;
-                      }
-                    "
-                    >취소철회</a
-                  >
+                    onclick="{$action_withdraw_cancel}">
+                    취소철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_exchange;
-                      }
-                    "
-                    >교환철회</a
-                  >
+                    onclick="{$action_withdraw_exchange}">
+                    교환철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_return;
-                      }
-                    "
-                    >반품철회</a
-                  >
+                    onclick="{$action_withdraw_return}">
+                    반품철회
+                  </a>
                 </div>
               </div>
             </div>
@@ -1047,16 +945,18 @@
             <div class="contents">
               상품구매금액 {$oversea.product_price}
               <span class="{$total.total_vat_price_display|display}">+ 부가세 {$oversea.vat_price}</span>
-              + 배송비 {$oversea.total_ship_fee}<span class="{$oversea.product_benefit_price_display|display}">
-                - 상품할인금액 {$oversea.product_benefit_price}</span
-              >
-              <span class="total"
-                >합계 :
-                {$oversea.total_price_front_head}<strong>{$oversea.total_price_front}</strong>{$oversea.total_price_front_tail}<span
-                  class="{$oversea.total_price_ref_display|display}"
-                  >{$oversea.total_price_back_head}{$oversea.total_price_back}{$oversea.total_price_back_tail}</span
-                ></span
-              >
+              + 배송비 {$oversea.total_ship_fee}
+              <span class="{$oversea.product_benefit_price_display|display}">
+                - 상품할인금액 {$oversea.product_benefit_price}
+              </span>
+              <span class="total">
+                합계 : {$oversea.total_price_front_head}
+                <strong>{$oversea.total_price_front}</strong>
+                {$oversea.total_price_front_tail}
+                <span class="{$oversea.total_price_ref_display|display}">
+                  {$oversea.total_price_back_head}{$oversea.total_price_back}{$oversea.total_price_back_tail}
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -1071,31 +971,27 @@
                     alt="{$product_name_alt}"
                     onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                     width="83"
-                    height="83"
-                  />
+                    height="83" />
                 </div>
                 <div class="description">
                   <strong class="prdName" title="상품명">{$product_name}</strong>
                   <p class="optionGroup {$option_display|display}">{$option_str}</p>
                   <ul class="optionGroup" module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <ul class="info">
                     <li class="{$shipping_company_display|display}">
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a
-                        href="#none"
-                        class="line"
-                        onclick="
-                          {
-                            $shipping_trace_popup;
-                          }
-                        "
-                        >[{$invoice_no}]</a
-                      >
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>배송 : {$type_all}</li>
                     <li>수량 : {$quantity}개</li>
@@ -1109,39 +1005,27 @@
                 <div class="gRight">
                   <a
                     href="/board/product/write.html{$param_postscript}"
-                    class="btnNormal sizeS {$postscript_display|display}"
-                    >구매후기</a
-                  >
+                    class="btnNormal sizeS {$postscript_display|display}">
+                    구매후기
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_cancel;
-                      }
-                    "
-                    >취소철회</a
-                  >
+                    onclick="{$action_withdraw_cancel}">
+                    취소철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_exchange;
-                      }
-                    "
-                    >교환철회</a
-                  >
+                    onclick="{$action_withdraw_exchange}">
+                    교환철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_return;
-                      }
-                    "
-                    >반품철회</a
-                  >
+                    onclick="{$action_withdraw_return}">
+                    반품철회
+                  </a>
                 </div>
               </div>
             </div>
@@ -1154,31 +1038,27 @@
                     alt="{$product_name_alt}"
                     onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                     width="83"
-                    height="83"
-                  />
+                    height="83" />
                 </div>
                 <div class="description">
                   <strong class="prdName" title="상품명">{$product_name}</strong>
                   <p class="optionGroup {$option_display|display}">{$option_str}</p>
                   <ul class="optionGroup" module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <ul class="info">
                     <li class="{$shipping_company_display|display}">
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a
-                        href="#none"
-                        class="line"
-                        onclick="
-                          {
-                            $shipping_trace_popup;
-                          }
-                        "
-                        >[{$invoice_no}]</a
-                      >
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>배송 : {$type_all}</li>
                     <li>수량 : {$quantity}개</li>
@@ -1192,39 +1072,27 @@
                 <div class="gRight">
                   <a
                     href="/board/product/write.html{$param_postscript}"
-                    class="btnNormal sizeS {$postscript_display|display}"
-                    >구매후기</a
-                  >
+                    class="btnNormal sizeS {$postscript_display|display}">
+                    구매후기
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_cancel;
-                      }
-                    "
-                    >취소철회</a
-                  >
+                    onclick="{$action_withdraw_cancel}">
+                    취소철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_exchange;
-                      }
-                    "
-                    >교환철회</a
-                  >
+                    onclick="{$action_withdraw_exchange}">
+                    교환철회
+                  </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="
-                      {
-                        $action_withdraw_return;
-                      }
-                    "
-                    >반품철회</a
-                  >
+                    onclick="{$action_withdraw_return}">
+                    반품철회
+                  </a>
                 </div>
               </div>
             </div>
@@ -1234,7 +1102,11 @@
               </div>
               <div class="contents">
                 상품구매금액 0 + 배송비 0 + 지역별배송비 0
-                <span class="total">합계 : {$price_unit_head}<strong>0</strong>{$price_unit_tail}</span>
+                <span class="total">
+                  합계 : {$price_unit_head}
+                  <strong>0</strong>
+                  {$price_unit_tail}
+                </span>
               </div>
             </div>
           </div>
@@ -1254,9 +1126,7 @@
       <div class="contents">
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              최종 결제 정보
-            </caption>
+            <caption>최종 결제 정보</caption>
             <colgroup>
               <col class="colOrder" />
               <col style="width: auto" />
@@ -1265,13 +1135,14 @@
               <tr>
                 <th scope="row">총 결제금액</th>
                 <td>
-                  <span class="txtEm"
-                    >{$total.price_unit_head}<strong class="txt18">{$total.final_payed_order_price}</strong
-                    >{$total.price_unit_tail}</span
-                  >
-                  <span class="{$total.final_payed_order_price_ref_display|display}"
-                    >{$total.final_payed_order_price_ref}</span
-                  >
+                  <span class="txtEm">
+                    {$total.price_unit_head}
+                    <strong class="txt18">{$total.final_payed_order_price}</strong>
+                    {$total.price_unit_tail}
+                  </span>
+                  <span class="{$total.final_payed_order_price_ref_display|display}">
+                    {$total.final_payed_order_price_ref}
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -1279,9 +1150,7 @@
         </div>
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              최종 결제 정보
-            </caption>
+            <caption>최종 결제 정보</caption>
             <colgroup>
               <col class="colOrder" />
               <col style="width: auto" />
@@ -1314,9 +1183,7 @@
       <div class="contents">
         <div class="ec-base-table" module="Myshop_OrderHistoryDetailCsInfo">
           <table border="1">
-            <caption>
-              취소/교환/반품 신청 정보
-            </caption>
+            <caption>취소/교환/반품 신청 정보</caption>
             <colgroup>
               <col style="width: 170px" />
               <col style="width: auto" />
@@ -1339,24 +1206,44 @@
                   <ul module="Myshop_cancelProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -1369,24 +1256,44 @@
                   <ul module="Myshop_exchangeProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -1408,10 +1315,10 @@
               <tr>
                 <th scope="row">환불예정금액</th>
                 <td colspan="3">
-                  환불예정금액은 판매자가 접수처리 완료 후 확인할 수 있습니다.<span
-                    class="gBlank5 {$refund_exchange_comment_display|display}"
-                    >교환상품에 따라 추가결제금액이 발생할 수 있습니다.</span
-                  >
+                  환불예정금액은 판매자가 접수처리 완료 후 확인할 수 있습니다.
+                  <span class="gBlank5 {$refund_exchange_comment_display|display}">
+                    교환상품에 따라 추가결제금액이 발생할 수 있습니다.
+                  </span>
                 </td>
               </tr>
               <tr class="{$refund_account_display|display}">
@@ -1420,14 +1327,10 @@
                   [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
                   <a
                     href="#none"
-                    onclick="
-                      {
-                        $action_bank_acc_change;
-                      }
-                    "
-                    class="btnNormal sizeS {$bank_acc_change_display|display}"
-                    >환불계좌변경</a
-                  >
+                    onclick="{$action_bank_acc_change}"
+                    class="btnNormal sizeS {$bank_acc_change_display|display}">
+                    환불계좌변경
+                  </a>
                 </td>
               </tr>
             </tbody>
@@ -1439,24 +1342,44 @@
                   <ul module="Myshop_cancelProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -1469,24 +1392,44 @@
                   <ul module="Myshop_exchangeProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -1507,10 +1450,10 @@
               <tr>
                 <th scope="row">환불예정금액</th>
                 <td colspan="3">
-                  환불예정금액은 판매자가 접수처리 완료 후 확인할 수 있습니다.<span
-                    class="gBlank5 {$refund_exchange_comment_display|display}"
-                    >교환상품에 따라 추가결제금액이 발생할 수 있습니다.</span
-                  >
+                  환불예정금액은 판매자가 접수처리 완료 후 확인할 수 있습니다.
+                  <span class="gBlank5 {$refund_exchange_comment_display|display}">
+                    교환상품에 따라 추가결제금액이 발생할 수 있습니다.
+                  </span>
                 </td>
               </tr>
               <tr class="{$refund_account_display|display}">
@@ -1519,14 +1462,10 @@
                   [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
                   <a
                     href="#none"
-                    onclick="
-                      {
-                        $action_bank_acc_change;
-                      }
-                    "
-                    class="btnNormal sizeS {$bank_acc_change_display|display}"
-                    >환불계좌변경</a
-                  >
+                    onclick="{$action_bank_acc_change}"
+                    class="btnNormal sizeS {$bank_acc_change_display|display}">
+                    환불계좌변경
+                  </a>
                 </td>
               </tr>
             </tbody>
@@ -1542,9 +1481,7 @@
       <div class="contents">
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              환불정보
-            </caption>
+            <caption>환불정보</caption>
             <colgroup>
               <col style="width: 170px" />
               <col style="width: auto" />
@@ -1567,24 +1504,44 @@
                   <ul module="Myshop_cancelProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -1597,24 +1554,44 @@
                   <ul module="Myshop_exchangeProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -1622,7 +1599,10 @@
               </tr>
               <tr>
                 <th scope="row">{$display_date_title} (처리상태)</th>
-                <td colspan="3">{$display_date} <strong>({$status})</strong></td>
+                <td colspan="3">
+                  {$display_date}
+                  <strong>({$status})</strong>
+                </td>
               </tr>
               <tr class="{$cancel_form_display|display}">
                 <th scope="row">{$refund_amount_title}</th>
@@ -1630,24 +1610,24 @@
                   상품금액 {$product_amount_org}
                   <span class="amount">{$additional_amount}</span>
                   = 합계
-                  <strong
-                    >{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span
-                      class="{$payment_amount_ref_display|display}"
-                      >{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span
-                    ></strong
-                  >
+                  <strong>
+                    {$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}
+                    <span class="{$payment_amount_ref_display|display}">
+                      {$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}
+                    </span>
+                  </strong>
                 </td>
               </tr>
               <tr class="{$add_payment_amount_display|display}">
                 <th scope="row">{$refund_amount_title}</th>
                 <td colspan="3" class="total">
                   배송비 추가결제
-                  <strong
-                    >{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span
-                      class="{$payment_amount_ref_display|display}"
-                      >{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span
-                    ></strong
-                  >
+                  <strong>
+                    {$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}
+                    <span class="{$payment_amount_ref_display|display}">
+                      {$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}
+                    </span>
+                  </strong>
                 </td>
               </tr>
               <tr class="{$cancel_only_shipping_amount_display|display}">
@@ -1656,12 +1636,12 @@
                   배송비
                   <span class="amount">{$additional_amount}</span>
                   = 합계
-                  <strong
-                    >{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span
-                      class="{$payment_amount_ref_display|display}"
-                      >{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span
-                    ></strong
-                  >
+                  <strong>
+                    {$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}
+                    <span class="{$payment_amount_ref_display|display}">
+                      {$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}
+                    </span>
+                  </strong>
                 </td>
               </tr>
               <tr class="{$hold_show_ord_detail|display}">
@@ -1678,18 +1658,18 @@
                   [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
                   <a
                     href="#none"
-                    onclick="
-                      {
-                        $action_bank_acc_change;
-                      }
-                    "
-                    class="btnNormal sizeS {$bank_acc_change_display|display}"
-                    >환불계좌변경</a
-                  >
+                    onclick="{$action_bank_acc_change}"
+                    class="btnNormal sizeS {$bank_acc_change_display|display}">
+                    환불계좌변경
+                  </a>
                 </td>
               </tr>
               <tr class="{$additional_display|display}">
-                <th scope="row">할인 및 부가결제<br />복원 내역</th>
+                <th scope="row">
+                  할인 및 부가결제
+                  <br />
+                  복원 내역
+                </th>
                 <td colspan="3">
                   <ul class="coupon">
                     <li class="{$coupon_display|display}">
@@ -1721,21 +1701,38 @@
                   <ul module="Myshop_cancelProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
                       <p class="quantity">{$quantity}</p>
@@ -1751,10 +1748,17 @@
                   <ul module="Myshop_exchangeProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
                       <p class="quantity">{$quantity}</p>
@@ -1762,13 +1766,23 @@
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -1776,7 +1790,10 @@
               </tr>
               <tr>
                 <th scope="row">{$display_date_title} (처리상태)</th>
-                <td colspan="3">{$display_date} <strong>({$status})</strong></td>
+                <td colspan="3">
+                  {$display_date}
+                  <strong>({$status})</strong>
+                </td>
               </tr>
               <tr class="{$cancel_form_display|display}">
                 <th scope="row">{$refund_amount_title}</th>
@@ -1784,36 +1801,36 @@
                   상품금액 {$product_amount_org}
                   <span class="amount">{$additional_amount}</span>
                   = 합계 :
-                  <strong
-                    >{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span
-                      class="{$payment_amount_ref_display|display}"
-                      >{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span
-                    ></strong
-                  >
+                  <strong>
+                    {$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}
+                    <span class="{$payment_amount_ref_display|display}">
+                      {$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}
+                    </span>
+                  </strong>
                 </td>
               </tr>
               <tr class="{$add_payment_amount_display|display}">
                 <th scope="row">{$refund_amount_title}</th>
                 <td colspan="3" class="total">
                   배송비 추가결제
-                  <strong
-                    >{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span
-                      class="{$payment_amount_ref_display|display}"
-                      >{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span
-                    ></strong
-                  >
+                  <strong>
+                    {$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}
+                    <span class="{$payment_amount_ref_display|display}">
+                      {$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}
+                    </span>
+                  </strong>
                 </td>
               </tr>
               <tr class="{$cancel_only_shipping_amount_display|display}">
                 <th scope="row">{$refund_amount_title}</th>
                 <td colspan="3" class="total">
                   배송비
-                  <strong
-                    >{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span
-                      class="{$payment_amount_ref_display|display}"
-                      >{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span
-                    ></strong
-                  >
+                  <strong>
+                    {$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}
+                    <span class="{$payment_amount_ref_display|display}">
+                      {$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}
+                    </span>
+                  </strong>
                 </td>
               </tr>
               <tr class="{$hold_show_ord_detail|display}">
@@ -1830,36 +1847,44 @@
                   [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
                   <a
                     href="#none"
-                    onclick="
-                      {
-                        $action_bank_acc_change;
-                      }
-                    "
-                    class="btnNormal sizeS {$bank_acc_change_display|display}"
-                    >환불계좌변경</a
-                  >
+                    onclick="{$action_bank_acc_change}"
+                    class="btnNormal sizeS {$bank_acc_change_display|display}">
+                    환불계좌변경
+                  </a>
                 </td>
               </tr>
               <tr class="{$additional_display|display}">
-                <th scope="row">할인 및 부가결제<br />복원 내역</th>
+                <th scope="row">
+                  할인 및 부가결제
+                  <br />
+                  복원 내역
+                </th>
                 <td colspan="3">
                   <ul class="coupon">
                     <li class="{$coupon_display|display}">
-                      쿠폰 복원 금액 : {$total.price_unit_head}<strong>{$coupon_price}</strong>{$total.price_unit_tail}
+                      쿠폰 복원 금액 : {$total.price_unit_head}
+                      <strong>{$coupon_price}</strong>
+                      {$total.price_unit_tail}
                     </li>
                     <li class="{$addsale_display|display}">
-                      할인 복원 금액 : {$total.price_unit_head}<strong>{$addsale_price}</strong>{$total.price_unit_tail}
+                      할인 복원 금액 : {$total.price_unit_head}
+                      <strong>{$addsale_price}</strong>
+                      {$total.price_unit_tail}
                     </li>
                     <li class="{$mileage_display|display}">
-                      적립금 복원 : {$total.price_unit_head}<strong>{$mileage_price}</strong>{$total.price_unit_tail}
+                      적립금 복원 : {$total.price_unit_head}
+                      <strong>{$mileage_price}</strong>
+                      {$total.price_unit_tail}
                     </li>
                     <li class="{$deposit_display|display}">
-                      예치금 복원 : {$total.price_unit_head}<strong>{$deposit_price}</strong>{$total.price_unit_tail}
+                      예치금 복원 : {$total.price_unit_head}
+                      <strong>{$deposit_price}</strong>
+                      {$total.price_unit_tail}
                     </li>
                     <li class="{$navermileage_display|display}">
-                      네이버마일리지 &amp; 캐시 복원 :
-                      {$total.price_unit_head}<strong>{$navermileage_price}</strong>{$total.price_unit_tail}
-                      ({$navermieage_detail})
+                      네이버마일리지 &amp; 캐시 복원 : {$total.price_unit_head}
+                      <strong>{$navermileage_price}</strong>
+                      {$total.price_unit_tail} ({$navermieage_detail})
                     </li>
                   </ul>
                 </td>
@@ -1877,9 +1902,7 @@
       <div class="contents">
         <div class="ec-base-table total">
           <table border="1">
-            <caption>
-              추가결제
-            </caption>
+            <caption>추가결제</caption>
             <colgroup>
               <col style="width: 170px" />
               <col style="width: auto" />
@@ -1902,24 +1925,44 @@
                   <ul module="Myshop_cancelProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -1932,12 +1975,12 @@
               <tr>
                 <th scope="row">결제금액</th>
                 <td colspan="3" class="total">
-                  <strong class="txtEm"
-                    >{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail}
-                    <span class="{$total_payment_price_ref_display|display}"
-                      >{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span
-                    ></strong
-                  >
+                  <strong class="txtEm">
+                    {$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail}
+                    <span class="{$total_payment_price_ref_display|display}">
+                      {$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}
+                    </span>
+                  </strong>
                 </td>
               </tr>
               <tr class="{$payer_name_area_display|display}">
@@ -1947,11 +1990,19 @@
               <tr>
                 <th scope="row">결제수단</th>
                 <td colspan="3">
-                  {$paymethod} {$paymethod_detail}<span class="{$paid_display|display}">(결제완료)</span
-                  ><span class="{$unpaid_display|display}">(<span class="txtWarn">결제취소</span>)</span>
+                  {$paymethod} {$paymethod_detail}
+                  <span class="{$paid_display|display}">(결제완료)</span>
+                  <span class="{$unpaid_display|display}">
+                    (
+                    <span class="txtWarn">결제취소</span>
+                    )
+                  </span>
                   <ul class="{$payment_date_area_display|display}">
                     <li class="{$pay_date_display|display}">결제일자 : {$pay_date}</li>
-                    <li class="{$canel_date_display|display}">취소일자 : <span class="txtWarn">{$canel_date}</span></li>
+                    <li class="{$canel_date_display|display}">
+                      취소일자 :
+                      <span class="txtWarn">{$canel_date}</span>
+                    </li>
                   </ul>
                 </td>
               </tr>
@@ -1964,24 +2015,44 @@
                   <ul module="Myshop_cancelProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -1994,12 +2065,12 @@
               <tr>
                 <th scope="row">결제금액</th>
                 <td colspan="3" class="total">
-                  <strong class="txtEm"
-                    >{$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail}
-                    <span class="{$total_payment_price_ref_display|display}"
-                      >{$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}</span
-                    ></strong
-                  >
+                  <strong class="txtEm">
+                    {$total_payment_price_front_head}{$total_payment_price_front}{$total_payment_price_front_tail}
+                    <span class="{$total_payment_price_ref_display|display}">
+                      {$total_payment_price_back_head}{$total_payment_price_back}{$total_payment_price_back_tail}
+                    </span>
+                  </strong>
                 </td>
               </tr>
               <tr class="{$payer_name_area_display|display}">
@@ -2009,11 +2080,19 @@
               <tr>
                 <th scope="row">결제수단</th>
                 <td colspan="3">
-                  {$paymethod} {$paymethod_detail}<span class="{$paid_display|display}">(결제완료)</span
-                  ><span class="{$unpaid_display|display}">(<span class="txtWarn">결제취소</span>)</span>
+                  {$paymethod} {$paymethod_detail}
+                  <span class="{$paid_display|display}">(결제완료)</span>
+                  <span class="{$unpaid_display|display}">
+                    (
+                    <span class="txtWarn">결제취소</span>
+                    )
+                  </span>
                   <ul class="{$payment_date_area_display|display}">
                     <li class="{$pay_date_display|display}">결제일자 : {$pay_date}</li>
-                    <li class="{$canel_date_display|display}">취소일자 : <span class="txtWarn">{$canel_date}</span></li>
+                    <li class="{$canel_date_display|display}">
+                      취소일자 :
+                      <span class="txtWarn">{$canel_date}</span>
+                    </li>
                   </ul>
                 </td>
               </tr>
@@ -2030,9 +2109,7 @@
       <div class="contents">
         <div class="ec-base-table {$delivery_info_display|display}">
           <table border="1">
-            <caption>
-              배송지정보
-            </caption>
+            <caption>배송지정보</caption>
             <colgroup>
               <col class="colOrder" />
               <col style="width: auto" />
@@ -2078,14 +2155,10 @@
                   <span class="{$delivery.receiver_update_button_display|display}">
                     <a
                       href="#none"
-                      onclick="
-                        {
-                          $delivery.action_receiver_update_button;
-                        }
-                      "
-                      class="btnNormal sizeS gIndent10"
-                      >배송지 변경</a
-                    >
+                      onclick="{$delivery.action_receiver_update_button}"
+                      class="btnNormal sizeS gIndent10">
+                      배송지 변경
+                    </a>
                   </span>
                 </td>
               </tr>
@@ -2137,9 +2210,7 @@
         </div>
         <div class="ec-base-table multiDelivery {$delivery_info_list_display|display}">
           <table border="1">
-            <caption>
-              배송지정보
-            </caption>
+            <caption>배송지정보</caption>
             <colgroup>
               <col style="width: 60px" />
               <col style="width: 400px" />
@@ -2184,32 +2255,29 @@
                     <li class="{$sc_display|display}">- 희망배송업체/방식 : {$sc_name}</li>
                   </ul>
                   <p class="{$receiver_update_button_display|display}">
-                    <a
-                      href="#none"
-                      onclick="
-                        {
-                          $action_receiver_update_button;
-                        }
-                      "
-                      class="btnNormal sizeS"
-                      >배송지 변경</a
-                    >
+                    <a href="#none" onclick="{$action_receiver_update_button}" class="btnNormal sizeS">배송지 변경</a>
                   </p>
                 </td>
                 <td class="thumb">
-                  <a href="/product/detail.html{$param_product}"
-                    ><img
+                  <a href="/product/detail.html{$param_product}">
+                    <img
                       src="{$thumbnail}"
                       alt="{$product_name_alt}"
-                      onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-                  /></a>
+                      onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
+                  </a>
                 </td>
                 <td class="left">
                   <strong class="name">{$product_name_link}</strong>
                   <div class="option {$option_display|display}">{$option_str}</div>
                   <ul class="option" module="Myshop_optionSet">
-                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <strong>{$product_name}</strong>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <strong>{$product_name}</strong>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <p class="gBlank5 {$card_installment_display|display}">무이자할부 상품</p>
                 </td>
@@ -2243,32 +2311,29 @@
                     <li class="{$sc_display|display}">- 희망배송업체/방식 : {$sc_name}</li>
                   </ul>
                   <p class="{$receiver_update_button_display|display}">
-                    <a
-                      href="#none"
-                      onclick="
-                        {
-                          $action_receiver_update_button;
-                        }
-                      "
-                      class="btnNormal sizeS"
-                      >배송지 변경</a
-                    >
+                    <a href="#none" onclick="{$action_receiver_update_button}" class="btnNormal sizeS">배송지 변경</a>
                   </p>
                 </td>
                 <td class="thumb">
-                  <a href="/product/detail.html{$param_product}"
-                    ><img
+                  <a href="/product/detail.html{$param_product}">
+                    <img
                       src="{$thumbnail}"
                       alt="{$product_name_alt}"
-                      onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-                  /></a>
+                      onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
+                  </a>
                 </td>
                 <td class="left">
                   <strong class="name">{$product_name_link}</strong>
                   <div class="option {$option_display|display}">{$option_str}</div>
                   <ul class="option" module="Myshop_optionSet">
-                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <strong>{$product_name}</strong>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <strong>{$product_name}</strong>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <p class="gBlank5 {$card_installment_display|display}">무이자할부 상품</p>
                 </td>
@@ -2287,9 +2352,7 @@
       <div class="contents">
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              추가 정보
-            </caption>
+            <caption>추가 정보</caption>
             <colgroup>
               <col class="colOrder" />
               <col style="width: auto" />
@@ -2316,9 +2379,7 @@
       <div class="contents">
         <div class="ec-base-table" module="Myshop_OrderHistoryDetailPickup">
           <table border="1">
-            <caption>
-              수거신청 정보
-            </caption>
+            <caption>수거신청 정보</caption>
             <colgroup>
               <col style="width: 170px" />
               <col style="width: auto" />
@@ -2341,24 +2402,44 @@
                   <ul module="Myshop_cancelProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -2371,8 +2452,10 @@
               <tr class="{$pickup_display|display}">
                 <th scope="row">수거지 주소</th>
                 <td colspan="3">
-                  {$pickup_name}<br />
-                  {$pickup_addr}<br />
+                  {$pickup_name}
+                  <br />
+                  {$pickup_addr}
+                  <br />
                   {$pickup_cell}
                 </td>
               </tr>
@@ -2385,24 +2468,44 @@
                   <ul module="Myshop_cancelProduct">
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                     <li>
                       <div class="product">
-                        {$product_name} <span class="option">{$option_str}</span>
+                        {$product_name}
+                        <span class="option">{$option_str}</span>
                         <ul class="option" module="Myshop_optionSet">
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
-                          <li><strong class="productName">{$product_name}</strong>{$option_str}</li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
+                          <li>
+                            <strong class="productName">{$product_name}</strong>
+                            {$option_str}
+                          </li>
                         </ul>
                       </div>
-                      <p class="quantity">{$quantity}<span class="RTMI">개</span></p>
+                      <p class="quantity">
+                        {$quantity}
+                        <span class="RTMI">개</span>
+                      </p>
                       <p class="price RW">{$product_price}</p>
                     </li>
                   </ul>
@@ -2415,8 +2518,10 @@
               <tr class="{$pickup_display|display}">
                 <th scope="row">수거지 주소</th>
                 <td colspan="3">
-                  {$pickup_name}<br />
-                  {$pickup_addr}<br />
+                  {$pickup_name}
+                  <br />
+                  {$pickup_addr}
+                  <br />
                   {$pickup_cell}
                 </td>
               </tr>
@@ -2437,86 +2542,33 @@
 
     <div class="ec-base-button">
       <span class="gRight">
+        <a href="#none" onclick="{$action_issue_cash}" class="btnNormal sizeS {$issue_cash_display|display}">
+          현금영수증 신청
+        </a>
+        <a href="#none" onclick="{$action_print_pg_cash}" class="btnNormal sizeS RW {$print_pg_cash_display|display}">
+          현금영수증전표 인쇄
+        </a>
+        <a href="#none" onclick="{$action_issue_tax}" class="btnNormal sizeS {$issue_tax_display|display}">
+          세금계산서 신청
+        </a>
+        <a href="#none" onclick="{$action_print_tax}" class="btnNormal sizeS RW {$print_tax_display|display}">
+          세금계산서 인쇄
+        </a>
+        <a href="#none" onclick="{$action_print_spec}" class="btnNormal sizeS RW {$print_spec_display|display}">
+          거래명세서 인쇄
+        </a>
+        <a href="#none" onclick="{$action_print_pg_card}" class="btnNormal sizeS RW {$print_pg_card_display|display}">
+          카드매출전표 인쇄
+        </a>
+        <a href="#none" onclick="{$action_select_gift}" class="btnNormal sizeS RW {$select_gift_display|display}">
+          사은품 선택
+        </a>
         <a
           href="#none"
-          onclick="
-            {
-              $action_issue_cash;
-            }
-          "
-          class="btnNormal sizeS {$issue_cash_display|display}"
-          >현금영수증 신청</a
-        >
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_print_pg_cash;
-            }
-          "
-          class="btnNormal sizeS RW {$print_pg_cash_display|display}"
-          >현금영수증전표 인쇄</a
-        >
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_issue_tax;
-            }
-          "
-          class="btnNormal sizeS {$issue_tax_display|display}"
-          >세금계산서 신청</a
-        >
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_print_tax;
-            }
-          "
-          class="btnNormal sizeS RW {$print_tax_display|display}"
-          >세금계산서 인쇄</a
-        >
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_print_spec;
-            }
-          "
-          class="btnNormal sizeS RW {$print_spec_display|display}"
-          >거래명세서 인쇄</a
-        >
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_print_pg_card;
-            }
-          "
-          class="btnNormal sizeS RW {$print_pg_card_display|display}"
-          >카드매출전표 인쇄</a
-        >
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_select_gift;
-            }
-          "
-          class="btnNormal sizeS RW {$select_gift_display|display}"
-          >사은품 선택</a
-        >
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_print_store;
-            }
-          "
-          class="btnNormal sizeS RW {$delivery.print_store_display|display}"
-          >수령지정보 인쇄</a
-        >
+          onclick="{$action_print_store}"
+          class="btnNormal sizeS RW {$delivery.print_store_display|display}">
+          수령지정보 인쇄
+        </a>
       </span>
     </div>
 
@@ -2548,8 +2600,9 @@
         <h4>부가가치세법 변경에 따른 신용카드매출전표 및 세금계산서 변경 안내</h4>
         <ul>
           <li>
-            변경된 부가가치세법에 의거, 2004.7.1 이후 신용카드로 결제하신 주문에 대해서는 세금계산서 발행이 불가하며<br />신용카드매출전표로
-            부가가치세 신고를 하셔야 합니다.(부가가치세법 시행령 57조)
+            변경된 부가가치세법에 의거, 2004.7.1 이후 신용카드로 결제하신 주문에 대해서는 세금계산서 발행이 불가하며
+            <br />
+            신용카드매출전표로 부가가치세 신고를 하셔야 합니다.(부가가치세법 시행령 57조)
           </li>
           <li>
             상기 부가가치세법 변경내용에 따라 신용카드 이외의 결제건에 대해서만 세금계산서 발행이 가능함을 양지하여

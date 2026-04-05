@@ -31,7 +31,7 @@
 }
 
 /********************* Mobile *********************/
-@media all and (max-width: 767px) {
+@media all and (max-width: 767.98px) {
   .xans-product-listnew.ec-base-product {
     margin-right: 16px;
     margin-left: 16px;

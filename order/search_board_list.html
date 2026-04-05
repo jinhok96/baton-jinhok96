@@ -15,8 +15,7 @@
             <img
               src="{$image_medium}"
               onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              alt=""
-            />
+              alt="" />
           </div>
           <div class="description">
             <strong class="prdName" title="상품명">{$product_name}</strong>
@@ -27,16 +26,7 @@
             </ul>
           </div>
           <div class="buttonGroup">
-            <a
-              href="#none"
-              class="btnNormal sizeS"
-              onclick="
-                {
-                  $action_product_select;
-                }
-              "
-              >선택</a
-            >
+            <a href="#none" class="btnNormal sizeS" onclick="{$action_product_select}">선택</a>
           </div>
         </div>
       </div>
@@ -46,13 +36,13 @@
             <img
               src="{$image_medium}"
               onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              alt=""
-            />
+              alt="" />
           </div>
           <div class="description">
             <strong class="prdName" title="상품명">{$product_name}</strong>
             <div class="price" title="판매가">
-              <span class="gBlank5">{$product_price}</span> {$product_tax_type_text}
+              <span class="gBlank5">{$product_price}</span>
+              {$product_tax_type_text}
             </div>
             <ul class="info">
               <li>{$order_id}</li>
@@ -60,16 +50,7 @@
             </ul>
           </div>
           <div class="buttonGroup">
-            <a
-              href="#none"
-              class="btnNormal sizeS"
-              onclick="
-                {
-                  $action_product_select;
-                }
-              "
-              >선택</a
-            >
+            <a href="#none" class="btnNormal sizeS" onclick="{$action_product_select}">선택</a>
           </div>
         </div>
       </div>
@@ -79,11 +60,21 @@
       <a href="{$param_first}" class="first">첫 페이지</a>
       <a href="{$param_before}">이전 페이지</a>
       <ol>
-        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li>
+          <a href="{$param}" class="{$param_class}">{$no}</a>
+        </li>
+        <li>
+          <a href="{$param}" class="{$param_class}">{$no}</a>
+        </li>
+        <li>
+          <a href="{$param}" class="{$param_class}">{$no}</a>
+        </li>
+        <li>
+          <a href="{$param}" class="{$param_class}">{$no}</a>
+        </li>
+        <li>
+          <a href="{$param}" class="{$param_class}">{$no}</a>
+        </li>
       </ol>
       <a href="{$param_next}">다음 페이지</a>
       <a href="{$param_last}" class="last">마지막 페이지</a>

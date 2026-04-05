@@ -6,8 +6,9 @@
   </div>
   <div class="content">
     <p class="ec-base-box">
-      <strong>{$delivery.mall_name}({$delivery.mall_domain}) 에서 스토어픽업을 선택해 주문하신 내역입니다.</strong
-      ><br />하단의 수령 정보를 참고하셔서 수령지에 방문해주세요.
+      <strong>{$delivery.mall_name}({$delivery.mall_domain}) 에서 스토어픽업을 선택해 주문하신 내역입니다.</strong>
+      <br />
+      하단의 수령 정보를 참고하셔서 수령지에 방문해주세요.
     </p>
 
     <div class="titleArea titleArea--middle">
@@ -15,9 +16,7 @@
     </div>
     <div class="ec-base-table">
       <table border="1">
-        <caption>
-          주문 정보
-        </caption>
+        <caption>주문 정보</caption>
         <colgroup>
           <col style="width: 140px" />
           <col style="width: auto" />
@@ -44,9 +43,7 @@
     </div>
     <div class="ec-base-table typeList">
       <table border="1">
-        <caption>
-          상품 정보
-        </caption>
+        <caption>상품 정보</caption>
         <colgroup>
           <col style="width: auto" />
           <col style="width: 10%" />
@@ -63,10 +60,14 @@
         </thead>
         <tbody class="center">
           <tr>
-            <td class="left"><strong>{$product_title.product_name}</strong></td>
+            <td class="left">
+              <strong>{$product_title.product_name}</strong>
+            </td>
             <td>{$product_title.option_str}</td>
             <td>{$product_title.quantity}</td>
-            <td><strong class="txtEm">{$product_title.total_product_price}</strong></td>
+            <td>
+              <strong class="txtEm">{$product_title.total_product_price}</strong>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -77,9 +78,7 @@
     </div>
     <div class="ec-base-table">
       <table border="1">
-        <caption>
-          수령자 정보
-        </caption>
+        <caption>수령자 정보</caption>
         <colgroup>
           <col style="width: 120px" />
           <col style="width: 252px" />
@@ -110,9 +109,7 @@
     </div>
     <div class="ec-base-table">
       <table border="1">
-        <caption>
-          수령지 정보
-        </caption>
+        <caption>수령지 정보</caption>
         <colgroup>
           <col style="width: 120px" />
           <col style="width: 252px" />

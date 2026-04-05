@@ -14,9 +14,7 @@
                     $use_per_add_option = yes
                     $default_option = yes
                     -->
-          <caption>
-            기본 정보
-          </caption>
+          <caption>기본 정보</caption>
           <colgroup>
             <col style="width: 80px" />
             <col style="width: auto" />
@@ -34,20 +32,20 @@
               <td>
                 <div class="ec-base-qty">
                   {$form.quantity}
-                  <a href="javascript:;" class="up eClearUp"
-                    ><img
+                  <a href="javascript:;" class="up eClearUp">
+                    <img
                       src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif"
                       id="{$quantity_up_id}"
                       alt="up"
-                      class="{$quantity_up_class}"
-                  /></a>
-                  <a href="javascript:;" class="down eClearDown"
-                    ><img
+                      class="{$quantity_up_class}" />
+                  </a>
+                  <a href="javascript:;" class="down eClearDown">
+                    <img
                       src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif"
                       id="{$quantity_down_id}"
                       alt="down"
-                      class="{$quantity_down_class}"
-                  /></a>
+                      class="{$quantity_down_class}" />
+                  </a>
                 </div>
               </td>
             </tr>
@@ -57,26 +55,18 @@
               <th scope="row">{$add_option_name}</th>
               <td>
                 {$form.add_option}
-                <span class="byte" title="현재글자수/최대글자수"
-                  >[ <strong class="length">0</strong> / {$option_maxlength} ]</span
-                >
+                <span class="byte" title="현재글자수/최대글자수">
+                  [
+                  <strong class="length">0</strong>
+                  / {$option_maxlength} ]
+                </span>
               </td>
             </tr>
           </tbody>
           <tbody>
             <tr class="{$option_push_button_display|display}" id="{$option_push_button_id}">
               <td colspan="2" class="selectButton">
-                <button
-                  type="button"
-                  class="btnSubmit sizeS"
-                  onclick="
-                    {
-                      $action_push_button;
-                    }
-                  "
-                >
-                  옵션 선택
-                </button>
+                <button type="button" class="btnSubmit sizeS" onclick="{$action_push_button}">옵션 선택</button>
               </td>
             </tr>
             <tr module="product_fileoption">
@@ -94,20 +84,20 @@
               <td>
                 <div class="ec-base-qty">
                   {$form.quantity}
-                  <a href="javascript:;" class="up eClearUp"
-                    ><img
+                  <a href="javascript:;" class="up eClearUp">
+                    <img
                       src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif"
                       id="{$quantity_up_id}"
                       alt="up"
-                      class="{$quantity_up_class}"
-                  /></a>
-                  <a href="javascript:;" class="down eClearDown"
-                    ><img
+                      class="{$quantity_up_class}" />
+                  </a>
+                  <a href="javascript:;" class="down eClearDown">
+                    <img
                       src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif"
                       id="{$quantity_down_id}"
                       alt="down"
-                      class="{$quantity_down_class}"
-                  /></a>
+                      class="{$quantity_down_class}" />
+                  </a>
                 </div>
               </td>
             </tr>
@@ -117,20 +107,20 @@
               <td>
                 <div class="ec-base-qty">
                   {$form.quantity}
-                  <a href="javascript:;" class="up eClearUp"
-                    ><img
+                  <a href="javascript:;" class="up eClearUp">
+                    <img
                       src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif"
                       id="{$quantity_up_id}"
                       alt="up"
-                      class="{$quantity_up_class}"
-                  /></a>
-                  <a href="javascript:;" class="down eClearDown"
-                    ><img
+                      class="{$quantity_up_class}" />
+                  </a>
+                  <a href="javascript:;" class="down eClearDown">
+                    <img
                       src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif"
                       id="{$quantity_down_id}"
                       alt="down"
-                      class="{$quantity_down_class}"
-                  /></a>
+                      class="{$quantity_down_class}" />
+                  </a>
                 </div>
               </td>
             </tr>
@@ -147,9 +137,14 @@
         <li>
           <div class="information">
             <div class="thumbnail">
-              <a href="{$link_product_detail}"><img src="{$product_image}" alt="" id="{$image_id}" /></a>
+              <a href="{$link_product_detail}">
+                <img src="{$product_image}" alt="" id="{$image_id}" />
+              </a>
             </div>
-            <p class="name">{$product_name} <span class="qty">({$set_quantity}개씩 구매되는 상품)</span></p>
+            <p class="name">
+              {$product_name}
+              <span class="qty">({$set_quantity}개씩 구매되는 상품)</span>
+            </p>
           </div>
           <ul class="option">
             <li module="product_option">
@@ -186,18 +181,25 @@
             <li module="product_addoption">
               <span class="name">{$add_option_name}</span>
               {$form.add_option}
-              <span class="txtByte" title="현재글자수/최대글자수"
-                >(<span class="length">0</span>/{$option_maxlength})</span
-              >
+              <span class="txtByte" title="현재글자수/최대글자수">
+                (
+                <span class="length">0</span>
+                /{$option_maxlength})
+              </span>
             </li>
           </ul>
         </li>
         <li>
           <div class="information">
             <div class="thumbnail">
-              <a href="{$link_product_detail}"><img src="{$product_image}" alt="" id="{$image_id}" /></a>
+              <a href="{$link_product_detail}">
+                <img src="{$product_image}" alt="" id="{$image_id}" />
+              </a>
             </div>
-            <p class="name">{$product_name} <span class="qty">({$set_quantity}개씩 구매되는 상품)</span></p>
+            <p class="name">
+              {$product_name}
+              <span class="qty">({$set_quantity}개씩 구매되는 상품)</span>
+            </p>
           </div>
           <ul class="option">
             <li module="product_option">
@@ -234,9 +236,11 @@
             <li module="product_addoption">
               <span class="name">{$add_option_name}</span>
               {$form.add_option}
-              <span class="txtByte" title="현재글자수/최대글자수"
-                >(<span class="length">0</span>/{$option_maxlength})</span
-              >
+              <span class="txtByte" title="현재글자수/최대글자수">
+                (
+                <span class="length">0</span>
+                /{$option_maxlength})
+              </span>
             </li>
           </ul>
         </li>
@@ -259,18 +263,18 @@
             -->
       <div class="title">
         <h3>추가구성상품</h3>
-        <a href="#self" class="toggle"
-          ><img src="//img.echosting.cafe24.com/skin/base/product/btn_additional_close.gif" alt="추가구성상품 닫기" /><i
-            aria-hidden="true"
-            class="icon"
-          ></i
-        ></a>
+        <a href="#self" class="toggle">
+          <img src="//img.echosting.cafe24.com/skin/base/product/btn_additional_close.gif" alt="추가구성상품 닫기" />
+          <i aria-hidden="true" class="icon"></i>
+        </a>
       </div>
       <ul class="product">
         <li>
           <div class="information">
             <div class="thumbnail">
-              <a href="{$link_product_detail}"><img src="{$product_image}" alt="" id="{$image_id}" /></a>
+              <a href="{$link_product_detail}">
+                <img src="{$product_image}" alt="" id="{$image_id}" />
+              </a>
             </div>
             <p class="name">{$product_name}</p>
             <p class="price {$product_price_del}">{$product_price}</p>
@@ -288,9 +292,9 @@
                   <div class="ec-base-qty">
                     {$form.quantity}
                     <a href="javascript:;" class="qtyUp eClearUp {$quantity_up_class}" id="{$quantity_up_id}">증가</a>
-                    <a href="javascript:;" class="qtyDown eClearDown {$quantity_down_class}" id="{$quantity_down_id}"
-                      >감소</a
-                    >
+                    <a href="javascript:;" class="qtyDown eClearDown {$quantity_down_class}" id="{$quantity_down_id}">
+                      감소
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -305,9 +309,9 @@
                   <div class="ec-base-qty">
                     {$form.quantity}
                     <a href="javascript:;" class="qtyUp eClearUp {$quantity_up_class}" id="{$quantity_up_id}">증가</a>
-                    <a href="javascript:;" class="qtyDown eClearDown {$quantity_down_class}" id="{$quantity_down_id}"
-                      >감소</a
-                    >
+                    <a href="javascript:;" class="qtyDown eClearDown {$quantity_down_class}" id="{$quantity_down_id}">
+                      감소
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -315,29 +319,24 @@
             <li module="product_addoption">
               <span class="name">{$add_option_name}</span>
               {$form.add_option}
-              <span class="txtByte" title="현재글자수/최대글자수"
-                >(<span class="length">0</span>/{$option_maxlength})</span
-              >
+              <span class="txtByte" title="현재글자수/최대글자수">
+                (
+                <span class="length">0</span>
+                /{$option_maxlength})
+              </span>
             </li>
 
             <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-              <a
-                href="#none"
-                class="btnSubmit sizeS"
-                onclick="
-                  {
-                    $add_action_push_button;
-                  }
-                "
-                >옵션선택</a
-              >
+              <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
             </li>
           </ul>
         </li>
         <li>
           <div class="information">
             <div class="thumbnail">
-              <a href="{$link_product_detail}"><img src="{$product_image}" alt="" id="{$image_id}" /></a>
+              <a href="{$link_product_detail}">
+                <img src="{$product_image}" alt="" id="{$image_id}" />
+              </a>
             </div>
             <p class="name">{$product_name}</p>
             <p class="price {$product_price_del}">{$product_price}</p>
@@ -355,9 +354,9 @@
                   <div class="ec-base-qty">
                     {$form.quantity}
                     <a href="javascript:;" class="qtyUp eClearUp {$quantity_up_class}" id="{$quantity_up_id}">증가</a>
-                    <a href="javascript:;" class="qtyDown eClearDown {$quantity_down_class}" id="{$quantity_down_id}"
-                      >감소</a
-                    >
+                    <a href="javascript:;" class="qtyDown eClearDown {$quantity_down_class}" id="{$quantity_down_id}">
+                      감소
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -372,9 +371,9 @@
                   <div class="ec-base-qty">
                     {$form.quantity}
                     <a href="javascript:;" class="qtyUp eClearUp {$quantity_up_class}" id="{$quantity_up_id}">증가</a>
-                    <a href="javascript:;" class="qtyDown eClearDown {$quantity_down_class}" id="{$quantity_down_id}"
-                      >감소</a
-                    >
+                    <a href="javascript:;" class="qtyDown eClearDown {$quantity_down_class}" id="{$quantity_down_id}">
+                      감소
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -382,22 +381,15 @@
             <li module="product_addoption">
               <span class="name">{$add_option_name}</span>
               {$form.add_option}
-              <span class="txtByte" title="현재글자수/최대글자수"
-                >(<span class="length">0</span>/{$option_maxlength})</span
-              >
+              <span class="txtByte" title="현재글자수/최대글자수">
+                (
+                <span class="length">0</span>
+                /{$option_maxlength})
+              </span>
             </li>
 
             <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-              <a
-                href="#none"
-                class="btnSubmit sizeS"
-                onclick="
-                  {
-                    $add_action_push_button;
-                  }
-                "
-                >옵션선택</a
-              >
+              <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
             </li>
           </ul>
         </li>
@@ -406,9 +398,7 @@
 
     <div id="{$total.total_id}" class="{$total.total_display|display}">
       <table border="1">
-        <caption>
-          상품 목록
-        </caption>
+        <caption>상품 목록</caption>
         <colgroup>
           <col style="width: auto" />
           <col style="width: 100px" />
@@ -427,61 +417,28 @@
       </table>
     </div>
     <div id="{$total.total_price_id}" class="totalPrice">
-      <strong>총상품금액</strong> <span class="{$total.total_cnt}"><strong class="price">0</strong></span>
+      <strong>총상품금액</strong>
+
+      <span class="{$total.total_cnt}">
+        <strong class="price">0</strong>
+      </span>
     </div>
     <p class="ec-base-help {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수 있습니다.</p>
   </div>
 
   <div module="product_action">
     <div class="ec-base-button gColumn {$action_display|display}">
-      <a
-        href="#none"
-        class="btnSubmit {$buy_display|display}"
-        onclick="
-          {
-            $action_buy;
-          }
-        "
-        ><span id="{$btn_buy_mobile_id}">구매하기</span
-        ><span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span
-        ><span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청하기</span></a
-      >
-      <button
-        type="button"
-        class="btnNormal {$basket_display|display}"
-        onclick="
-          {
-            $action_basket;
-          }
-        "
-      >
-        장바구니
-      </button>
-      <button
-        type="button"
-        class="btnNormal {$wishlist_display|display}"
-        onclick="
-          {
-            $action_wishlist;
-          }
-        "
-      >
-        관심상품
-      </button>
+      <a href="#none" class="btnSubmit {$buy_display|display}" onclick="{$action_buy}">
+        <span id="{$btn_buy_mobile_id}">구매하기</span>
+        <span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span>
+        <span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청하기</span>
+      </a>
+      <button type="button" class="btnNormal {$basket_display|display}" onclick="{$action_basket}">장바구니</button>
+      <button type="button" class="btnNormal {$wishlist_display|display}" onclick="{$action_wishlist}">관심상품</button>
     </div>
     <div class="ec-base-button gColumn {$action_soldout_display|display}">
       <button type="button" class="btnSubmit {$soldout_display|display}">SOLD OUT</button>
-      <button
-        type="button"
-        class="btnNormal {$wishlist_display|display}"
-        onclick="
-          {
-            $action_wishlist;
-          }
-        "
-      >
-        관심상품
-      </button>
+      <button type="button" class="btnNormal {$wishlist_display|display}" onclick="{$action_wishlist}">관심상품</button>
     </div>
     <!-- 네이버 체크아웃 구매 버튼 -->
     <div id="NaverChk_Button" style="display: none"></div>

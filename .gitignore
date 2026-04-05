@@ -1,2 +1,3 @@
 .vscode
 node_modules/
+layout/basic/css/tailwind.css

@@ -1,12 +1,10 @@
-<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes"
-    />
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
     <title>주문서 작성</title>
 
     <!--@css(/css/module/order/ec_orderform/form_onetouch.css)-->
@@ -63,9 +61,11 @@
 
       <div class="ec-base-button gFull" id="orderFixItem">
         <button type="button" class="btnSubmit" id="{$btn_payment_id}">
-          {$total_order_price_front_head}<span id="{$total_order_price_front_id}">{$total_order_price_front}</span
-          >{$total_order_price_front_tail} <span class="{$subscription_hide_display|display}">결제하기</span
-          ><span class="{$subscription_show_display|display}">정기배송 신청하기</span>
+          {$total_order_price_front_head}
+          <span id="{$total_order_price_front_id}">{$total_order_price_front}</span>
+          {$total_order_price_front_tail}
+          <span class="{$subscription_hide_display|display}">결제하기</span>
+          <span class="{$subscription_show_display|display}">정기배송 신청하기</span>
         </button>
       </div>
 
@@ -93,8 +93,7 @@
         height="0"
         src=""
         title=""
-        style="border: none"
-      ></iframe>
+        style="border: none"></iframe>
       <input type="hidden" id="sPrdName" name="sPrdName" value="{$sPrdName}" />
     </div>
     <div id="progressPaybar" style="display: none">
@@ -102,9 +101,12 @@
       <div id="progressPaybarView">
         <p class="graph">현재 결제가 진행중입니다.</p>
         <p class="txt">
-          본 결제 창은 결제완료 후 자동으로 닫히며, <br />
-          결제 진행 중에 본 결제 창을 닫으시면<br />
-          주문이 되지 않으니 <br />
+          본 결제 창은 결제완료 후 자동으로 닫히며,
+          <br />
+          결제 진행 중에 본 결제 창을 닫으시면
+          <br />
+          주문이 되지 않으니
+          <br />
           결제 완료 될 때 까지 닫지 마시기 바랍니다.
         </p>
       </div>

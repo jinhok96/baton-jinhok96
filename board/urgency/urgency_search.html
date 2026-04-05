@@ -10,7 +10,9 @@
         <li id="liOrdtab" class="selected" onClick="{$clickOrdTab}">
           <a href="#none" id="tabordno" name="tabordno">주문번호</a>
         </li>
-        <li id="liPrdtab" onClick="{$clickPrdTab}"><a href="#none" id="tabprdno" name="tabprdno">상품</a></li>
+        <li id="liPrdtab" onClick="{$clickPrdTab}">
+          <a href="#none" id="tabprdno" name="tabprdno">상품</a>
+        </li>
       </ul>
     </div>
     {$form.isLogin}
@@ -20,9 +22,7 @@
     <div id="urgencyProduct" class="urgencyProduct {$prdDisplay | display}">
       <div class="ec-base-table typeWrite">
         <table border="1">
-          <caption>
-            상품검색
-          </caption>
+          <caption>상품검색</caption>
           <colgroup>
             <col style="width: 120px" />
             <col style="width: auto" />

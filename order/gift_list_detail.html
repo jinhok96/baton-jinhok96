@@ -7,9 +7,7 @@
   <div class="content">
     <div class="ec-base-table typeList">
       <table border="1" module="Gift_Listdetail">
-        <caption>
-          사은품 제공 상품
-        </caption>
+        <caption>사은품 제공 상품</caption>
         <colgroup>
           <col style="width: 60px" />
           <col style="width: auto" />
@@ -23,9 +21,13 @@
         </thead>
         <tbody module="Gift_detail">
           <tr>
-            <td class="thumb"><img src="{$gift_image}" alt="" /></td>
+            <td class="thumb">
+              <img src="{$gift_image}" alt="" />
+            </td>
             <td>{$product_name} {$soldout_icon} {$recommend_icon} {$new_icon}</td>
-            <td class="right"><span class="txtEm">{$price_unit_head}{$product_price}{$price_unit_tail}</span></td>
+            <td class="right">
+              <span class="txtEm">{$price_unit_head}{$product_price}{$price_unit_tail}</span>
+            </td>
           </tr>
         </tbody>
       </table>

@@ -8,7 +8,9 @@
   <div class="content">
     <div class="ec-base-prdInfo" module="Coupon_aPrd">
       <div class="prdBox">
-        <div class="thumbnail"><img src="{$product_image}" alt="" /></div>
+        <div class="thumbnail">
+          <img src="{$product_image}" alt="" />
+        </div>
         <div class="description">
           <strong class="prdName" title="상품명">{$product_name}</strong>
           <div class="price" title="판매가">{$sOrdPrice}</div>
@@ -24,9 +26,7 @@
 
     <div class="ec-base-table gBlank20">
       <table border="1">
-        <caption>
-          총 쿠폰 할인금액
-        </caption>
+        <caption>총 쿠폰 할인금액</caption>
         <colgroup>
           <col style="width: 33.33%" />
           <col style="width: 33.33%" />
@@ -43,11 +43,14 @@
           <tr>
             <td colspan="3">
               = 총 쿠폰 할인금액({$mileage_name}) :
-              <span class="total txtEm"
-                >{$price_unit_head}<strong class="txt18">{$total_coupon_discount}</strong
-                ><strong>{$price_unit_tail}</strong> (<img src="{$mileage_mileage_icon}" alt="" />
-                {$total_mileage})</span
-              >
+              <span class="total txtEm">
+                {$price_unit_head}
+                <strong class="txt18">{$total_coupon_discount}</strong>
+                <strong>{$price_unit_tail}</strong>
+                (
+                <img src="{$mileage_mileage_icon}" alt="" />
+                {$total_mileage})
+              </span>
             </td>
           </tr>
         </tfoot>
@@ -56,16 +59,26 @@
             <td>
               <div class="box">
                 {$price_unit_head}{$product_coupon_discount}{$price_unit_tail}
-                <span class="txtInfo">(<img src="{$mileage_mileage_icon}" alt="" /> {$product_mileage})</span>
+                <span class="txtInfo">
+                  (
+                  <img src="{$mileage_mileage_icon}" alt="" />
+                  {$product_mileage})
+                </span>
               </div>
             </td>
             <td>
               <div class="box">
                 -{$price_unit_head}{$order_coupon_discount}{$price_unit_tail}
-                <span class="txtInfo">(<img src="{$mileage_mileage_icon}" alt="" /> {$order_mileage})</span>
+                <span class="txtInfo">
+                  (
+                  <img src="{$mileage_mileage_icon}" alt="" />
+                  {$order_mileage})
+                </span>
               </div>
             </td>
-            <td><div class="box">-{$price_unit_head}{$delivery_coupon_discount}{$price_unit_tail}</div></td>
+            <td>
+              <div class="box">-{$price_unit_head}{$delivery_coupon_discount}{$price_unit_tail}</div>
+            </td>
           </tr>
         </tbody>
         <tbody class="center">

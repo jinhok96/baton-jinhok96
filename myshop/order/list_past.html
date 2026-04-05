@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>주문조회</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>주문조회</strong>
+    </li>
   </ol>
 </div>
 
@@ -14,7 +20,9 @@
   </div>
   <div module="Myshop_OrderHistoryTab" class="ec-base-tab typeNav">
     <ul class="menu">
-      <li class="{$tab_class}"><a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a></li>
+      <li class="{$tab_class}">
+        <a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a>
+      </li>
       <li class="{$tab_class_cs}">
         <a href="/myshop/order/list.html{$param_cs}">취소/반품/교환 내역 ({$total_orders_cs})</a>
       </li>
@@ -33,14 +41,15 @@
       <legend>검색기간설정</legend>
       <div class="stateSelect">{$order_search_year}</div>
       <div class="date">
-        <span class="btnSubmit sizeM"
-          >조회<input
+        <span class="btnSubmit sizeM">
+          조회
+          <input
             id="order_search_btn"
             type="image"
             src="//img.echosting.cafe24.com/skin/admin_ko_KR/myshop/btn_search.gif"
             onclick="OrderHistory.searchPast(true)"
-            alt=""
-        /></span>
+            alt="" />
+        </span>
       </div>
     </fieldset>
     <ul class="txtInfo">
@@ -63,25 +72,26 @@
         <div class="ec-base-prdInfo">
           <div class="prdBox">
             <div class="thumbnail">
-              <a href="/product/detail.html{$param}"
-                ><img
+              <a href="/product/detail.html{$param}">
+                <img
                   src="{$product_image}"
                   onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                   width="83"
                   height="83"
-                  alt=""
-              /></a>
+                  alt="" />
+              </a>
             </div>
             <div class="description">
               <strong class="prdName" title="상품명">{$product_name_link}</strong>
               <div class="price">
-                <span title="판매가"
-                  >{$product_price_front_head}<strong>{$product_price_front}</strong>{$product_price_front_tail}<span
-                    class="refer {$product_price_ref_display|display}"
-                  >
-                    {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</span
-                  ></span
-                >
+                <span title="판매가">
+                  {$product_price_front_head}
+                  <strong>{$product_price_front}</strong>
+                  {$product_price_front_tail}
+                  <span class="refer {$product_price_ref_display|display}">
+                    {$product_price_back_head}{$product_price_back}{$product_price_back_tail}
+                  </span>
+                </span>
                 <span class="qty" title="수량">({$quantity}개)</span>
               </div>
               <ul class="info">
@@ -89,8 +99,14 @@
               </ul>
               <p class="optionGroup {$option_str_display|display}">{$option_str}</p>
               <ul class="optionGroup" module="Myshop_optionSet">
-                <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                <li>
+                  <span class="product">{$product_name}</span>
+                  {$option_str} ({$qty}개)
+                </li>
+                <li>
+                  <span class="product">{$product_name}</span>
+                  {$option_str} ({$qty}개)
+                </li>
               </ul>
             </div>
           </div>
@@ -98,9 +114,9 @@
             <div class="gLeft">
               <span class="txtStatus">{$status}</span>
               <span class="store">{$mobile_store_info}</span>
-              <span class="addition {$detail_info_display|display}"
-                ><a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a></span
-              >
+              <span class="addition {$detail_info_display|display}">
+                <a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a>
+              </span>
             </div>
           </div>
         </div>
@@ -114,25 +130,26 @@
         <div class="ec-base-prdInfo">
           <div class="prdBox">
             <div class="thumbnail">
-              <a href="/product/detail.html{$param}"
-                ><img
+              <a href="/product/detail.html{$param}">
+                <img
                   src="{$product_image}"
                   onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                   width="83"
                   height="83"
-                  alt=""
-              /></a>
+                  alt="" />
+              </a>
             </div>
             <div class="description">
               <strong class="prdName" title="상품명">{$product_name_link}</strong>
               <div class="price">
-                <span title="판매가"
-                  >{$product_price_front_head}<strong>{$product_price_front}</strong>{$product_price_front_tail}<span
-                    class="refer {$product_price_ref_display|display}"
-                  >
-                    {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</span
-                  ></span
-                >
+                <span title="판매가">
+                  {$product_price_front_head}
+                  <strong>{$product_price_front}</strong>
+                  {$product_price_front_tail}
+                  <span class="refer {$product_price_ref_display|display}">
+                    {$product_price_back_head}{$product_price_back}{$product_price_back_tail}
+                  </span>
+                </span>
                 <span class="qty" title="수량">({$quantity}개)</span>
               </div>
               <ul class="info">
@@ -140,8 +157,14 @@
               </ul>
               <p class="optionGroup {$option_str_display|display}">{$option_str}</p>
               <ul class="optionGroup" module="Myshop_optionSet">
-                <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                <li>
+                  <span class="product">{$product_name}</span>
+                  {$option_str} ({$qty}개)
+                </li>
+                <li>
+                  <span class="product">{$product_name}</span>
+                  {$option_str} ({$qty}개)
+                </li>
               </ul>
             </div>
           </div>
@@ -149,9 +172,9 @@
             <div class="gLeft">
               <span class="txtStatus">{$status}</span>
               <span class="store">{$mobile_store_info}</span>
-              <span class="addition {$detail_info_display|display}"
-                ><a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a></span
-              >
+              <span class="addition {$detail_info_display|display}">
+                <a href="order_detail_cs.html{$params}" target="_blank" class="btnText">상세정보</a>
+              </span>
             </div>
           </div>
         </div>
@@ -164,8 +187,12 @@
     <a href="{$param_first}" class="first">첫 페이지</a>
     <a href="{$param_prev}">이전 페이지</a>
     <ol>
-      <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
-      <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+      <li>
+        <a href="{$param_page}" class="{$param_class}">{$num}</a>
+      </li>
+      <li>
+        <a href="{$param_page}" class="{$param_class}">{$num}</a>
+      </li>
     </ol>
     <a href="{$param_next}">다음 페이지</a>
     <a href="{$param_last}" class="last">마지막 페이지</a>

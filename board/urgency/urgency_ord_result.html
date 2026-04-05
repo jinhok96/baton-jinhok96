@@ -1,9 +1,7 @@
 <!-- logout -->
 <div module="Mall_UrgencycallOrdLogout" class="ec-base-table typeWrite {$displayLogout|display}">
   <table border="1">
-    <caption>
-      주문번호 검색
-    </caption>
+    <caption>주문번호 검색</caption>
     <colgroup>
       <col style="width: 100px" />
       <col style="width: auto" />
@@ -12,18 +10,10 @@
       <tr>
         <th scope="row">주문번호</th>
         <td class="formGroup">
-          <input type="text" id="{$order_id1}" class="inputOrdNum" /> -
+          <input type="text" id="{$order_id1}" class="inputOrdNum" />
+          -
           <input type="text" id="{$order_id2}" class="inputOrdNum" />
-          <a
-            href="#none"
-            class="btnSubmit"
-            onclick="
-              {
-                $insertfn;
-              }
-            "
-            >등록</a
-          >
+          <a href="#none" class="btnSubmit" onclick="{$insertfn}">등록</a>
           <span class="gBlank5 txtInfo">예) 00000000 - 0000000</span>
         </td>
       </tr>
@@ -34,9 +24,7 @@
 
 <div class="ec-base-table typeList">
   <table border="1" module="Mall_UrgencycallOrdHeader" class="{$displayLogin|display}">
-    <caption>
-      검색결과
-    </caption>
+    <caption>검색결과</caption>
     <colgroup>
       <col style="width: auto" />
       <col style="width: 130px" />
@@ -52,9 +40,7 @@
   </table>
   <div module="Mall_UrgencycallOrdResult" class="scroll {$displayLogin|display}">
     <table border="1">
-      <caption>
-        검색결과
-      </caption>
+      <caption>검색결과</caption>
       <colgroup>
         <col style="width: auto" />
         <col style="width: 130px" />
@@ -63,40 +49,26 @@
       <tbody class="{$displayPrdlist|display} center">
         <tr>
           <td class="product left">
-            <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+            <span class="thumb">
+              <img src="{$image_tiny}" alt="" />
+            </span>
             <p>{$product_name}</p>
           </td>
           <td>{$order_id}</td>
           <td>
-            <a
-              href="#none"
-              class="btnNormal"
-              onclick="
-                {
-                  $selectfn;
-                }
-              "
-              >선택</a
-            >
+            <a href="#none" class="btnNormal" onclick="{$selectfn}">선택</a>
           </td>
         </tr>
         <tr>
           <td class="product left">
-            <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+            <span class="thumb">
+              <img src="{$image_tiny}" alt="" />
+            </span>
             <p>{$product_name}</p>
           </td>
           <td>{$order_id}</td>
           <td>
-            <a
-              href="#none"
-              class="btnNormal"
-              onclick="
-                {
-                  $selectfn;
-                }
-              "
-              >선택</a
-            >
+            <a href="#none" class="btnNormal" onclick="{$selectfn}">선택</a>
           </td>
         </tr>
       </tbody>
@@ -108,11 +80,21 @@
 <div module="Mall_UrgencycallOrdPage" class="ec-base-paginate typeList {$displayLogin|display}">
   <a href="#none" onClick="{$prev}">이전 페이지</a>
   <ol>
-    <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
-    <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
-    <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
-    <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
-    <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+    <li>
+      <a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a>
+    </li>
+    <li>
+      <a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a>
+    </li>
+    <li>
+      <a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a>
+    </li>
+    <li>
+      <a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a>
+    </li>
+    <li>
+      <a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a>
+    </li>
   </ol>
   <a href="#none" onClick="{$next}">다음 페이지</a>
 </div>

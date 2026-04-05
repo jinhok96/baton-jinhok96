@@ -1,0 +1,16 @@
+<div module="product_action" id="{$fixed_action_button}">
+  <div class="{$action_display|display} flex gap-2 py-2">
+    <button
+      class="border-color-primary text-primary text-l5 actionCart {$basket_display|display} flex-1 rounded-xs border px-4 py-3"
+      onclick="{$action_basket}"
+      id="actionCart">
+      장바구니 담기
+    </button>
+    <button
+      class="border-color-tertiary text-primary text-l5 {$buy_display|display} flex flex-1 items-center justify-center rounded-xs border px-4 py-3"
+      onclick="{$action_buy}">
+      <span id="{$btn_buy_mobile_id}">바로 구매하기</span>
+    </button>
+  </div>
+  <div id="{$app_payment_button_box_id}"></div>
+</div>

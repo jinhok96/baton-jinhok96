@@ -1,0 +1,39 @@
+<div class="w-full">
+  <div class="relative aspect-4/5 w-full overflow-hidden rounded-lg">
+    <a href="{$link_product_detail}" class="absolute inset-0">
+      <img src="{$image_big}" alt="{$seo_alt_tag}" class="size-full object-cover" />
+    </a>
+    <div
+      class="{$recommend_icon|display} text-c1 text-secondary md:text-l6 absolute top-0 left-0 px-3 py-2 md:px-4 md:py-3">
+      베스트
+    </div>
+  </div>
+
+  <div class="flex w-full flex-col gap-3 pt-3">
+    <!--담기 버튼-->
+    <a
+      href="{$link_product_detail}"
+      class="border-color-primary bg-primary flex w-full items-center justify-center gap-2 rounded border p-2 md:px-3 md:py-2">
+      <span class="text-secondary size-4.5 shrink-0">
+        <!--@import(/svg/icon/cart.html)-->
+      </span>
+      <span class="text-c1 md:text-l6 text-secondary">담기</span>
+    </a>
+
+    <!--정보-->
+    <div class="flex flex-col gap-1">
+      <!--카테고리, 제품명-->
+      <div class="flex w-full flex-col gap-0.5 pr-5">
+        <a href="#none" class="text-secondary flex items-center">
+          <span class="text-c1">{$prd_brand}</span>
+          <span class="size-5 shrink-0">
+            <!--@import(/svg/icon/arrow_sm_right.html)-->
+          </span>
+        </a>
+        <p class="**:text-l6! **:md:text-l5! **:text-primary!">{$product_name}</p>
+      </div>
+
+      <!--@import(/layout/product/product_price.html)-->
+    </div>
+  </div>
+</div>

@@ -14,9 +14,7 @@
     </div>
     <div class="ec-base-table typeList gBorder">
       <table border="1">
-        <caption>
-          사은품
-        </caption>
+        <caption>사은품</caption>
         <colgroup>
           <col style="width: 35px" class="{$display_orderform_choice|display}" />
           <col style="width: 92px" />
@@ -38,11 +36,17 @@
         <tfoot class="right" module="gift_point">
           <tr>
             <td colspan="6">
-              <span class="gLeft"
-                ><strong>사은품 {$select_gift_count}개 선택</strong>(<span class="{$select_gift_name_class}"></span
-                >)</span
-              >
-              보유 포인트 <strong>{$total_point}</strong>점 - 사용 포인트 <strong>{$use_point}</strong>점 = 잔여 포인트
+              <span class="gLeft">
+                <strong>사은품 {$select_gift_count}개 선택</strong>
+                (
+                <span class="{$select_gift_name_class}"></span>
+                )
+              </span>
+              보유 포인트
+              <strong>{$total_point}</strong>
+              점 - 사용 포인트
+              <strong>{$use_point}</strong>
+              점 = 잔여 포인트
               <strong class="txtEm">{$able_point}점</strong>
             </td>
           </tr>
@@ -50,7 +54,9 @@
         <tbody class="center">
           <tr>
             <td class="{$display_orderform_choice|display}">{$product_choice}</td>
-            <td class="thumb gClearLine"><img src="{$gift_image}" class="image {$giftImage_class}" alt="" /></td>
+            <td class="thumb gClearLine">
+              <img src="{$gift_image}" class="image {$giftImage_class}" alt="" />
+            </td>
             <td class="left gClearLine">
               <strong class="name {$giftName_class}">{$product_name}{$soldout_icon}</strong>
               <ul class="option">
@@ -65,27 +71,18 @@
             <td class="{$display_orderform_quantity_td|display}">
               <span class="ec-base-qty">
                 {$product_amount}
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_change_amount_up;
-                    }
-                  "
-                  ><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" class="up"
-                /></a>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_change_amount_down;
-                    }
-                  "
-                  ><img
+                <a href="#none" onclick="{$action_change_amount_up}">
+                  <img
+                    src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif"
+                    alt="수량증가"
+                    class="up" />
+                </a>
+                <a href="#none" onclick="{$action_change_amount_down}">
+                  <img
                     src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif"
                     alt="수량감소"
-                    class="down"
-                /></a>
+                    class="down" />
+                </a>
               </span>
             </td>
             <td class="{$display_orderform_offer_auto_quantity_td|display}">{$offer_auto_quantity}</td>
@@ -95,7 +92,9 @@
           </tr>
           <tr>
             <td class="{$display_orderform_choice|display}">{$product_choice}</td>
-            <td class="thumb gClearLine"><img src="{$gift_image}" class="image {$giftImage_class}" alt="" /></td>
+            <td class="thumb gClearLine">
+              <img src="{$gift_image}" class="image {$giftImage_class}" alt="" />
+            </td>
             <td class="left gClearLine">
               <strong class="name {$giftName_class}">{$product_name}{$soldout_icon}</strong>
               <ul class="option">
@@ -110,27 +109,18 @@
             <td class="{$display_orderform_quantity_td|display}">
               <span class="ec-base-qty">
                 {$product_amount}
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_change_amount_up;
-                    }
-                  "
-                  ><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" class="up"
-                /></a>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_change_amount_down;
-                    }
-                  "
-                  ><img
+                <a href="#none" onclick="{$action_change_amount_up}">
+                  <img
+                    src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif"
+                    alt="수량증가"
+                    class="up" />
+                </a>
+                <a href="#none" onclick="{$action_change_amount_down}">
+                  <img
                     src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif"
                     alt="수량감소"
-                    class="down"
-                /></a>
+                    class="down" />
+                </a>
               </span>
             </td>
             <td class="{$display_orderform_offer_auto_quantity_td|display}">{$offer_auto_quantity}</td>
@@ -140,7 +130,9 @@
           </tr>
           <tr>
             <td class="{$display_orderform_choice|display}">{$product_choice}</td>
-            <td class="thumb gClearLine"><img src="{$gift_image}" class="image {$giftImage_class}" alt="" /></td>
+            <td class="thumb gClearLine">
+              <img src="{$gift_image}" class="image {$giftImage_class}" alt="" />
+            </td>
             <td class="left gClearLine">
               <strong class="name {$giftName_class}">{$product_name}{$soldout_icon}</strong>
               <ul class="option">
@@ -155,27 +147,18 @@
             <td class="{$display_orderform_quantity_td|display}">
               <span class="ec-base-qty">
                 {$product_amount}
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_change_amount_up;
-                    }
-                  "
-                  ><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" class="up"
-                /></a>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_change_amount_down;
-                    }
-                  "
-                  ><img
+                <a href="#none" onclick="{$action_change_amount_up}">
+                  <img
+                    src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif"
+                    alt="수량증가"
+                    class="up" />
+                </a>
+                <a href="#none" onclick="{$action_change_amount_down}">
+                  <img
                     src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif"
                     alt="수량감소"
-                    class="down"
-                /></a>
+                    class="down" />
+                </a>
               </span>
             </td>
             <td class="{$display_orderform_offer_auto_quantity_td|display}">{$offer_auto_quantity}</td>

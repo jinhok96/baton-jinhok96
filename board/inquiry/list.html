@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>대량구매문의 관리</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>대량구매문의 관리</strong>
+    </li>
   </ol>
 </div>
 
@@ -14,9 +20,7 @@
 
 <div module="board_InquiryList" class="ec-base-table typeList">
   <table border="1">
-    <caption>
-      대량구매문의 목록
-    </caption>
+    <caption>대량구매문의 목록</caption>
     <colgroup>
       <col style="width: 70px" />
       <col style="width: auto" />
@@ -41,20 +45,30 @@
       <tr>
         <td>{$no}</td>
         <td class="txtBreak left">
-          <a href="/board/inquiry/read.html{$param}">{$title}</a> {$icon_new}{$icon_hit}{$icon_file}
+          <a href="/board/inquiry/read.html{$param}">{$title}</a>
+          {$icon_new}{$icon_hit}{$icon_file}
         </td>
         <td class="txtBreak left">{$product_name}</td>
-        <td><span class="txtNum">{$date}</span></td>
-        <td><span class="txtNum">{$replay}</span></td>
+        <td>
+          <span class="txtNum">{$date}</span>
+        </td>
+        <td>
+          <span class="txtNum">{$replay}</span>
+        </td>
       </tr>
       <tr>
         <td>{$no}</td>
         <td class="txtBreak left">
-          <a href="/board/inquiry/read.html{$param}">{$title}</a> {$icon_new}{$icon_hit}{$icon_file}
+          <a href="/board/inquiry/read.html{$param}">{$title}</a>
+          {$icon_new}{$icon_hit}{$icon_file}
         </td>
         <td class="txtBreak left">{$product_name}</td>
-        <td><span class="txtNum">{$date}</span></td>
-        <td><span class="txtNum">{$replay}</span></td>
+        <td>
+          <span class="txtNum">{$date}</span>
+        </td>
+        <td>
+          <span class="txtNum">{$replay}</span>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -67,8 +81,12 @@
     -->
   <a href="{$prev_url}">이전 페이지</a>
   <ol>
-    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+    <li>
+      <a href="{$url_query}" class="{$param_class}">{$n}</a>
+    </li>
+    <li>
+      <a href="{$url_query}" class="{$param_class}">{$n}</a>
+    </li>
   </ol>
   <a href="{$next_url}">다음 페이지</a>
 </div>
@@ -79,16 +97,7 @@
     <legend>게시물 검색</legend>
     <div class="form">
       {$form.reply} {$form.period} {$form.search_content} {$form.search_text}
-      <a
-        href="#none"
-        class="btnNormal"
-        onclick="
-          {
-            $action_search;
-          }
-        "
-        >찾기</a
-      >
+      <a href="#none" class="btnNormal" onclick="{$action_search}">찾기</a>
     </div>
   </fieldset>
 </div>

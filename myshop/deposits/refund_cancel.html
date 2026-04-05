@@ -31,16 +31,18 @@
 
       <div class="ec-base-tab typeNav">
         <ul class="menu">
-          <li><a href="refund_call.html">현금환불 요청</a></li>
-          <li class="selected"><a href="refund_cancel.html">현금환불 취소</a></li>
+          <li>
+            <a href="refund_call.html">현금환불 요청</a>
+          </li>
+          <li class="selected">
+            <a href="refund_cancel.html">현금환불 취소</a>
+          </li>
         </ul>
       </div>
 
       <div class="ec-base-table">
         <table border="1">
-          <caption>
-            환불취소 목록
-          </caption>
+          <caption>환불취소 목록</caption>
           <colgroup>
             <col style="width: 20px" />
             <col style="width: 150px" />
@@ -61,25 +63,37 @@
           </thead>
           <tbody class="{$display_refund|display} center">
             <tr>
-              <td><input type="checkbox" id="{$chk_id}" name="{$chk_id}" value="{$chk_val}" {$chk_able} /></td>
+              <td>
+                <input type="checkbox" id="{$chk_id}" name="{$chk_id}" value="{$chk_val}" {$chk_able} />
+              </td>
               <td>{$refund_date}</td>
-              <td class="right"><strong>{$refund_money}</strong></td>
+              <td class="right">
+                <strong>{$refund_money}</strong>
+              </td>
               <td>{$depositor}</td>
               <td>{$bank}</td>
               <td>{$status}</td>
             </tr>
             <tr>
-              <td><input type="checkbox" id="{$chk_id}" name="{$chk_id}" value="{$chk_val}" {$chk_able} /></td>
+              <td>
+                <input type="checkbox" id="{$chk_id}" name="{$chk_id}" value="{$chk_val}" {$chk_able} />
+              </td>
               <td>{$refund_date}</td>
-              <td class="right"><strong>{$refund_money}</strong></td>
+              <td class="right">
+                <strong>{$refund_money}</strong>
+              </td>
               <td>{$depositor}</td>
               <td>{$bank}</td>
               <td>{$status}</td>
             </tr>
             <tr>
-              <td><input type="checkbox" id="{$chk_id}" name="{$chk_id}" value="{$chk_val}" {$chk_able} /></td>
+              <td>
+                <input type="checkbox" id="{$chk_id}" name="{$chk_id}" value="{$chk_val}" {$chk_able} />
+              </td>
               <td>{$refund_date}</td>
-              <td class="right"><strong>{$refund_money}</strong></td>
+              <td class="right">
+                <strong>{$refund_money}</strong>
+              </td>
               <td>{$depositor}</td>
               <td>{$bank}</td>
               <td>{$status}</td>
@@ -93,16 +107,36 @@
         <a href="{$first_url}" class="first">첫 페이지</a>
         <a href="{$prev_url}">이전 페이지</a>
         <ol>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-          <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
+          <li>
+            <a href="{$url_query}" class="{$param_class}">{$n}</a>
+          </li>
         </ol>
         <a href="{$next_url}">다음 페이지></a>
         <a href="{$last_url}" class="last">마지막 페이지</a>

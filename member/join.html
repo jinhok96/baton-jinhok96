@@ -2,8 +2,12 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li title="현재 위치"><strong>회원 가입</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li title="현재 위치">
+      <strong>회원 가입</strong>
+    </li>
   </ol>
 </div>
 
@@ -38,16 +42,17 @@
     </div>
     <div class="ec-base-table typeWrite">
       <table border="1">
-        <caption>
-          회원가입
-        </caption>
+        <caption>회원가입</caption>
         <colgroup>
           <col style="width: 190px" />
           <col style="width: auto" />
         </colgroup>
         <tbody>
           <tr class="{$display_member_type|display}">
-            <th scope="row">회원구분 <i aria-hidden="true" aria-hidden="true">*</i></th>
+            <th scope="row">
+              회원구분
+              <i aria-hidden="true" aria-hidden="true">*</i>
+            </th>
             <td>{$form.member_type}</td>
           </tr>
           <tr id="companyWrap">
@@ -56,8 +61,7 @@
               <img
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
                 class="icon icoRequired"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
             <td>{$form.company_type}</td>
           </tr>
@@ -67,41 +71,23 @@
               <img
                 src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
                 class="icon icoRequired"
-                alt="필수"
-              />
+                alt="필수" />
             </th>
             <td class="formMultiple">
               <div id="authWrap" style="display: none">
                 <div id="personAuth">
                   <div id="personalTypeWrap">{$form.personal_type}</div>
                   <div id="ipinWrap">
-                    <a
-                      href="#none"
-                      class="btnNormal sizeS"
-                      onclick="
-                        {
-                          $action_ipin_open;
-                        }
-                      "
-                      >아이핀인증</a
-                    >
+                    <a href="#none" class="btnNormal sizeS" onclick="{$action_ipin_open}">아이핀인증</a>
                     <p class="gBlank5">
                       아이핀이란, 회원님의 개인정보 보호를 위해 웹사이트에 주민등록번호를 제공하지 않고 본인임을
-                      확인하는 인터넷상의 개인식별번호 서비스입니다. <br />아이핀을 통한 가입을 원하시면 아이핀 인증
-                      버튼을 눌러 진행해 주십시오.
+                      확인하는 인터넷상의 개인식별번호 서비스입니다.
+                      <br />
+                      아이핀을 통한 가입을 원하시면 아이핀 인증 버튼을 눌러 진행해 주십시오.
                     </p>
                   </div>
                   <div id="mobileWrap">
-                    <a
-                      href="#none"
-                      class="btnNormal sizeS"
-                      onclick="
-                        {
-                          $action_mobile_open;
-                        }
-                      "
-                      >휴대폰인증</a
-                    >
+                    <a href="#none" class="btnNormal sizeS" onclick="{$action_mobile_open}">휴대폰인증</a>
                     <p class="gBlank5">본인 명의의 휴대폰으로 본인인증을 진행합니다.</p>
                   </div>
                   <div id="emailWrap">
@@ -119,16 +105,7 @@
                     <dt>법인번호</dt>
                     <dd class="formGroup code">
                       {$form.bssn1} - {$form.bssn2}
-                      <a
-                        href="#none"
-                        class="btnNormal"
-                        onclick="
-                          {
-                            $action_business_dupl;
-                          }
-                        "
-                        >중복확인</a
-                      >
+                      <a href="#none" class="btnNormal" onclick="{$action_business_dupl}">중복확인</a>
                     </dd>
                   </dl>
                 </div>
@@ -140,22 +117,15 @@
                     <dt>{$form.foreigner_type}</dt>
                     <dd class="formGroup">
                       {$form.foreigner_ssn}
-                      <a
-                        href="#none"
-                        class="btnNormal"
-                        onclick="
-                          {
-                            $action_foreigner_check;
-                          }
-                        "
-                        >중복확인</a
-                      >
+                      <a href="#none" class="btnNormal" onclick="{$action_foreigner_check}">중복확인</a>
                     </dd>
                   </dl>
                   <div id="foreignerPersonWrap">
                     <p class="txtInfo">
                       회사는 회원의 본인확인 및 서비스제공을 위하여 고유식별정보를 수집하여 보관하며 개인정보처리방침에
-                      따라 보유 및 이용합니다.<br />고유식별정보 제공을 거부하는 경우 서비스 이용이 제한됩니다.
+                      따라 보유 및 이용합니다.
+                      <br />
+                      고유식별정보 제공을 거부하는 경우 서비스 이용이 제한됩니다.
                     </p>
                     <p>{$form.f_identification_check}</p>
                   </div>
@@ -183,9 +153,7 @@
   </div>
   <div class="ec-base-table typeWrite">
     <table border="1">
-      <caption>
-        회원 기본정보
-      </caption>
+      <caption>회원 기본정보</caption>
       <colgroup>
         <col style="width: 190px" />
         <col style="width: auto" />
@@ -197,11 +165,11 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>
-            {$form.member_id} <span class="txtInfo">(영문소문자/숫자, 4~16자)</span>
+            {$form.member_id}
+            <span class="txtInfo">(영문소문자/숫자, 4~16자)</span>
             <p id="{$idMsg_id}" class="txtInfo txtSuccess"></p>
           </td>
         </tr>
@@ -211,8 +179,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>
             <div class="eTooltip">
@@ -237,8 +204,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>
             {$form.user_passwd_confirm}
@@ -251,8 +217,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.hint}</td>
         </tr>
@@ -262,8 +227,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.hint_answer}</td>
         </tr>
@@ -273,8 +237,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>
             <span id="{$name_contents}">{$form.name}</span>
@@ -287,10 +250,12 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_name_en|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
-          <td>{$form.name_en} <span class="txtInfo">(이름 - 성 형식으로 입력해 주세요.)</span></td>
+          <td>
+            {$form.name_en}
+            <span class="txtInfo">(이름 - 성 형식으로 입력해 주세요.)</span>
+          </td>
         </tr>
         <tr>
           <th scope="row" id="ssnTitle"></th>
@@ -302,8 +267,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td id="companyName">{$form.cname}</td>
         </tr>
@@ -313,21 +277,11 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formGroup" id="companySsn">
             {$form.cssn}
-            <a
-              href="#none"
-              class="btnNormal {$display_cssn_dupl|display}"
-              onclick="
-                {
-                  $action_cssn_dupl;
-                }
-              "
-              >중복확인</a
-            >
+            <a href="#none" class="btnNormal {$display_cssn_dupl|display}" onclick="{$action_cssn_dupl}">중복확인</a>
             <p id="{$cssnMsg_id}"></p>
           </td>
         </tr>
@@ -337,8 +291,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.citizenship}</td>
         </tr>
@@ -348,8 +301,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_address|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formMultiple">{$form.address}</td>
         </tr>
@@ -359,8 +311,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_phone|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formGroup code">{$form.phone}</td>
         </tr>
@@ -370,20 +321,15 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_cell|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formGroup code">
-            {$form.mobile}<button
+            {$form.mobile}
+            <button
               type="button"
               id="{$btn_action_verify_mobile}"
               class="btnNormal {$display_verify_mobile|display}"
-              onclick="
-                {
-                  $action_verify_mobile;
-                }
-              "
-            >
+              onclick="{$action_verify_mobile}">
               인증번호받기
             </button>
             <p class="txtInfo {$bDisplayMobileVerifyInfoDefault|display}">
@@ -401,8 +347,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formGroup">
             <div class="verify">
@@ -413,12 +358,7 @@
               type="button"
               class="btnNormal"
               id="{$btn_verify_mobile_confirm}"
-              onclick="
-                {
-                  $action_verify_mobile_confirm;
-                }
-              "
-            >
+              onclick="{$action_verify_mobile_confirm}">
               확인
             </button>
           </td>
@@ -429,8 +369,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>
             {$form.email}
@@ -443,8 +382,9 @@
             {$form.is_lifetime}
             <ul class="txtInfo">
               <li>
-                평생회원으로 가입하시면 <strong>{$mall_name}</strong> 회원 탈퇴시까지는 휴면회원으로 전환되지 않으며,
-                고객님의 개인정보가 탈퇴시까지 안전하게 보관됩니다.
+                평생회원으로 가입하시면
+                <strong>{$mall_name}</strong>
+                회원 탈퇴시까지는 휴면회원으로 전환되지 않으며, 고객님의 개인정보가 탈퇴시까지 안전하게 보관됩니다.
               </li>
               <li class="{$display_is_lifetime_benefit|display}">
                 지금 평생회원으로 가입하시면 쿠폰혜택을 드립니다. (쿠폰혜택을 받으신 경우, 3개월간 평생회원을 유지하셔야
@@ -458,13 +398,14 @@
   </div>
 
   <div class="titleArea titleArea--middle {$display_add_title|display}">
-    <h3>추가정보 <span class="desc">(선택)</span></h3>
+    <h3>
+      추가정보
+      <span class="desc">(선택)</span>
+    </h3>
   </div>
   <div class="ec-base-table typeWrite {$display_add_title|display}">
     <table border="1">
-      <caption>
-        회원 추가정보
-      </caption>
+      <caption>회원 추가정보</caption>
       <colgroup>
         <col style="width: 190px" />
         <col style="width: auto" />
@@ -476,10 +417,12 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_nick_name_flag|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
-          <td>{$form.nick_name} <span class="txtInfo" id="{$nick_msg}"></span></td>
+          <td>
+            {$form.nick_name}
+            <span class="txtInfo" id="{$nick_msg}"></span>
+          </td>
         </tr>
         <tr class="{$display_is_sex|display}">
           <th scope="row">
@@ -487,8 +430,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_sex|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.is_sex}</td>
         </tr>
@@ -498,14 +440,11 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_is_birthday|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formGroup date">
-            {$form.birth_year} 년 {$form.birth_month} 월 {$form.birth_day} 일<span
-              class="gFlow {$display_calendar_type|display}"
-              >{$form.is_solar_calendar}</span
-            >
+            {$form.birth_year} 년 {$form.birth_month} 월 {$form.birth_day} 일
+            <span class="gFlow {$display_calendar_type|display}">{$form.is_solar_calendar}</span>
           </td>
         </tr>
         <tr class="{$display_marry|display}">
@@ -514,8 +453,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_is_wedding_anniversary|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formGroup date">{$form.marry_year} 년 {$form.marry_month} 월 {$form.marry_day} 일</td>
         </tr>
@@ -525,8 +463,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_is_life_partner|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formGroup date">{$form.partner_year} 년 {$form.partner_month} 월 {$form.partner_day} 일</td>
         </tr>
@@ -536,8 +473,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_child|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.child}</td>
         </tr>
@@ -547,8 +483,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_school|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.school}</td>
         </tr>
@@ -558,8 +493,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_job_class|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.job_class}</td>
         </tr>
@@ -569,8 +503,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_job|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.job}</td>
         </tr>
@@ -580,8 +513,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_earning|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.earning}</td>
         </tr>
@@ -591,8 +523,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_car|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.car}</td>
         </tr>
@@ -602,8 +533,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_region|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.region}</td>
         </tr>
@@ -613,8 +543,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_internet|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.internet}</td>
         </tr>
@@ -624,10 +553,11 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_interest|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
-          <td><div class="interest">{$form.inter_check}</div></td>
+          <td>
+            <div class="interest">{$form.inter_check}</div>
+          </td>
         </tr>
         <tr class="{$display_add1|display}">
           <th scope="row">
@@ -635,8 +565,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add1|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add1}</td>
         </tr>
@@ -646,8 +575,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add2|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add2}</td>
         </tr>
@@ -657,8 +585,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add3|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add3}</td>
         </tr>
@@ -668,8 +595,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add4|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add4}</td>
         </tr>
@@ -679,8 +605,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add5|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add5}</td>
         </tr>
@@ -690,8 +615,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add6|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add6}</td>
         </tr>
@@ -701,8 +625,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add7|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add7}</td>
         </tr>
@@ -712,8 +635,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add8|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add8}</td>
         </tr>
@@ -723,8 +645,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add9|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add9}</td>
         </tr>
@@ -734,8 +655,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add10|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add10}</td>
         </tr>
@@ -745,8 +665,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add11|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add11}</td>
         </tr>
@@ -756,8 +675,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add12|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add12}</td>
         </tr>
@@ -767,8 +685,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add13|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add13}</td>
         </tr>
@@ -778,8 +695,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add14|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add14}</td>
         </tr>
@@ -789,8 +705,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_add15|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.add15}</td>
         </tr>
@@ -800,8 +715,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_reco_id|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td>{$form.reco_id}</td>
         </tr>
@@ -811,8 +725,7 @@
             <img
               src="//img.echosting.cafe24.com/skin/skin/common/ico_required.svg"
               class="icon icoRequired {$display_required_bank_account_no|display}"
-              alt="필수"
-            />
+              alt="필수" />
           </th>
           <td class="formMultiple">
             <dl>
@@ -821,7 +734,10 @@
               <dt>은행명</dt>
               <dd>{$form.refund_bank_code}</dd>
               <dt>계좌번호</dt>
-              <dd>{$form.bank_account_no} <span class="txtInfo">('-'와 숫자만 입력해주세요.)</span></dd>
+              <dd>
+                {$form.bank_account_no}
+                <span class="txtInfo">('-'와 숫자만 입력해주세요.)</span>
+              </dd>
             </dl>
           </td>
         </tr>
@@ -830,16 +746,7 @@
   </div>
 
   <div class="ec-base-button gBottom">
-    <a
-      href="#none"
-      class="btnSubmitFix sizeM"
-      onclick="
-        {
-          $action_func_join;
-        }
-      "
-      >회원가입</a
-    >
+    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_join}">회원가입</a>
   </div>
 
   <!--@import(/member/join_confirm.html)-->

@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>게시물 관리</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>게시물 관리</strong>
+    </li>
   </ol>
 </div>
 
@@ -24,9 +30,7 @@
                 $relation_post = yes
             -->
       <table border="1">
-        <caption>
-          게시물 관리 목록
-        </caption>
+        <caption>게시물 관리 목록</caption>
         <colgroup module="board_listheader_1002">
           <col style="width: 70px" />
           <col style="width: auto" />
@@ -47,26 +51,44 @@
         </thead>
         <tbody class="{$list_display|display} center">
           <tr>
-            <td class="chk no"><span class="RW">{$no}</span></td>
-            <td class="left subject">
-              {$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a
-              ><span class="comment">{$comment_count}</span>{$icon_new}{$icon_file}
+            <td class="chk no">
+              <span class="RW">{$no}</span>
             </td>
-            <td><a href="{$link_board_list}" class="txtEm">{$board_category}</a></td>
+            <td class="left subject">
+              {$icon_re}{$icon_lock}
+              <a href="{$board_read_url}">{$subject}</a>
+              <span class="comment">{$comment_count}</span>
+              {$icon_new}{$icon_file}
+            </td>
+            <td>
+              <a href="{$link_board_list}" class="txtEm">{$board_category}</a>
+            </td>
             <td>{$writer}</td>
             <td>{$write_date}</td>
-            <td><span class="RTMI">조회</span> {$hit_count}</td>
+            <td>
+              <span class="RTMI">조회</span>
+              {$hit_count}
+            </td>
           </tr>
           <tr>
-            <td class="chk no"><span class="RW">{$no}</span></td>
-            <td class="left subject">
-              {$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a
-              ><span class="comment">{$comment_count}</span>{$icon_new}{$icon_file}
+            <td class="chk no">
+              <span class="RW">{$no}</span>
             </td>
-            <td><a href="{$link_board_list}" class="txtEm">{$board_category}</a></td>
+            <td class="left subject">
+              {$icon_re}{$icon_lock}
+              <a href="{$board_read_url}">{$subject}</a>
+              <span class="comment">{$comment_count}</span>
+              {$icon_new}{$icon_file}
+            </td>
+            <td>
+              <a href="{$link_board_list}" class="txtEm">{$board_category}</a>
+            </td>
             <td>{$writer}</td>
             <td>{$write_date}</td>
-            <td><span class="RTMI">조회</span> {$hit_count}</td>
+            <td>
+              <span class="RTMI">조회</span>
+              {$hit_count}
+            </td>
           </tr>
         </tbody>
       </table>
@@ -80,16 +102,7 @@
       <legend>게시물 검색</legend>
       <div class="form">
         {$form.search_key} {$form.search}
-        <a
-          href="#none"
-          class="btnNormal"
-          onclick="
-            {
-              $action_search;
-            }
-          "
-          >검색</a
-        >
+        <a href="#none" class="btnNormal" onclick="{$action_search}">검색</a>
       </div>
     </fieldset>
   </div>
@@ -100,8 +113,12 @@
         -->
     <a href="{$param_prev}">이전 페이지</a>
     <ol>
-      <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-      <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+      <li>
+        <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+      </li>
+      <li>
+        <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+      </li>
     </ol>
     <a href="{$param_next}">다음 페이지</a>
   </div>

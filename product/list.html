@@ -5,12 +5,22 @@
   <div class="path" module="product_headcategory">
     <span>현재 위치</span>
     <ol>
-      <li><a href="/">홈</a></li>
-      <li class="{$disp_cate_1|display}"><a href="{$link_product_list_1}">{$name_1}</a></li>
-      <li class="{$disp_cate_2|display}"><a href="{$link_product_list_2}">{$name_2}</a></li>
-      <li class="{$disp_cate_3|display}"><a href="{$link_product_list_3}">{$name_3}</a></li>
+      <li>
+        <a href="/">홈</a>
+      </li>
+      <li class="{$disp_cate_1|display}">
+        <a href="{$link_product_list_1}">{$name_1}</a>
+      </li>
+      <li class="{$disp_cate_2|display}">
+        <a href="{$link_product_list_2}">{$name_2}</a>
+      </li>
+      <li class="{$disp_cate_3|display}">
+        <a href="{$link_product_list_3}">{$name_3}</a>
+      </li>
       <li class="{$disp_cate_4|display}">
-        <strong><a href="{$link_product_list_4}">{$name_4}</a></strong>
+        <strong>
+          <a href="{$link_product_list_4}">{$name_4}</a>
+        </strong>
       </li>
     </ol>
   </div>
@@ -19,54 +29,71 @@
 
 <div class="titleArea" module="product_headcategory">
   <h2>{$title_text_or_image}</h2>
-  <span class="likeButton {$disp_likecate_class}"
-    ><button type="button">{$disp_likecate_icon}<strong>{$disp_likecate_count}</strong></button></span
-  >
+  <span class="likeButton {$disp_likecate_class}">
+    <button type="button">
+      {$disp_likecate_icon}
+      <strong>{$disp_likecate_count}</strong>
+    </button>
+  </span>
 </div>
 
 <div class="ec-base-tab typeMenu">
   <ul class="menuCategory menu">
     <li module="product_displaycategory" style="display:{$display};" class="{$selected}">
-      <a href="{$link_product_list_sub}" class="button"
-        >{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a
-      ><a href="#none" class="iconWrap"></a>
+      <a href="{$link_product_list_sub}" class="button">
+        {$category_name}
+        <span class="count {$product_count_display|display}">({$product_count})</span>
+      </a>
+      <a href="#none" class="iconWrap"></a>
       <ul module="product_children">
         <li class="{$selected}">
-          <a href="{$link_product_list_sub}"
-            >{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a
-          ><a href="#none" class="iconWrap"></a>
+          <a href="{$link_product_list_sub}">
+            {$category_name}
+            <span class="{$product_count_display|display}">({$product_count})</span>
+          </a>
+          <a href="#none" class="iconWrap"></a>
           <div class="button">
             {$children_icon}
             <ul module="product_children" class="subCategory">
               <li class="{$selected}">
-                <a href="{$link_product_list_sub}"
-                  >{$category_name}<span class="{$product_count_display|display}">({$product_count})</span></a
-                ><a href="#none" class="iconWrap"></a>
+                <a href="{$link_product_list_sub}">
+                  {$category_name}
+                  <span class="{$product_count_display|display}">({$product_count})</span>
+                </a>
+                <a href="#none" class="iconWrap"></a>
               </li>
               <li class="{$selected}">
-                <a href="{$link_product_list_sub}"
-                  >{$category_name}<span class="{$product_count_display|display}">({$product_count})</span></a
-                ><a href="#none" class="iconWrap"></a>
+                <a href="{$link_product_list_sub}">
+                  {$category_name}
+                  <span class="{$product_count_display|display}">({$product_count})</span>
+                </a>
+                <a href="#none" class="iconWrap"></a>
               </li>
             </ul>
           </div>
         </li>
         <li class="{$selected}">
-          <a href="{$link_product_list_sub}"
-            >{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a
-          ><a href="#none" class="iconWrap"></a>
+          <a href="{$link_product_list_sub}">
+            {$category_name}
+            <span class="{$product_count_display|display}">({$product_count})</span>
+          </a>
+          <a href="#none" class="iconWrap"></a>
           <div class="button">
             {$children_icon}
             <ul module="product_children" class="subCategory">
               <li class="{$selected}">
-                <a href="{$link_product_list_sub}"
-                  >{$category_name}<span class="{$product_count_display|display}">({$product_count})</span></a
-                ><a href="#none" class="iconWrap"></a>
+                <a href="{$link_product_list_sub}">
+                  {$category_name}
+                  <span class="{$product_count_display|display}">({$product_count})</span>
+                </a>
+                <a href="#none" class="iconWrap"></a>
               </li>
               <li class="{$selected}">
-                <a href="{$link_product_list_sub}"
-                  >{$category_name}<span class="{$product_count_display|display}">({$product_count})</span></a
-                ><a href="#none" class="iconWrap"></a>
+                <a href="{$link_product_list_sub}">
+                  {$category_name}
+                  <span class="{$product_count_display|display}">({$product_count})</span>
+                </a>
+                <a href="#none" class="iconWrap"></a>
               </li>
             </ul>
           </div>
@@ -91,10 +118,12 @@
     <li id="anchorBoxId_{$product_no}">
       <div class="prdList__item">
         <div class="thumbnail">
-          <a href="{$link_product_detail}"
-            ><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"
-              ><span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span></span
-          ></a>
+          <a href="{$link_product_detail}">
+            <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" />
+            <span module="product_Imagestyle">
+              <span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span>
+            </span>
+          </a>
           <div class="icon__box">
             <span class="wish">{$list_wish_icon}</span>
             <span class="cart">{$basket_icon}</span>
@@ -102,14 +131,15 @@
           <span class="benefit">{$benefit_icons}</span>
         </div>
         <div class="description">
-          <strong class="name {$product_name_display|display}"
-            ><a href="{$link_product_detail}">{$product_name}</a></strong
-          >
+          <strong class="name {$product_name_display|display}">
+            <a href="{$link_product_detail}">{$product_name}</a>
+          </strong>
           <ul class="spec">
             <li class="summary">{$summary_desc}</li>
             <li class="price {$product_price_display|display} {$product_sale_strike}">
-              {$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span
-              ><span id="span_product_price_text">{$product_tax_type_text}</span>
+              {$disp_product_price}
+              <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span>
+              <span id="span_product_price_text">{$product_tax_type_text}</span>
             </li>
             <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
             <li class="price sale {$optimum_discount_price_display|display}">{$optimum_discount_price}</li>
@@ -131,10 +161,12 @@
     <li id="anchorBoxId_{$product_no}">
       <div class="prdList__item">
         <div class="thumbnail">
-          <a href="{$link_product_detail}"
-            ><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"
-              ><span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span></span
-          ></a>
+          <a href="{$link_product_detail}">
+            <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" />
+            <span module="product_Imagestyle">
+              <span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span>
+            </span>
+          </a>
           <div class="icon__box">
             <span class="wish">{$list_wish_icon}</span>
             <span class="cart">{$basket_icon}</span>
@@ -142,14 +174,15 @@
           <span class="benefit">{$benefit_icons}</span>
         </div>
         <div class="description">
-          <strong class="name {$product_name_display|display}"
-            ><a href="{$link_product_detail}">{$product_name}</a></strong
-          >
+          <strong class="name {$product_name_display|display}">
+            <a href="{$link_product_detail}">{$product_name}</a>
+          </strong>
           <ul class="spec">
             <li class="summary">{$summary_desc}</li>
             <li class="price {$product_price_display|display} {$product_sale_strike}">
-              {$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span
-              ><span id="span_product_price_text">{$product_tax_type_text}</span>
+              {$disp_product_price}
+              <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span>
+              <span id="span_product_price_text">{$product_tax_type_text}</span>
             </li>
             <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
             <li class="price sale {$optimum_discount_price_display|display}">{$optimum_discount_price}</li>
@@ -185,10 +218,12 @@
     <li id="anchorBoxId_{$product_no}">
       <div class="prdList__item">
         <div class="thumbnail">
-          <a href="{$link_product_detail}"
-            ><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"
-              ><span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span></span
-          ></a>
+          <a href="{$link_product_detail}">
+            <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" />
+            <span module="product_Imagestyle">
+              <span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span>
+            </span>
+          </a>
           <div class="icon__box">
             <span class="wish">{$list_wish_icon}</span>
             <span class="cart">{$basket_icon}</span>
@@ -196,14 +231,15 @@
           <span class="benefit">{$benefit_icons}</span>
         </div>
         <div class="description">
-          <strong class="name {$product_name_display|display}"
-            ><a href="{$link_product_detail}">{$product_name}</a></strong
-          >
+          <strong class="name {$product_name_display|display}">
+            <a href="{$link_product_detail}">{$product_name}</a>
+          </strong>
           <ul class="spec">
             <li class="summary">{$summary_desc}</li>
             <li class="price {$product_price_display|display} {$product_sale_strike}">
-              {$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span
-              ><span id="span_product_price_text">{$product_tax_type_text}</span>
+              {$disp_product_price}
+              <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span>
+              <span id="span_product_price_text">{$product_tax_type_text}</span>
             </li>
             <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
             <li class="price sale {$optimum_discount_price_display|display}">{$optimum_discount_price}</li>
@@ -225,10 +261,12 @@
     <li id="anchorBoxId_{$product_no}">
       <div class="prdList__item">
         <div class="thumbnail">
-          <a href="{$link_product_detail}"
-            ><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"
-              ><span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span></span
-          ></a>
+          <a href="{$link_product_detail}">
+            <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" />
+            <span module="product_Imagestyle">
+              <span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span>
+            </span>
+          </a>
           <div class="icon__box">
             <span class="wish">{$list_wish_icon}</span>
             <span class="cart">{$basket_icon}</span>
@@ -236,14 +274,15 @@
           <span class="benefit">{$benefit_icons}</span>
         </div>
         <div class="description">
-          <strong class="name {$product_name_display|display}"
-            ><a href="{$link_product_detail}">{$product_name}</a></strong
-          >
+          <strong class="name {$product_name_display|display}">
+            <a href="{$link_product_detail}">{$product_name}</a>
+          </strong>
           <ul class="spec">
             <li class="summary">{$summary_desc}</li>
             <li class="price {$product_price_display|display} {$product_sale_strike}">
-              {$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span
-              ><span id="span_product_price_text">{$product_tax_type_text}</span>
+              {$disp_product_price}
+              <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span>
+              <span id="span_product_price_text">{$product_tax_type_text}</span>
             </li>
             <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
             <li class="price sale {$optimum_discount_price_display|display}">{$optimum_discount_price}</li>
@@ -273,25 +312,19 @@
         	$compare_page = /product/compare.html
         -->
     <div class="function" id="{$listmenu_position}">
-      <p class="prdCount">All Product <strong class="txtEm">{$total_count}</strong></p>
+      <p class="prdCount">
+        All Product
+        <strong class="txtEm">{$total_count}</strong>
+      </p>
       <div class="sort">
         <select id="selArray" name="selArray" module="product_Orderby">
           <option value="{$param}">{$sort_name}</option>
           <option value="{$param}">{$sort_name}</option>
         </select>
       </div>
-      <span class="compare {$product_compare_display|display}"
-        ><a
-          href="#none"
-          class="btnCompare"
-          onclick="
-            {
-              $product_compare_action;
-            }
-          "
-          >상품비교</a
-        ></span
-      >
+      <span class="compare {$product_compare_display|display}">
+        <a href="#none" class="btnCompare" onclick="{$product_compare_action}">상품비교</a>
+      </span>
     </div>
 
     <fieldset class="condition {$select_search_display|display}">
@@ -327,11 +360,12 @@
         <li id="anchorBoxId_{$product_no}">
           <div class="prdList__item">
             <div class="thumbnail">
-              <a href="{$link_product_detail}"
-                ><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span
-                  module="product_Imagestyle"
-                  ><span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span></span
-              ></a>
+              <a href="{$link_product_detail}">
+                <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" />
+                <span module="product_Imagestyle">
+                  <span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span>
+                </span>
+              </a>
               <div class="icon__box">
                 <span class="wish">{$list_wish_icon}</span>
                 <span class="cart">{$basket_icon}</span>
@@ -339,18 +373,20 @@
               <span class="benefit">{$benefit_icons}</span>
             </div>
             <div class="description">
-              <strong class="name"
-                ><a href="{$link_product_detail}" class="{$product_name_display|display}"
-                  ><span class="title {$product_name_title_display|display}">{$product_name_title} :</span>
-                  {$product_name}</a
-                ></strong
-              >
+              <strong class="name">
+                <a href="{$link_product_detail}" class="{$product_name_display|display}">
+                  <span class="title {$product_name_title_display|display}">{$product_name_title} :</span>
+                  {$product_name}
+                </a>
+              </strong>
               <ul module="product_ListItem" class="spec">
                 <li class="{$item_display|display}">
-                  <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                  <strong class="title {$item_title_display|display}">{$item_title} :</strong>
+                  {$item_content}
                 </li>
                 <li class="{$item_display|display}">
-                  <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                  <strong class="title {$item_title_display|display}">{$item_title} :</strong>
+                  {$item_content}
                 </li>
               </ul>
               <div class="icon">
@@ -363,11 +399,12 @@
         <li id="anchorBoxId_{$product_no}">
           <div class="prdList__item">
             <div class="thumbnail">
-              <a href="{$link_product_detail}"
-                ><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span
-                  module="product_Imagestyle"
-                  ><span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span></span
-              ></a>
+              <a href="{$link_product_detail}">
+                <img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" />
+                <span module="product_Imagestyle">
+                  <span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span>
+                </span>
+              </a>
               <div class="icon__box">
                 <span class="wish">{$list_wish_icon}</span>
                 <span class="cart">{$basket_icon}</span>
@@ -375,18 +412,20 @@
               <span class="benefit">{$benefit_icons}</span>
             </div>
             <div class="description">
-              <strong class="name"
-                ><a href="{$link_product_detail}" class="{$product_name_display|display}"
-                  ><span class="title {$product_name_title_display|display}">{$product_name_title} :</span>
-                  {$product_name}</a
-                ></strong
-              >
+              <strong class="name">
+                <a href="{$link_product_detail}" class="{$product_name_display|display}">
+                  <span class="title {$product_name_title_display|display}">{$product_name_title} :</span>
+                  {$product_name}
+                </a>
+              </strong>
               <ul module="product_ListItem" class="spec">
                 <li class="{$item_display|display}">
-                  <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                  <strong class="title {$item_title_display|display}">{$item_title} :</strong>
+                  {$item_content}
                 </li>
                 <li class="{$item_display|display}">
-                  <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                  <strong class="title {$item_title_display|display}">{$item_title} :</strong>
+                  {$item_content}
                 </li>
               </ul>
               <div class="icon">
@@ -400,16 +439,11 @@
     </div>
 
     <div module="product_listmore" class="more">
-      <a
-        href="#none"
-        onclick="
-          {
-            $more_action;
-          }
-        "
-        class="btnMore"
-      >
-        더보기<span id="more_current_page">{$current_page}</span>/<span id="more_total_page">{$total_page}</span>
+      <a href="#none" onclick="{$more_action}" class="btnMore">
+        더보기
+        <span id="more_current_page">{$current_page}</span>
+        /
+        <span id="more_total_page">{$total_page}</span>
         <i aria-hidden="true" class="icon icoArrowBottom"></i>
       </a>
     </div>

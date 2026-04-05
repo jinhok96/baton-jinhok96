@@ -6,5 +6,19 @@
   "singleQuote": true,
   "trailingComma": "all",
   "endOfLine": "lf",
-  "printWidth": 120
+  "printWidth": 120,
+  "bracketSameLine": true,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html",
+        "htmlWhitespaceSensitivity": "ignore",
+        "singleQuote": false,
+        "singleAttributePerLine": false,
+        "embeddedLanguageFormatting": "off"
+      }
+    }
+  ]
 }

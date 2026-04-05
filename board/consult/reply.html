@@ -5,9 +5,15 @@
     <div class="path">
       <span>현재 위치</span>
       <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/myshop/index.html">마이쇼핑</a></li>
-        <li title="현재 위치"><strong>{$board_name}</strong></li>
+        <li>
+          <a href="/">홈</a>
+        </li>
+        <li>
+          <a href="/myshop/index.html">마이쇼핑</a>
+        </li>
+        <li title="현재 위치">
+          <strong>{$board_name}</strong>
+        </li>
       </ol>
     </div>
 
@@ -22,9 +28,7 @@
         -->
     <div class="ec-base-table gLayoutFixed">
       <table border="1">
-        <caption>
-          1:1 맞춤상담 상세
-        </caption>
+        <caption>1:1 맞춤상담 상세</caption>
         <colgroup>
           <col style="width: 130px" />
           <col style="width: auto" />
@@ -63,9 +67,7 @@
              -->
     <div class="ec-base-table typeWrite">
       <table border="1">
-        <caption>
-          1:1 맞춤상담 답변쓰기 폼
-        </caption>
+        <caption>1:1 맞춤상담 답변쓰기 폼</caption>
 
         <tbody>
           <tr>
@@ -78,32 +80,14 @@
 
     <div class="ec-base-button gBottom">
       <span class="gLeft RW">
-        <span class="{$config.is_admin|display}"
-          ><a
-            href="#none"
-            class="btnNormalFix sizeM"
-            onclick="
-              {
-                $action_comment_admin;
-              }
-            "
-            >관리자 답변보기</a
-          ></span
-        >
+        <span class="{$config.is_admin|display}">
+          <a href="#none" class="btnNormalFix sizeM" onclick="{$action_comment_admin}">관리자 답변보기</a>
+        </span>
         <a href="{$link_board_list}" class="btnNormalFix sizeM">목록</a>
       </span>
       <span class="gRight">
         <a href="{$link_board_list}" class="btnNormalFix sizeM">취소</a>
-        <a
-          href="#none"
-          onclick="
-            {
-              $action_reply;
-            }
-          "
-          class="btnSubmitFix sizeM"
-          >등록</a
-        >
+        <a href="#none" onclick="{$action_reply}" class="btnSubmitFix sizeM">등록</a>
       </span>
     </div>
   </div>

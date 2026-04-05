@@ -5,9 +5,15 @@
     <div class="path">
       <span>현재 위치</span>
       <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/myshop/index.html">마이쇼핑</a></li>
-        <li title="현재 위치"><strong>{$board_name}</strong></li>
+        <li>
+          <a href="/">홈</a>
+        </li>
+        <li>
+          <a href="/myshop/index.html">마이쇼핑</a>
+        </li>
+        <li title="현재 위치">
+          <strong>{$board_name}</strong>
+        </li>
       </ol>
     </div>
 
@@ -22,9 +28,7 @@
         -->
     <div class="ec-base-table gLayoutFixed {$display_parent_form|display}">
       <table border="1">
-        <caption>
-          1:1 맞춤상담 상세
-        </caption>
+        <caption>1:1 맞춤상담 상세</caption>
         <colgroup>
           <col style="width: 190px" />
           <col style="width: auto" />
@@ -57,9 +61,7 @@
 
     <div class="ec-base-table typeWrite">
       <table border="1">
-        <caption>
-          1:1 맞춤상담 쓰기 폼
-        </caption>
+        <caption>1:1 맞춤상담 쓰기 폼</caption>
         <colgroup>
           <col style="width: 190px" />
           <col style="width: auto" />
@@ -71,7 +73,10 @@
           </tr>
           <tr>
             <th scope="row">이메일</th>
-            <td>{$form.email} <span class="gBlank5">답변여부를 메일로 받으시겠습니까? {$form.cons_re}</span></td>
+            <td>
+              {$form.email}
+              <span class="gBlank5">답변여부를 메일로 받으시겠습니까? {$form.cons_re}</span>
+            </td>
           </tr>
         </tbody>
 
@@ -108,19 +113,12 @@
     </div>
 
     <div class="ec-base-button gBottom">
-      <span class="gLeft RW"><a href="{$link_board_list}" class="btnNormalFix sizeM">목록</a></span>
+      <span class="gLeft RW">
+        <a href="{$link_board_list}" class="btnNormalFix sizeM">목록</a>
+      </span>
       <span class="gRight">
         <a href="{$link_board_list}" class="btnNormalFix sizeM">취소</a>
-        <a
-          href="#none"
-          class="btnSubmitFix sizeM"
-          onclick="
-            {
-              $action_modify;
-            }
-          "
-          >수정</a
-        >
+        <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_modify}">수정</a>
       </span>
     </div>
   </div>

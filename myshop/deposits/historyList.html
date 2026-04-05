@@ -2,8 +2,12 @@
 <div class="path" module="Myshop_DepositHead">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이 쇼핑</a></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이 쇼핑</a>
+    </li>
     <li title="현재 위치">{$deposit_name}</li>
   </ol>
 </div>
@@ -16,13 +20,27 @@
 
   <div module="Myshop_DepositSummary" class="ec-base-box gHalf">
     <ul>
-      <li><strong class="title">누적 {$deposit_name}</strong> <span class="data">{$all_deposit}</span></li>
-      <li><strong class="title">사용된 {$deposit_name}</strong> <span class="data">{$used_deposit}</span></li>
+      <li>
+        <strong class="title">누적 {$deposit_name}</strong>
+
+        <span class="data">{$all_deposit}</span>
+      </li>
+      <li>
+        <strong class="title">사용된 {$deposit_name}</strong>
+
+        <span class="data">{$used_deposit}</span>
+      </li>
     </ul>
     <ul>
-      <li><strong class="title">사용가능 {$deposit_name}</strong> <span class="data">{$total_deposit}</span></li>
       <li>
-        <strong class="title">현금환불요청 {$deposit_name}</strong> <span class="data">{$deposit_refund_wait}</span>
+        <strong class="title">사용가능 {$deposit_name}</strong>
+
+        <span class="data">{$total_deposit}</span>
+      </li>
+      <li>
+        <strong class="title">현금환불요청 {$deposit_name}</strong>
+
+        <span class="data">{$deposit_refund_wait}</span>
       </li>
     </ul>
   </div>
@@ -41,9 +59,7 @@
 
     <div class="ec-base-table typeList">
       <table border="1">
-        <caption>
-          {$deposit_name} 내역
-        </caption>
+        <caption>{$deposit_name} 내역</caption>
         <colgroup>
           <col style="width: 20%" />
           <col style="width: 15%" />
@@ -87,16 +103,36 @@
     <a href="{$first_url}" class="first">첫 페이지</a>
     <a href="{$prev_url}">이전 페이지</a>
     <ol>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
     </ol>
     <a href="{$next_url}">다음 페이지</a>
     <a href="{$last_url}" class="last">마지막 페이지</a>

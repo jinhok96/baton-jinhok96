@@ -2,8 +2,12 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li title="현재 위치">
+      <strong>비밀번호 찾기</strong>
+    </li>
   </ol>
 </div>
 
@@ -26,22 +30,15 @@
           <div class="desc">{$passwd_question}</div>
         </li>
         <li>
-          <strong class="term"><label for="passwd_answer">답변</label></strong>
+          <strong class="term">
+            <label for="passwd_answer">답변</label>
+          </strong>
           <div class="desc">{$form.passwd_answer}</div>
         </li>
       </ul>
     </fieldset>
   </div>
   <div class="ec-base-button gBottom">
-    <a
-      href="#none"
-      class="btnSubmitFix sizeM"
-      onclick="
-        {
-          $action_func_find_passwd;
-        }
-      "
-      >확인</a
-    >
+    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_find_passwd}">확인</a>
   </div>
 </div>

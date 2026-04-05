@@ -1,0 +1,91 @@
+@layer base {
+  :root {
+    /* Spacing */
+    --spacing-2: 2px;
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-20: 20px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-40: 40px;
+    --spacing-60: 60px;
+    --spacing-80: 80px;
+
+    /* Layout */
+    --layout-header-height: 48px;
+    --layout-content-max-width: 1440px;
+    --layout-container-padding: var(--spacing-16);
+    --layout-section-gap: var(--spacing-80);
+
+    /* Product */
+    --product-card-ratio: 4 / 5;
+    --product-grid-cols: 2;
+    --product-grid-gap: var(--spacing-20);
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --layout-header-height: 56px;
+      --layout-container-padding: var(--spacing-24);
+      --product-grid-cols: 5;
+    }
+  }
+}
+
+@utility pl-container {
+  padding-left: var(--layout-container-padding);
+}
+
+@utility pr-container {
+  padding-right: var(--layout-container-padding);
+}
+
+@utility pt-container {
+  padding-top: var(--layout-container-padding);
+}
+
+@utility pb-container {
+  padding-bottom: var(--layout-container-padding);
+}
+
+@utility px-container {
+  @apply pl-container pr-container;
+}
+
+@utility py-container {
+  @apply pt-container pb-container;
+}
+
+@utility p-container {
+  @apply px-container py-container;
+}
+
+@utility ml-container {
+  margin-left: var(--layout-container-padding);
+}
+
+@utility mr-container {
+  margin-right: var(--layout-container-padding);
+}
+
+@utility mt-container {
+  margin-top: var(--layout-container-padding);
+}
+
+@utility mb-container {
+  margin-bottom: var(--layout-container-padding);
+}
+
+@utility mx-container {
+  @apply ml-container mr-container;
+}
+
+@utility my-container {
+  @apply mt-container mb-container;
+}
+
+@utility m-container {
+  @apply mx-container my-container;
+}

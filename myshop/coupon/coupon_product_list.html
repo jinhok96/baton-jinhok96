@@ -12,30 +12,23 @@
         <p>{$form.coupon_no} 의 적용가능 상품목록입니다.</p>
         <p>
           {$form.search_key} {$form.search}
-          <a
-            href="#none"
-            class="btnSubmit"
-            onclick="
-              {
-                $action_form_submit;
-              }
-            "
-            >검색하기</a
-          >
+          <a href="#none" class="btnSubmit" onclick="{$action_form_submit}">검색하기</a>
         </p>
       </fieldset>
     </div>
 
     <div module="myshop_CouponProductList">
       <div class="title">
-        <p class="result">총 <strong>{$totalPrd}</strong>개</p>
+        <p class="result">
+          총
+          <strong>{$totalPrd}</strong>
+          개
+        </p>
         {$ec_list_size}
       </div>
       <div class="ec-base-table">
         <table border="1">
-          <caption>
-            {$cate_name}
-          </caption>
+          <caption>{$cate_name}</caption>
           <colgroup>
             <col style="width: 92px" />
             <col style="width: auto" />
@@ -55,15 +48,14 @@
                   src="{$image_tiny}"
                   onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                   alt=""
-                  style="width: 65px"
-                />
+                  style="width: 65px" />
               </td>
               <td class="left">
                 <a
                   href="/product/detail.html?product_no={$product_no}&main_cate_no={$main_cate_no}&display_group={$display_group}"
-                  target="_blank"
-                  ><strong>{$product_name}</strong></a
-                >
+                  target="_blank">
+                  <strong>{$product_name}</strong>
+                </a>
               </td>
               <td class="price">
                 <strong>{$product_custom_price}</strong>
@@ -76,15 +68,14 @@
                   src="{$image_tiny}"
                   onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
                   alt=""
-                  style="width: 65px"
-                />
+                  style="width: 65px" />
               </td>
               <td class="left">
                 <a
                   href="/product/detail.html?product_no={$product_no}&main_cate_no={$main_cate_no}&display_group={$display_group}"
-                  target="_blank"
-                  ><strong>{$product_name}</strong></a
-                >
+                  target="_blank">
+                  <strong>{$product_name}</strong>
+                </a>
               </td>
               <td class="price">
                 <strong>{$product_custom_price}</strong>
@@ -105,9 +96,15 @@
       <a href="{$first_url}" class="first">첫 페이지</a>
       <a href="{$prev_url}">이전 페이지</a>
       <ol>
-        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li>
+          <a href="{$url_query}" class="{$param_class}">{$n}</a>
+        </li>
+        <li>
+          <a href="{$url_query}" class="{$param_class}">{$n}</a>
+        </li>
+        <li>
+          <a href="{$url_query}" class="{$param_class}">{$n}</a>
+        </li>
       </ol>
       <a href="{$next_url}">다음 페이지</a>
       <a href="{$last_url}" class="last">마지막 페이지</a>

@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>주문상세조회</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>주문상세조회</strong>
+    </li>
   </ol>
 </div>
 
@@ -30,9 +36,7 @@
 
     <div class="ec-base-table">
       <table border="1">
-        <caption>
-          주문 정보
-        </caption>
+        <caption>주문 정보</caption>
         <colgroup>
           <col style="width: 160px" />
           <col style="width: auto" />
@@ -65,9 +69,7 @@
     </div>
     <div class="ec-base-table">
       <table border="1">
-        <caption>
-          결제정보
-        </caption>
+        <caption>결제정보</caption>
         <colgroup>
           <col style="width: 160px" />
           <col style="width: auto" />
@@ -76,7 +78,9 @@
           <tr class="sum">
             <th scope="row">총 주문금액</th>
             <td>
-              {$total.price_unit_head}<strong class="txt14">{$total.total_order_price}</strong>{$total.price_unit_tail}
+              {$total.price_unit_head}
+              <strong class="txt14">{$total.total_order_price}</strong>
+              {$total.price_unit_tail}
             </td>
           </tr>
         </tbody>
@@ -84,7 +88,9 @@
           <tr class="sum">
             <th scope="row">총 부가결제금액</th>
             <td>
-              {$total.price_unit_head}<strong class="txt14">{$total.total_addpay_price}</strong>{$total.price_unit_tail}
+              {$total.price_unit_head}
+              <strong class="txt14">{$total.total_addpay_price}</strong>
+              {$total.price_unit_tail}
             </td>
           </tr>
           <tr class="{$total.mileage_display|display}">
@@ -100,8 +106,9 @@
           <tr class="sum">
             <th scope="row">총 할인금액</th>
             <td>
-              {$total.price_unit_head}<strong class="txt14">{$total.total_addsale_price}</strong
-              >{$total.price_unit_tail}
+              {$total.price_unit_head}
+              <strong class="txt14">{$total.total_addsale_price}</strong>
+              {$total.price_unit_tail}
             </td>
           </tr>
         </tbody>
@@ -109,9 +116,7 @@
     </div>
     <div class="ec-base-table total">
       <table border="1">
-        <caption>
-          결제정보
-        </caption>
+        <caption>결제정보</caption>
         <colgroup>
           <col style="width: 160px" />
           <col style="width: auto" />
@@ -120,9 +125,11 @@
           <tr class="sum">
             <th scope="row">총 결제금액</th>
             <td>
-              <span class="txtEm"
-                >{$total.price_unit_head}<strong class="txt18">{$payment.price}</strong>{$total.price_unit_tail}</span
-              >
+              <span class="txtEm">
+                {$total.price_unit_head}
+                <strong class="txt18">{$payment.price}</strong>
+                {$total.price_unit_tail}
+              </span>
             </td>
           </tr>
           <tr class="{$payment.paymethod_display|display}">
@@ -131,9 +138,9 @@
               <strong>{$payment.paymethod}</strong>
               <p>
                 {$payment.paymethod_detail}
-                <a target="_blank" href="{$payment.bank_url}" class="btnNormal {$payment.display_banking|display}"
-                  >인터넷뱅킹 바로가기</a
-                >
+                <a target="_blank" href="{$payment.bank_url}" class="btnNormal {$payment.display_banking|display}">
+                  인터넷뱅킹 바로가기
+                </a>
               </p>
             </td>
           </tr>
@@ -149,9 +156,7 @@
 
     <div class="ec-base-table typeList">
       <table border="1" class="{$basic_display|display}">
-        <caption>
-          기본배송
-        </caption>
+        <caption>기본배송</caption>
         <colgroup>
           <col style="width: 92px" />
           <col style="width: auto" />
@@ -173,24 +178,30 @@
         <tfoot class="right">
           <tr>
             <td colspan="6">
-              <span class="gLeft">[기본배송]</span> 상품구매금액 <strong>{$basic.product_price}</strong> + 배송비
-              {$basic.ship_fee} + 지역별배송비 {$basic.special_ship_fee} = 합계 :
-              <strong class="txtEm gIndent10"><span class="txt18">{$basic.total_price}</span></strong>
+              <span class="gLeft">[기본배송]</span>
+              상품구매금액
+              <strong>{$basic.product_price}</strong>
+              + 배송비 {$basic.ship_fee} + 지역별배송비 {$basic.special_ship_fee} = 합계 :
+              <strong class="txtEm gIndent10">
+                <span class="txt18">{$basic.total_price}</span>
+              </strong>
             </td>
           </tr>
         </tfoot>
         <tbody module="Myshop_OrderHistoryDetailBasic" class="center">
           <tr>
             <td class="thumb">
-              <a href="/product/detail.html{$param_product}"
-                ><img
+              <a href="/product/detail.html{$param_product}">
+                <img
                   src="{$thumbnail}"
                   alt="{$name}"
-                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              /></a>
+                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
+              </a>
             </td>
             <td class="left">
-              <a href="/product/detail.html{$param_product}"><strong>{$name}</strong></a>
+              <a href="/product/detail.html{$param_product}">
+                <strong>{$name}</strong>
+              </a>
               <div class="option">
                 {$opt_str} {$option_add}
                 <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
@@ -200,36 +211,33 @@
               </p>
             </td>
             <td>{$quantity}</td>
-            <td><strong>{$price}</strong></td>
-            <td><span class="txtInfo">{$type}</span></td>
+            <td>
+              <strong>{$price}</strong>
+            </td>
+            <td>
+              <span class="txtInfo">{$type}</span>
+            </td>
             <td>
               <p class="txtEm">{$status}</p>
               <p class="txtEm">{$shipping_info}</p>
               <p>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_track;
-                    }
-                  "
-                  class="btnNormalFix {$track_display|display}"
-                  >배송추적</a
-                >
+                <a href="#none" onclick="{$action_track}" class="btnNormalFix {$track_display|display}">배송추적</a>
               </p>
             </td>
           </tr>
           <tr>
             <td class="thumb">
-              <a href="/product/detail.html{$param_product}"
-                ><img
+              <a href="/product/detail.html{$param_product}">
+                <img
                   src="{$thumbnail}"
                   alt="{$name}"
-                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              /></a>
+                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
+              </a>
             </td>
             <td class="left">
-              <a href="/product/detail.html{$param_product}"><strong>{$name}</strong></a>
+              <a href="/product/detail.html{$param_product}">
+                <strong>{$name}</strong>
+              </a>
               <div class="option">
                 {$opt_str} {$option_add}
                 <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
@@ -239,22 +247,17 @@
               </p>
             </td>
             <td>{$quantity}</td>
-            <td><strong>{$price}</strong></td>
-            <td><span class="txtInfo">{$type}</span></td>
+            <td>
+              <strong>{$price}</strong>
+            </td>
+            <td>
+              <span class="txtInfo">{$type}</span>
+            </td>
             <td>
               <p class="txtEm">{$status}</p>
               <p class="txtEm">{$shipping_info}</p>
               <p>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_track;
-                    }
-                  "
-                  class="btnNormalFix {$track_display|display}"
-                  >배송추적</a
-                >
+                <a href="#none" onclick="{$action_track}" class="btnNormalFix {$track_display|display}">배송추적</a>
               </p>
             </td>
           </tr>
@@ -264,9 +267,7 @@
 
     <div class="ec-base-table typeList">
       <table border="1" class="{$individual_display|display}">
-        <caption>
-          개별배송
-        </caption>
+        <caption>개별배송</caption>
         <colgroup>
           <col style="width: 92px" />
           <col style="width: auto" />
@@ -288,24 +289,30 @@
         <tfoot class="right">
           <tr>
             <td colspan="6">
-              <span class="gLeft">[개별배송]</span> 상품구매금액 <strong>{$individual.product_price}</strong> + 배송비
-              {$individual.ship_fee} + 지역별배송비{$individual.special_ship_fee} = 합계 :
-              <strong class="total"><span>{$individual.total_price}</span></strong>
+              <span class="gLeft">[개별배송]</span>
+              상품구매금액
+              <strong>{$individual.product_price}</strong>
+              + 배송비 {$individual.ship_fee} + 지역별배송비{$individual.special_ship_fee} = 합계 :
+              <strong class="total">
+                <span>{$individual.total_price}</span>
+              </strong>
             </td>
           </tr>
         </tfoot>
         <tbody module="Myshop_OrderHistoryDetailIndividual" class="center">
           <tr>
             <td class="thumb">
-              <a href="/product/detail.html{$param_product}"
-                ><img
+              <a href="/product/detail.html{$param_product}">
+                <img
                   src="{$thumbnail}"
                   alt="{$name}"
-                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              /></a>
+                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
+              </a>
             </td>
             <td class="left">
-              <a href="/product/detail.html{$param_product}"><strong>{$name}</strong></a>
+              <a href="/product/detail.html{$param_product}">
+                <strong>{$name}</strong>
+              </a>
               <div class="option">
                 {$opt_str} {$option_add}
                 <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
@@ -315,36 +322,33 @@
               </p>
             </td>
             <td>{$quantity}</td>
-            <td><strong>{$price}</strong></td>
-            <td><span class="txtInfo">{$type}</span></td>
+            <td>
+              <strong>{$price}</strong>
+            </td>
+            <td>
+              <span class="txtInfo">{$type}</span>
+            </td>
             <td>
               <p class="txtEm">{$status}</p>
               <p class="txtEm">{$shipping_info}</p>
               <p>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_track;
-                    }
-                  "
-                  class="btnNormalFix {$track_display|display}"
-                  >배송추적</a
-                >
+                <a href="#none" onclick="{$action_track}" class="btnNormalFix {$track_display|display}">배송추적</a>
               </p>
             </td>
           </tr>
           <tr>
             <td class="thumb">
-              <a href="/product/detail.html{$param_product}"
-                ><img
+              <a href="/product/detail.html{$param_product}">
+                <img
                   src="{$thumbnail}"
                   alt="{$name}"
-                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              /></a>
+                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
+              </a>
             </td>
             <td class="left">
-              <a href="/product/detail.html{$param_product}"><strong>{$name}</strong></a>
+              <a href="/product/detail.html{$param_product}">
+                <strong>{$name}</strong>
+              </a>
               <div class="option">
                 {$opt_str} {$option_add}
                 <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
@@ -354,22 +358,17 @@
               </p>
             </td>
             <td>{$quantity}</td>
-            <td><strong>{$price}</strong></td>
-            <td><span class="txtInfo">{$type}</span></td>
+            <td>
+              <strong>{$price}</strong>
+            </td>
+            <td>
+              <span class="txtInfo">{$type}</span>
+            </td>
             <td>
               <p class="txtEm">{$status}</p>
               <p class="txtEm">{$shipping_info}</p>
               <p>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_track;
-                    }
-                  "
-                  class="btnNormalFix {$track_display|display}"
-                  >배송추적</a
-                >
+                <a href="#none" onclick="{$action_track}" class="btnNormalFix {$track_display|display}">배송추적</a>
               </p>
             </td>
           </tr>
@@ -379,9 +378,7 @@
 
     <div class="ec-base-table typeList">
       <table border="1" class="{$oversea_display|display}">
-        <caption>
-          해외배송
-        </caption>
+        <caption>해외배송</caption>
         <colgroup>
           <col style="width: 92px" />
           <col style="width: auto" />
@@ -403,24 +400,30 @@
         <tfoot class="right">
           <tr>
             <td colspan="6">
-              <span class="gLeft">[해외배송]</span> 상품구매금액 <strong>{$oversea.product_price}</strong> + 배송비
-              {$oversea.ship_fee} + 지역별배송비 {$oversea.special_ship_fee} = 합계 :
-              <strong class="total"><span>{$oversea.total_price}</span></strong>
+              <span class="gLeft">[해외배송]</span>
+              상품구매금액
+              <strong>{$oversea.product_price}</strong>
+              + 배송비 {$oversea.ship_fee} + 지역별배송비 {$oversea.special_ship_fee} = 합계 :
+              <strong class="total">
+                <span>{$oversea.total_price}</span>
+              </strong>
             </td>
           </tr>
         </tfoot>
         <tbody module="Myshop_OrderHistoryDetailOversea" class="center">
           <tr>
             <td class="thumb">
-              <a href="/product/detail.html{$param_product}"
-                ><img
+              <a href="/product/detail.html{$param_product}">
+                <img
                   src="{$thumbnail}"
                   alt="{$name}"
-                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              /></a>
+                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
+              </a>
             </td>
             <td class="left">
-              <a href="/product/detail.html{$param_product}"><strong>{$name}</strong></a>
+              <a href="/product/detail.html{$param_product}">
+                <strong>{$name}</strong>
+              </a>
               <div class="option">
                 {$opt_str} {$option_add}
                 <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
@@ -430,36 +433,33 @@
               </p>
             </td>
             <td>{$quantity}</td>
-            <td><strong>{$price}</strong></td>
-            <td><span class="txtInfo">{$type}</span></td>
+            <td>
+              <strong>{$price}</strong>
+            </td>
+            <td>
+              <span class="txtInfo">{$type}</span>
+            </td>
             <td>
               <p class="txtEm">{$status}</p>
               <p class="txtEm">{$shipping_info}</p>
               <p>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_track;
-                    }
-                  "
-                  class="btnNormalFix {$track_display|display}"
-                  >배송추적</a
-                >
+                <a href="#none" onclick="{$action_track}" class="btnNormalFix {$track_display|display}">배송추적</a>
               </p>
             </td>
           </tr>
           <tr>
             <td class="thumb">
-              <a href="/product/detail.html{$param_product}"
-                ><img
+              <a href="/product/detail.html{$param_product}">
+                <img
                   src="{$thumbnail}"
                   alt="{$name}"
-                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              /></a>
+                  onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
+              </a>
             </td>
             <td class="left">
-              <a href="/product/detail.html{$param_product}"><strong>{$name}</strong></a>
+              <a href="/product/detail.html{$param_product}">
+                <strong>{$name}</strong>
+              </a>
               <div class="option">
                 {$opt_str} {$option_add}
                 <span class="{$opt_price_display|display}">(+{$opt_price}{$price_unit_tail})</span>
@@ -469,22 +469,17 @@
               </p>
             </td>
             <td>{$quantity}</td>
-            <td><strong>{$price}</strong></td>
-            <td><span class="txtInfo">{$type}</span></td>
+            <td>
+              <strong>{$price}</strong>
+            </td>
+            <td>
+              <span class="txtInfo">{$type}</span>
+            </td>
             <td>
               <p class="txtEm">{$status}</p>
               <p class="txtEm">{$shipping_info}</p>
               <p>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_track;
-                    }
-                  "
-                  class="btnNormalFix {$track_display|display}"
-                  >배송추적</a
-                >
+                <a href="#none" onclick="{$action_track}" class="btnNormalFix {$track_display|display}">배송추적</a>
               </p>
             </td>
           </tr>
@@ -494,9 +489,7 @@
 
     <div class="ec-base-table typeList">
       <table border="1" class="{$gift_display|display}">
-        <caption>
-          사은품
-        </caption>
+        <caption>사은품</caption>
         <colgroup>
           <col style="width: 92px" />
           <col style="width: auto" />
@@ -518,7 +511,10 @@
         <tfoot class="right">
           <tr>
             <td colspan="6">
-              <span class="gLeft">[사은품]</span> 상품구매금액 <strong>0</strong> + 배송비 0 + 지역별배송비 0 = 합계 :
+              <span class="gLeft">[사은품]</span>
+              상품구매금액
+              <strong>0</strong>
+              + 배송비 0 + 지역별배송비 0 = 합계 :
               <strong class="total">0</strong>
             </td>
           </tr>
@@ -529,8 +525,7 @@
               <img
                 src="{$thumbnail}"
                 alt="{$name}"
-                onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              />
+                onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
             </td>
             <td class="left">
               {$name}
@@ -540,22 +535,17 @@
               </div>
             </td>
             <td>{$quantity}</td>
-            <td><strong>{$price}</strong></td>
-            <td><span class="txtInfo">{$type}</span></td>
+            <td>
+              <strong>{$price}</strong>
+            </td>
+            <td>
+              <span class="txtInfo">{$type}</span>
+            </td>
             <td>
               <p class="txtEm">{$status}</p>
               <p class="txtEm">{$shipping_info}</p>
               <p>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_track;
-                    }
-                  "
-                  class="btnNormalFix {$track_display|display}"
-                  >배송추적</a
-                >
+                <a href="#none" onclick="{$action_track}" class="btnNormalFix {$track_display|display}">배송추적</a>
               </p>
             </td>
           </tr>
@@ -564,8 +554,7 @@
               <img
                 src="{$thumbnail}"
                 alt="{$name}"
-                onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-              />
+                onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'" />
             </td>
             <td class="left">
               {$name}
@@ -575,22 +564,17 @@
               </div>
             </td>
             <td>{$quantity}</td>
-            <td><strong>{$price}</strong></td>
-            <td><span class="txtInfo">{$type}</span></td>
+            <td>
+              <strong>{$price}</strong>
+            </td>
+            <td>
+              <span class="txtInfo">{$type}</span>
+            </td>
             <td>
               <p class="txtEm">{$status}</p>
               <p class="txtEm">{$shipping_info}</p>
               <p>
-                <a
-                  href="#none"
-                  onclick="
-                    {
-                      $action_track;
-                    }
-                  "
-                  class="btnNormalFix {$track_display|display}"
-                  >배송추적</a
-                >
+                <a href="#none" onclick="{$action_track}" class="btnNormalFix {$track_display|display}">배송추적</a>
               </p>
             </td>
           </tr>
@@ -605,9 +589,7 @@
     </div>
     <div class="ec-base-table">
       <table border="1">
-        <caption>
-          환불정보
-        </caption>
+        <caption>환불정보</caption>
         <colgroup>
           <col style="width: 160px" />
           <col style="width: auto" />
@@ -616,7 +598,8 @@
           <tr>
             <th scope="row">{$payment_type}금액</th>
             <td>
-              {$payment_amount}<span class="{$display_detail|display}"> = {$product_amount} {$additional_amount}</span>
+              {$payment_amount}
+              <span class="{$display_detail|display}">= {$product_amount} {$additional_amount}</span>
             </td>
           </tr>
           <tr>
@@ -636,7 +619,8 @@
           <tr>
             <th scope="row">{$payment_type}금액</th>
             <td>
-              {$payment_amount}<span class="{$display_detail|display}"> = {$product_amount} {$additional_amount}</span>
+              {$payment_amount}
+              <span class="{$display_detail|display}">= {$product_amount} {$additional_amount}</span>
             </td>
           </tr>
           <tr>
@@ -662,9 +646,7 @@
     </div>
     <div class="ec-base-table">
       <table border="1">
-        <caption>
-          배송지정보
-        </caption>
+        <caption>배송지정보</caption>
         <colgroup>
           <col style="width: 160px" />
           <col style="width: auto" />
@@ -708,76 +690,27 @@
 
   <div class="ec-base-button">
     <span class="gRight">
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_issue_cash;
-          }
-        "
-        class="btnNormal sizeS {$issue_cash_display|display}"
-        >현금영수증 신청</a
-      >
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_print_pg_cash;
-          }
-        "
-        class="btnNormal sizeS RW {$print_pg_cash_display|display}"
-        >현금영수증전표 인쇄</a
-      >
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_issue_tax;
-          }
-        "
-        class="btnNormal sizeS {$issue_tax_display|display}"
-        >세금계산서 신청</a
-      >
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_print_tax;
-          }
-        "
-        class="btnNormal sizeS RW {$print_tax_display|display}"
-        >세금계산서 인쇄</a
-      >
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_print_spec;
-          }
-        "
-        class="btnNormal sizeS RW {$print_spec_display|display}"
-        >거래명세서 인쇄</a
-      >
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_print_pg_card;
-          }
-        "
-        class="btnNormal sizeS RW {$print_pg_card_display|display}"
-        >카드매출전표 인쇄</a
-      >
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_select_gift;
-          }
-        "
-        class="btnNormal sizeS {$select_gift_display|display}"
-        >사은품 선택</a
-      >
+      <a href="#none" onclick="{$action_issue_cash}" class="btnNormal sizeS {$issue_cash_display|display}">
+        현금영수증 신청
+      </a>
+      <a href="#none" onclick="{$action_print_pg_cash}" class="btnNormal sizeS RW {$print_pg_cash_display|display}">
+        현금영수증전표 인쇄
+      </a>
+      <a href="#none" onclick="{$action_issue_tax}" class="btnNormal sizeS {$issue_tax_display|display}">
+        세금계산서 신청
+      </a>
+      <a href="#none" onclick="{$action_print_tax}" class="btnNormal sizeS RW {$print_tax_display|display}">
+        세금계산서 인쇄
+      </a>
+      <a href="#none" onclick="{$action_print_spec}" class="btnNormal sizeS RW {$print_spec_display|display}">
+        거래명세서 인쇄
+      </a>
+      <a href="#none" onclick="{$action_print_pg_card}" class="btnNormal sizeS RW {$print_pg_card_display|display}">
+        카드매출전표 인쇄
+      </a>
+      <a href="#none" onclick="{$action_select_gift}" class="btnNormal sizeS {$select_gift_display|display}">
+        사은품 선택
+      </a>
     </span>
   </div>
   <div class="ec-base-button gBottom">
@@ -818,8 +751,9 @@
     <h4>부가가치세법 변경에 따른 신용카드매출전표 및 세금계산서 변경 안내</h4>
     <ul>
       <li>
-        변경된 부가가치세법에 의거, 2004.7.1 이후 신용카드로 결제하신 주문에 대해서는 세금계산서 발행이 불가하며<br />신용카드매출전표로
-        부가가치세 신고를 하셔야 합니다.(부가가치세법 시행령 57조)
+        변경된 부가가치세법에 의거, 2004.7.1 이후 신용카드로 결제하신 주문에 대해서는 세금계산서 발행이 불가하며
+        <br />
+        신용카드매출전표로 부가가치세 신고를 하셔야 합니다.(부가가치세법 시행령 57조)
       </li>
       <li>
         상기 부가가치세법 변경내용에 따라 신용카드 이외의 결제건에 대해서만 세금계산서 발행이 가능함을 양지하여 주시기

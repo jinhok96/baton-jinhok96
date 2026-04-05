@@ -12,8 +12,14 @@
         <strong>{$product_name}</strong>
         <p class="{$option_display|display}">{$option_str}</p>
         <ul module="Myshop_optionSet">
-          <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-          <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+          <li>
+            <strong>{$product_name}</strong>
+            {$option_str} ({$qty}개)
+          </li>
+          <li>
+            <strong>{$product_name}</strong>
+            {$option_str} ({$qty}개)
+          </li>
         </ul>
       </div>
 
@@ -23,9 +29,7 @@
         </div>
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              취소신청 사유
-            </caption>
+            <caption>취소신청 사유</caption>
             <colgroup>
               <col style="width: 120px" />
               <col style="width: auto" />
@@ -46,9 +50,7 @@
             </tbody>
           </table>
           <table border="1">
-            <caption>
-              취소신청 사유
-            </caption>
+            <caption>취소신청 사유</caption>
             <colgroup>
               <col style="width: 120px" />
               <col style="width: auto" />
@@ -77,9 +79,7 @@
         </div>
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              교환신청 사유
-            </caption>
+            <caption>교환신청 사유</caption>
             <colgroup>
               <col style="width: 120px" />
               <col style="width: auto" />
@@ -100,9 +100,7 @@
             </tbody>
           </table>
           <table border="1">
-            <caption>
-              교환신청 사유
-            </caption>
+            <caption>교환신청 사유</caption>
             <colgroup>
               <col style="width: 120px" />
               <col style="width: auto" />
@@ -131,9 +129,7 @@
         </div>
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              반품신청 사유
-            </caption>
+            <caption>반품신청 사유</caption>
             <colgroup>
               <col style="width: 120px" />
               <col style="width: auto" />
@@ -154,9 +150,7 @@
             </tbody>
           </table>
           <table border="1">
-            <caption>
-              반품신청 사유
-            </caption>
+            <caption>반품신청 사유</caption>
             <colgroup>
               <col style="width: 120px" />
               <col style="width: auto" />
@@ -185,9 +179,7 @@
         </div>
         <div class="ec-base-table">
           <table border="1">
-            <caption>
-              처리불가 사유
-            </caption>
+            <caption>처리불가 사유</caption>
             <colgroup>
               <col style="width: 120px" />
               <col style="width: auto" />
@@ -204,9 +196,7 @@
             </tbody>
           </table>
           <table border="1">
-            <caption>
-              처리불가 사유
-            </caption>
+            <caption>처리불가 사유</caption>
             <colgroup>
               <col style="width: 120px" />
               <col style="width: auto" />
@@ -227,26 +217,8 @@
     </div>
 
     <div class="ec-base-button">
-      <a
-        href="#none"
-        class="btnNormalFix sizeM"
-        onclick="
-          {
-            $close_btn;
-          }
-        "
-        >닫기</a
-      >
+      <a href="#none" class="btnNormalFix sizeM" onclick="{$close_btn}">닫기</a>
     </div>
-    <a
-      href="#none"
-      class="btnClose"
-      onclick="
-        {
-          $close_btn;
-        }
-      "
-      >닫기</a
-    >
+    <a href="#none" class="btnClose" onclick="{$close_btn}">닫기</a>
   </div>
 </div>

@@ -27,9 +27,7 @@
 
     <div class="ec-base-table typeList">
       <table border="1">
-        <caption>
-          배송 주소록 목록
-        </caption>
+        <caption>배송 주소록 목록</caption>
         <colgroup>
           <col style="width: 27px" />
           <col style="width: 80px" />
@@ -42,7 +40,9 @@
         </colgroup>
         <tbody class="head">
           <tr>
-            <td scope="col"><span class="{$list_display|display}">{$sCheckAll}</span></td>
+            <td scope="col">
+              <span class="{$list_display|display}">{$sCheckAll}</span>
+            </td>
             <td scope="col">주소록 고정</td>
             <td scope="col">배송지명</td>
             <td scope="col">수령인</td>
@@ -55,9 +55,7 @@
       </table>
       <div class="scroll">
         <table border="1">
-          <caption>
-            배송 주소록 목록
-          </caption>
+          <caption>배송 주소록 목록</caption>
           <colgroup>
             <col style="width: 27px" />
             <col style="width: 80px" />
@@ -72,16 +70,15 @@
             <tr>
               <td>{$checkbox}</td>
               <td>
-                <a href="{$fix_url}" class="btnNormal sizeS {$notfix_display|display}">해제</a
-                ><a href="{$fix_url}" class="btnEm sizeS {$fix_display|display}">고정</a
-                ><span class="{$default_img_display|display}">-</span>
+                <a href="{$fix_url}" class="btnNormal sizeS {$notfix_display|display}">해제</a>
+                <a href="{$fix_url}" class="btnEm sizeS {$fix_display|display}">고정</a>
+                <span class="{$default_img_display|display}">-</span>
               </td>
               <td>
                 <img
                   src="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/ico_addr_default.gif"
                   class="{$default_img_display|display}"
-                  alt="기본"
-                />
+                  alt="기본" />
                 {$ma_rcv_title}
               </td>
               <td>{$ma_rcv_name}</td>
@@ -89,32 +86,24 @@
               <td>{$ma_rcv_mobile_no}</td>
               <td class="left">({$ma_rcv_zipcode}){$ma_rcv_addr1} {$ma_rcv_addr2}</td>
               <td>
-                <a
-                  href="#none"
-                  class="btnSubmit sizeS"
-                  onclick="
-                    {
-                      $action_order;
-                    }
-                  "
-                  >적용</a
-                >
-                <span class="gBlank10"><a href="modify.html?ma_idx={$ma_idx}" class="btnNormal sizeS">수정</a></span>
+                <a href="#none" class="btnSubmit sizeS" onclick="{$action_order}">적용</a>
+                <span class="gBlank10">
+                  <a href="modify.html?ma_idx={$ma_idx}" class="btnNormal sizeS">수정</a>
+                </span>
               </td>
             </tr>
             <tr>
               <td>{$checkbox}</td>
               <td>
-                <a href="{$fix_url}" class="btnNormal sizeS {$notfix_display|display}">해제</a
-                ><a href="{$fix_url}" class="btnEm sizeS {$fix_display|display}">고정</a
-                ><span class="{$default_img_display|display}">-</span>
+                <a href="{$fix_url}" class="btnNormal sizeS {$notfix_display|display}">해제</a>
+                <a href="{$fix_url}" class="btnEm sizeS {$fix_display|display}">고정</a>
+                <span class="{$default_img_display|display}">-</span>
               </td>
               <td>
                 <img
                   src="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/ico_addr_default.gif"
                   class="{$default_img_display|display}"
-                  alt="기본"
-                />
+                  alt="기본" />
                 {$ma_rcv_title}
               </td>
               <td>{$ma_rcv_name}</td>
@@ -122,17 +111,10 @@
               <td>{$ma_rcv_mobile_no}</td>
               <td class="left">({$ma_rcv_zipcode}){$ma_rcv_addr1} {$ma_rcv_addr2}</td>
               <td>
-                <a
-                  href="#none"
-                  class="btnSubmit sizeS"
-                  onclick="
-                    {
-                      $action_order;
-                    }
-                  "
-                  >적용</a
-                >
-                <span class="gBlank10"><a href="modify.html?ma_idx={$ma_idx}" class="btnNormal sizeS">수정</a></span>
+                <a href="#none" class="btnSubmit sizeS" onclick="{$action_order}">적용</a>
+                <span class="gBlank10">
+                  <a href="modify.html?ma_idx={$ma_idx}" class="btnNormal sizeS">수정</a>
+                </span>
               </td>
             </tr>
           </tbody>
@@ -147,17 +129,9 @@
   </div>
 
   <div class="ec-base-button">
-    <a
-      href="#none"
-      onclick="
-        {
-          $action_delete;
-        }
-        return false;
-      "
-      class="btnNormalFix sizeM {$delete_display|display}"
-      >선택 주소록 삭제</a
-    >
+    <a href="#none" onclick="{$action_delete} return false;" class="btnNormalFix sizeM {$delete_display|display}">
+      선택 주소록 삭제
+    </a>
     <a href="register.html" class="btnSubmitFix sizeM">배송지 등록</a>
   </div>
 </div>

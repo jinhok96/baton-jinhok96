@@ -14,21 +14,15 @@
         <div class="keyImg">
           <div class="topLogo {$supply_link_display|display}">
             <span>{$supply_top_logo}</span>
-            <a
-              href="#none"
-              onclick="
-                {
-                  $supply_go_action;
-                }
-              "
-              ><img src="{$supply_go_img}" alt="공급사 바로가기"
-            /></a>
+            <a href="#none" onclick="{$supply_go_action}">
+              <img src="{$supply_go_img}" alt="공급사 바로가기" />
+            </a>
           </div>
           <div class="thumbnail">
-            <img src="{$big_img}" class="{$big_img_class}" alt="" onclick="self.close()" /><span
-              module="product_Imagestyle"
-              ><span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span
-            ></span>
+            <img src="{$big_img}" class="{$big_img_class}" alt="" onclick="self.close()" />
+            <span module="product_Imagestyle">
+              <span class="prdIcon {$icon_class_name}" style="background-image: url('{$icon_url}')"></span>
+            </span>
           </div>
         </div>
 
@@ -39,8 +33,14 @@
               <li>{$add_img}</li>
             </ul>
           </div>
-          <button type="button" class="prev"><i aria-hidden="true" class="icon icoArrowLeft"></i>이전</button>
-          <button type="button" class="next"><i aria-hidden="true" class="icon icoArrowRight"></i>다음</button>
+          <button type="button" class="prev">
+            <i aria-hidden="true" class="icon icoArrowLeft"></i>
+            이전
+          </button>
+          <button type="button" class="next">
+            <i aria-hidden="true" class="icon icoArrowRight"></i>
+            다음
+          </button>
         </div>
       </div>
     </div>

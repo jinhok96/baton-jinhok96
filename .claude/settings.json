@@ -26,7 +26,13 @@
       "Bash(tree:*)",
       "Bash(wc:*)",
       "Bash(where:*)",
-      "mcp__chrome-devtools__*"
+      "Bash(npm run:*)",
+      "mcp__chrome-devtools__*",
+      "mcp__figma__use_figma",
+      "mcp__figma__get_design_context",
+      "mcp__figma__get_metadata",
+      "mcp__figma__get_screenshot",
+      "Bash(python3)"
     ],
     "deny": [],
     "ask": []

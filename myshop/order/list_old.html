@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>주문조회</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>주문조회</strong>
+    </li>
   </ol>
 </div>
 
@@ -14,7 +20,9 @@
   </div>
   <div module="Myshop_OrderHistoryTab" class="ec-base-tab typeNav">
     <ul class="menu">
-      <li class="{$tab_class}"><a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a></li>
+      <li class="{$tab_class}">
+        <a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a>
+      </li>
       <li class="{$tab_class_cs}">
         <a href="/myshop/order/list.html{$param_cs}">취소/반품/교환 내역 ({$total_orders_cs})</a>
       </li>
@@ -36,7 +44,9 @@
       <div class="order">
         <h3>
           <span class="date" title="주문일자">{$order_date}</span>
-          <span class="number" title="주문번호"><a href="detail_old.html{$param_detail}">({$order_id})</a></span>
+          <span class="number" title="주문번호">
+            <a href="detail_old.html{$param_detail}">({$order_id})</a>
+          </span>
         </h3>
         <div class="ec-base-prdInfo">
           <div class="prdBox">
@@ -56,14 +66,17 @@
             </div>
           </div>
         </div>
-        <a href="detail_old.html{$param_detail}" class="btnDetail"
-          >상세보기 <i aria-hidden="true" class="icon icoArrowRight"></i
-        ></a>
+        <a href="detail_old.html{$param_detail}" class="btnDetail">
+          상세보기
+          <i aria-hidden="true" class="icon icoArrowRight"></i>
+        </a>
       </div>
       <div class="order">
         <h3>
           <span class="date" title="주문일자">{$order_date}</span>
-          <span class="number" title="주문번호"><a href="detail_old.html{$param_detail}">({$order_id})</a></span>
+          <span class="number" title="주문번호">
+            <a href="detail_old.html{$param_detail}">({$order_id})</a>
+          </span>
         </h3>
         <div class="ec-base-prdInfo">
           <div class="prdBox">
@@ -83,9 +96,10 @@
             </div>
           </div>
         </div>
-        <a href="detail_old.html{$param_detail}" class="btnDetail"
-          >상세보기 <i aria-hidden="true" class="icon icoArrowRight"></i
-        ></a>
+        <a href="detail_old.html{$param_detail}" class="btnDetail">
+          상세보기
+          <i aria-hidden="true" class="icon icoArrowRight"></i>
+        </a>
       </div>
     </div>
     <p class="ec-base-prdEmpty {$empty_display|display}">주문 내역이 없습니다.</p>
@@ -95,8 +109,12 @@
     <a href="{$param_first}" class="first">첫 페이지</a>
     <a href="{$param_prev}">이전 페이지</a>
     <ol>
-      <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
-      <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+      <li>
+        <a href="{$param_page}" class="{$param_class}">{$num}</a>
+      </li>
+      <li>
+        <a href="{$param_page}" class="{$param_class}">{$num}</a>
+      </li>
     </ol>
     <a href="{$param_next}">다음 페이지</a>
     <a href="{$param_last}" class="last">마지막 페이지</a>

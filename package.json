@@ -2,15 +2,21 @@
   "name": "baton-jinhok96",
   "private": true,
   "scripts": {
+    "build": "tailwindcss -i ./src/css/tailwind.css -o ./layout/basic/css/tailwind.css --minify",
+    "watch": "tailwindcss -i ./src/css/tailwind.css -o ./layout/basic/css/tailwind.css --watch",
     "lint": "npm run lf && npm run eslint",
     "lf": "prettier --write -l --end-of-line lf .",
     "eslint": "eslint . --fix"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
+    "@tailwindcss/cli": "^4.2.2",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^10.0.0",
+    "eslint-plugin-better-tailwindcss": "^4.3.2",
     "globals": "^15.0.0",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.2.2"
   }
 }

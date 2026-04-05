@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>주문조회</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>주문조회</strong>
+    </li>
   </ol>
 </div>
 
@@ -14,7 +20,9 @@
   </div>
   <div module="Myshop_OrderHistoryTab" class="ec-base-tab typeNav">
     <ul class="menu">
-      <li class="{$tab_class}"><a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a></li>
+      <li class="{$tab_class}">
+        <a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a>
+      </li>
       <li class="{$tab_class_cs}">
         <a href="/myshop/order/list.html{$param_cs}">취소/반품/교환 내역 ({$total_orders_cs})</a>
       </li>
@@ -50,11 +58,14 @@
         있습니다.
       </li>
       <li class="{$is_past_list_display|display}">
-        - 완료 후 36개월 이상 경과한 주문은 <a href="javascript:OrderHistory.searchPast(false)">[과거주문내역]</a>에서
-        확인할 수 있습니다.
+        - 완료 후 36개월 이상 경과한 주문은
+        <a href="javascript:OrderHistory.searchPast(false)">[과거주문내역]</a>
+        에서 확인할 수 있습니다.
       </li>
       <li>
-        - 리뉴얼 전에 주문한 내역은 <a href="/myshop/order/list_old.html">[이전 주문내역]</a>에서 확인할 수 있습니다.
+        - 리뉴얼 전에 주문한 내역은
+        <a href="/myshop/order/list_old.html">[이전 주문내역]</a>
+        에서 확인할 수 있습니다.
       </li>
       <li class="{$cs_request_guide_display|display}">
         - 취소/교환/반품 신청은 {$cs_request_period_day_condition} {$cs_request_period_day}일까지 가능합니다.

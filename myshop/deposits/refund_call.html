@@ -30,16 +30,18 @@
 
       <div class="ec-base-tab typeNav">
         <ul class="menu">
-          <li class="selected"><a href="refund_call.html">현금환불 요청</a></li>
-          <li><a href="refund_cancel.html">현금환불 취소</a></li>
+          <li class="selected">
+            <a href="refund_call.html">현금환불 요청</a>
+          </li>
+          <li>
+            <a href="refund_cancel.html">현금환불 취소</a>
+          </li>
         </ul>
       </div>
 
       <div class="ec-base-table typeWrite">
         <table border="1">
-          <caption>
-            현금환불요청
-          </caption>
+          <caption>현금환불요청</caption>
           <colgroup>
             <col style="width: 180px" />
             <col style="width: 160px" />
@@ -48,12 +50,16 @@
           <tbody>
             <tr>
               <th scope="row">환불 가능 총 {$deposit_name}액</th>
-              <td><strong class="price1">{$deposit_can_dissaving}</strong></td>
+              <td>
+                <strong class="price1">{$deposit_can_dissaving}</strong>
+              </td>
               <td>환불 대기 금액 미포함</td>
             </tr>
             <tr>
               <th scope="row">환불 대기 금액</th>
-              <td><strong class="price2">{$deposit_refund_wait}</strong></td>
+              <td>
+                <strong class="price2">{$deposit_refund_wait}</strong>
+              </td>
               <td>환불 요청 후 환불처리 대기 중인 금액</td>
             </tr>
             <tr>
@@ -70,14 +76,17 @@
               <th scope="row">환불 요청 은행</th>
               <td colspan="2">
                 {$form.request_bank_code}
-                <span class="gIndent20 {$display_bank_name_chk|display}"
-                  >환불계좌의 은행, 지점, 계좌종류를 입력해 주세요.</span
-                >
+                <span class="gIndent20 {$display_bank_name_chk|display}">
+                  환불계좌의 은행, 지점, 계좌종류를 입력해 주세요.
+                </span>
               </td>
             </tr>
             <tr>
               <th scope="row">환불 요청 계좌번호</th>
-              <td colspan="2">{$form.request_account_no} <span class="gIndent20">(- 를 제외한 번호만 입력)</span></td>
+              <td colspan="2">
+                {$form.request_account_no}
+                <span class="gIndent20">(- 를 제외한 번호만 입력)</span>
+              </td>
             </tr>
           </tbody>
         </table>

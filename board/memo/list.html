@@ -5,9 +5,15 @@
     <div class="path">
       <span>현재 위치</span>
       <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/board/index.html">게시판</a></li>
-        <li title="현재 위치"><strong>{$board_name}</strong></li>
+        <li>
+          <a href="/">홈</a>
+        </li>
+        <li>
+          <a href="/board/index.html">게시판</a>
+        </li>
+        <li title="현재 위치">
+          <strong>{$board_name}</strong>
+        </li>
       </ol>
     </div>
 
@@ -22,23 +28,16 @@
       <div class="input">
         <span class="{$config.is_login|display}">이름 :{$form.writer}</span>
         <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 :{$form.secure_password}</span>
-        <span class="secret {$config.use_secret|display}"><label>{$form.secure} 비밀글</label></span>
+        <span class="secret {$config.use_secret|display}">
+          <label>{$form.secure} 비밀글</label>
+        </span>
         <p class="ec-base-help {$password_rule_help_display|display}">
           영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자
         </p>
       </div>
       <p>
         {$form.content}
-        <a
-          href="#none"
-          class="btnSubmit sizeL"
-          onclick="
-            {
-              $action_memo_insert;
-            }
-          "
-          >등록</a
-        >
+        <a href="#none" class="btnSubmit sizeL" onclick="{$action_memo_insert}">등록</a>
       </p>
       <p class="captcha {$config.use_captcha_write|display}">
         {$captcha_image} {$captcha_refresh} {$form.captcha}
@@ -58,39 +57,14 @@
         <div class="memo">{$icon_lock} {$content|nl2br} {$icon_new}</div>
         <p class="ec-base-button">
           <span class="gLeft">
-            <a
-              href="#none"
-              onclick="
-                {
-                  $action_comment_write;
-                }
-              "
-              class="btnNormal sizeS {$display_use_comment|display}"
-              >댓글</a
-            >
+            <a href="#none" onclick="{$action_comment_write}" class="btnNormal sizeS {$display_use_comment|display}">
+              댓글
+            </a>
             <span class="text">{$comment_count}</span>
           </span>
           <span class="gRight {$display_mod_button|display}">
-            <a
-              href="#none"
-              class="btnNormal sizeS"
-              onclick="
-                {
-                  $action_memo_modify;
-                }
-              "
-              >수정</a
-            >
-            <a
-              href="#none"
-              class="btnNormal sizeS"
-              onclick="
-                {
-                  $action_memo_delete;
-                }
-              "
-              >삭제</a
-            >
+            <a href="#none" class="btnNormal sizeS" onclick="{$action_memo_modify}">수정</a>
+            <a href="#none" class="btnNormal sizeS" onclick="{$action_memo_delete}">삭제</a>
           </span>
         </p>
 
@@ -105,26 +79,8 @@
                 <span class="date {$display_use_date|display}">{$comment_date}</span>
               </p>
               <p class="btn {$comment_display_button|display}">
-                <a
-                  href="#none"
-                  class="btnNormal sizeS"
-                  onclick="
-                    {
-                      $action_comment_modify;
-                    }
-                  "
-                  >수정</a
-                >
-                <a
-                  href="#none"
-                  class="btnNormal sizeS"
-                  onclick="
-                    {
-                      $action_comment_delete;
-                    }
-                  "
-                  >삭제</a
-                >
+                <a href="#none" class="btnNormal sizeS" onclick="{$action_comment_modify}">수정</a>
+                <a href="#none" class="btnNormal sizeS" onclick="{$action_comment_delete}">삭제</a>
               </p>
               <div class="memo">{$comment_icon_lock} {$comment_content}</div>
             </div>
@@ -138,50 +94,16 @@
   <div class="commentView" module="board_memoformcmtsecret_1001">
     <p>
       비밀번호 : {$form.comment_password}
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_secret_submit;
-          }
-        "
-        >확인</a
-      >
-      <a
-        href="#none"
-        onclick="
-          {
-            $action_secret_cancel;
-          }
-        "
-        >취소</a
-      >
+      <a href="#none" onclick="{$action_secret_submit}">확인</a>
+      <a href="#none" onclick="{$action_secret_cancel}">취소</a>
     </p>
   </div>
 
   <div class="commentView" module="board_memoformsecret_1001">
     <p>
       비밀번호 : {$form.secure_password}
-      <a
-        href="#none"
-        class="btnNormal"
-        onclick="
-          {
-            $action_secret_submit;
-          }
-        "
-        >확인</a
-      >
-      <a
-        href="#none"
-        class="btnNormal"
-        onclick="
-          {
-            $action_secret_cancel;
-          }
-        "
-        >취소</a
-      >
+      <a href="#none" class="btnNormal" onclick="{$action_secret_submit}">확인</a>
+      <a href="#none" class="btnNormal" onclick="{$action_secret_cancel}">취소</a>
     </p>
   </div>
 
@@ -189,33 +111,17 @@
     <fieldset>
       <legend>메모 수정</legend>
       <p>
-        <span id="{$memo_name_id}" class="{$config.is_login|display}">이름 : {$form.writer} </span>
-        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.secure_password} </span>
-        <span class="secret {$config.use_secret|display}"><label>{$form.secure} 비밀글</label></span>
+        <span id="{$memo_name_id}" class="{$config.is_login|display}">이름 : {$form.writer}</span>
+        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.secure_password}</span>
+        <span class="secret {$config.use_secret|display}">
+          <label>{$form.secure} 비밀글</label>
+        </span>
       </p>
       <p class="modify">
         {$form.content}
         <span class="submit">
-          <a
-            href="#none"
-            onclick="
-              {
-                $action_modify_submit;
-              }
-            "
-            class="btnSubmit sizeL"
-            >수정</a
-          >
-          <a
-            href="#none"
-            class="btnNormal sizeL"
-            onclick="
-              {
-                $action_modify_cancel;
-              }
-            "
-            >취소</a
-          >
+          <a href="#none" onclick="{$action_modify_submit}" class="btnSubmit sizeL">수정</a>
+          <a href="#none" class="btnNormal sizeL" onclick="{$action_modify_cancel}">취소</a>
         </span>
       </p>
     </fieldset>
@@ -225,31 +131,13 @@
     <fieldset>
       <legend>메모 삭제</legend>
       <p>
-        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.secure_password} </span>
+        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.secure_password}</span>
       </p>
       <p class="modify">
         {$form.content}
         <span class="submit">
-          <a
-            href="#none"
-            class="btnSubmit sizeL"
-            onclick="
-              {
-                $action_delete_submit;
-              }
-            "
-            >삭제</a
-          >
-          <a
-            href="#none"
-            class="btnNormal sizeL"
-            onclick="
-              {
-                $action_delete_cancel;
-              }
-            "
-            >취소</a
-          >
+          <a href="#none" class="btnSubmit sizeL" onclick="{$action_delete_submit}">삭제</a>
+          <a href="#none" class="btnNormal sizeL" onclick="{$action_delete_cancel}">취소</a>
         </span>
       </p>
     </fieldset>
@@ -259,9 +147,11 @@
     <fieldset>
       <legend>댓글 쓰기</legend>
       <div class="input">
-        <span class="{$config.is_login|display}">이름 : {$form.comment_name} </span>
-        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.comment_password} </span>
-        <span class="secret {$config.use_secret|display}"><label>{$form.secure} 비밀글</label></span>
+        <span class="{$config.is_login|display}">이름 : {$form.comment_name}</span>
+        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.comment_password}</span>
+        <span class="secret {$config.use_secret|display}">
+          <label>{$form.secure} 비밀글</label>
+        </span>
         <p class="ec-base-help {$password_rule_help_display|display}">
           영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자
         </p>
@@ -269,26 +159,8 @@
       <p class="modify">
         {$form.comment}
         <span class="submit">
-          <a
-            href="#none"
-            class="btnSubmit sizeL"
-            onclick="
-              {
-                $action_comment_submit;
-              }
-            "
-            >등록</a
-          >
-          <a
-            href="#none"
-            class="btnNormal sizeL"
-            onclick="
-              {
-                $action_comment_cancel;
-              }
-            "
-            >취소</a
-          >
+          <a href="#none" class="btnSubmit sizeL" onclick="{$action_comment_submit}">등록</a>
+          <a href="#none" class="btnNormal sizeL" onclick="{$action_comment_cancel}">취소</a>
         </span>
       </p>
       <p class="captcha {$config.use_captcha_comment|display}">
@@ -302,33 +174,17 @@
     <fieldset>
       <legend>댓글 수정</legend>
       <p>
-        <span id="{$memo_name_id}" class="{$config.is_login|display}">이름 : {$form.comment_name} </span>
-        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.comment_password} </span>
-        <span class="secret {$config.use_secret|display}"><label>{$form.secure} 비밀글</label></span>
+        <span id="{$memo_name_id}" class="{$config.is_login|display}">이름 : {$form.comment_name}</span>
+        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.comment_password}</span>
+        <span class="secret {$config.use_secret|display}">
+          <label>{$form.secure} 비밀글</label>
+        </span>
       </p>
       <p class="modify">
         {$form.comment_modify}
         <span class="submit">
-          <a
-            href="#none"
-            class="btnSubmit sizeL"
-            onclick="
-              {
-                $action_comment_update;
-              }
-            "
-            >수정</a
-          >
-          <a
-            href="#none"
-            class="btnNormal sizeL"
-            onclick="
-              {
-                $action_comment_cancel;
-              }
-            "
-            >취소</a
-          >
+          <a href="#none" class="btnSubmit sizeL" onclick="{$action_comment_update}">수정</a>
+          <a href="#none" class="btnNormal sizeL" onclick="{$action_comment_cancel}">취소</a>
         </span>
       </p>
     </fieldset>
@@ -338,31 +194,13 @@
     <fieldset>
       <legend>댓글 삭제</legend>
       <p>
-        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.comment_password} </span>
+        <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.comment_password}</span>
       </p>
       <p class="modify">
         {$form.comment_modify}
         <span class="submit">
-          <a
-            href="#none"
-            class="btnSubmit sizeL"
-            onclick="
-              {
-                $action_comment_delete;
-              }
-            "
-            >삭제</a
-          >
-          <a
-            href="#none"
-            class="btnNormal sizeL"
-            onclick="
-              {
-                $action_comment_cancel;
-              }
-            "
-            >취소</a
-          >
+          <a href="#none" class="btnSubmit sizeL" onclick="{$action_comment_delete}">삭제</a>
+          <a href="#none" class="btnNormal sizeL" onclick="{$action_comment_cancel}">취소</a>
         </span>
       </p>
     </fieldset>
@@ -372,8 +210,12 @@
 <div module="board_paging_1001" class="ec-base-paginate typeList">
   <a href="{$param_prev}">이전 페이지</a>
   <ol>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
   </ol>
   <a href="{$param_next}">다음 페이지</a>
 </div>

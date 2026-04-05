@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>마이쿠폰</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>마이쿠폰</strong>
+    </li>
   </ol>
 </div>
 <div class="myshopArea">
@@ -22,16 +28,7 @@
       <fieldset>
         <legend>쿠폰번호 등록</legend>
         {$form.coupon_code}
-        <a
-          href="#none"
-          class="btnSubmitFix sizeM"
-          onclick="
-            {
-              $action_coupon_submit;
-            }
-          "
-          >쿠폰번호인증</a
-        >
+        <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_coupon_submit}">쿠폰번호인증</a>
         <p class="txtInfo">반드시 쇼핑몰에서 발행한 쿠폰번호만 입력해주세요. (10~35자 일련번호 "-" 제외)</p>
       </fieldset>
     </div>
@@ -46,9 +43,7 @@
     <div class="couponList">
       <div class="ec-base-table {$display_coupon_list|display}">
         <table border="1">
-          <caption>
-            마이 쿠폰 목록
-          </caption>
+          <caption>마이 쿠폰 목록</caption>
           <colgroup>
             <col style="width: 10%" class="RW" />
             <col style="width: 50%" />
@@ -78,18 +73,41 @@
             <tr>
               <td colspan="5" class="contents" title="쿠폰정보">
                 <ul>
-                  <li class="number"><strong>쿠폰번호</strong><span class="content">{$coupon_no}</span></li>
-                  <li><strong>구매금액</strong><span class="content">{$coupon_use_price}</span></li>
-                  <li class="{$display_paymethod|display}">
-                    <strong>결제수단</strong><span class="content">{$coupon_paymethod}</span>
+                  <li class="number">
+                    <strong>쿠폰번호</strong>
+                    <span class="content">{$coupon_no}</span>
                   </li>
-                  <li><strong>쿠폰혜택</strong><span class="content">{$coupon_benefit_result}</span></li>
-                  <li><strong>할인액(률)</strong><span class="content">{$coupon_discount}</span></li>
-                  <li><strong>적립액(률)</strong><span class="content">{$coupon_mileage}</span></li>
-                  <li><strong>예치금</strong><span class="content">{$coupon_deposit}</span></li>
-                  <li><strong>사용가능 기간</strong><span class="content">{$coupon_use_date}</span></li>
+                  <li>
+                    <strong>구매금액</strong>
+                    <span class="content">{$coupon_use_price}</span>
+                  </li>
+                  <li class="{$display_paymethod|display}">
+                    <strong>결제수단</strong>
+                    <span class="content">{$coupon_paymethod}</span>
+                  </li>
+                  <li>
+                    <strong>쿠폰혜택</strong>
+                    <span class="content">{$coupon_benefit_result}</span>
+                  </li>
+                  <li>
+                    <strong>할인액(률)</strong>
+                    <span class="content">{$coupon_discount}</span>
+                  </li>
+                  <li>
+                    <strong>적립액(률)</strong>
+                    <span class="content">{$coupon_mileage}</span>
+                  </li>
+                  <li>
+                    <strong>예치금</strong>
+                    <span class="content">{$coupon_deposit}</span>
+                  </li>
+                  <li>
+                    <strong>사용가능 기간</strong>
+                    <span class="content">{$coupon_use_date}</span>
+                  </li>
                   <li class="gButton">
-                    <strong>쿠폰적용상품</strong><span class="content">{$coupon_use_product_icon}</span>
+                    <strong>쿠폰적용상품</strong>
+                    <span class="content">{$coupon_use_product_icon}</span>
                   </li>
                 </ul>
               </td>
@@ -108,18 +126,41 @@
             <tr>
               <td colspan="5" class="contents" title="쿠폰정보">
                 <ul>
-                  <li class="number"><strong>쿠폰번호</strong><span class="content">{$coupon_no}</span></li>
-                  <li><strong>구매금액</strong><span class="content">{$coupon_use_price}</span></li>
-                  <li class="{$display_paymethod|display}">
-                    <strong>결제수단</strong><span class="content">{$coupon_paymethod}</span>
+                  <li class="number">
+                    <strong>쿠폰번호</strong>
+                    <span class="content">{$coupon_no}</span>
                   </li>
-                  <li><strong>쿠폰혜택</strong><span class="content">{$coupon_benefit_result}</span></li>
-                  <li><strong>할인액(률)</strong><span class="content">{$coupon_discount}</span></li>
-                  <li><strong>적립액(률)</strong><span class="content">{$coupon_mileage}</span></li>
-                  <li><strong>예치금</strong><span class="content">{$coupon_deposit}</span></li>
-                  <li><strong>사용가능 기간</strong><span class="content">{$coupon_use_date}</span></li>
+                  <li>
+                    <strong>구매금액</strong>
+                    <span class="content">{$coupon_use_price}</span>
+                  </li>
+                  <li class="{$display_paymethod|display}">
+                    <strong>결제수단</strong>
+                    <span class="content">{$coupon_paymethod}</span>
+                  </li>
+                  <li>
+                    <strong>쿠폰혜택</strong>
+                    <span class="content">{$coupon_benefit_result}</span>
+                  </li>
+                  <li>
+                    <strong>할인액(률)</strong>
+                    <span class="content">{$coupon_discount}</span>
+                  </li>
+                  <li>
+                    <strong>적립액(률)</strong>
+                    <span class="content">{$coupon_mileage}</span>
+                  </li>
+                  <li>
+                    <strong>예치금</strong>
+                    <span class="content">{$coupon_deposit}</span>
+                  </li>
+                  <li>
+                    <strong>사용가능 기간</strong>
+                    <span class="content">{$coupon_use_date}</span>
+                  </li>
                   <li class="gButton">
-                    <strong>쿠폰적용상품</strong><span class="content">{$coupon_use_product_icon}</span>
+                    <strong>쿠폰적용상품</strong>
+                    <span class="content">{$coupon_use_product_icon}</span>
                   </li>
                 </ul>
               </td>
@@ -140,9 +181,15 @@
     <a href="{$first_url}" class="first">첫 페이지</a>
     <a href="{$prev_url}">이전 페이지</a>
     <ol>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
-      <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
+      <li>
+        <a href="{$url_query}" class="{$param_class}">{$n}</a>
+      </li>
     </ol>
     <a href="{$next_url}">다음 페이지</a>
     <a href="{$last_url}" class="last">마지막 페이지</a>
@@ -153,8 +200,9 @@
     <div class="inner">
       <ul>
         <li>
-          <strong>쿠폰인증번호 등록하기</strong>에서 쇼핑몰에서 발행한 종이쿠폰/시리얼쿠폰/모바일쿠폰 등의 인증번호를
-          등록하시면 온라인쿠폰으로 발급되어 사용이 가능합니다.
+          <strong>쿠폰인증번호 등록하기</strong>
+          에서 쇼핑몰에서 발행한 종이쿠폰/시리얼쿠폰/모바일쿠폰 등의 인증번호를 등록하시면 온라인쿠폰으로 발급되어
+          사용이 가능합니다.
         </li>
         <li>쿠폰은 주문 시 1회에 한해 적용되며, 1회 사용 시 재 사용이 불가능합니다.</li>
         <li>쿠폰은 적용 가능한 상품이 따로 적용되어 있는 경우 해당 상품 구매 시에만 사용이 가능합니다.</li>

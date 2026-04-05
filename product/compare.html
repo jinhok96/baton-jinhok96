@@ -2,7 +2,9 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
     <li title="현재 위치">상품비교하기</li>
   </ol>
 </div>
@@ -21,22 +23,24 @@
             ※ <td>를 두번 이상 반복해야 합니다.
     -->
   <table border="1">
-    <caption>
-      상품 비교하기
-    </caption>
+    <caption>상품 비교하기</caption>
     <tbody>
       <tr module="Product_Productimagetiny">
         <th scope="row">상품이미지</th>
         <td class="center">
-          <span class="thumb"
-            ><a href="{$link_product_detail}"><img src="{$Productimagetiny}" alt="" /></a
-          ></span>
+          <span class="thumb">
+            <a href="{$link_product_detail}">
+              <img src="{$Productimagetiny}" alt="" />
+            </a>
+          </span>
           <input type="checkbox" class="{$product_select_class}" />
         </td>
         <td class="center">
-          <span class="thumb"
-            ><a href="{$link_product_detail}"><img src="{$Productimagetiny}" alt="" /></a
-          ></span>
+          <span class="thumb">
+            <a href="{$link_product_detail}">
+              <img src="{$Productimagetiny}" alt="" />
+            </a>
+          </span>
           <input type="checkbox" class="{$product_select_class}" />
         </td>
       </tr>
@@ -61,34 +65,50 @@
       </tr>
       <tr module="Product_Productcustom">
         <th scope="row">소비자가</th>
-        <td><em id="product_price_nf{$product_no}">{$Productcustom}</em></td>
-        <td><em id="product_price_nf{$product_no}">{$Productcustom}</em></td>
+        <td>
+          <em id="product_price_nf{$product_no}">{$Productcustom}</em>
+        </td>
+        <td>
+          <em id="product_price_nf{$product_no}">{$Productcustom}</em>
+        </td>
       </tr>
       <tr module="Product_Productprice">
         <th scope="row">판매가</th>
         <td>
-          <span class="txtEm"><strong id="product_price_nf{$product_no}">{$Productprice}</strong></span
-          >{$product_tax_type_text}
+          <span class="txtEm">
+            <strong id="product_price_nf{$product_no}">{$Productprice}</strong>
+          </span>
+          {$product_tax_type_text}
         </td>
         <td>
-          <span class="txtEm"><strong id="product_price_nf{$product_no}">{$Productprice}</strong></span
-          >{$product_tax_type_text}
+          <span class="txtEm">
+            <strong id="product_price_nf{$product_no}">{$Productprice}</strong>
+          </span>
+          {$product_tax_type_text}
         </td>
       </tr>
 
       <tr module="Product_Productsaleprice">
         <th scope="row">할인판매가</th>
         <td>
-          <span class="txtEm"><strong id="product_price_nf{$product_no}">{$Productsaleprice}</strong></span>
+          <span class="txtEm">
+            <strong id="product_price_nf{$product_no}">{$Productsaleprice}</strong>
+          </span>
         </td>
         <td>
-          <span class="txtEm"><strong id="product_price_nf{$product_no}">{$Productsaleprice}</strong></span>
+          <span class="txtEm">
+            <strong id="product_price_nf{$product_no}">{$Productsaleprice}</strong>
+          </span>
         </td>
       </tr>
       <tr module="Product_Quantity">
         <th scope="row">수량</th>
-        <td><span class="quantity">{$form.quantity}</span></td>
-        <td><span class="quantity">{$form.quantity}</span></td>
+        <td>
+          <span class="quantity">{$form.quantity}</span>
+        </td>
+        <td>
+          <span class="quantity">{$form.quantity}</span>
+        </td>
       </tr>
       <tr>
         <th scope="row">옵션</th>
@@ -96,12 +116,16 @@
         <td module="Product_CompareOptionList">
           <ul>
             <li module="Product_CompareAddOption">
-              <span class="optionName">{$add_option_name}</span> <span class="fWidthFull">{$form.add_option}</span>
+              <span class="optionName">{$add_option_name}</span>
+
+              <span class="fWidthFull">{$form.add_option}</span>
             </li>
           </ul>
           <ul>
             <li module="Product_CompareOption">
-              <span class="optionName">{$option_name}</span> <span class="fWidthFull">{$form.option}</span>
+              <span class="optionName">{$option_name}</span>
+
+              <span class="fWidthFull">{$form.option}</span>
             </li>
           </ul>
         </td>
@@ -153,17 +177,17 @@
 
   <div class="ec-base-button">
     <span class="gLeft">
-      <span class="{$basket_display|display}"
-        ><a href="#none" class="btnNormalFix sizeM {$basket_class}">장바구니담기</a></span
-      >
-      <span class="{$wishlist_display|display}"
-        ><a href="#none" class="btnNormalFix sizeM {$wishlist_class}">관심상품등록</a></span
-      >
+      <span class="{$basket_display|display}">
+        <a href="#none" class="btnNormalFix sizeM {$basket_class}">장바구니담기</a>
+      </span>
+      <span class="{$wishlist_display|display}">
+        <a href="#none" class="btnNormalFix sizeM {$wishlist_class}">관심상품등록</a>
+      </span>
     </span>
     <span class="gRight">
-      <span class="{$buy_display|display}"
-        ><a href="#none" class="btnSubmitFix sizeM {$buy_class}">바로구매하기</a></span
-      >
+      <span class="{$buy_display|display}">
+        <a href="#none" class="btnSubmitFix sizeM {$buy_class}">바로구매하기</a>
+      </span>
     </span>
   </div>
 </div>

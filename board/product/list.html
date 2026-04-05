@@ -5,9 +5,15 @@
     <div class="path">
       <span>현재 위치</span>
       <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/board/index.html">게시판</a></li>
-        <li title="현재 위치"><strong>{$board_name}</strong></li>
+        <li>
+          <a href="/">홈</a>
+        </li>
+        <li>
+          <a href="/board/index.html">게시판</a>
+        </li>
+        <li title="현재 위치">
+          <strong>{$board_name}</strong>
+        </li>
       </ol>
     </div>
 
@@ -19,8 +25,12 @@
 
   <div module="Layout_BoardInfo" class="ec-base-tab typeMenu gScroll">
     <ul class="menu">
-      <li><a href="{$board_list_url}" class="button">{$board_name}</a></li>
-      <li><a href="{$board_list_url}" class="button">{$board_name}</a></li>
+      <li>
+        <a href="{$board_list_url}" class="button">{$board_name}</a>
+      </li>
+      <li>
+        <a href="{$board_list_url}" class="button">{$board_name}</a>
+      </li>
     </ul>
   </div>
 
@@ -31,9 +41,7 @@
 
   <div class="ec-base-table typeList gThumb gBorderClear">
     <table border="1">
-      <caption>
-        상품 게시판 목록
-      </caption>
+      <caption>상품 게시판 목록</caption>
       <colgroup module="board_listheader_4">
         <col style="width: 80px" />
         <col style="width: 85px" />
@@ -64,61 +72,77 @@
                 $deny_access_url = /index.html
             -->
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk">{$checkbox}<span class="RW">{$notice_icon}</span></td>
+          <td class="chk">
+            {$checkbox}
+            <span class="RW">{$notice_icon}</span>
+          </td>
           <td class="thumb">
-            <a href="{$link_product_detail}"
-              ><img
+            <a href="{$link_product_detail}">
+              <img
                 src="{$product_img_src}"
                 onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_medium.gif'"
-                alt=""
-            /></a>
+                alt="" />
+            </a>
           </td>
           <td class="subject left txtBreak">
             <p class="product">{$product_name}</p>
             <span class="badge">{$notice_icon}</span>
-            <strong
-              >{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a
-              >{$icon_file}<span class="comment">{$comment_count}</span>{$icon_new}{$icon_hit}</strong
-            >
+            <strong>
+              {$icon_re}{$icon_lock}
+              <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+              {$icon_file}
+              <span class="comment">{$comment_count}</span>
+              {$icon_new}{$icon_hit}
+            </strong>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk">{$checkbox}<span class="RW">{$notice_icon}</span></td>
+          <td class="chk">
+            {$checkbox}
+            <span class="RW">{$notice_icon}</span>
+          </td>
           <td class="thumb">
-            <a href="{$link_product_detail}"
-              ><img
+            <a href="{$link_product_detail}">
+              <img
                 src="{$product_img_src}"
                 onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_medium.gif'"
-                alt=""
-            /></a>
+                alt="" />
+            </a>
           </td>
           <td class="subject left txtBreak">
             <p class="product">{$product_name}</p>
             <span class="badge">{$notice_icon}</span>
-            <strong
-              >{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a
-              >{$icon_file}<span class="comment">{$comment_count}</span>{$icon_new}{$icon_hit}</strong
-            >
+            <strong>
+              {$icon_re}{$icon_lock}
+              <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+              {$icon_file}
+              <span class="comment">{$comment_count}</span>
+              {$icon_new}{$icon_hit}
+            </strong>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
       </tbody>
@@ -129,61 +153,77 @@
                 $deny_access_url = /index.html
             -->
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk">{$checkbox}<span class="RW">{$fixed_icon}</span></td>
+          <td class="chk">
+            {$checkbox}
+            <span class="RW">{$fixed_icon}</span>
+          </td>
           <td class="thumb">
-            <a href="{$link_product_detail}"
-              ><img
+            <a href="{$link_product_detail}">
+              <img
                 src="{$product_img_src}"
                 onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_medium.gif'"
-                alt=""
-            /></a>
+                alt="" />
+            </a>
           </td>
           <td class="subject left txtBreak">
             <p class="product">{$product_name}</p>
             <span class="badge">{$fixed_icon}</span>
-            <strong
-              >{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a
-              >{$icon_file}<span class="comment">{$comment_count}</span>{$icon_new}{$icon_hit}</strong
-            >
+            <strong>
+              {$icon_re}{$icon_lock}
+              <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+              {$icon_file}
+              <span class="comment">{$comment_count}</span>
+              {$icon_new}{$icon_hit}
+            </strong>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk">{$checkbox}<span class="RW">{$fixed_icon}</span></td>
+          <td class="chk">
+            {$checkbox}
+            <span class="RW">{$fixed_icon}</span>
+          </td>
           <td class="thumb">
-            <a href="{$link_product_detail}"
-              ><img
+            <a href="{$link_product_detail}">
+              <img
                 src="{$product_img_src}"
                 onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_medium.gif'"
-                alt=""
-            /></a>
+                alt="" />
+            </a>
           </td>
           <td class="subject left txtBreak">
             <p class="product">{$product_name}</p>
             <span class="badge">{$fixed_icon}</span>
-            <strong
-              >{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a
-              >{$icon_file}<span class="comment">{$comment_count}</span>{$icon_new}{$icon_hit}</strong
-            >
+            <strong>
+              {$icon_re}{$icon_lock}
+              <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+              {$icon_file}
+              <span class="comment">{$comment_count}</span>
+              {$icon_new}{$icon_hit}
+            </strong>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
       </tbody>
@@ -194,59 +234,73 @@
                 $deny_access_url = /index.html
             -->
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk no">{$checkbox}<span class="RW">{$no}</span></td>
+          <td class="chk no">
+            {$checkbox}
+            <span class="RW">{$no}</span>
+          </td>
           <td class="thumb">
-            <a href="{$link_product_detail}"
-              ><img
+            <a href="{$link_product_detail}">
+              <img
                 src="{$product_img_src}"
                 onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_medium.gif'"
-                alt=""
-            /></a>
+                alt="" />
+            </a>
           </td>
           <td class="subject left txtBreak">
             <p class="product">{$product_name}</p>
-            {$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>{$icon_file}<span
-              class="comment"
-              >{$comment_count}</span
-            >{$icon_new}<span style="width: 100vw; height: 100vh">{$icon_hit}</span>
+            {$icon_re}{$icon_lock}
+            <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+            {$icon_file}
+            <span class="comment">{$comment_count}</span>
+            {$icon_new}
+            <span style="width: 100vw; height: 100vh">{$icon_hit}</span>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
         <tr style="{$list_bg_color} {$list_char_color}">
-          <td class="chk no">{$checkbox}<span class="RW">{$no}</span></td>
+          <td class="chk no">
+            {$checkbox}
+            <span class="RW">{$no}</span>
+          </td>
           <td class="thumb">
-            <a href="{$link_product_detail}"
-              ><img
+            <a href="{$link_product_detail}">
+              <img
                 src="{$product_img_src}"
                 onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_medium.gif'"
-                alt="{$product_name}"
-            /></a>
+                alt="{$product_name}" />
+            </a>
           </td>
           <td class="subject left txtBreak">
             <p class="product">{$product_name}</p>
-            {$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>{$icon_file}<span
-              class="comment"
-              >{$comment_count}</span
-            >{$icon_new}<span style="width: 100vw; height: 100vh">{$icon_hit}</span>
+            {$icon_re}{$icon_lock}
+            <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+            {$icon_file}
+            <span class="comment">{$comment_count}</span>
+            {$icon_new}
+            <span style="width: 100vw; height: 100vh">{$icon_hit}</span>
           </td>
           <td class="{$category_display|display}">{$category_name}</td>
           <td>{$member_icon}{$writer}</td>
           <td class="{$date_display|display}">{$write_date|date:Y-m-d}</td>
-          <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+          <td class="{$hit_display|display}">
+            <span class="RTMI">조회</span>
+            {$hit_count}
+          </td>
           <td class="{$point_display|display}">
             <img
               src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg"
-              alt="{$point_count}점"
-            />
+              alt="{$point_count}점" />
           </td>
         </tr>
       </tbody>
@@ -263,16 +317,7 @@
       <p class="category {$form.product_category_selector_display|display}">{$form.product_category_selector}</p>
       <div class="form">
         {$form.search_date} {$form.search_key} {$form.search}
-        <a
-          href="#none"
-          class="btnNormal"
-          onclick="
-            {
-              $action_search;
-            }
-          "
-          >찾기</a
-        >
+        <a href="#none" class="btnNormal" onclick="{$action_search}">찾기</a>
       </div>
     </fieldset>
   </div>
@@ -282,11 +327,21 @@
   <a href="{$param_first}" class="first">첫 페이지</a>
   <a href="{$param_prev}">이전 페이지</a>
   <ol>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-    <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
+    <li>
+      <a href="{$param_num}" class="{$param_class}">{$page_num}</a>
+    </li>
   </ol>
   <a href="{$param_next}">다음 페이지</a>
   <a href="{$param_last}" class="last">마지막 페이지</a>
@@ -296,18 +351,9 @@
 <div module="board_catemove_4">
   <!--@css(/css/module/board/catemove.css)-->
   <span class="gColumn">{$board_catemove_selectbox}</span>
-  <span class="gColumn"
-    ><a
-      href="#none"
-      class="btnNormal sizeS"
-      onclick="
-        {
-          $action_category_move;
-        }
-      "
-      >{$category_move}</a
-    ></span
-  >
+  <span class="gColumn">
+    <a href="#none" class="btnNormal sizeS" onclick="{$action_category_move}">{$category_move}</a>
+  </span>
 </div>
 
 <div module="board_function_4">
@@ -317,23 +363,11 @@
     <a
       href="#none"
       class="btnNormal sizeS"
-      onclick="
-        {
-          $action_article_move;
-        }
-      "
-      >{$article_move}</a
-    >
-    <a
-      href="#none"
-      class="btnNormal sizeS"
-      onclick="
-        {
-          $action_article_copy;
-        }
-      "
-      >{$article_copy}</a
-    >
+      onclick="{$action_article_move}
+      ">
+      {$article_move}
+    </a>
+    <a href="#none" class="btnNormal sizeS" onclick="{$action_article_copy}">{$article_copy}</a>
   </span>
   <span class="ec-base-help">{$board_function_help|replace:*,}</span>
 </div>

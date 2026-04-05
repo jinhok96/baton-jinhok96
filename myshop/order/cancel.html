@@ -2,9 +2,15 @@
 <div class="path">
   <span>현재 위치</span>
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/myshop/index.html">마이쇼핑</a></li>
-    <li title="현재 위치"><strong>취소신청</strong></li>
+    <li>
+      <a href="/">홈</a>
+    </li>
+    <li>
+      <a href="/myshop/index.html">마이쇼핑</a>
+    </li>
+    <li title="현재 위치">
+      <strong>취소신청</strong>
+    </li>
   </ol>
 </div>
 
@@ -28,23 +34,25 @@
           <div class="ec-base-prdInfo gCheck">
             <div class="prdBox">
               <span class="check">{$form.checkbox}</span>
-              <span class="thumbnail"
-                ><a href="/product/detail.html{$param_product}"
-                  ><img
+              <span class="thumbnail">
+                <a href="/product/detail.html{$param_product}">
+                  <img
                     src="{$product_image}"
                     onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-                    alt="" /></a
-              ></span>
+                    alt="" />
+                </a>
+              </span>
               <div class="description">
                 <strong class="prdName" title="상품명">{$product_name_link}</strong>
                 <div class="price">
-                  <span class="price" title="판매가"
-                    >{$item_price_raw_front_head}<strong>{$item_price_raw_front}</strong>{$item_price_raw_front_tail}<span
-                      class="{$item_price_ref_display|display}"
-                    >
-                      {$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</span
-                    ></span
-                  >
+                  <span class="price" title="판매가">
+                    {$item_price_raw_front_head}
+                    <strong>{$item_price_raw_front}</strong>
+                    {$item_price_raw_front_tail}
+                    <span class="{$item_price_ref_display|display}">
+                      {$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}
+                    </span>
+                  </span>
                   <span class="qty" title="수량">({$quantity}개)</span>
                 </div>
                 <ul class="info">
@@ -53,46 +61,25 @@
                 <div class="optionGroup {$option_display|display}">
                   <div>{$option_str}</div>
                   <ul module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <p class="free {$card_installment_display|display}">무이자할부 상품</p>
                 </div>
               </div>
               <div class="quantity">
                 <span class="ec-base-qty">
-                  <a
-                    href="javascript:;"
-                    class="down"
-                    onclick="
-                      {
-                        $out_shortcut;
-                      }
-                    "
-                    >수량감소</a
-                  >
+                  <a href="javascript:;" class="down" onclick="{$out_shortcut}">수량감소</a>
                   {$form.quantity}
-                  <a
-                    href="javascript:;"
-                    class="up"
-                    onclick="
-                      {
-                        $add_shortcut;
-                      }
-                    "
-                    >수량증가</a
-                  >
+                  <a href="javascript:;" class="up" onclick="{$add_shortcut}">수량증가</a>
                 </span>
-                <a
-                  class="btnNormal sizeQty"
-                  href="javascript:;"
-                  onclick="
-                    {
-                      $action_modify;
-                    }
-                  "
-                  >변경</a
-                >
+                <a class="btnNormal sizeQty" href="javascript:;" onclick="{$action_modify}">변경</a>
               </div>
             </div>
             <div class="prdFoot" title="주문처리상태">
@@ -104,23 +91,25 @@
           <div class="ec-base-prdInfo gCheck">
             <div class="prdBox">
               <span class="check">{$form.checkbox}</span>
-              <span class="thumbnail"
-                ><a href="/product/detail.html{$param_product}"
-                  ><img
+              <span class="thumbnail">
+                <a href="/product/detail.html{$param_product}">
+                  <img
                     src="{$product_image}"
                     onerror="this.src = '//img.echosting.cafe24.com/thumb/img_product_small.gif'"
-                    alt="" /></a
-              ></span>
+                    alt="" />
+                </a>
+              </span>
               <div class="description">
                 <strong class="prdName" title="상품명">{$product_name_link}</strong>
                 <div class="price">
-                  <span class="price" title="판매가"
-                    >{$item_price_raw_front_head}<strong>{$item_price_raw_front}</strong>{$item_price_raw_front_tail}<span
-                      class="{$item_price_ref_display|display}"
-                    >
-                      {$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</span
-                    ></span
-                  >
+                  <span class="price" title="판매가">
+                    {$item_price_raw_front_head}
+                    <strong>{$item_price_raw_front}</strong>
+                    {$item_price_raw_front_tail}
+                    <span class="{$item_price_ref_display|display}">
+                      {$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}
+                    </span>
+                  </span>
                   <span class="qty" title="수량">({$quantity}개)</span>
                 </div>
                 <ul class="info">
@@ -129,46 +118,25 @@
                 <div class="optionGroup {$option_display|display}">
                   <div>{$option_str}</div>
                   <ul module="Myshop_optionSet">
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
-                    <li><span class="product">{$product_name}</span>{$option_str} ({$qty}개)</li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
+                    <li>
+                      <span class="product">{$product_name}</span>
+                      {$option_str} ({$qty}개)
+                    </li>
                   </ul>
                   <p class="free {$card_installment_display|display}">무이자할부 상품</p>
                 </div>
               </div>
               <div class="quantity">
                 <span class="ec-base-qty">
-                  <a
-                    href="javascript:;"
-                    class="down"
-                    onclick="
-                      {
-                        $out_shortcut;
-                      }
-                    "
-                    >수량감소</a
-                  >
+                  <a href="javascript:;" class="down" onclick="{$out_shortcut}">수량감소</a>
                   {$form.quantity}
-                  <a
-                    href="javascript:;"
-                    class="up"
-                    onclick="
-                      {
-                        $add_shortcut;
-                      }
-                    "
-                    >수량증가</a
-                  >
+                  <a href="javascript:;" class="up" onclick="{$add_shortcut}">수량증가</a>
                 </span>
-                <a
-                  class="btnNormal sizeQty"
-                  href="javascript:;"
-                  onclick="
-                    {
-                      $action_modify;
-                    }
-                  "
-                  >변경</a
-                >
+                <a class="btnNormal sizeQty" href="javascript:;" onclick="{$action_modify}">변경</a>
               </div>
             </div>
             <div class="prdFoot" title="주문처리상태">
@@ -190,9 +158,7 @@
     </div>
     <div class="ec-base-table typeWrite">
       <table border="1">
-        <caption>
-          취소사유
-        </caption>
+        <caption>취소사유</caption>
         <colgroup>
           <col style="width: 200px" />
           <col style="width: auto" />
@@ -216,9 +182,7 @@
       </div>
       <div class="ec-base-table typeWrite">
         <table border="1">
-          <caption>
-            추가 정보
-          </caption>
+          <caption>추가 정보</caption>
           <colgroup>
             <col style="width: 200px" />
             <col style="width: auto" />
@@ -250,9 +214,7 @@
       </div>
       <div class="ec-base-table typeWrite">
         <table border="1">
-          <caption>
-            환불 계좌 정보
-          </caption>
+          <caption>환불 계좌 정보</caption>
           <colgroup>
             <col style="width: 200px" />
             <col style="width: auto" />
@@ -272,16 +234,16 @@
               <th scope="row">환불계좌</th>
               <td>
                 <span id="{$id_acc_full_str}" class="{$acc_full_str_display|display} gSpace10">{$acc_full_str}</span>
-                <span id="{$id_acc_reg_disp}" class="{$acc_reg_display|display}"
-                  ><a href="#none" class="btnNormal sizeS" onclick="OrderApply.popupAccount('./account.html')"
-                    >환불계좌등록</a
-                  ></span
-                >
-                <span id="{$id_acc_mod_disp}" class="{$acc_mod_display|display}"
-                  ><a href="#none" class="btnNormal sizeS" onclick="OrderApply.popupAccount('./account.html')"
-                    >환불계좌변경</a
-                  ></span
-                >
+                <span id="{$id_acc_reg_disp}" class="{$acc_reg_display|display}">
+                  <a href="#none" class="btnNormal sizeS" onclick="OrderApply.popupAccount('./account.html')">
+                    환불계좌등록
+                  </a>
+                </span>
+                <span id="{$id_acc_mod_disp}" class="{$acc_mod_display|display}">
+                  <a href="#none" class="btnNormal sizeS" onclick="OrderApply.popupAccount('./account.html')">
+                    환불계좌변경
+                  </a>
+                </span>
               </td>
             </tr>
           </tbody>
@@ -299,9 +261,9 @@
         onclick="
           OrderApply.apply();
           return false;
-        "
-        >취소신청</a
-      >
+        ">
+        취소신청
+      </a>
     </div>
   </div>
 

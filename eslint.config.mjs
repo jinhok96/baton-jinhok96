@@ -1,11 +1,21 @@
 import js from '@eslint/js';
 import prettier from 'eslint-config-prettier';
+import betterTailwindcss from 'eslint-plugin-better-tailwindcss';
 import globals from 'globals';
 
 export default [
   js.configs.recommended,
   prettier,
   {
+    plugins: {
+      'better-tailwindcss': betterTailwindcss,
+    },
+    settings: {
+      'better-tailwindcss': {
+        entryPoint: './src/tailwind.css',
+        attributes: ['.*class', '.*Class'],
+      },
+    },
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -32,11 +42,12 @@ export default [
       },
     },
     rules: {
+      ...betterTailwindcss.configs['recommended-warn'].rules,
       'no-unused-vars': 'warn',
       'no-console': 'off',
     },
   },
   {
-    ignores: ['js/swiper-bundle.js', '**/*.html'],
+    ignores: ['js/swiper-bundle.js', 'layout/basic/css/tailwind.css'],
   },
 ];
