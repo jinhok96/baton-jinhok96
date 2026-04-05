@@ -1,31 +1,32 @@
 <!--@js(/layout/header/header.js)-->
 
 <header id="header" class="bg-primary sticky top-0 left-0 z-50 px-4 py-3 md:px-6 md:py-4">
-  <div class="flex w-full items-center justify-between">
+  <div class="flex w-full items-center justify-between gap-5">
     <!-- 로고 -->
-    <h1 class="text-l5 text-primary md:w-43">
+    <h1 class="text-l5 text-primary md:w-full md:max-w-43">
       <a href="/index.html" module="Layout_LogoTop">{$mall_name}</a>
     </h1>
 
     <!-- 카테고리 nav (데스크톱만) -->
-    <nav class="hidden md:block" aria-label="카테고리 메뉴">
+    <nav class="hidden shrink-0 md:flex md:items-center md:gap-6" aria-label="카테고리 메뉴">
+      <a href="/product/list.html?cate_no=43" class="text-l5 text-primary">전체</a>
       <div module="Layout_category">
         <ul class="flex items-center gap-6">
           <li>
-            <a href="{$link_product_list}" class="text-l5 text-primary">{$name_or_img_tag}</a>
+            <a href="{$link_product_list}" class="text-l5 text-primary" cate="{$param}">{$name_or_img_tag}</a>
           </li>
           <li>
-            <a href="{$link_product_list}" class="text-l5 text-primary">{$name_or_img_tag}</a>
+            <a href="{$link_product_list}" class="text-l5 text-primary" cate="{$param}">{$name_or_img_tag}</a>
           </li>
           <li>
-            <a href="{$link_product_list}" class="text-l5 text-primary">{$name_or_img_tag}</a>
+            <a href="{$link_product_list}" class="text-l5 text-primary" cate="{$param}">{$name_or_img_tag}</a>
           </li>
         </ul>
       </div>
     </nav>
 
     <!-- 유틸리티 -->
-    <div class="flex items-center gap-5">
+    <div class="flex shrink-0 items-center gap-5">
       <!-- 메뉴 버튼 (모바일/태블릿만) -->
       <button type="button" class="text-p4 text-secondary md:hidden" id="btnDrawerOpen" aria-label="메뉴 열기">
         메뉴

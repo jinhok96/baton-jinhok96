@@ -29,12 +29,12 @@
                 <span class="{$qty_display|display}">({$qty}개)</span>
                 <span class="txtEm {$popup_option_change_display|display}">옵션을 선택하세요</span>
                 <span class="gRight">
-                  <a href="#none" class="btnText {$option_change_display|display}" onclick="{$action_option_change;}">
+                  <a href="#none" class="btnText {$option_change_display|display}" onclick="{$action_option_change}">
                     옵션변경
                   </a>
                   <a
                     href="#none"
-                    onclick="{$action_option_change;}"
+                    onclick="{$action_option_change}"
                     class="btnText {$popup_option_change_display|display}">
                     옵션선택
                   </a>
@@ -71,7 +71,7 @@
                     </div>
                   </div>
                   <div class="ec-base-button">
-                    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify;}">변경</a>
+                    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify}">변경</a>
                     <a href="#none" class="btnNormalFix sizeM" onclick="$('.optionModifyLayer').hide()">취소</a>
                   </div>
                   <a href="#none" class="btnClose" onclick="$('.optionModifyLayer').hide()">닫기</a>
@@ -85,12 +85,12 @@
                 <span class="{$qty_display|display}">({$qty}개)</span>
                 <span class="txtEm {$popup_option_change_display|display}">옵션을 선택하세요</span>
                 <span class="gRight">
-                  <a href="#none" class="btnText {$option_change_display|display}" onclick="{$action_option_change;}">
+                  <a href="#none" class="btnText {$option_change_display|display}" onclick="{$action_option_change}">
                     옵션변경
                   </a>
                   <a
                     href="#none"
-                    onclick="{$action_option_change;}"
+                    onclick="{$action_option_change}"
                     class="btnText {$popup_option_change_display|display}">
                     옵션선택
                   </a>
@@ -127,7 +127,7 @@
                     </div>
                   </div>
                   <div class="ec-base-button">
-                    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify;}">변경</a>
+                    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify}">변경</a>
                     <a href="#none" class="btnNormalFix sizeM" onclick="$('.optionModifyLayer').hide()">취소</a>
                   </div>
                   <a href="#none" class="btnClose" onclick="$('.optionModifyLayer').hide()">닫기</a>
@@ -144,13 +144,13 @@
         </div>
         <div class="quantity">
           <span class="ec-base-qty">
-            <a href="javascript:;" class="down" onclick="{$out_shortcut;}">수량감소</a>
+            <a href="javascript:;" class="down" onclick="{$out_shortcut}">수량감소</a>
             {$form.quantity}
-            <a href="javascript:;" class="up" onclick="{$add_shortcut;}">수량증가</a>
+            <a href="javascript:;" class="up" onclick="{$add_shortcut}">수량증가</a>
           </span>
         </div>
       </div>
-      <a href="#none" onclick="{$action_move_item;}" class="btnDelete">삭제</a>
+      <a href="#none" onclick="{$action_move_item}" class="btnDelete">삭제</a>
     </div>
   </div>
   <p class="message ec-base-prdEmpty" id="{$empty_message}">
@@ -161,7 +161,7 @@
 
   <div class="ec-base-button {$delete_button_display|display}">
     <span class="gRight">
-      <a href="#none" class="btnNormal sizeM" onclick="{$action_delete_item_all;}">전체삭제</a>
+      <a href="#none" class="btnNormal sizeM" onclick="{$action_delete_item_all}">전체삭제</a>
     </span>
   </div>
 </div>

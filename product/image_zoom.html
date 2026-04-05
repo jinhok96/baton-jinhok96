@@ -16,7 +16,7 @@
         <div class="keyImg">
           <div class="topLogo {$supply_link_display|display}">
             <span>{$supply_top_logo}</span>
-            <a href="#none" onclick="{$supply_go_action;}">
+            <a href="#none" onclick="{$supply_go_action}">
               <img src="{$supply_go_img}" alt="공급사 바로가기" />
             </a>
           </div>
@@ -157,7 +157,7 @@
           <tbody>
             <tr class="{$option_push_button_display|display}" id="{$option_push_button_id}">
               <td colspan="2" class="selectButton">
-                <a href="#none" onclick="{$action_push_button;}" class="btnSubmit sizeS">옵션 선택</a>
+                <a href="#none" onclick="{$action_push_button}" class="btnSubmit sizeS">옵션 선택</a>
               </td>
             </tr>
             <tr module="product_fileoption">
@@ -310,7 +310,7 @@
                   </span>
                 </li>
                 <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-                  <a href="#none" onclick="{$add_action_push_button;}" class="btnSubmit sizeS">옵션 선택</a>
+                  <a href="#none" onclick="{$add_action_push_button}" class="btnSubmit sizeS">옵션 선택</a>
                 </li>
               </ul>
               <div class="guide">
@@ -420,7 +420,7 @@
                   </span>
                 </li>
                 <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-                  <a href="#none" onclick="{$add_action_push_button;}" class="btnSubmit sizeS">옵션 선택</a>
+                  <a href="#none" onclick="{$add_action_push_button}" class="btnSubmit sizeS">옵션 선택</a>
                 </li>
               </ul>
               <div class="guide">
@@ -580,15 +580,15 @@
 
         <div module="product_action">
           <div class="ec-base-button gColumn">
-            <a href="#none" class="btnSubmit sizeL {$buy_display|display}" onclick="{$action_buy;}">
+            <a href="#none" class="btnSubmit sizeL {$buy_display|display}" onclick="{$action_buy}">
               <span id="{$btn_buy_id}">바로 구매하기</span>
               <span id="{$btn_reserve_id}" class="{$btn_reserve_class|display}">예약주문</span>
             </a>
-            <a href="#none" class="btnNormal sizeL {$basket_display|display}" onclick="{$action_basket;}">
+            <a href="#none" class="btnNormal sizeL {$basket_display|display}" onclick="{$action_basket}">
               장바구니 담기
             </a>
             <span class="btnSubmit sizeL gFlex2 {$soldout_display|display}">SOLD OUT</span>
-            <a href="#none" onclick="{$action_detail;}" class="btnNormal sizeL">상품상세보기</a>
+            <a href="#none" onclick="{$action_detail}" class="btnNormal sizeL">상품상세보기</a>
           </div>
           <!-- 네이버 체크아웃 구매 버튼  -->
           <div id="NaverChk_Button"></div>

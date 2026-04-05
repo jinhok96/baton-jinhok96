@@ -101,7 +101,7 @@
                       {$total.total_order_price_back_head}{$total.total_order_price_back}{$total.total_order_price_back_tail}
                     </span>
                   </span>
-                  <a href="#none" onclick="{$total.total_order_layer_on;}" class="btnNormal sizeS">내역보기</a>
+                  <a href="#none" onclick="{$total.total_order_layer_on}" class="btnNormal sizeS">내역보기</a>
                   <div id="{$total.total_order_layer}" class="totalDetail ec-base-layer typeLayer">
                     <div class="header">
                       <h3>총 주문금액 상세내역</h3>
@@ -135,7 +135,7 @@
                         </li>
                       </ul>
                     </div>
-                    <a href="#none" class="btnClose" onclick="{$total.total_order_layer_off;}"></a>
+                    <a href="#none" class="btnClose" onclick="{$total.total_order_layer_off}"></a>
                   </div>
                 </td>
               </tr>
@@ -173,7 +173,7 @@
                   <span class="gSpace20">
                     {$total.price_unit_head}{$total.total_benefit_price}{$total.price_unit_tail}
                   </span>
-                  <a href="#none" class="btnNormal sizeS" onclick="{$total.total_benefit_layer_on;}">내역보기</a>
+                  <a href="#none" class="btnNormal sizeS" onclick="{$total.total_benefit_layer_on}">내역보기</a>
                   <div id="{$total.total_benefit_layer}" class="totalDetail ec-base-layer typeLayer">
                     <div class="header">
                       <h3>추가금액할인 내역보기</h3>
@@ -280,7 +280,7 @@
                         {$total.total_appordersale_price_detail}
                       </ul>
                     </div>
-                    <a href="#none" class="btnClose" onclick="{$total.total_benefit_layer_off;}">닫기</a>
+                    <a href="#none" class="btnClose" onclick="{$total.total_benefit_layer_off}">닫기</a>
                   </div>
                 </td>
               </tr>
@@ -424,7 +424,7 @@
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a href="#none" class="line" onclick="{$shipping_trace_popup;}">[{$invoice_no}]</a>
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>
                       배송 : {$type_all}
@@ -439,7 +439,7 @@
                   <span class="txtStatus">{$status}</span>
                   <span class="store">{$mobile_store_info}</span>
                   <span class="{$detail_info_display|display}">
-                    <a href="#none" onclick="{$detail_info;}" class="btnText">상세정보</a>
+                    <a href="#none" onclick="{$detail_info}" class="btnText">상세정보</a>
                   </span>
                 </div>
                 <div class="gRight">
@@ -451,19 +451,19 @@
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="{$action_withdraw_cancel;}">
+                    onclick="{$action_withdraw_cancel}">
                     취소철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="{$action_withdraw_exchange;}">
+                    onclick="{$action_withdraw_exchange}">
                     교환철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="{$action_withdraw_return;}">
+                    onclick="{$action_withdraw_return}">
                     반품철회
                   </a>
                 </div>
@@ -509,7 +509,7 @@
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a href="#none" class="line" onclick="{$shipping_trace_popup;}">[{$invoice_no}]</a>
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>
                       배송 : {$type_all}
@@ -525,7 +525,7 @@
                   <span class="txtStatus">{$status}</span>
                   <span class="store">{$mobile_store_info}</span>
                   <span class="{$detail_info_display|display}">
-                    <a href="#none" onclick="{$detail_info;}" class="btnText">상세정보</a>
+                    <a href="#none" onclick="{$detail_info}" class="btnText">상세정보</a>
                   </span>
                 </div>
                 <div class="gRight">
@@ -537,19 +537,19 @@
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="{$action_withdraw_cancel;}">
+                    onclick="{$action_withdraw_cancel}">
                     취소철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="{$action_withdraw_exchange;}">
+                    onclick="{$action_withdraw_exchange}">
                     교환철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="{$action_withdraw_return;}">
+                    onclick="{$action_withdraw_return}">
                     반품철회
                   </a>
                 </div>
@@ -620,7 +620,7 @@
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a href="#none" class="line" onclick="{$shipping_trace_popup;}">[{$invoice_no}]</a>
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>
                       배송 : {$type_all}
@@ -647,19 +647,19 @@
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="{$action_withdraw_cancel;}">
+                    onclick="{$action_withdraw_cancel}">
                     취소철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="{$action_withdraw_exchange;}">
+                    onclick="{$action_withdraw_exchange}">
                     교환철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="{$action_withdraw_return;}">
+                    onclick="{$action_withdraw_return}">
                     반품철회
                   </a>
                 </div>
@@ -705,7 +705,7 @@
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a href="#none" class="line" onclick="{$shipping_trace_popup;}">[{$invoice_no}]</a>
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>
                       배송 : {$type_all}
@@ -732,19 +732,19 @@
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="{$action_withdraw_cancel;}">
+                    onclick="{$action_withdraw_cancel}">
                     취소철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="{$action_withdraw_exchange;}">
+                    onclick="{$action_withdraw_exchange}">
                     교환철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="{$action_withdraw_return;}">
+                    onclick="{$action_withdraw_return}">
                     반품철회
                   </a>
                 </div>
@@ -815,7 +815,7 @@
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a href="#none" class="line" onclick="{$shipping_trace_popup;}">[{$invoice_no}]</a>
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>배송 : {$type_all}</li>
                     <li class="{$card_installment_display|display}">무이자할부 상품</li>
@@ -838,19 +838,19 @@
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="{$action_withdraw_cancel;}">
+                    onclick="{$action_withdraw_cancel}">
                     취소철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="{$action_withdraw_exchange;}">
+                    onclick="{$action_withdraw_exchange}">
                     교환철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="{$action_withdraw_return;}">
+                    onclick="{$action_withdraw_return}">
                     반품철회
                   </a>
                 </div>
@@ -896,7 +896,7 @@
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a href="#none" class="line" onclick="{$shipping_trace_popup;}">[{$invoice_no}]</a>
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>배송 : {$type_all}</li>
                     <li class="{$card_installment_display|display}">무이자할부 상품</li>
@@ -919,19 +919,19 @@
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="{$action_withdraw_cancel;}">
+                    onclick="{$action_withdraw_cancel}">
                     취소철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="{$action_withdraw_exchange;}">
+                    onclick="{$action_withdraw_exchange}">
                     교환철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="{$action_withdraw_return;}">
+                    onclick="{$action_withdraw_return}">
                     반품철회
                   </a>
                 </div>
@@ -991,7 +991,7 @@
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a href="#none" class="line" onclick="{$shipping_trace_popup;}">[{$invoice_no}]</a>
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>배송 : {$type_all}</li>
                     <li>수량 : {$quantity}개</li>
@@ -1011,19 +1011,19 @@
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="{$action_withdraw_cancel;}">
+                    onclick="{$action_withdraw_cancel}">
                     취소철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="{$action_withdraw_exchange;}">
+                    onclick="{$action_withdraw_exchange}">
                     교환철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="{$action_withdraw_return;}">
+                    onclick="{$action_withdraw_return}">
                     반품철회
                   </a>
                 </div>
@@ -1058,7 +1058,7 @@
                       <a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a>
                     </li>
                     <li class="{$invoice_no_display|display}">
-                      <a href="#none" class="line" onclick="{$shipping_trace_popup;}">[{$invoice_no}]</a>
+                      <a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a>
                     </li>
                     <li>배송 : {$type_all}</li>
                     <li>수량 : {$quantity}개</li>
@@ -1078,19 +1078,19 @@
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_cancel_display|display}"
-                    onclick="{$action_withdraw_cancel;}">
+                    onclick="{$action_withdraw_cancel}">
                     취소철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_exchange_display|display}"
-                    onclick="{$action_withdraw_exchange;}">
+                    onclick="{$action_withdraw_exchange}">
                     교환철회
                   </a>
                   <a
                     href="#none"
                     class="btnNormal sizeS {$withdraw_return_display|display}"
-                    onclick="{$action_withdraw_return;}">
+                    onclick="{$action_withdraw_return}">
                     반품철회
                   </a>
                 </div>
@@ -1327,7 +1327,7 @@
                   [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
                   <a
                     href="#none"
-                    onclick="{$action_bank_acc_change;}"
+                    onclick="{$action_bank_acc_change}"
                     class="btnNormal sizeS {$bank_acc_change_display|display}">
                     환불계좌변경
                   </a>
@@ -1462,7 +1462,7 @@
                   [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
                   <a
                     href="#none"
-                    onclick="{$action_bank_acc_change;}"
+                    onclick="{$action_bank_acc_change}"
                     class="btnNormal sizeS {$bank_acc_change_display|display}">
                     환불계좌변경
                   </a>
@@ -1658,7 +1658,7 @@
                   [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
                   <a
                     href="#none"
-                    onclick="{$action_bank_acc_change;}"
+                    onclick="{$action_bank_acc_change}"
                     class="btnNormal sizeS {$bank_acc_change_display|display}">
                     환불계좌변경
                   </a>
@@ -1847,7 +1847,7 @@
                   [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
                   <a
                     href="#none"
-                    onclick="{$action_bank_acc_change;}"
+                    onclick="{$action_bank_acc_change}"
                     class="btnNormal sizeS {$bank_acc_change_display|display}">
                     환불계좌변경
                   </a>
@@ -2155,7 +2155,7 @@
                   <span class="{$delivery.receiver_update_button_display|display}">
                     <a
                       href="#none"
-                      onclick="{$delivery.action_receiver_update_button;}"
+                      onclick="{$delivery.action_receiver_update_button}"
                       class="btnNormal sizeS gIndent10">
                       배송지 변경
                     </a>
@@ -2255,7 +2255,7 @@
                     <li class="{$sc_display|display}">- 희망배송업체/방식 : {$sc_name}</li>
                   </ul>
                   <p class="{$receiver_update_button_display|display}">
-                    <a href="#none" onclick="{$action_receiver_update_button;}" class="btnNormal sizeS">배송지 변경</a>
+                    <a href="#none" onclick="{$action_receiver_update_button}" class="btnNormal sizeS">배송지 변경</a>
                   </p>
                 </td>
                 <td class="thumb">
@@ -2311,7 +2311,7 @@
                     <li class="{$sc_display|display}">- 희망배송업체/방식 : {$sc_name}</li>
                   </ul>
                   <p class="{$receiver_update_button_display|display}">
-                    <a href="#none" onclick="{$action_receiver_update_button;}" class="btnNormal sizeS">배송지 변경</a>
+                    <a href="#none" onclick="{$action_receiver_update_button}" class="btnNormal sizeS">배송지 변경</a>
                   </p>
                 </td>
                 <td class="thumb">
@@ -2542,30 +2542,30 @@
 
     <div class="ec-base-button">
       <span class="gRight">
-        <a href="#none" onclick="{$action_issue_cash;}" class="btnNormal sizeS {$issue_cash_display|display}">
+        <a href="#none" onclick="{$action_issue_cash}" class="btnNormal sizeS {$issue_cash_display|display}">
           현금영수증 신청
         </a>
-        <a href="#none" onclick="{$action_print_pg_cash;}" class="btnNormal sizeS RW {$print_pg_cash_display|display}">
+        <a href="#none" onclick="{$action_print_pg_cash}" class="btnNormal sizeS RW {$print_pg_cash_display|display}">
           현금영수증전표 인쇄
         </a>
-        <a href="#none" onclick="{$action_issue_tax;}" class="btnNormal sizeS {$issue_tax_display|display}">
+        <a href="#none" onclick="{$action_issue_tax}" class="btnNormal sizeS {$issue_tax_display|display}">
           세금계산서 신청
         </a>
-        <a href="#none" onclick="{$action_print_tax;}" class="btnNormal sizeS RW {$print_tax_display|display}">
+        <a href="#none" onclick="{$action_print_tax}" class="btnNormal sizeS RW {$print_tax_display|display}">
           세금계산서 인쇄
         </a>
-        <a href="#none" onclick="{$action_print_spec;}" class="btnNormal sizeS RW {$print_spec_display|display}">
+        <a href="#none" onclick="{$action_print_spec}" class="btnNormal sizeS RW {$print_spec_display|display}">
           거래명세서 인쇄
         </a>
-        <a href="#none" onclick="{$action_print_pg_card;}" class="btnNormal sizeS RW {$print_pg_card_display|display}">
+        <a href="#none" onclick="{$action_print_pg_card}" class="btnNormal sizeS RW {$print_pg_card_display|display}">
           카드매출전표 인쇄
         </a>
-        <a href="#none" onclick="{$action_select_gift;}" class="btnNormal sizeS RW {$select_gift_display|display}">
+        <a href="#none" onclick="{$action_select_gift}" class="btnNormal sizeS RW {$select_gift_display|display}">
           사은품 선택
         </a>
         <a
           href="#none"
-          onclick="{$action_print_store;}"
+          onclick="{$action_print_store}"
           class="btnNormal sizeS RW {$delivery.print_store_display|display}">
           수령지정보 인쇄
         </a>

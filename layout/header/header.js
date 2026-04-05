@@ -11,6 +11,7 @@
         success: function (aData) {
           if (!aData) {
             drawer.checkNoChildItems();
+            drawer.setActiveCategory();
             return;
           }
           for (var i = 0; i < aData.length; i++) {
@@ -21,8 +22,80 @@
             drawer.aSubCategory[sParentCateNo].push(aData[i]);
           }
           drawer.checkNoChildItems();
+          drawer.setActiveCategory();
         },
       });
+    },
+
+    // 현재 페이지 카테고리 활성화 (underline)
+    setActiveCategory: function () {
+      // 쿼리 파라미터 방식 (?cate_no=43) 또는 pretty URL 방식 (/category/name/24/) 모두 처리
+      var iCurrentCateNo = Number(drawer.getParam(window.location.href, 'cate_no'));
+      if (!iCurrentCateNo) {
+        var aParts = window.location.pathname.split('/');
+        var iCateIdx = aParts.indexOf('category');
+        if (iCateIdx !== -1) {
+          for (var j = iCateIdx + 1; j < aParts.length; j++) {
+            if (/^\d+$/.test(aParts[j])) {
+              iCurrentCateNo = Number(aParts[j]);
+              break;
+            }
+          }
+        }
+      }
+      if (!iCurrentCateNo) return;
+
+      // nav [cate] 항목들의 cate_no 목록 수집 (대분류 레벨)
+      var aNavCateNos = [];
+      $('[cate]').each(function () {
+        var n = Number(drawer.getParam($(this).attr('cate'), 'cate_no'));
+        if (n) aNavCateNos.push(n);
+      });
+
+      // 현재 cate_no에서 출발해 nav 항목에 도달할 때까지 부모를 탐색
+      var iActiveCateNo = 0;
+      var iLookup = iCurrentCateNo;
+      for (var depth = 0; depth < 5; depth++) {
+        if (aNavCateNos.indexOf(iLookup) !== -1) {
+          iActiveCateNo = iLookup;
+          break;
+        }
+        var iParent = 0;
+        for (var sP in drawer.aSubCategory) {
+          var aSubs = drawer.aSubCategory[sP];
+          for (var i = 0; i < aSubs.length; i++) {
+            if (Number(aSubs[i].cate_no) === iLookup) {
+              iParent = Number(sP);
+              break;
+            }
+          }
+          if (iParent) break;
+        }
+        if (!iParent) break;
+        iLookup = iParent;
+      }
+
+      if (iActiveCateNo) {
+        $('[cate]').each(function () {
+          if (Number(drawer.getParam($(this).attr('cate'), 'cate_no')) === iActiveCateNo) {
+            if ($(this).closest('#mobileNav').length) {
+              $(this).addClass('nav-tab-active');
+            } else {
+              $(this).addClass('underline');
+            }
+          }
+        });
+      } else if (iCurrentCateNo === 43) {
+        $('a[href*="cate_no=43"]')
+          .not('[cate]')
+          .each(function () {
+            if ($(this).closest('#mobileNav').length) {
+              $(this).addClass('nav-tab-active');
+            } else {
+              $(this).addClass('underline');
+            }
+          });
+      }
     },
 
     // 하위 카테고리가 없는 항목의 화살표 버튼 숨기기
@@ -134,6 +207,51 @@
 
   $(function () {
     drawer.fetchSubCategories();
+    drawer.setActiveCategory();
+
+    // 모바일 nav sticky top + 드래그 스크롤
+    var $mobileNav = $('#mobileNav');
+    if ($mobileNav.length) {
+      var bDragActive = false;
+      var bDragged = false;
+      var iStartX, iScrollLeft;
+
+      $mobileNav.css('top', $('#header').outerHeight() + 'px');
+
+      $mobileNav.on('mousedown', function (e) {
+        bDragActive = true;
+        bDragged = false;
+        iStartX = e.pageX;
+        iScrollLeft = $mobileNav[0].scrollLeft;
+        $mobileNav.css({ cursor: 'grabbing', 'user-select': 'none' });
+        e.preventDefault();
+      });
+
+      $(document).on('mouseup.mobileNav', function () {
+        if (!bDragActive) return;
+        bDragActive = false;
+        $mobileNav.css({ cursor: '', 'user-select': '' });
+      });
+
+      $(document).on('mousemove.mobileNav', function (e) {
+        if (!bDragActive) return;
+        var dx = e.pageX - iStartX;
+        if (Math.abs(dx) > 4) bDragged = true;
+        $mobileNav[0].scrollLeft = iScrollLeft - dx;
+      });
+
+      $mobileNav[0].addEventListener(
+        'click',
+        function (e) {
+          if (bDragged) {
+            bDragged = false;
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        },
+        true,
+      );
+    }
 
     // 드로어 열기
     $(document).on('click', '#btnDrawerOpen', function () {
@@ -168,13 +286,16 @@
       }
     });
 
-    // 화면 리사이즈 시 스크롤 복구; 디바운스 0.2초
+    // 화면 리사이즈 시 스크롤 복구 + 모바일 nav top 갱신; 디바운스 0.2초
     var resizeTimer;
     $(window).on('resize', function () {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () {
         if (window.innerWidth >= 768 && drawer.isOpen) {
           drawer.close();
+        }
+        if ($mobileNav.length) {
+          $mobileNav.css('top', $('#header').outerHeight() + 'px');
         }
       }, 200);
     });

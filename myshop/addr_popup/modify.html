@@ -57,7 +57,7 @@
             <th scope="row">주소</th>
             <td>
               {$form.address_zip1}
-              <a href="#none" class="btnNormal" onclick="{$action_find_address;}" id="{$btn_find_post}">우편번호</a>
+              <a href="#none" class="btnNormal" onclick="{$action_find_address}" id="{$btn_find_post}">우편번호</a>
               <br />
               {$form.address_addr1} 기본주소
               <br />
@@ -99,6 +99,6 @@
 
   <div class="ec-base-button">
     <a href="list.html" class="btnNormalFix sizeM">취소</a>
-    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_check;}">수정</a>
+    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_check}">수정</a>
   </div>
 </div>

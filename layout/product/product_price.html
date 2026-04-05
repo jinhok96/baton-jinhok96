@@ -1,0 +1,12 @@
+<!--@js(/layout/product/product_price.js)-->
+<div class="price-wrapper flex flex-col items-start gap-x-1 md:flex-row md:flex-wrap md:items-center">
+  <!--할인가 (JS가 가격만 추출해 표시)-->
+  <span class="sale-price text-l6 md:text-l5 text-primary leading-[140%] font-bold!">{$prd_price_sale}</span>
+
+  <!--판매가 + 할인율-->
+  <span class="flex items-center gap-1">
+    <span class="original-price text-l6 md:text-l5 text-tertiary strike">{$product_price|numberformat}원</span>
+    <!--할인율 (JS가 % 만 추출해 표시)-->
+    <span class="sale-rate text-l6 md:text-l5 text-brand-600 leading-[140%] font-bold!">{$prd_price_sale}</span>
+  </span>
+</div>

@@ -48,7 +48,7 @@
                 <span class="optionStr">{$option_str}</span>
 
                 <span class="{$qty_display|display}">({$qty}개)</span>
-                <a href="#none" onclick="{$action_option_change;}" class="btnText {$option_change_display|display}">
+                <a href="#none" onclick="{$action_option_change}" class="btnText {$option_change_display|display}">
                   옵션변경
                 </a>
                 <div class="optionModifyLayer ec-base-layer-area" id="{$option_modify_layer_id}">
@@ -89,10 +89,10 @@
                       <a
                         href="#none"
                         class="btnNormalFix sizeM {$option_add_display|display}"
-                        onclick="{$action_option_add;}">
+                        onclick="{$action_option_add}">
                         추가
                       </a>
-                      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify;}">변경</a>
+                      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify}">변경</a>
                     </div>
                     <a href="#none" class="btnClose" onclick="$('.optionModifyLayer').hide()">닫기</a>
                   </div>
@@ -103,7 +103,7 @@
                 <span class="optionStr">{$option_str}</span>
 
                 <span class="{$qty_display|display}">({$qty}개)</span>
-                <a href="#none" onclick="{$action_option_change;}" class="btnText {$option_change_display|display}">
+                <a href="#none" onclick="{$action_option_change}" class="btnText {$option_change_display|display}">
                   옵션변경
                 </a>
                 <div class="optionModifyLayer ec-base-layer-area" id="{$option_modify_layer_id}">
@@ -144,10 +144,10 @@
                       <a
                         href="#none"
                         class="btnNormalFix sizeM {$option_add_display|display}"
-                        onclick="{$action_option_add;}">
+                        onclick="{$action_option_add}">
                         추가
                       </a>
-                      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify;}">변경</a>
+                      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify}">변경</a>
                     </div>
                     <a href="#none" class="btnClose" onclick="$('.optionModifyLayer').hide()">닫기</a>
                   </div>
@@ -157,10 +157,10 @@
           </div>
           <div class="buttonGroup">
             <span class="gRight">
-              <button type="button" onclick="{$act_basket;}" class="btnNormal sizeS {$disp_basket|display}">
+              <button type="button" onclick="{$act_basket}" class="btnNormal sizeS {$disp_basket|display}">
                 장바구니
               </button>
-              <button type="button" onclick="{$act_order;}" class="btnSubmit sizeS {$disp_order|display}">
+              <button type="button" onclick="{$act_order}" class="btnSubmit sizeS {$disp_order|display}">
                 주문하기
               </button>
             </span>
@@ -189,7 +189,7 @@
                 <span class="optionStr">{$option_str}</span>
 
                 <span class="{$qty_display|display}">({$qty}개)</span>
-                <a href="#none" onclick="{$action_option_change;}" class="btnText {$option_change_display|display}">
+                <a href="#none" onclick="{$action_option_change}" class="btnText {$option_change_display|display}">
                   옵션변경
                 </a>
                 <div class="optionModifyLayer ec-base-layer-area" id="{$option_modify_layer_id}">
@@ -230,10 +230,10 @@
                       <a
                         href="#none"
                         class="btnNormalFix sizeM {$option_add_display|display}"
-                        onclick="{$action_option_add;}">
+                        onclick="{$action_option_add}">
                         추가
                       </a>
-                      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify;}">변경</a>
+                      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify}">변경</a>
                     </div>
                     <a href="#none" class="btnClose" onclick="$('.optionModifyLayer').hide()">닫기</a>
                   </div>
@@ -244,7 +244,7 @@
                 <span class="optionStr">{$option_str}</span>
 
                 <span class="{$qty_display|display}">({$qty}개)</span>
-                <a href="#none" onclick="{$action_option_change;}" class="btnText {$option_change_display|display}">
+                <a href="#none" onclick="{$action_option_change}" class="btnText {$option_change_display|display}">
                   옵션변경
                 </a>
                 <div class="optionModifyLayer ec-base-layer-area" id="{$option_modify_layer_id}">
@@ -285,10 +285,10 @@
                       <a
                         href="#none"
                         class="btnNormalFix sizeM {$option_add_display|display}"
-                        onclick="{$action_option_add;}">
+                        onclick="{$action_option_add}">
                         추가
                       </a>
-                      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify;}">변경</a>
+                      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_option_modify}">변경</a>
                     </div>
                     <a href="#none" class="btnClose" onclick="$('.optionModifyLayer').hide()">닫기</a>
                   </div>
@@ -298,10 +298,10 @@
           </div>
           <div class="buttonGroup">
             <span class="gRight">
-              <button type="button" onclick="{$act_basket;}" class="btnNormal sizeS {$disp_basket|display}">
+              <button type="button" onclick="{$act_basket}" class="btnNormal sizeS {$disp_basket|display}">
                 장바구니
               </button>
-              <button type="button" onclick="{$act_order;}" class="btnSubmit sizeS {$disp_order|display}">
+              <button type="button" onclick="{$act_order}" class="btnSubmit sizeS {$disp_order|display}">
                 주문하기
               </button>
             </span>
@@ -316,14 +316,14 @@
   <div module="Myshop_WishlistButton">
     <div class="ec-base-button">
       <span class="gRight">
-        <a href="#none" class="btnNormal sizeS" onclick="{$chk_wishlist;}" id="product_select_all" data-status="off">
+        <a href="#none" class="btnNormal sizeS" onclick="{$chk_wishlist}" id="product_select_all" data-status="off">
           전체선택
         </a>
-        <a href="#none" class="btnNormal sizeS" onclick="{$action_delete;}">선택삭제</a>
+        <a href="#none" class="btnNormal sizeS" onclick="{$action_delete}">선택삭제</a>
       </span>
     </div>
     <div class="ec-base-button gBottom">
-      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_order_all;}">전체상품주문</a>
+      <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_order_all}">전체상품주문</a>
     </div>
   </div>
 

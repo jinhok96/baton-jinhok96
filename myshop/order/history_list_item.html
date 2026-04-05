@@ -58,12 +58,12 @@
             <span class="txtStatus">{$status}</span>
             <span class="store">{$mobile_store_info}</span>
             <span class="{$detail_info_display|display}">
-              <a href="#none" onclick="{$detail_info;}" class="btnText">상세정보</a>
+              <a href="#none" onclick="{$detail_info}" class="btnText">상세정보</a>
             </span>
           </div>
           <div class="gRight">
             <span class="{$invoice_no_display|display}">
-              <a href="#none" class="btnNormal sizeS" onclick="{$shipping_trace_popup;}">배송조회</a>
+              <a href="#none" class="btnNormal sizeS" onclick="{$shipping_trace_popup}">배송조회</a>
             </span>
             <a
               href="/board/product/write.html{$param_postscript}"
@@ -73,19 +73,19 @@
             <a
               href="#none"
               class="btnNormal sizeS {$withdraw_cancel_display|display}"
-              onclick="{$action_withdraw_cancel;}">
+              onclick="{$action_withdraw_cancel}">
               취소철회
             </a>
             <a
               href="#none"
               class="btnNormal sizeS {$withdraw_exchange_display|display}"
-              onclick="{$action_withdraw_exchange;}">
+              onclick="{$action_withdraw_exchange}">
               교환철회
             </a>
             <a
               href="#none"
               class="btnNormal sizeS {$withdraw_return_display|display}"
-              onclick="{$action_withdraw_return;}">
+              onclick="{$action_withdraw_return}">
               반품철회
             </a>
           </div>
@@ -93,10 +93,7 @@
       </div>
       <div class="ec-base-button gMColumn {$cs_button_display_column|display}">
         <span class="gRight">
-          <a
-            href="#none"
-            class="btnNormalFix sizeM {$direct_cancel_display|display}"
-            onclick="{$action_direct_cancel;}">
+          <a href="#none" class="btnNormalFix sizeM {$direct_cancel_display|display}" onclick="{$action_direct_cancel}">
             주문취소
           </a>
           <a href="/myshop/order/cancel.html{$param_apply}" class="btnNormalFix sizeM {$apply_cancel_display|display}">
@@ -171,12 +168,12 @@
             <span class="txtStatus">{$status}</span>
             <span class="store">{$mobile_store_info}</span>
             <span class="{$detail_info_display|display}">
-              <a href="#none" onclick="{$detail_info;}" class="btnText">상세정보</a>
+              <a href="#none" onclick="{$detail_info}" class="btnText">상세정보</a>
             </span>
           </div>
           <div class="gRight">
             <span class="{$invoice_no_display|display}">
-              <a href="#none" class="btnNormal sizeS" onclick="{$shipping_trace_popup;}">배송조회</a>
+              <a href="#none" class="btnNormal sizeS" onclick="{$shipping_trace_popup}">배송조회</a>
             </span>
             <a
               href="/board/product/write.html{$param_postscript}"
@@ -186,19 +183,19 @@
             <a
               href="#none"
               class="btnNormal sizeS {$withdraw_cancel_display|display}"
-              onclick="{$action_withdraw_cancel;}">
+              onclick="{$action_withdraw_cancel}">
               취소철회
             </a>
             <a
               href="#none"
               class="btnNormal sizeS {$withdraw_exchange_display|display}"
-              onclick="{$action_withdraw_exchange;}">
+              onclick="{$action_withdraw_exchange}">
               교환철회
             </a>
             <a
               href="#none"
               class="btnNormal sizeS {$withdraw_return_display|display}"
-              onclick="{$action_withdraw_return;}">
+              onclick="{$action_withdraw_return}">
               반품철회
             </a>
           </div>
@@ -206,10 +203,7 @@
       </div>
       <div class="ec-base-button gMColumn {$cs_button_display_column|display}">
         <span class="gRight">
-          <a
-            href="#none"
-            class="btnNormalFix sizeM {$direct_cancel_display|display}"
-            onclick="{$action_direct_cancel;}">
+          <a href="#none" class="btnNormalFix sizeM {$direct_cancel_display|display}" onclick="{$action_direct_cancel}">
             주문취소
           </a>
           <a href="/myshop/order/cancel.html{$param_apply}" class="btnNormalFix sizeM {$apply_cancel_display|display}">
