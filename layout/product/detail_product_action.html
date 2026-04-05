@@ -1,0 +1,20 @@
+<div module="product_action" id="{$fixed_action_button}" class="flex flex-col gap-4">
+  <div class="{$action_display|display} flex gap-2">
+    <button
+      class="border-color-primary text-primary text-l5 actionCart {$basket_display|display} flex-1 rounded-xs border px-4 py-3"
+      onclick="{$action_basket}"
+      id="actionCart">
+      장바구니 담기
+    </button>
+    <button
+      class="border-color-tertiary text-primary text-l5 {$buy_display|display} flex flex-1 items-center justify-center rounded-xs border px-4 py-3"
+      onclick="{$action_buy}">
+      <span id="{$btn_buy_mobile_id}">바로 구매하기</span>
+    </button>
+  </div>
+  <!-- 네이버 체크아웃 구매 버튼 -->
+  <div id="NaverChk_Button">
+    <img src="https://ecimg.cafe24img.com/pg2761b01354194048/jinhok96/web/upload/img_naver_pay.png" />
+  </div>
+  <div id="{$app_payment_button_box_id}"></div>
+</div>
