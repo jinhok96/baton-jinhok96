@@ -1,0 +1,145 @@
+<!--@js(/layout/product/detail.js)-->
+
+<!-- ================================================================
+     탭 네비게이션
+     ================================================================ -->
+<nav id="detailTabNav" class="bg-primary border-color-primary sticky top-12 z-40 border-b md:top-14">
+  <div class="mx-auto flex w-full items-stretch md:max-w-289">
+    <button
+      type="button"
+      class="detail-tab-btn text-p4 text-primary border-color-tertiary flex flex-1 items-center justify-center border-b-2 py-3"
+      data-target="tab-color">
+      색상
+    </button>
+    <button
+      type="button"
+      class="detail-tab-btn text-p4 text-tertiary flex flex-1 items-center justify-center py-3"
+      data-target="tab-detail">
+      상세
+    </button>
+    <button
+      type="button"
+      class="detail-tab-btn text-p4 text-tertiary flex flex-1 items-center justify-center gap-1 py-3"
+      data-target="tab-review">
+      후기
+      <span class="text-c1" module="product_reviewcount">{$count}</span>
+    </button>
+    <button
+      type="button"
+      class="detail-tab-btn text-p4 text-tertiary flex flex-1 items-center justify-center py-3"
+      data-target="tab-inquiry">
+      문의
+    </button>
+    <button
+      type="button"
+      class="detail-tab-btn text-p4 text-tertiary flex flex-1 items-center justify-center py-3"
+      data-target="tab-recommend">
+      추천
+    </button>
+  </div>
+</nav>
+
+<!-- ================================================================
+     탭 섹션 컨텐츠
+     ================================================================ -->
+<div class="mx-auto w-full">
+  <!-- 색상 섹션 -->
+  <section id="tab-color" class="detail-tab-section border-color-primary border-b py-5 md:py-10">
+    <div class="px-container pb-4">
+      <h2 class="text-h6 md:text-h5 text-primary">색상 정보</h2>
+    </div>
+    <div module="product_Colorchip" class="px-container flex items-center gap-2 overflow-x-auto py-2">
+      <div
+        class="border-color-primary bg-primary relative flex aspect-square w-5 shrink-0 items-center justify-center rounded border">
+        <div class="chips size-4 overflow-hidden rounded-xs" title="{$color_name}"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 상세 섹션 -->
+  <section id="tab-detail" class="detail-tab-section border-color-primary border-b py-5 md:py-10">
+    <div class="px-container pb-4">
+      <h2 class="text-h6 md:text-h5 text-primary">상품 상세 정보</h2>
+    </div>
+    <div class="px-container">
+      <!--@css(/css/module/product/detail.css)-->
+      <!-- 상품 상세 에디터 콘텐츠 (Cafe24 자동 주입) -->
+    </div>
+  </section>
+
+  <!-- 후기 섹션 -->
+  <section id="tab-review" class="detail-tab-section border-color-primary border-b py-5 md:py-10">
+    <div class="px-container flex items-center justify-between pb-4">
+      <h2 class="text-h6 md:text-h5 text-primary">상품 후기</h2>
+      <a
+        href="{$review_write}"
+        class="border-color-primary text-secondary text-l6 flex items-center rounded border px-3 py-2">
+        후기 작성
+      </a>
+    </div>
+    <div module="product_review" class="px-container">
+      <!--@js(/js/module/product/review.js)-->
+    </div>
+    <div module="product_reviewpaging" class="px-container flex items-center justify-center gap-4 py-10"></div>
+  </section>
+
+  <!-- 문의 섹션 -->
+  <section id="tab-inquiry" class="detail-tab-section border-color-primary border-b py-5 md:py-10">
+    <div class="px-container flex items-center justify-between pb-4">
+      <h2 class="text-h6 md:text-h5 text-primary">상품 문의</h2>
+      <a
+        href="{$qna_write}"
+        class="border-color-primary text-secondary text-l6 flex items-center rounded border px-3 py-2">
+        문의하기
+      </a>
+    </div>
+    <div module="product_qna" class="border-color-primary border-t">
+      <div class="bg-primary border-color-primary px-container flex items-center border-b py-4">
+        <div class="flex flex-1 items-center gap-3">
+          <div class="border-color-primary size-15 shrink-0 overflow-hidden rounded border">
+            <img src="{$product_image}" alt="" class="size-full object-cover" />
+          </div>
+          <div class="flex min-w-0 flex-col gap-1">
+            <div class="text-c2 text-secondary flex items-center gap-2">
+              <span>{$writer}</span>
+              <span>{$written_date}</span>
+              <span>조회 {$hit}</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-secondary size-4 shrink-0"><!--@import(/svg/icon/lock.html)--></span>
+              <p class="text-l6 text-primary truncate">{$subject}</p>
+              <span class="text-secondary size-4 shrink-0"><!--@import(/svg/icon/file.html)--></span>
+              <span class="bg-secondary text-c2 text-secondary rounded px-1 py-0.5">New</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 답변 항목 -->
+      <div class="bg-secondary border-color-primary px-container flex items-center border-b py-4">
+        <div class="flex flex-1 items-center gap-3">
+          <span class="text-tertiary size-5 shrink-0 pl-1">
+            <!--@import(/svg/icon/subdirectory_arrow_right.html)-->
+          </span>
+          <div class="flex min-w-0 flex-col gap-1">
+            <div class="text-c2 text-secondary flex items-center gap-2">
+              <span>{$writer}</span>
+              <span>{$written_date}</span>
+            </div>
+            <p class="text-l6 text-primary truncate">{$subject}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div module="product_qnapaging" class="px-container flex items-center justify-center gap-4 py-10"></div>
+  </section>
+
+  <!-- 추천 섹션 -->
+  <section id="tab-recommend" class="detail-tab-section py-5 md:py-10">
+    <div class="px-container pb-4">
+      <h2 class="text-h6 md:text-h5 text-primary">추천 상품</h2>
+    </div>
+    <div module="product_relation" class="px-container grid grid-cols-2 gap-5 pb-15 md:grid-cols-5">
+      <!--@import(/layout/product/product_colorchip.html)-->
+    </div>
+  </section>
+</div>

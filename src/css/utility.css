@@ -2,7 +2,7 @@
    Scrollbar
    ========================================================================== */
 
-@utility scrollbar-hide {
+@utility scrollbar-hidden {
   scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;

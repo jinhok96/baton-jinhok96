@@ -996,15 +996,6 @@
   color: #757575;
 }
 
-/* 회원등급별 할인가 적용 */
-.xans-product-zoom .infoArea td > span > ul.discountMember > li {
-  position: relative;
-  float: left;
-}
-.xans-product-zoom .infoArea td ul.discountMember li a {
-  display: block;
-  margin: 0 4px 4px 0;
-}
 .xans-product-zoom .infoArea td ul li .discount_layer h3 {
   margin: 0 0 8px;
   padding: 0 10px;

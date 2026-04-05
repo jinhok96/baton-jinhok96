@@ -66,7 +66,7 @@
           <tbody>
             <tr class="{$option_push_button_display|display}" id="{$option_push_button_id}">
               <td colspan="2" class="selectButton">
-                <button type="button" class="btnSubmit sizeS" onclick="{$action_push_button;}">옵션 선택</button>
+                <button type="button" class="btnSubmit sizeS" onclick="{$action_push_button}">옵션 선택</button>
               </td>
             </tr>
             <tr module="product_fileoption">
@@ -327,7 +327,7 @@
             </li>
 
             <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-              <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">옵션선택</a>
+              <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
             </li>
           </ul>
         </li>
@@ -389,7 +389,7 @@
             </li>
 
             <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
-              <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button;}">옵션선택</a>
+              <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
             </li>
           </ul>
         </li>
@@ -428,21 +428,17 @@
 
   <div module="product_action">
     <div class="ec-base-button gColumn {$action_display|display}">
-      <a href="#none" class="btnSubmit {$buy_display|display}" onclick="{$action_buy;}">
+      <a href="#none" class="btnSubmit {$buy_display|display}" onclick="{$action_buy}">
         <span id="{$btn_buy_mobile_id}">구매하기</span>
         <span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span>
         <span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청하기</span>
       </a>
-      <button type="button" class="btnNormal {$basket_display|display}" onclick="{$action_basket;}">장바구니</button>
-      <button type="button" class="btnNormal {$wishlist_display|display}" onclick="{$action_wishlist;}">
-        관심상품
-      </button>
+      <button type="button" class="btnNormal {$basket_display|display}" onclick="{$action_basket}">장바구니</button>
+      <button type="button" class="btnNormal {$wishlist_display|display}" onclick="{$action_wishlist}">관심상품</button>
     </div>
     <div class="ec-base-button gColumn {$action_soldout_display|display}">
       <button type="button" class="btnSubmit {$soldout_display|display}">SOLD OUT</button>
-      <button type="button" class="btnNormal {$wishlist_display|display}" onclick="{$action_wishlist;}">
-        관심상품
-      </button>
+      <button type="button" class="btnNormal {$wishlist_display|display}" onclick="{$action_wishlist}">관심상품</button>
     </div>
     <!-- 네이버 체크아웃 구매 버튼 -->
     <div id="NaverChk_Button" style="display: none"></div>

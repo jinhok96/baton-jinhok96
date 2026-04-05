@@ -78,7 +78,7 @@
                 <div id="personAuth">
                   <div id="personalTypeWrap">{$form.personal_type}</div>
                   <div id="ipinWrap">
-                    <a href="#none" class="btnNormal sizeS" onclick="{$action_ipin_open;}">아이핀인증</a>
+                    <a href="#none" class="btnNormal sizeS" onclick="{$action_ipin_open}">아이핀인증</a>
                     <p class="gBlank5">
                       아이핀이란, 회원님의 개인정보 보호를 위해 웹사이트에 주민등록번호를 제공하지 않고 본인임을
                       확인하는 인터넷상의 개인식별번호 서비스입니다.
@@ -87,7 +87,7 @@
                     </p>
                   </div>
                   <div id="mobileWrap">
-                    <a href="#none" class="btnNormal sizeS" onclick="{$action_mobile_open;}">휴대폰인증</a>
+                    <a href="#none" class="btnNormal sizeS" onclick="{$action_mobile_open}">휴대폰인증</a>
                     <p class="gBlank5">본인 명의의 휴대폰으로 본인인증을 진행합니다.</p>
                   </div>
                   <div id="emailWrap">
@@ -105,7 +105,7 @@
                     <dt>법인번호</dt>
                     <dd class="formGroup code">
                       {$form.bssn1} - {$form.bssn2}
-                      <a href="#none" class="btnNormal" onclick="{$action_business_dupl;}">중복확인</a>
+                      <a href="#none" class="btnNormal" onclick="{$action_business_dupl}">중복확인</a>
                     </dd>
                   </dl>
                 </div>
@@ -117,7 +117,7 @@
                     <dt>{$form.foreigner_type}</dt>
                     <dd class="formGroup">
                       {$form.foreigner_ssn}
-                      <a href="#none" class="btnNormal" onclick="{$action_foreigner_check;}">중복확인</a>
+                      <a href="#none" class="btnNormal" onclick="{$action_foreigner_check}">중복확인</a>
                     </dd>
                   </dl>
                   <div id="foreignerPersonWrap">
@@ -281,7 +281,7 @@
           </th>
           <td class="formGroup" id="companySsn">
             {$form.cssn}
-            <a href="#none" class="btnNormal {$display_cssn_dupl|display}" onclick="{$action_cssn_dupl;}">중복확인</a>
+            <a href="#none" class="btnNormal {$display_cssn_dupl|display}" onclick="{$action_cssn_dupl}">중복확인</a>
             <p id="{$cssnMsg_id}"></p>
           </td>
         </tr>
@@ -329,7 +329,7 @@
               type="button"
               id="{$btn_action_verify_mobile}"
               class="btnNormal {$display_verify_mobile|display}"
-              onclick="{$action_verify_mobile;}">
+              onclick="{$action_verify_mobile}">
               인증번호받기
             </button>
             <p class="txtInfo {$bDisplayMobileVerifyInfoDefault|display}">
@@ -358,7 +358,7 @@
               type="button"
               class="btnNormal"
               id="{$btn_verify_mobile_confirm}"
-              onclick="{$action_verify_mobile_confirm;}">
+              onclick="{$action_verify_mobile_confirm}">
               확인
             </button>
           </td>
@@ -746,7 +746,7 @@
   </div>
 
   <div class="ec-base-button gBottom">
-    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_join;}">회원가입</a>
+    <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_join}">회원가입</a>
   </div>
 
   <!--@import(/member/join_confirm.html)-->

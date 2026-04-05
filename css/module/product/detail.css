@@ -948,66 +948,6 @@
   text-align: right;
 }
 
-/* 회원등급별 할인가 적용 */
-.xans-product-detail .discountMember > li {
-  position: relative;
-  float: left;
-}
-.xans-product-detail .discountMember li a {
-  display: block;
-  margin: 0 4px 4px 0;
-}
-.xans-product-detail .discount_layer h3 {
-  margin: 0 0 8px;
-  font-size: 12px;
-  border-bottom: 0;
-}
-.xans-product-detail .discount_layer {
-  display: block;
-  left: -140px;
-  min-width: 300px;
-  box-sizing: border-box;
-}
-.xans-product-detail .discount_layer .content {
-  overflow-x: hidden;
-  overflow-y: auto;
-  max-height: 400px;
-}
-.xans-product-detail .discount_layer thead th {
-  padding: 0;
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
-  border-width: 0 1px 0 1px;
-}
-.xans-product-detail .discount_layer tbody th {
-  width: auto;
-  padding: 7px 0 8px 6px;
-}
-.xans-product-detail .discount_layer .edge {
-  display: none;
-}
-.xans-product-detail .discount_layer .btnStrong {
-  display: inline-block;
-  padding: 12px 20px;
-  height: 40px;
-  font-size: 13px;
-  box-sizing: border-box;
-  border: 1px solid transparent;
-  line-height: 1;
-  text-decoration: none;
-  vertical-align: middle;
-  word-spacing: -0.5px;
-  letter-spacing: 0;
-  text-align: center;
-  color: #fff;
-  background-color: #000;
-}
-.xans-product-detail .discount_layer .ec-base-button {
-  text-align: center;
-}
-
 /* 세트상품 추가정보 레이어 */
 .xans-product-detail .productSet .product {
   position: relative;
@@ -1075,18 +1015,6 @@
   height: 18px;
   margin: 0 2px 3px 0;
   border: 1px solid #e3e3e3;
-}
-.xans-product-detail .productSet .description > .ec-base-tooltip {
-  display: block;
-  top: 0;
-}
-.xans-product-detail .productSet .description > .ec-base-tooltip > .edge {
-  z-index: 20;
-  position: absolute;
-  left: auto;
-  right: 40px;
-  display: block;
-  margin: 0 0 0 -5px;
 }
 
 /* regularDelivery */
@@ -1239,12 +1167,6 @@
   #totalPrice {
     padding: 40px 0 26px;
   }
-  .xans-product-detail .discountMember > li {
-    position: static;
-  }
-  .xans-product-detail .discountMember .btnClose.close {
-    display: none;
-  }
   .xans-product-detail .btnTooltip {
     position: static;
   }
@@ -1254,6 +1176,87 @@
     width: 88%;
     margin: 10px auto 0;
   }
+}
+
+/* =======================================
+   totalProducts - 카드 레이아웃 오버라이드
+   ======================================= */
+
+#totalProducts table {
+  display: block;
+  width: 100%;
+}
+
+#totalProducts thead,
+#totalProducts tbody {
+  display: block;
+  width: 100%;
+}
+
+#totalProducts tbody tr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  border: 1px solid #e8e8e8 !important;
+  border-radius: 4px;
+  padding: 16px 12px;
+  margin-bottom: 8px;
+}
+
+#totalProducts tbody tr:last-child {
+  margin-bottom: 0;
+}
+
+#totalProducts tbody td {
+  padding: 0 !important;
+  border: none !important;
+  line-height: 1.4;
+  vertical-align: top;
+}
+
+/* 1열: 상품명 */
+#totalProducts tbody tr > td:first-child {
+  flex: 1;
+  min-width: 0;
+  padding-right: 8px !important;
+}
+
+#totalProducts tbody td .product {
+  padding: 0;
+  font-size: 12px;
+  color: #1e1e1e;
+  line-height: 1.4;
+}
+
+#totalProducts tbody td .product span {
+  display: block;
+  font-size: 14px;
+  color: #717171;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+/* 2열: 수량 + 삭제 버튼 */
+#totalProducts tbody tr > td:nth-child(2) {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+#totalProducts tbody tr > td:nth-child(2) .quantity {
+  width: auto !important;
+  position: static;
+  display: flex;
+  align-items: center;
+}
+
+/* 3열: 가격 (아래 줄) */
+#totalProducts tbody tr > td.right {
+  width: 100%;
+  text-align: right !important;
+  padding-top: 8px !important;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 /********************* PC *********************/

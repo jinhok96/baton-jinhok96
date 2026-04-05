@@ -1,0 +1,39 @@
+<!--@js(/layout/product/product_image.js)-->
+<div module="product_image" class="md:flex md:flex-row-reverse md:justify-end md:gap-12 md:py-20">
+  <!--메인 이미지-->
+  <div class="relative aspect-4/5 w-full overflow-hidden md:h-130 md:w-97.5 md:rounded">
+    <img
+      id="prdBigImg"
+      src="{$big_img}"
+      alt="{$seo_alt_tag}"
+      class="{$img_display|display} absolute inset-0 size-full object-cover" />
+  </div>
+
+  <!--추가 이미지-->
+  <div
+    module="product_addimage"
+    class="scrollbar-hidden h-27 overflow-x-auto md:h-full md:w-20 md:overflow-x-hidden md:overflow-y-auto">
+    <ul class="relative! flex size-full! shrink-0 items-center gap-1 p-1 md:flex-col md:p-0">
+      <li
+        class="data-active:border-color-tertiary relative float-none! aspect-4/5 h-full shrink-0 cursor-pointer overflow-hidden rounded-xs data-active:border-2 md:h-auto md:w-full md:rounded [&_img]:absolute [&_img]:inset-0 [&_img]:size-full [&_img]:object-cover">
+        {$add_img}
+        <!--gif용 아이콘-->
+        <div class="gif-play-icon absolute inset-0 hidden">
+          <div class="flex size-full items-center justify-center text-(--color-icon-on-color)">
+            <span class="size-10"><!--@import(/svg/icon/play_circle.html)--></span>
+          </div>
+        </div>
+      </li>
+      <li
+        class="data-active:border-color-tertiary relative float-none! aspect-4/5 h-full shrink-0 cursor-pointer overflow-hidden rounded-xs data-active:border-2 md:h-auto md:w-full md:rounded [&_img]:absolute [&_img]:inset-0 [&_img]:size-full [&_img]:object-cover">
+        {$add_img}
+        <!--gif용 아이콘-->
+        <div class="gif-play-icon absolute inset-0 hidden">
+          <div class="flex size-full items-center justify-center text-(--color-icon-on-color)">
+            <span class="size-10"><!--@import(/svg/icon/play_circle.html)--></span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
