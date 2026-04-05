@@ -658,9 +658,3 @@ body#popup {
 #totalPrice .total em {
   font-style: normal;
 }
-
-/* 네이버페이 & 카카오페이 */
-.xans-product-optionselectlayer #NaverChk_Button,
-.xans-product-optionselectlayer #appPaymentButtonBox {
-  margin: 10px 0 0;
-}

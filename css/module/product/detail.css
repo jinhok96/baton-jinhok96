@@ -347,10 +347,6 @@
   max-width: none;
 }
 
-#NaverChk_Button {
-  margin: 10px 0 0;
-}
-
 #divNvPointInfo {
   display: none;
   position: absolute;
@@ -1160,9 +1156,6 @@
   .xans-product-detail .xans-product-action .gActionButtonColumn [class*='btn'] {
     flex: 1;
     margin: 10px 0 0;
-  }
-  #NaverChk_Button {
-    margin: 0 0 10px;
   }
   #totalPrice {
     padding: 40px 0 26px;

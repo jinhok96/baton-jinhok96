@@ -76,29 +76,38 @@
       </div>
     </div>
 
-    <!--옵션-->
-    <div class="w-full p-4">
-      <!--@import(/layout/product/detail_product_option.html)-->
+    <!-- 스크롤 영역 (모바일: 시트 스크롤 영역으로 이동) -->
+    <div id="productScrollAreaSentinel"></div>
+    <div id="productScrollArea">
+      <!--옵션-->
+      <div class="w-full p-4">
+        <!--@import(/layout/product/detail_product_option.html)-->
+      </div>
+
+      <!--추가구성상품-->
+      <div class="px-4 py-2">
+        <!--@import(/layout/product/detail_product_addproduct.html)-->
+      </div>
+
+      <!--상품 목록-->
+      <div class="p-4">
+        <!--@import(/layout/product/detail_total.html)-->
+      </div>
     </div>
 
-    <!--추가구성상품-->
-    <div class="px-4 py-2">
-      <!--@import(/layout/product/detail_product_addproduct.html)-->
-    </div>
+    <!-- 액션 영역 (모바일: 시트 하단 고정 영역으로 이동) -->
+    <div id="productActionAreaSentinel"></div>
+    <div id="productActionArea">
+      <!--총 상품 금액-->
+      <div id="productTotalPriceWrapper" class="p-4">
+        <!--@import(/layout/product/detail_total_price.html)-->
+      </div>
 
-    <!--상품 목록-->
-    <div class="p-4">
-      <!--@import(/layout/product/detail_total.html)-->
-    </div>
-
-    <!--총 상품 금액-->
-    <div class="p-4">
-      <!--@import(/layout/product/detail_total_price.html)-->
-    </div>
-
-    <!--장바구니, 바로구매-->
-    <div class="p-4">
-      <!--@import(/layout/product/detail_product_action.html)-->
+      <!--장바구니, 바로구매-->
+      <div id="productActionWrapper" class="flex flex-col gap-4 p-4">
+        <!--@import(/layout/product/detail_product_action.html)-->
+        <!--@import(/layout/product/detail_product_action_naver_pay.html)-->
+      </div>
     </div>
 
     <!--안내-->
@@ -444,6 +453,9 @@
       <li class="w-full shrink-0 not-md:last:hidden"><!--@import(/layout/product/product_colorchip.html)--></li>
     </ul>
   </section>
+
+  <!--모바일 하단 고정 버튼-->
+  <!--@import(/layout/product/detail_fixed_button.html)-->
 </div>
 
 <!--@define(cmc_log)-->

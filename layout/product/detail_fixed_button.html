@@ -1,156 +1,36 @@
-<!-- ================================================================
-     모바일 전용 고정 구매 버튼 / 바텀시트
-     md:hidden — 데스크톱에서 완전히 숨김
-     ================================================================ -->
+<div class="md:hidden" module="product_detail">
+  <!--@js(/layout/product/detail_fixed_button.js)-->
 
-<!-- 기본 고정 버튼 (하단) -->
-<div id="detailFixedBtn" class="bg-primary fixed bottom-0 left-0 z-30 w-full px-4 py-3 md:hidden">
-  <button
-    id="btnFixedBuyNow"
-    type="button"
-    class="border-color-tertiary text-primary text-l5 w-full rounded-sm border px-4 py-3">
-    바로 구매하기
-  </button>
-</div>
+  <!-- 백드롭 -->
+  <div
+    id="fixedSheetBackdrop"
+    class="pointer-events-none fixed inset-0 z-50 bg-black/40 opacity-0 transition-opacity duration-300"></div>
 
-<!-- 오버레이 -->
-<div id="fixedBtnOverlay" class="fixed inset-0 z-40 hidden bg-black/40 md:hidden"></div>
+  <!-- 바텀 시트 -->
+  <div
+    id="fixedSheet"
+    class="bg-primary shadow-500 fixed inset-x-0 bottom-0 z-50 flex h-[90vh] translate-y-full flex-col rounded-t-lg transition-transform duration-300">
+    <!-- 헤더 -->
+    <div class="border-color-primary relative flex shrink-0 items-center justify-between border-b px-4 py-4">
+      <span class="text-l5 text-primary w-full text-center">옵션 선택</span>
+      <button id="fixedSheetClose" class="absolute top-4 right-4 size-6 text-(--color-icon-primary)">
+        <!--@import(/svg/icon/close.html)-->
+      </button>
+    </div>
 
-<!-- 바텀시트 -->
-<div
-  id="fixedBtnSheet"
-  class="bg-primary fixed bottom-0 left-0 z-50 flex w-full translate-y-full flex-col rounded-t-lg shadow-[0_-4px_32px_rgba(0,0,0,0.15)] transition-transform duration-300 md:hidden">
-  <!-- 헤더 (sticky) -->
-  <div class="border-color-primary sticky top-0 z-10 flex h-14 items-center justify-center border-b bg-inherit px-4">
-    <p class="text-l5 text-primary">옵션 선택</p>
-    <button id="btnSheetClose" type="button" class="text-primary absolute top-1/2 right-4 size-6 -translate-y-1/2">
-      <!--@import(/svg/icon/close_medium.html)-->
+    <!-- 스크롤 영역 (productScrollArea가 JS로 이동됨) -->
+    <div id="fixedSheetScrollContent" class="flex flex-1 flex-col overflow-y-auto"></div>
+
+    <!-- 하단 고정 액션 버튼 (productActionArea가 JS로 이동됨) -->
+    <div id="fixedSheetActionContent" class="border-color-primary flex flex-col gap-2 border-t px-4 py-2"></div>
+  </div>
+
+  <!-- 하단 고정 버튼 바 -->
+  <div class="border-color-primary bg-primary fixed inset-x-0 bottom-0 z-40 border-t px-4 py-3">
+    <button
+      id="fixedSheetOpen"
+      class="border-color-tertiary text-primary text-l5 flex w-full items-center justify-center rounded-xs border px-4 py-3">
+      바로 구매하기
     </button>
   </div>
-
-  <!-- 스크롤 본체 -->
-  <div class="flex-1 overflow-y-auto">
-    <!-- 색상 옵션 -->
-    <div class="px-4 py-4">
-      <p class="text-c1 text-secondary pb-2">색상</p>
-      <div module="product_option" class="flex flex-wrap gap-1">
-        <!-- Cafe24 옵션 모듈 — 색상 미리보기 -->
-        <div class="flex flex-col items-start">
-          <div class="border-color-primary aspect-4/5 w-11 overflow-hidden rounded-sm border">
-            <img src="{$option_image}" alt="{$option_name}" class="size-full object-cover" />
-          </div>
-          <p class="text-c2 text-primary w-11 pt-1 text-center leading-tight">{$option_name}</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- 추가구성상품 드롭다운 -->
-    <div class="px-4 py-2">
-      <div
-        module="product_addoption"
-        class="border-color-primary flex items-center justify-between rounded border px-3 py-2">
-        <p class="text-c1 text-secondary">{$add_option_name}</p>
-        <span class="text-secondary size-5 shrink-0">
-          <!--@import(/svg/icon/arrow_sm_down.html)-->
-        </span>
-      </div>
-    </div>
-
-    <!-- 선택된 옵션 카드 목록 -->
-    <div class="px-4 py-4">
-      <div module="product_basket_layer" class="flex flex-col gap-2">
-        <div class="border-color-primary flex flex-col gap-2 rounded border px-3 py-4">
-          <div class="flex items-start gap-4">
-            <div class="flex flex-1 flex-col">
-              <p class="text-c1 text-primary">{$product_name}</p>
-              <p class="text-l6 text-secondary">{$option_name}</p>
-            </div>
-            <!-- Stepper -->
-            <div class="bg-secondary flex overflow-hidden rounded-sm">
-              <button type="button" class="flex size-7 items-center justify-center">
-                <span class="text-primary size-5"><!--@import(/svg/icon/count_remove.html)--></span>
-              </button>
-              <span class="text-p4 text-primary flex size-7 items-center justify-center">{$quantity}</span>
-              <button type="button" class="flex size-7 items-center justify-center">
-                <span class="text-primary size-5"><!--@import(/svg/icon/count_add_small.html)--></span>
-              </button>
-            </div>
-            <!-- 삭제 -->
-            <button type="button" class="text-secondary size-6 shrink-0">
-              <!--@import(/svg/icon/close.html)-->
-            </button>
-          </div>
-          <p class="text-p4 text-primary text-right">{$price}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /스크롤 본체 -->
-
-  <!-- 하단 고정 영역 -->
-  <div class="border-color-primary border-t px-4 py-3">
-    <!-- 합계 -->
-    <div module="product_buyprice" class="flex items-center justify-between py-2">
-      <div class="text-l5 text-primary flex items-center gap-1">
-        <span>총 상품금액</span>
-        <span class="text-secondary">({$count}개)</span>
-      </div>
-      <p class="text-l5 text-primary font-bold!">{$price}</p>
-    </div>
-
-    <!-- 버튼 그룹 -->
-    <div class="flex gap-2">
-      <button
-        type="button"
-        onclick="{$action_basket}"
-        class="border-color-primary text-primary text-l5 flex-1 rounded-sm border px-4 py-3">
-        장바구니 담기
-      </button>
-      <button
-        type="button"
-        onclick="{$action_buy}"
-        class="border-color-tertiary text-primary text-l5 flex-1 rounded-sm border px-4 py-3">
-        바로 구매하기
-      </button>
-    </div>
-
-    <!-- 네이버페이 -->
-    <div class="pt-2">
-      <img
-        src="https://ecimg.cafe24img.com/pg2761b01354194048/jinhok96/web/upload/img_naver_pay.png"
-        alt="네이버페이"
-        class="w-full" />
-    </div>
-  </div>
-  <!-- /하단 고정 -->
 </div>
-<!-- /바텀시트 -->
-
-<script>
-  (function () {
-    'use strict';
-
-    var sheet = document.getElementById('fixedBtnSheet');
-    var overlay = document.getElementById('fixedBtnOverlay');
-    var btnOpen = document.getElementById('btnFixedBuyNow');
-    var btnClose = document.getElementById('btnSheetClose');
-
-    if (!sheet || !overlay || !btnOpen) return;
-
-    function openSheet() {
-      sheet.classList.remove('translate-y-full');
-      overlay.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    }
-
-    function closeSheet() {
-      sheet.classList.add('translate-y-full');
-      overlay.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    btnOpen.addEventListener('click', openSheet);
-    if (btnClose) btnClose.addEventListener('click', closeSheet);
-    overlay.addEventListener('click', closeSheet);
-  })();
-</script>
